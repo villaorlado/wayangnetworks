@@ -13,7 +13,7 @@
 #explanation{
   position:absolute;
   top:10px;
-  right:40px;
+right40px;
   width:300px;
   border:2px solid black;
   padding:10px;
@@ -92,16 +92,16 @@ sigma.classes.graph.addMethod('neighbors', function(nodeId) {
         //explanation += $.load("characterPages/" + e.data.node.label + ".txt");
         //$.get(("characterPages/" + e.data.node.label + ".txt"), function (data){alert(JSON.stringify(data));});
 
-        $.ajax({url: "characterPages/" + e.data.node.label + ".html", success: function(result){
+        $.ajax({url: "characterPages/" + e.data.node.label + ".txt", success: function(result){
         //  alert("a");
           explanation += result;
           explanation += "<p><br/>Degree: " + e.data.node.attributes.degree;
-          //explanation += "<br/>Weighted degree: " + e.data.node.attributes["weighted degree"];
-          //explanation += "<br/>Eccentricity: " + e.data.node.attributes.eccentricity;
-          //explanation += "<br/>Closness centrality: " + parseFloat(e.data.node.attributes.closnesscentrality).toFixed(2);
-          //explanation += "<br/>Betweeness centrality: " + e.data.node.attributes.betweenesscentrality.toFixed(2);
-          //explanation += "<br/>Clustering: " + e.data.node.attributes.clustering.toFixed(2);
-          explanation += "<br/>Linked to: " + linkedCharacters.length + " characters";
+          explanation += "<br/>Weighted degree: " + e.data.node.attributes["weighted degree"];
+          explanation += "<br/>Eccentricity: " + e.data.node.attributes.eccentricity;
+          explanation += "<br/>Closness centrality: " + parseFloat(e.data.node.attributes.closnesscentrality).toFixed(2);
+          explanation += "<br/>Betweeness centrality: " + e.data.node.attributes.betweenesscentrality.toFixed(2);
+          explanation += "<br/>Clustering: " + e.data.node.attributes.clustering.toFixed(2);
+          //explanation += "<br/>Linked to: " + (linkedCharacters.length -1 )  + " characters";
           $("#explanation").html(explanation);
           $("#explanation").show();
         }});

@@ -20,6 +20,12 @@ def makeLakonHtml():
 	#lakonList = sh.cell_value(rowx=num, colx=15)
 	htmlString = "<p><b>Found in the follwing lakon </b>: " + lakonList
 	return htmlString
+	
+def makeLakonHtml2():
+	lakonList = re.sub(r'([\w \(\) ,]*)',r'<a target="_blank" href="../html/lakonPages/\1.html">\1</a>',sh.cell_value(rowx=num, colx=15))
+	#lakonList = sh.cell_value(rowx=num, colx=15)
+	htmlString = "<p><b>Found in the follwing lakon </b>: " + lakonList
+	return htmlString
 
 for num in range(1,sh.nrows):
 	
@@ -37,9 +43,13 @@ for num in range(1,sh.nrows):
 	html += makeHtml("Spouses", 12)
 	html += makeHtml("Ruler of", 14)
 	#html += makeHtml("Found in the following lakons: ", 15)
+	text = ""
+	text += html
+	text += makeLakonHtml2()
 	html += makeLakonHtml()
+	
 	with open("../html/characterPages/" + name + ".html", "w") as file:
 		file.write(html)
 	with open("../html/characterPages/" + name + ".txt", "w") as file:
-		file.write(makeHtml("Description", 6))
+		file.write(text)
 
