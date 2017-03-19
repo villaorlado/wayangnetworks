@@ -1,6 +1,6 @@
-## This is a new project
+## The networks of Wayang Kulit
 
-This explores how the stories of Wayang Kulit through network visualization and analysis.
+This explores how the stories of _Wayang Kulit_ through network visualization and analysis.
 
 Browse through the different network visualizations, according to different windows:
 
@@ -13,7 +13,7 @@ Adegan window (higher resolution):
 
 Lakon window (lower resolution)
 
-- [Canonical only](https://villaorlado.github.io/wayangnetworks/html/)
+- [Canonical only]
 - [Canonical and amemba]
 - [Canonical and collective]
 - [Canonical and collective and amemba]
