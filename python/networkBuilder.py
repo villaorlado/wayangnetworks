@@ -79,6 +79,14 @@ def makeCSV(characterDict,csvName):
 	with open("../output/" + csvName + ".csv", "w") as file:
 		file.write(csvFile)
 
+'''
+For Andy's analysis
+csv file with adegan name and characters = 
+01.01 = Puntadewa, Werkudara, Sadewa
+designations file: character,desgination
+Abimanyu,Pandawa
+'''
+
 #iterate for each window type
 for k,v in windowTypes.iteritems():
 	windowList = ""

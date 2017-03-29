@@ -11,7 +11,7 @@ lakons = re.split(r"[//]\d+ ",narratives);
 
 for x in range (1, len(lakons)):
 	lines = lakons[x].splitlines()
-	title = lines[0]
+	title = re.sub("#","",lines[0])
 	text = ""
 	matches = re.findall(r'\[(\w*)\]', lakons[x])
 	characters = list(set(matches))

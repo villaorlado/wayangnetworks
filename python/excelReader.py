@@ -15,6 +15,9 @@ worksheet = workbook.add_worksheet()
 #difference report
 diffReport = ""
 
+canonicalOnly_nodeInfo = open("../output/processedData/adegan_canonicalOnly_nodeInfo.csv").read().splitlines()
+canonicalAndDisguised_nodeInfo = open("../output/processedData/adegan_canonicalAndDisguised_nodeInfo.csv").read().splitlines()
+
 def findDiference(fileName):
 	characterStory = []
 	characterDictionary = []
@@ -40,10 +43,26 @@ def findDiference(fileName):
 			if characterInXlsx in lakonText:
 				lakonArray.append(lakonName)
 		
+		#add quantitative information to each character row
+		characterInfo = []
+		for nodeInfo in canonicalOnly_nodeInfo:
+			nodeInfo = nodeInfo.split(",")
+			if (str(characterInXlsx) == nodeInfo[0]):
+				characterInfo = nodeInfo
+
+		characterInfo2 = []
+		for nodeInfo in canonicalAndDisguised_nodeInfo:
+			nodeInfo = nodeInfo.split(",")
+			if (str(characterInXlsx) == nodeInfo[0]):
+				characterInfo2 = nodeInfo
+
 		worksheet.write(num, 0, str(characterInXlsx))
 		worksheet.write(num, 1, str(lakonArray))
-		#print str(characterInXlsx) + " in " + str(lakonArray)
-	
+		if (len(characterInfo) > 3):
+			worksheet.write(num, 2, str(characterInfo[1]))
+		if (len(characterInfo2) > 3):
+			worksheet.write(num, 3, str(characterInfo2[1]))
+		
 	diffReport += "----------------------------------------------------"
 	diffReport += "\nDifferences in " + fileName
 	diffReport += "\nNames in the excel file but not in the story\n\n"
@@ -53,8 +72,8 @@ def findDiference(fileName):
 	diffReport += "\n\n"
 	
 def diff(first, second):
-        second = set(second)
-        return [item for item in first if item not in second]
+	second = set(second)
+	return [item for item in first if item not in second]
 
 #print diff(characterDictionary, characterStory)
 #print diff(characterStory,characterDictionary)

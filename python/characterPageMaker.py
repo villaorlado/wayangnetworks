@@ -12,7 +12,7 @@ sh = book.sheet_by_index(0)
 def makeHtml (header,column):
 	htmlString = ""
 	if (sh.cell_value(rowx=num, colx=column) != ""):
-		htmlString = "<p><b>" + header + "</b>: " + sh.cell_value(rowx=num, colx=column)	
+		htmlString = "<p><b>" + header + "</b>: " + str(sh.cell_value(rowx=num, colx=column))	
 	return htmlString
 
 def makeLakonHtml():
@@ -26,6 +26,8 @@ def makeLakonHtml2():
 	#lakonList = sh.cell_value(rowx=num, colx=15)
 	htmlString = "<p><b>Found in the follwing lakon </b>: " + lakonList
 	return htmlString
+
+factions = ""
 
 for num in range(1,sh.nrows):
 	
@@ -42,14 +44,20 @@ for num in range(1,sh.nrows):
 	html += makeHtml("Siblings", 11)
 	html += makeHtml("Spouses", 12)
 	html += makeHtml("Ruler of", 14)
-	#html += makeHtml("Found in the following lakons: ", 15)
 	text = ""
 	text += html
 	text += makeLakonHtml2()
 	html += makeLakonHtml()
+	html += makeHtml("Degree in canoncial network", 17)
+	html += makeHtml("Degree in canonical and disguised network", 18)
+	html += makeHtml("Difference in degree ", 19)
+	
+	factions += name + "," + sh.cell_value(rowx=num, colx=2) + "," + sh.cell_value(rowx=num, colx=4) + "\n"
 	
 	with open("../html/characterPages/" + name + ".html", "w") as file:
 		file.write(html)
 	with open("../html/characterPages/" + name + ".txt", "w") as file:
 		file.write(text)
 
+with open("../output/processedData/factions.txt","w") as file:
+		file.write(factions)
