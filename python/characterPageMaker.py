@@ -28,6 +28,7 @@ def makeLakonHtml2():
 	return htmlString
 
 factions = ""
+origin = ""
 
 for num in range(1,sh.nrows):
 	
@@ -52,7 +53,7 @@ for num in range(1,sh.nrows):
 	html += makeHtml("Degree in canonical and disguised network", 18)
 	html += makeHtml("Difference in degree ", 19)
 	
-	factions += name + "," + sh.cell_value(rowx=num, colx=2) + "," + sh.cell_value(rowx=num, colx=4) + "\n"
+	factions += name + "," + sh.cell_value(rowx=num, colx=2) + "," + sh.cell_value(rowx=num, colx=4) + "," + sh.cell_value(rowx=num, colx=1) + "\n"
 	
 	with open("../html/characterPages/" + name + ".html", "w") as file:
 		file.write(html)
