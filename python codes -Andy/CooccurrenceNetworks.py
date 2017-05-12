@@ -35,7 +35,7 @@ def CoarseGrainer(datasettag, newdatasettag):
 		episodesub[episode.split('=')[0].strip(' ').split(".")[0]] = []
 		episodes[episode.split('=')[0].strip(' ').split(".")[0]] = []
 	for episode in episodelist:	
-		print(episode.split('=')[0].strip(' '))
+		#print(episode.split('=')[0].strip(' '))
 		episodesub[episode.split('=')[0].strip(' ').split(".")[0]].append(episode.split('=')[0].strip(' '))
 		episodes[episode.split('=')[0].strip(' ').split(".")[0]].extend([char.strip(" ") for char in episode.split('=')[1].split(',') if char.strip(" ")])
 
@@ -295,6 +295,62 @@ def LoadFactions(datasettag):
 
 ###########################################################################
 
+def LoadFactionsMultiple(datasettag):
+
+	# Prepare directory for output files (spreadsheets, plots, etc.):
+	try:
+	    os.makedirs("../Outputs/" + datasettag + "/Objects/")
+	except OSError as exception:
+	    if exception.errno != errno.EEXIST:
+	    	raise
+
+	if os.path.isfile("../Outputs/" + datasettag + "/Objects/CharacterFactionsMultiple" + datasettag + ".pkl"):
+		CharacterFactionsMultiple = pk.load(open("../Outputs/" + datasettag + "/Objects/CharacterFactionsMultiple" + datasettag + ".pkl","rb"))
+		FactionCharactersMultiple = pk.load(open("../Outputs/" + datasettag + "/Objects/FactionCharactersMultiple" + datasettag + ".pkl","rb"))
+	else:
+		CharacterFactionsMultiple = CharacterFactionAffiliationsMultiple(datasettag)
+		FactionCharactersMultiple = FactionCharacterListsMultiple(CharacterFactionsMultiple)
+		pk.dump(CharacterFactionsMultiple, open( "../Outputs/" + datasettag + "/Objects/CharacterFactionsMultiple" + datasettag + ".pkl", "wb" ))
+		pk.dump(FactionCharactersMultiple, open( "../Outputs/" + datasettag + "/Objects/FactionCharactersMultiple" + datasettag + ".pkl", "wb" ))
+
+	return CharacterFactionsMultiple, FactionCharactersMultiple
+
+###########################################################################
+
+def CharacterFactionAffiliationsMultiple(datasettag):
+
+	NumberOfPartitions = len(open("../Inputs/CharacterAffiliations" + datasettag + "ALL.txt").read().splitlines()[0:][0].split(',')) - 1
+
+	CharacterFactionsMultiple = dict()
+
+	for partition in range(NumberOfPartitions):
+		CharacterFactionsMultiple[partition] = dict()
+		b = open("../Inputs/CharacterAffiliations" + datasettag + "Partition" + str(partition) + ".csv" , 'w')
+		for line in open("../Inputs/CharacterAffiliations" + datasettag + "ALL.txt").read().splitlines()[0:]:
+			character = line.split(",")[0].strip(" ")
+			affiliation = line.split(",")[1:][partition].strip(" ")
+			if not affiliation:
+				affiliation = 'Other'
+			CharacterFactionsMultiple[partition][character] = affiliation
+			b.write(character + "," + affiliation + "\n")
+		b.close()
+
+	return CharacterFactionsMultiple
+
+###########################################################################
+
+def FactionCharacterListsMultiple(CharacterFactionsMultiple):
+
+	FactionCharacterListsMany = dict()
+
+	for partition in list(CharacterFactionsMultiple.keys()):
+		CharacterFactions = CharacterFactionsMultiple[partition]
+		FactionCharacterListsMany[partition] = FactionCharacterLists(CharacterFactions)
+
+	return FactionCharacterListsMany
+
+###########################################################################
+
 def FactionNodeMetricStats(datasettag):
 
 	CharacterDegrees, CharacterStrengths, CharacterBetweenness = LoadCharacterNodeMetrics(datasettag)
@@ -340,9 +396,9 @@ def FactionNodeMetricStats(datasettag):
 		ibs.write(faction + "," + str(len(FactionCharacters[faction])) + "," + str(FactionMeanDegrees[faction]) + "," + str(FactionMeanStrength[faction]) + "," + str(FactionMeanBetweenness[faction]))
 		ibt.write(faction + "," + str(len(FactionCharacters[faction])) + "," + str(len(FactionCharacters[faction])*FactionMeanDegrees[faction]) + "," + str(len(FactionCharacters[faction])*FactionMeanStrength[faction]) + "," + str(len(FactionCharacters[faction])*FactionMeanBetweenness[faction]))
 		for factiond in sorted(FactionCharacters.keys()):
-			if IG.has_edge(faction,factiond):
-				print(faction + factiond)
-				print(str(FactionMeanStrengthByFaction[factiond][faction]) + " vs " + str(IG[faction][factiond]['weight']))
+			#if IG.has_edge(faction,factiond):
+				#print(faction + factiond)
+				#print(str(FactionMeanStrengthByFaction[factiond][faction]) + " vs " + str(IG[faction][factiond]['weight']))
 			ibs.write("," + str(FactionMeanStrengthByFaction[factiond][faction]))
 			ibt.write("," + str(len(FactionCharacters[faction])*FactionMeanStrengthByFaction[factiond][faction]))
 			#ibs.write("," + str(np.mean([StrengthByFaction[character][faction] for character in FactionCharacters[faction1]])))
@@ -352,13 +408,13 @@ def FactionNodeMetricStats(datasettag):
 
 	PercentagesOverall = dict()
 	for faction in sorted(FactionCharacters.keys()):
-		print(faction)
-		print(len(FactionCharacters[faction]))
+		#print(faction)
+		#print(len(FactionCharacters[faction]))
 		#PercentagesOverall[faction] = np.divide(len(FactionCharacters[faction]), len(G.nodes()))
 
 		PercentagesOverall[faction] = np.divide(FactionMeanStrength[faction]*len(FactionCharacters[faction]), np.sum(list(CharacterStrengths.values())))
 
-	print(PercentagesOverall)
+	#print(PercentagesOverall)
 
 	DistanceFromOverall = dict()
 	ProductOverall = dict()
@@ -379,9 +435,7 @@ def FactionNodeMetricStats(datasettag):
 			#sumofsquares += np.power(DifferenceFromOverall[faction][factiond], 2)
 			dotproduct += np.dot(FactionMeanStrengthByFaction[factiond][faction], PercentagesOverall[factiond])
 			totes += np.power(FactionMeanStrengthByFaction[factiond][faction], 2)
-		print(faction)
-		print(totes)
-		print(totes0)
+
 		DistanceFromOverall[faction] = np.abs(sumofsquares) #np.sqrt(sumofsquares)
 		totes = np.sqrt(totes)
 		ProductOverall[faction] = np.divide(dotproduct, np.dot(totes0, totes))
@@ -507,6 +561,28 @@ def LoadInterfactionBetweenness(datasettag):
 	return InterfactionBetweenness
 
 ###########################################################################
+###########################################################################
+
+def LoadInterfactionBetweennessMultiple(datasettag):
+
+	# Prepare directory for output files (spreadsheets, plots, etc.):
+	try:
+	    os.makedirs("../Outputs/" + datasettag + "/Objects/")
+	except OSError as exception:
+	    if exception.errno != errno.EEXIST:
+	    	raise
+
+	if os.path.isfile("../Outputs/" + datasettag + "/Objects/InterfactionBetweennessMultiple" + datasettag + ".pkl"):
+		InterfactionBetweenness = pk.load(open("../Outputs/" + datasettag + "/Objects/InterfactionBetweennessMultiple" + datasettag + ".pkl","rb"))
+	else:
+		GI = LoadGraphs(datasettag)[4] #
+		FactionCharacters = LoadFactionsMultiple(datasettag)[1]
+		InterfactionBetweenness = InterfactionBetweennessCentralityMultiple(GI, FactionCharacters)
+		pk.dump(InterfactionBetweenness, open( "../Outputs/" + datasettag + "/Objects/InterfactionBetweenness" + datasettag + ".pkl", "wb" ))
+
+	return InterfactionBetweenness
+
+###########################################################################
 
 def LoadInterfactionLinkBetweenness(datasettag):
 
@@ -566,6 +642,27 @@ def LoadFactionWorldBetweenness(datasettag):
 		GI = LoadGraphs(datasettag)[4] #EpisodeNodes, CharacterNodes, B, G, GI, E, EI
 		FactionCharacters = LoadFactions(datasettag)[1]
 		FactionWorldBetweenness = FactionWorldBetweennessCentrality(GI, FactionCharacters)
+		pk.dump(FactionWorldBetweenness, open( "../Outputs/" + datasettag + "/Objects/FactionWorldBetweenness" + datasettag + ".pkl", "wb" ))
+
+	return FactionWorldBetweenness
+
+###########################################################################
+
+def LoadFactionWorldBetweennessMultiple(datasettag):
+
+	# Prepare directory for output files (spreadsheets, plots, etc.):
+	try:
+	    os.makedirs("../Outputs/" + datasettag + "/Objects/")
+	except OSError as exception:
+	    if exception.errno != errno.EEXIST:
+	    	raise
+
+	if os.path.isfile("../Outputs/" + datasettag + "/Objects/FactionWorldBetweenness" + datasettag + ".pkl"):
+		FactionWorldBetweenness = pk.load(open("../Outputs/" + datasettag + "/Objects/FactionWorldBetweenness" + datasettag + ".pkl","rb"))
+	else:
+		GI = LoadGraphs(datasettag)[4] #EpisodeNodes, CharacterNodes, B, G, GI, E, EI
+		FactionCharacters = LoadFactionsMultiple(datasettag)[1]
+		FactionWorldBetweenness = FactionWorldBetweennessCentralityMultiple(GI, FactionCharacters)
 		pk.dump(FactionWorldBetweenness, open( "../Outputs/" + datasettag + "/Objects/FactionWorldBetweenness" + datasettag + ".pkl", "wb" ))
 
 	return FactionWorldBetweenness
@@ -677,8 +774,37 @@ def InterfactionBetweennessCentrality(GI, FactionCharacters):
 
 	InterfactionBetweenness = dict()
 	for pair in FactionPairsList:
+		print(pair)
 		IFB = nx.betweenness_centrality_subset(GI, FactionCharacters[pair[0]], FactionCharacters[pair[1]], normalized = True, weight = 'weight')
 		InterfactionBetweenness[pair] = IFB
+
+	############################
+
+	return InterfactionBetweenness
+
+###########################################################################
+
+def InterfactionBetweennessCentralityMultiple(GI, FactionCharactersMultiple):
+
+	########################
+
+	CharacterNodes = GI.nodes()
+
+	InterfactionBetweenness = dict()
+
+	for partition in list(FactionCharactersMultiple.keys()):
+
+		factions = sorted(set(FactionCharactersMultiple[partition].keys()))
+		FactionPairsList = []
+		for faction1 in factions:
+			for faction2 in factions:
+				if (not (faction1, faction2) in FactionPairsList) and (not (faction2, faction1) in FactionPairsList):
+					FactionPairsList.append((faction1, faction2))
+
+		InterfactionBetweenness[partition] = dict()
+		for pair in FactionPairsList:
+			IFB = nx.betweenness_centrality_subset(GI, FactionCharactersMultiple[partition][pair[0]], FactionCharactersMultiple[partition][pair[1]], normalized = True, weight = 'weight')
+			InterfactionBetweenness[partition][pair] = IFB
 
 	############################
 
@@ -730,6 +856,7 @@ def FactionWorldLinkBetweennessCentrality(GI, FactionCharacters):
 	return FactionWorldLinkBetweenness
 
 ###########################################################################
+
 
 def InterfactionBetweennessBreakdownByFaction(datasettag, FactionCharacters, Betweenness, InterfactionBetweenness):
 
@@ -823,7 +950,7 @@ def InterfactionBetweennessBreakdownByFaction(datasettag, FactionCharacters, Bet
 		ax.set_ylim([0, 1])
 		ax.legend(['Overall betweenness centrality', pair[0] + "-" + pair[1] + ' betweenness centrality'], fontsize = 6, loc = 'best')
 		#ax.set_aspect('equal')
-		plt.savefig("../Outputs/" + datasettag + "/InterfactionBetweenness/InterfactionBetweennessByFactionPlots/" + pair[0] + pair[1] + "BetweennessByFaction.png", bbox_inches='tight')
+		plt.savefig("../Outputs/" + datasettag + "/InterfactionBetweenness/InterfactionBetweennessByFactionPlots/" + pair[0].strip(" ") + pair[1].strip(" ") + "BetweennessByFaction.png", bbox_inches='tight')
 		plt.close()
 		figurecounter += 1
 		betweennesstypecounter += 1
@@ -971,7 +1098,7 @@ def InterfactionBetweennessBreakdownByCharacter(datasettag, FactionCharacters, B
 		ax.set_ylim([0, 1])
 		ax.legend(['Overall betweenness centrality', pair[0] + "-" + pair[1] + ' betweenness centrality'], fontsize = 6, loc = 'best')
 		#ax.set_aspect('equal')
-		plt.savefig("../Outputs/" + datasettag + "/InterfactionBetweenness/InterfactionBetweennessByCharacterPlots/" + pair[0] + pair[1] + "BetweennessByCharacter.png", bbox_inches='tight')
+		plt.savefig("../Outputs/" + datasettag + "/InterfactionBetweenness/InterfactionBetweennessByCharacterPlots/" + pair[0].strip(" ") + pair[1].strip(" ") + "BetweennessByCharacter.png", bbox_inches='tight')
 		plt.close()
 		figurecounter += 1
 		betweennesstypecounter += 1
@@ -1524,6 +1651,25 @@ def FactionWorldBetweennessCentrality(GI, FactionCharacters):
 
 ###########################################################################
 
+def FactionWorldBetweennessCentralityMultiple(GI, FactionCharactersMultiple):
+
+	CharacterNodes = GI.nodes()
+
+	FactionWorldBetweenness = dict()
+
+	for partition in list(FactionCharactersMultiple.keys()):
+		factions = sorted(set(FactionCharactersMultiple[partition].keys()))
+		FactionWorldBetweenness[partition] = dict()
+		for faction in factions:
+			factioncharacters = [str(x) for x in FactionCharactersMultiple[partition][faction]]
+			worldcharacters = [str(x) for x in (set(CharacterNodes) - set(factioncharacters))] 
+			FWB = nx.betweenness_centrality_subset(GI, factioncharacters, worldcharacters, normalized = True, weight = 'weight')
+			FactionWorldBetweenness[partition][faction] = FWB
+
+	return FactionWorldBetweenness
+
+###########################################################################
+
 ###########################################################################
 # Null model
 ###########################################################################
@@ -1604,9 +1750,9 @@ def BipartiteConfigurationModelRealization(EpisodeDegreesTarget, CharacterDegree
 
 	if (FactionCharacters != 0):
 
-		InterfactionBetweenness = InterfactionBetweennessCentrality(GI, FactionCharacters)
+		InterfactionBetweenness = InterfactionBetweennessCentralityMultiple(GI, FactionCharacters)
 
-		FactionWorldBetweenness = FactionWorldBetweennessCentrality(GI, FactionCharacters)
+		FactionWorldBetweenness = FactionWorldBetweennessCentralityMultiple(GI, FactionCharacters)
 
 		# factions = sorted(set(FactionCharacters.keys()))
 		# FactionPairsList = []
@@ -1634,7 +1780,7 @@ def BipartiteConfigurationModelRealization(EpisodeDegreesTarget, CharacterDegree
 
 ###########################################################################
 
-def NullModelEnsemble(datasettag, ensembletag, EpisodeDegreesTarget, CharacterDegreesTarget, NumberOfRealizations, FactionCharacters = 0, LinkWeightsTarget = [], episodes = 0):
+def NullModelEnsemble(datasettag, ensembletag, EpisodeDegreesTarget, CharacterDegreesTarget, NumberOfRealizations, FactionCharactersMultiple = 0, LinkWeightsTarget = [], episodes = 0):
 
 	if LinkWeightsTarget:
 		links = 1
@@ -1693,23 +1839,27 @@ def NullModelEnsemble(datasettag, ensembletag, EpisodeDegreesTarget, CharacterDe
 
 	########################
 
-	if (FactionCharacters != 0):
-		factions = sorted(set(FactionCharacters.keys()))
-		FactionPairsList = []
-		for faction1 in factions:
-			for faction2 in factions:
-				if ((faction1, faction2) not in FactionPairsList) and ((faction2, faction1) not in FactionPairsList):
-					FactionPairsList.append((faction1, faction2))
+	if (FactionCharactersMultiple != 0):
 		InterfactionBetweennessEnsemble = dict()
-		for pair in FactionPairsList:
-			InterfactionBetweennessEnsemble[pair] = dict()
-			for character in CharacterNodes:
-				InterfactionBetweennessEnsemble[pair][character] = []
 		FactionWorldBetweennessEnsemble = dict()
-		for faction in FactionCharacters.keys():
-			FactionWorldBetweennessEnsemble[faction] = dict()
-			for character in CharacterNodes:
-				FactionWorldBetweennessEnsemble[faction][character] = []
+		FactionPairsList = dict()
+		for partition in list(FactionCharactersMultiple.keys()):
+			factions = sorted(set(FactionCharactersMultiple[partition].keys()))
+			FactionPairsList[partition] = []
+			for faction1 in factions:
+				for faction2 in factions:
+					if ((faction1, faction2) not in FactionPairsList[partition]) and ((faction2, faction1) not in FactionPairsList[partition]):
+						FactionPairsList[partition].append((faction1, faction2))
+			InterfactionBetweennessEnsemble[partition] = dict()
+			for pair in FactionPairsList[partition]:
+				InterfactionBetweennessEnsemble[partition][pair] = dict()
+				for character in CharacterNodes:
+					InterfactionBetweennessEnsemble[partition][pair][character] = []
+			FactionWorldBetweennessEnsemble[partition] = dict()
+			for faction in FactionCharactersMultiple[partition].keys():
+				FactionWorldBetweennessEnsemble[partition][faction] = dict()
+				for character in CharacterNodes:
+					FactionWorldBetweennessEnsemble[partition][faction][character] = []
 
 	############################
 
@@ -1717,7 +1867,7 @@ def NullModelEnsemble(datasettag, ensembletag, EpisodeDegreesTarget, CharacterDe
 		
 		print("Processing realization " + str(r+1) + " of " + str(NumberOfRealizations))
 		
-		CharacterDegrees, CharacterStrength, CharacterBetweenness, NumberOfLinks, InterfactionBetweenness, FactionWorldBetweenness, LinkWeights, LinkDegreeProduct, LinkBetweenness, EpisodeDegrees, EpisodeStrength, EpisodeBetweenness = BipartiteConfigurationModelRealization(EpisodeDegreesTarget, CharacterDegreesTarget, FactionCharacters, links, episodes)
+		CharacterDegrees, CharacterStrength, CharacterBetweenness, NumberOfLinks, InterfactionBetweenness, FactionWorldBetweenness, LinkWeights, LinkDegreeProduct, LinkBetweenness, EpisodeDegrees, EpisodeStrength, EpisodeBetweenness = BipartiteConfigurationModelRealization(EpisodeDegreesTarget, CharacterDegreesTarget, FactionCharactersMultiple, links, episodes)
 		
 		NumberOfLinksEnsemble.extend([NumberOfLinks])
 		for character in CharacterNodes:
@@ -1734,13 +1884,15 @@ def NullModelEnsemble(datasettag, ensembletag, EpisodeDegreesTarget, CharacterDe
 		#######################################################################################
 
 		if InterfactionBetweenness:
-			for pair in InterfactionBetweenness.keys():
-				for character in CharacterDegrees.keys():
-					InterfactionBetweennessEnsemble[pair][character].extend([InterfactionBetweenness[pair][character]])
+			for partition in list(FactionCharactersMultiple.keys()):
+				for pair in InterfactionBetweenness[partition].keys():
+					for character in CharacterDegrees.keys():
+						InterfactionBetweennessEnsemble[partition][pair][character].extend([InterfactionBetweenness[partition][pair][character]])
 		if FactionWorldBetweenness:
-			for faction in FactionCharacters.keys():
-				for character in CharacterDegrees:
-					FactionWorldBetweennessEnsemble[faction][character].extend([FactionWorldBetweenness[faction][character]])
+			for partition in list(FactionCharactersMultiple.keys()):
+				for faction in FactionCharactersMultiple[partition].keys():
+					for character in CharacterDegrees:
+						FactionWorldBetweennessEnsemble[partition][faction][character].extend([FactionWorldBetweenness[partition][faction][character]])
 
 		#######################################################################################
 
@@ -1789,18 +1941,22 @@ def NullModelEnsemble(datasettag, ensembletag, EpisodeDegreesTarget, CharacterDe
 	######################################
 
 	if InterfactionBetweennessEnsemble:
+#		for partition in list(FactionCharactersMultiple.keys()):	
 		if os.path.exists("../Outputs/" + datasettag + "/Objects/NullModelEnsembles/" + datasettag + "_" + ensembletag + "_Ensemble_InterfactionBetweenness.pkl"):
 			InterfactionBetweennessEnsemble0 = pk.load(open("../Outputs/" + datasettag + "/Objects/NullModelEnsembles/" + datasettag + "_" + ensembletag + "_Ensemble_InterfactionBetweenness.pkl","rb"))
-			for pair in InterfactionBetweennessEnsemble.keys():
-				for character in CharacterNodes:
-					InterfactionBetweennessEnsemble[pair][character].extend(InterfactionBetweennessEnsemble0[pair][character])
+			for partition in InterfactionBetweennessEnsemble.keys():
+				for pair in InterfactionBetweennessEnsemble[partition].keys():
+					for character in CharacterNodes:
+						InterfactionBetweennessEnsemble[partition][pair][character].extend(InterfactionBetweennessEnsemble0[partition][pair][character])
 		pk.dump( InterfactionBetweennessEnsemble, open("../Outputs/" + datasettag + "/Objects/NullModelEnsembles/" + datasettag + "_" + ensembletag + "_Ensemble_InterfactionBetweenness.pkl","wb"))
 	if FactionWorldBetweennessEnsemble:
+#		for partition in list(FactionCharactersMultiple.keys()):
 		if os.path.exists("../Outputs/" + datasettag + "/Objects/NullModelEnsembles/" + datasettag + "_" + ensembletag + "_Ensemble_FactionWorldBetweenness.pkl"):
 			FactionWorldBetweennessEnsemble0 = pk.load(open("../Outputs/" + datasettag + "/Objects/NullModelEnsembles/" + datasettag + "_" + ensembletag + "_Ensemble_FactionWorldBetweenness.pkl","rb"))
-			for faction in FactionWorldBetweennessEnsemble.keys():
-				for character in CharacterNodes:
-					FactionWorldBetweennessEnsemble[faction][character].extend(FactionWorldBetweennessEnsemble0[faction][character])
+			for partition in InterfactionBetweennessEnsemble.keys():
+				for faction in FactionWorldBetweennessEnsemble[partition].keys():
+					for character in CharacterNodes:
+						FactionWorldBetweennessEnsemble[partition][faction][character].extend(FactionWorldBetweennessEnsemble0[partition][faction][character])
 		pk.dump( FactionWorldBetweennessEnsemble, open("../Outputs/" + datasettag + "/Objects/NullModelEnsembles/" + datasettag + "_" + ensembletag + "_Ensemble_FactionWorldBetweenness.pkl","wb"))
 
 	#######################################
@@ -1957,38 +2113,48 @@ def NullModelEnsembleProcess(datasettag, ensembletag, CharacterDegrees, Characte
 	###################
 
 	if InterfactionBetweenness:
-		InterfactionBetweennessEnsemble = pk.load(open("../Outputs/" + datasettag + "/Objects/NullModelEnsembles/" + datasettag + "_" + ensembletag + "_Ensemble_InterfactionBetweenness.pkl","rb"))
 		InterfactionEnsembleMeans = dict()
 		InterfactionEnsembleSTD = dict()
 		InterfactionEnsembleSigma = dict()
-		for pair in InterfactionBetweenness.keys():
-			InterfactionEnsembleMeans[pair] = dict()
-			InterfactionEnsembleSTD[pair] = dict()
-			InterfactionEnsembleSigma[pair] = dict()
-			for character in CharacterNodes:
-				InterfactionEnsembleMeans[pair][character] = np.mean(InterfactionBetweennessEnsemble[pair][character])
-				InterfactionEnsembleSTD[pair][character] = np.std(InterfactionBetweennessEnsemble[pair][character])
-				if (InterfactionEnsembleSTD[pair][character] > 0 ):
-					InterfactionEnsembleSigma[pair][character] = np.divide(InterfactionBetweenness[pair][character] - InterfactionEnsembleMeans[pair][character],InterfactionEnsembleSTD[pair][character])
-				else:
-					InterfactionEnsembleSigma[pair][character] = 0
-		
+		InterfactionBetweennessEnsemble = pk.load(open("../Outputs/" + datasettag + "/Objects/NullModelEnsembles/" + datasettag + "_" + ensembletag + "_Ensemble_InterfactionBetweenness.pkl","rb"))
+
+		for partition in InterfactionBetweenness.keys():
+			InterfactionEnsembleMeans[partition] = dict()
+			InterfactionEnsembleSTD[partition] = dict()
+			InterfactionEnsembleSigma[partition] = dict()
+			for pair in InterfactionBetweenness[partition].keys():
+				InterfactionEnsembleMeans[partition][pair] = dict()
+				InterfactionEnsembleSTD[partition][pair] = dict()
+				InterfactionEnsembleSigma[partition][pair] = dict()
+				for character in CharacterNodes:
+					InterfactionEnsembleMeans[partition][pair][character] = np.mean(InterfactionBetweennessEnsemble[partition][pair][character])
+					InterfactionEnsembleSTD[partition][pair][character] = np.std(InterfactionBetweennessEnsemble[partition][pair][character])
+					if (InterfactionEnsembleSTD[partition][pair][character] > 0 ):
+						InterfactionEnsembleSigma[partition][pair][character] = np.divide(InterfactionBetweenness[partition][pair][character] - InterfactionEnsembleMeans[partition][pair][character],InterfactionEnsembleSTD[partition][pair][character])
+					else:
+						InterfactionEnsembleSigma[partition][pair][character] = 0
+			
 	if FactionWorldBetweenness:
 		FactionWorldBetweennessEnsemble = pk.load(open("../Outputs/" + datasettag + "/Objects/NullModelEnsembles/" + datasettag + "_" + ensembletag + "_Ensemble_FactionWorldBetweenness.pkl","rb"))
 		FactionWorldEnsembleMeans = dict()
 		FactionWorldEnsembleSTD = dict()
 		FactionWorldEnsembleSigma = dict()
-		for faction in FactionWorldBetweenness.keys():
-			FactionWorldEnsembleMeans[faction] = dict()
-			FactionWorldEnsembleSTD[faction] = dict()
-			FactionWorldEnsembleSigma[faction] = dict()
-			for character in CharacterNodes:
-				FactionWorldEnsembleMeans[faction][character] = np.mean(FactionWorldBetweennessEnsemble[faction][character])
-				FactionWorldEnsembleSTD[faction][character] = np.std(FactionWorldBetweennessEnsemble[faction][character])
-				if (FactionWorldEnsembleSTD[faction][character] > 0 ):
-					FactionWorldEnsembleSigma[faction][character] = np.divide(FactionWorldBetweenness[faction][character] - FactionWorldEnsembleMeans[faction][character],FactionWorldEnsembleSTD[faction][character])
-				else:
-					FactionWorldEnsembleSigma[faction][character] = 0
+		for partition in FactionWorldBetweenness.keys():
+			FactionWorldEnsembleMeans[partition] = dict()
+			FactionWorldEnsembleSTD[partition] = dict()
+			FactionWorldEnsembleSigma[partition] = dict()
+			for faction in FactionWorldBetweenness[partition].keys():
+				FactionWorldEnsembleMeans[partition][faction] = dict()
+				FactionWorldEnsembleSTD[partition][faction] = dict()
+				FactionWorldEnsembleSigma[partition][faction] = dict()
+				for character in CharacterNodes:
+					FactionWorldEnsembleMeans[partition][faction][character] = np.mean(FactionWorldBetweennessEnsemble[partition][faction][character])
+					FactionWorldEnsembleSTD[partition][faction][character] = np.std(FactionWorldBetweennessEnsemble[partition][faction][character])
+					if (FactionWorldEnsembleSTD[partition][faction][character] > 0 ):
+						print(FactionWorldBetweenness[partition][faction][character])
+						FactionWorldEnsembleSigma[partition][faction][character] = np.divide(FactionWorldBetweenness[partition][faction][character] - FactionWorldEnsembleMeans[partition][faction][character],FactionWorldEnsembleSTD[partition][faction][character])
+					else:
+						FactionWorldEnsembleSigma[partition][faction][character] = 0
 
 	###################
 	#oooooooooooooooooo
@@ -2105,53 +2271,55 @@ def NullModelEnsembleProcess(datasettag, ensembletag, CharacterDegrees, Characte
 
 	if InterfactionBetweenness:
 
-		try:
-			os.makedirs("../Outputs/" + datasettag + "/InterfactionBetweenness/")
-		except OSError as exception:
-			if exception.errno != errno.EEXIST:
-				raise
-		for pair in InterfactionBetweenness.keys():
+		for partition in InterfactionBetweenness.keys():
 
-			Pvalues = dict()
-			for character in CharacterNodes:
+			try:
+				os.makedirs("../Outputs/" + datasettag + "/InterfactionBetweenness/")
+			except OSError as exception:
+				if exception.errno != errno.EEXIST:
+					raise
+			for pair in InterfactionBetweenness[partition].keys():
 
-				if (np.max(np.max(InterfactionBetweennessEnsemble[pair][character]),2*InterfactionBetweenness[pair][character]) > 0):
-					bins = np.linspace(0,np.max(np.max(InterfactionBetweennessEnsemble[pair][character]),2*InterfactionBetweenness[pair][character]),30, endpoint = True)
-					freaq= plt.hist(InterfactionBetweennessEnsemble[pair][character], bins)
-					#plt.close()
-					#plt.figure(14)
-					#bincenters = 0.5*(bins[1:]+bins[:-1])
-					#totalfreq = np.sum(freaq[0])
-					cumsumkasar = np.concatenate(([0],list(np.cumsum(freaq[0]))))
-					#plt.plot(bins, cumsumkasar)
-					binshalus = np.linspace(np.min(0),np.max(bins),1000, endpoint = True)
-					cumsumhalus = interpolate.pchip_interpolate(bins, cumsumkasar, binshalus)
-					cumsumhalusn = [np.divide(c, np.max(cumsumhalus)) for c in cumsumhalus]
-					aindec = list(binshalus).index(min(binshalus, key=lambda x:abs(x-InterfactionBetweenness[pair][character])))
-					pval = (cumsumhalusn[aindec])
-					#plt.plot(binshalus, cumsumhalusn)
-					#plt.plot([InterfactionBetweenness[pair][character], InterfactionBetweenness[pair][character]],[0, 1],'r-')
-					#plt.plot([binshalus[aindec], binshalus[aindec]],[0, 1],'g-')
-					#plt.pause(0.1)
-					plt.close()
-					#plt.plot([CharacterBetweenness[character]],[.5],'ro')
-					Pvalues[character] = pval
-					#print(pval)
-				else:
-					Pvalues[character] = -1.0
-				#plt.show()
+				Pvalues = dict()
+				for character in CharacterNodes:
 
-			ifbr = open("../Outputs/" + datasettag + "/InterfactionBetweenness/" + pair[0] + pair[1] + "InterfactionBetweennessRankings" + ensembletag + str(EnsembleSize) + ".csv" , 'w')
-			ifbr.write("Character,Number of occurrences,Node strength," + pair[0] + "-" + pair[1] + " Betweenness centrality,Ensemble Mean " + pair[0] + "-" + pair[1] + " Betweenness centrality, Ensemble Mean Standard Deviation, Sigmas from mean, P-value\n")
-			for character in sorted(InterfactionEnsembleSigma[pair].keys(), key=lambda x: InterfactionEnsembleSigma[pair][x], reverse = True):
-				ifbr.write(character + "," + str(CharacterDegrees[character]) + "," + str(CharacterStrengths[character]) + "," + str(InterfactionBetweenness[pair][character]) + "," + str(InterfactionEnsembleMeans[pair][character]) + "," + str(InterfactionEnsembleSTD[pair][character]) + "," + str(InterfactionEnsembleSigma[pair][character]) + "\n")
-			ifbr.close()
+					if (np.max(np.max(InterfactionBetweennessEnsemble[partition][pair][character]),2*InterfactionBetweenness[partition][pair][character]) > 0):
+						bins = np.linspace(0,np.max(np.max(InterfactionBetweennessEnsemble[partition][pair][character]),2*InterfactionBetweenness[partition][pair][character]),30, endpoint = True)
+						freaq= plt.hist(InterfactionBetweennessEnsemble[partition][pair][character], bins)
+						#plt.close()
+						#plt.figure(14)
+						#bincenters = 0.5*(bins[1:]+bins[:-1])
+						#totalfreq = np.sum(freaq[0])
+						cumsumkasar = np.concatenate(([0],list(np.cumsum(freaq[0]))))
+						#plt.plot(bins, cumsumkasar)
+						binshalus = np.linspace(np.min(0),np.max(bins),1000, endpoint = True)
+						cumsumhalus = interpolate.pchip_interpolate(bins, cumsumkasar, binshalus)
+						cumsumhalusn = [np.divide(c, np.max(cumsumhalus)) for c in cumsumhalus]
+						aindec = list(binshalus).index(min(binshalus, key=lambda x:abs(x-InterfactionBetweenness[partition][pair][character])))
+						pval = (cumsumhalusn[aindec])
+						#plt.plot(binshalus, cumsumhalusn)
+						#plt.plot([InterfactionBetweenness[pair][character], InterfactionBetweenness[pair][character]],[0, 1],'r-')
+						#plt.plot([binshalus[aindec], binshalus[aindec]],[0, 1],'g-')
+						#plt.pause(0.1)
+						plt.close()
+						#plt.plot([CharacterBetweenness[character]],[.5],'ro')
+						Pvalues[character] = pval
+						#print(pval)
+					else:
+						Pvalues[character] = -1.0
+					#plt.show()
 
-			ifbr = open("../Outputs/" + datasettag + "/InterfactionBetweenness/" + pair[0] + pair[1] + "NEWInterfactionBetweennessRankings" + ensembletag + str(EnsembleSize) + ".csv" , 'w')
-			ifbr.write("Character,Number of occurrences,Node strength," + pair[0] + "-" + pair[1] + " Betweenness centrality,Ensemble Mean " + pair[0] + "-" + pair[1] + " Betweenness centrality, Ensemble Mean Standard Deviation, Sigmas from mean\n")
-			for character in sorted(InterfactionEnsembleSigma[pair].keys(), key=lambda x: (Pvalues[x], InterfactionEnsembleSigma[pair][x]), reverse = True):
-				ifbr.write(character + "," + str(CharacterDegrees[character]) + "," + str(CharacterStrengths[character]) + "," + str(InterfactionBetweenness[pair][character]) + "," + str(InterfactionEnsembleMeans[pair][character]) + "," + str(InterfactionEnsembleSTD[pair][character]) + "," + str(InterfactionEnsembleSigma[pair][character]) + "," + str(Pvalues[character]) + "\n")
-			ifbr.close()
+				ifbr = open("../Outputs/" + datasettag + "/InterfactionBetweenness/" + pair[0].strip(" ") + pair[1].strip(" ") + "InterfactionBetweennessRankingsPartition" + str(partition) + ensembletag + str(EnsembleSize) + ".csv" , 'w')
+				ifbr.write("Character,Number of occurrences,Node strength," + pair[0] + "-" + pair[1] + " Betweenness centrality,Ensemble Mean " + pair[0] + "-" + pair[1] + " Betweenness centrality, Ensemble Mean Standard Deviation, Sigmas from mean, P-value\n")
+				for character in sorted(InterfactionEnsembleSigma[partition][pair].keys(), key=lambda x: InterfactionEnsembleSigma[partition][pair][x], reverse = True):
+					ifbr.write(character + "," + str(CharacterDegrees[character]) + "," + str(CharacterStrengths[character]) + "," + str(InterfactionBetweenness[partition][pair][character]) + "," + str(InterfactionEnsembleMeans[partition][pair][character]) + "," + str(InterfactionEnsembleSTD[partition][pair][character]) + "," + str(InterfactionEnsembleSigma[partition][pair][character]) + "\n")
+				ifbr.close()
+
+				ifbr = open("../Outputs/" + datasettag + "/InterfactionBetweenness/" + pair[0].strip(" ") + pair[1].strip(" ") + "NEWInterfactionBetweennessRankingsPartition" + str(partition) + ensembletag + str(EnsembleSize) + ".csv" , 'w')
+				ifbr.write("Character,Number of occurrences,Node strength," + pair[0] + "-" + pair[1] + " Betweenness centrality,Ensemble Mean " + pair[0] + "-" + pair[1] + " Betweenness centrality, Ensemble Mean Standard Deviation, Sigmas from mean\n")
+				for character in sorted(InterfactionEnsembleSigma[partition][pair].keys(), key=lambda x: (Pvalues[x], InterfactionEnsembleSigma[partition][pair][x]), reverse = True):
+					ifbr.write(character + "," + str(CharacterDegrees[character]) + "," + str(CharacterStrengths[character]) + "," + str(InterfactionBetweenness[partition][pair][character]) + "," + str(InterfactionEnsembleMeans[partition][pair][character]) + "," + str(InterfactionEnsembleSTD[partition][pair][character]) + "," + str(InterfactionEnsembleSigma[partition][pair][character]) + "," + str(Pvalues[character]) + "\n")
+				ifbr.close()
 
 	if FactionWorldBetweenness:
 		try:
@@ -2159,46 +2327,48 @@ def NullModelEnsembleProcess(datasettag, ensembletag, CharacterDegrees, Characte
 		except OSError as exception:
 			if exception.errno != errno.EEXIST:
 				raise
-		for faction in FactionWorldBetweenness.keys():
-			Pvalues = dict()
-			for character in CharacterNodes:
-				if (np.max(np.max(FactionWorldBetweennessEnsemble[faction][character]),2*FactionWorldBetweenness[faction][character]) > 0):
-					bins = np.linspace(0,np.max(np.max(FactionWorldBetweennessEnsemble[faction][character]),2*FactionWorldBetweenness[faction][character]),30, endpoint = True)
-					freaq= plt.hist(FactionWorldBetweennessEnsemble[faction][character], bins)
-					#plt.close()
-					#plt.figure(14)
-					#bincenters = 0.5*(bins[1:]+bins[:-1])
-					#totalfreq = np.sum(freaq[0])
-					cumsumkasar = np.concatenate(([0],list(np.cumsum(freaq[0]))))
-					#plt.plot(bins, cumsumkasar)
-					binshalus = np.linspace(np.min(0),np.max(bins),1000, endpoint = True)
-					cumsumhalus = interpolate.pchip_interpolate(bins, cumsumkasar, binshalus)
-					cumsumhalusn = [np.divide(c, np.max(cumsumhalus)) for c in cumsumhalus]
-					aindec = list(binshalus).index(min(binshalus, key=lambda x:abs(x-FactionWorldBetweenness[faction][character])))
-					pval = (cumsumhalusn[aindec])
-					#plt.plot(binshalus, cumsumhalusn)
-					#plt.plot([FactionWorldBetweenness[faction][character], FactionWorldBetweenness[faction][character]],[0, 1],'r-')
-					#plt.plot([binshalus[aindec], binshalus[aindec]],[0, 1],'g-')
-					#plt.pause(0.1)
-					#plt.close()
-					#plt.plot([CharacterBetweenness[character]],[.5],'ro')
-					Pvalues[character] = pval
-					#print(pval)
-				else:
-					Pvalues[character] = -1.0
-				#plt.show()
 
-			fwbr = open("../Outputs/" + datasettag + "/FactionWorldBetweenness/" + faction + "FactionWorldBetweennessRankings" + ensembletag + str(EnsembleSize) + ".csv" , 'w')
-			fwbr.write("Characters,Number of occurrences,Node strength," + faction + "-World Betweenness centrality,Ensemble Mean " + faction + "-World Betweenness centrality, Ensemble Mean Standard Deviation, Sigmas from mean\n")
-			for character in sorted(FactionWorldEnsembleSigma[faction].keys(), key=lambda x: FactionWorldEnsembleSigma[faction][x], reverse = True):
-				fwbr.write(character + "," + str(CharacterDegrees[character]) + "," + str(CharacterStrengths[character]) + "," + str(FactionWorldBetweenness[faction][character]) + "," + str(FactionWorldEnsembleMeans[faction][character]) + "," + str(FactionWorldEnsembleSTD[faction][character]) + "," + str(FactionWorldEnsembleSigma[faction][character]) + "\n")
-			fwbr.close
+		for partition in FactionWorldBetweenness.keys():
+			for faction in FactionWorldBetweenness[partition].keys():
+				Pvalues = dict()
+				for character in CharacterNodes:
+					if (np.max(np.max(FactionWorldBetweennessEnsemble[partition][faction][character]),2*FactionWorldBetweenness[partition][faction][character]) > 0):
+						bins = np.linspace(0,np.max(np.max(FactionWorldBetweennessEnsemble[partition][faction][character]),2*FactionWorldBetweenness[partition][faction][character]),30, endpoint = True)
+						freaq= plt.hist(FactionWorldBetweennessEnsemble[partition][faction][character], bins)
+						#plt.close()
+						#plt.figure(14)
+						#bincenters = 0.5*(bins[1:]+bins[:-1])
+						#totalfreq = np.sum(freaq[0])
+						cumsumkasar = np.concatenate(([0],list(np.cumsum(freaq[0]))))
+						#plt.plot(bins, cumsumkasar)
+						binshalus = np.linspace(np.min(0),np.max(bins),1000, endpoint = True)
+						cumsumhalus = interpolate.pchip_interpolate(bins, cumsumkasar, binshalus)
+						cumsumhalusn = [np.divide(c, np.max(cumsumhalus)) for c in cumsumhalus]
+						aindec = list(binshalus).index(min(binshalus, key=lambda x:abs(x-FactionWorldBetweenness[partition][faction][character])))
+						pval = (cumsumhalusn[aindec])
+						#plt.plot(binshalus, cumsumhalusn)
+						#plt.plot([FactionWorldBetweenness[faction][character], FactionWorldBetweenness[faction][character]],[0, 1],'r-')
+						#plt.plot([binshalus[aindec], binshalus[aindec]],[0, 1],'g-')
+						#plt.pause(0.1)
+						#plt.close()
+						#plt.plot([CharacterBetweenness[character]],[.5],'ro')
+						Pvalues[character] = pval
+						#print(pval)
+					else:
+						Pvalues[character] = -1.0
+					#plt.show()
 
-			fwbr = open("../Outputs/" + datasettag + "/FactionWorldBetweenness/" + faction + "FactionWorldNEWBetweennessRankings" + ensembletag + str(EnsembleSize) + ".csv" , 'w')
-			fwbr.write("Characters,Number of occurrences,Node strength," + faction + "-World Betweenness centrality,Ensemble Mean " + faction + "-World Betweenness centrality, Ensemble Mean Standard Deviation, Sigmas from mean, P-value\n")
-			for character in sorted(FactionWorldEnsembleSigma[faction].keys(), key=lambda x: (Pvalues[x], FactionWorldEnsembleSigma[faction][x]), reverse = True):
-				fwbr.write(character + "," + str(CharacterDegrees[character]) + "," + str(CharacterStrengths[character]) + "," + str(FactionWorldBetweenness[faction][character]) + "," + str(FactionWorldEnsembleMeans[faction][character]) + "," + str(FactionWorldEnsembleSTD[faction][character]) + "," + str(FactionWorldEnsembleSigma[faction][character]) + "," + str(Pvalues[character]) + "\n")
-			fwbr.close
+				fwbr = open("../Outputs/" + datasettag + "/FactionWorldBetweenness/" + faction.strip(" ") + "FactionWorldBetweennessRankingsPartition" + str(partition) + ensembletag + str(EnsembleSize) + ".csv" , 'w')
+				fwbr.write("Characters,Number of occurrences,Node strength," + faction + "-World Betweenness centrality,Ensemble Mean " + faction + "-World Betweenness centrality, Ensemble Mean Standard Deviation, Sigmas from mean\n")
+				for character in sorted(FactionWorldEnsembleSigma[partition][faction].keys(), key=lambda x: FactionWorldEnsembleSigma[partition][faction][x], reverse = True):
+					fwbr.write(character + "," + str(CharacterDegrees[character]) + "," + str(CharacterStrengths[character]) + "," + str(FactionWorldBetweenness[partition][faction][character]) + "," + str(FactionWorldEnsembleMeans[partition][faction][character]) + "," + str(FactionWorldEnsembleSTD[partition][faction][character]) + "," + str(FactionWorldEnsembleSigma[partition][faction][character]) + "\n")
+				fwbr.close
+
+				fwbr = open("../Outputs/" + datasettag + "/FactionWorldBetweenness/" + faction.strip(" ") + "FactionWorldNEWBetweennessRankingsPartition" + str(partition) + ensembletag + str(EnsembleSize) + ".csv" , 'w')
+				fwbr.write("Characters,Number of occurrences,Node strength," + faction + "-World Betweenness centrality,Ensemble Mean " + faction + "-World Betweenness centrality, Ensemble Mean Standard Deviation, Sigmas from mean, P-value\n")
+				for character in sorted(FactionWorldEnsembleSigma[partition][faction].keys(), key=lambda x: (Pvalues[x], FactionWorldEnsembleSigma[partition][faction][x]), reverse = True):
+					fwbr.write(character + "," + str(CharacterDegrees[character]) + "," + str(CharacterStrengths[character]) + "," + str(FactionWorldBetweenness[partition][faction][character]) + "," + str(FactionWorldEnsembleMeans[partition][faction][character]) + "," + str(FactionWorldEnsembleSTD[partition][faction][character]) + "," + str(FactionWorldEnsembleSigma[partition][faction][character]) + "," + str(Pvalues[character]) + "\n")
+				fwbr.close
 
 	#############################
 	#oooooooooooooooooooooooooooo
@@ -3109,8 +3279,6 @@ def WeightedGraphDensity(G):
 
 	EdgeWeights = [G[edge[0]][edge[1]]['weight'] for edge in G.edges()]
 	EdgeWeightSum = np.sum(EdgeWeights)
-	print(len(EdgeWeights))
-	print(EdgeWeightSum)
 	N = len(G.nodes())
 	Density = np.divide(2*EdgeWeightSum, N*(N-1))
 

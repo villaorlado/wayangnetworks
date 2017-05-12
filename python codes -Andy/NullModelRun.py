@@ -79,12 +79,13 @@ for edge in GI.edges():
 # 	ibs.write(character + "," + "\n")#," + str(factioneccentricity[faction]) + "," + str(factioncloseness[faction]) + "\n")
 # ibs.close()	
 
-CharacterFactions, FactionCharacters = co.LoadFactions(datasettag)
+#CharacterFactions, FactionCharacters = co.LoadFactions(datasettag)
+CharacterFactions, FactionCharacters = co.LoadFactionsMultiple(datasettag)
 
 # CharacterFactions = co.CharacterFactionAffiliations(datasettag)
 # FactionCharacters = co.FactionCharacterLists(CharacterFactions)
-InterfactionBetweenness = co.LoadInterfactionBetweenness(datasettag)#co.InterfactionBetweennessCentrality(GI, FactionCharacters)
-FactionWorldBetweenness = co.LoadFactionWorldBetweenness(datasettag)#co.FactionWorldBetweennessCentrality(GI, FactionCharacters)
+InterfactionBetweenness = co.LoadInterfactionBetweennessMultiple(datasettag)#co.InterfactionBetweennessCentrality(GI, FactionCharacters)
+FactionWorldBetweenness = co.LoadFactionWorldBetweennessMultiple(datasettag)#co.FactionWorldBetweennessCentrality(GI, FactionCharacters)
 
 ##########################################################
 
