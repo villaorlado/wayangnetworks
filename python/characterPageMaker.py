@@ -40,8 +40,11 @@ for num in range(1,sh.nrows):
 for num in range(1,sh.nrows):
 	
 	name = sh.cell_value(rowx=num, colx=0)
-	html = "<html><head><title>" + name + "</title></head>"
-	html += "<br/><h1>" + name + "</h1></p>"
+	html = open("htmlfragments/heather.txt").read()
+	html += name 
+	html += open("htmlfragments/html1.html").read()
+	
+	html += "<p><h1>" + name + "</h1></p>"
 	html += makeHtml("Alternative names", 7)
 	html += makeHtml("Terms of address", 3)
 	html += makeHtml("Kalangan", 2)
@@ -52,17 +55,22 @@ for num in range(1,sh.nrows):
 	html += makeHtml("Siblings", 11)
 	html += makeHtml("Spouses", 12)
 	html += makeHtml("Ruler of", 14)
-	
-	#text file for network display
-	text = ""
-	text += html
-	text += makeLakonHtml2()
 	html += makeLakonHtml()
 	html += makeHtml("Degree in canoncial only network", 17)
 	html += makeHtml("Degree in canonical and disguised network", 18)
 	html += makeHtml("Difference in degree ", 19)
 	html += "<p><img src=images/" + name + ".png>"
-	
+	html += open("htmlfragments/html2.html").read()
+
+	#text file for network display
+	text = ""
+	text += "<p><h1>" + name + "</h1></p>"
+	text += makeHtml("Alternative names", 7)
+	text += makeHtml("Terms of address", 3)
+	text += makeHtml("Kalangan", 2)
+	text += makeHtml("Description", 6)
+	text += makeLakonHtml2()
+
 	#this is for the factions file
 	factions += name + "," + sh.cell_value(rowx=num, colx=2) + "," + sh.cell_value(rowx=num, colx=4) + "," + sh.cell_value(rowx=num, colx=1) + "\n"
 	
@@ -97,3 +105,4 @@ for num in range(1,sh.nrows):
 
 with open("../output/processedData/factions.txt","w") as file:
 		file.write(factions)
+

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Canonical Only Network</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/shop-item.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <style>
+        #sigma-container{
+          top:0px;
+          left:0px;
+          width:800px;
+          height:800px;
+          border:1px solid black;
+          /*position:absolute;*/
+        }
+
+        #explanation{
+          position:relative;
+          /*top:10px;
+          right:40px;
+          width:300px;
+          border:2px solid black;
+          padding:10px;
+          box-shadow: 10px 10px 10px grey;;
+          background-color:white;
+          display:none;
+          z-index:3000;*/
+        }
+    </style>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../index.html">Quantitative Wayang Dictionary</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <p class="lead">Quantiative Wayang Dictionary</p>
+                    <!--img src="../img/logo.jpg"></img-->
+
+                    Click on a character for a description
+                    <div id="explanation"></div>
+                </div>
+
+                <div class="col-md-9">
+
+                <div>
+                  <h1>Canonical Only Network</h1>
+                  <div id="sigma-container"></div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; <a href="http://miguelescobar.com">Miguel Escobar Varela</a> and Andy Schauf 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery and Sigma-->
+    <script src="js/jquery.js"></script>
+    <script src="sigma/sigma.js"></script>
+    <script src="sigma/plugins/sigma.parsers.gexf.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    sigma.classes.graph.addMethod('neighbors', function(nodeId) {
+       var k,
+           neighbors = {},
+           index = this.allNeighborsIndex[nodeId] || {};
+
+       for (k in index)
+         neighbors[k] = this.nodesIndex[k];
+
+       return neighbors;
+     });
+
+      sigma.parsers.gexf(
+        'data/wayang.gexf',
+        { // Here is the ID of the DOM element that
+          // will contain the graph:
+          container: 'sigma-container'
+        },
+        function(s) {
+          // This function will be executed when the
+          // graph is displayed, with "s" the related
+          // sigma instance.
+          s.graph.nodes().forEach(function(n) {
+            n.originalColor = n.color;
+          });
+          s.graph.edges().forEach(function(e) {
+            e.originalColor = e.color;
+          });
+
+          // When a node is clicked, we check for each node
+          // if it is a neighbor of the clicked one. If not,
+          // we set its color as grey, and else, it takes its
+          // original color.
+          // We do the same for the edges, and we only keep
+          // edges that have both extremities colored.
+          s.bind('clickNode', function(e) {
+            var nodeId = e.data.node.id,
+                toKeep = s.graph.neighbors(nodeId),
+                explanation = "<b><a href='characterPages/" + e.data.node.label + ".html'>" + e.data.node.label + "</a></b>",
+                linkedCharacters = [];
+            toKeep[nodeId] = e.data.node;
+
+            s.graph.nodes().forEach(function(n) {
+              if (toKeep[n.id]){
+                n.color = n.originalColor;
+                linkedCharacters.push(n.id);
+              }
+              else{
+                n.color = '#eee';
+              }
+            });
+
+            //modularity_class, componentnumber, clustering, Triangles, newClusteringCoefficient, eigencentrality
+            //explanation += JSON.stringify(e.data.node.attributes);
+
+            //explanation += $.load("characterPages/" + e.data.node.label + ".txt");
+            //$.get(("characterPages/" + e.data.node.label + ".txt"), function (data){alert(JSON.stringify(data));});
+
+            $.ajax({url: "characterPages/" + e.data.node.label + ".txt", success: function(result){
+            //  alert("a");
+              explanation += result;
+              explanation += "<p><br/>Degree: " + e.data.node.attributes.degree;
+              explanation += "<br/>Weighted degree: " + e.data.node.attributes["weighted degree"];
+              explanation += "<br/>Eccentricity: " + e.data.node.attributes.eccentricity;
+              explanation += "<br/>Closness centrality: " + parseFloat(e.data.node.attributes.closnesscentrality).toFixed(2);
+              explanation += "<br/>Betweeness centrality: " + e.data.node.attributes.betweenesscentrality.toFixed(2);
+              explanation += "<br/>Clustering: " + e.data.node.attributes.clustering.toFixed(2);
+              //explanation += "<br/>Linked to: " + (linkedCharacters.length -1 )  + " characters";
+              $("#explanation").html(explanation);
+              $("#explanation").show();
+            }});
+
+            s.graph.edges().forEach(function(e) {
+              if (toKeep[e.source] && toKeep[e.target]){
+                e.color = e.originalColor;
+                //explanation += JSON.stringify(e);
+                //explanation += e.source;
+              }
+              else{
+                e.color = '#eee';
+              }
+              //if (toKeep[e.source] && toKeep[e.target])
+            });
+
+
+
+            // Since the data has been modified, we need to
+            // call the refresh method to make the colors
+            // update effective.
+            s.refresh();
+          });
+
+          // When the stage is clicked, we just color each
+          // node and edge with its original color.
+          s.bind('clickStage', function(e) {
+            s.graph.nodes().forEach(function(n) {
+              n.color = n.originalColor;
+            });
+
+            s.graph.edges().forEach(function(e) {
+              e.color = e.originalColor;
+            });
+
+            // Same as in the previous event:
+            s.refresh();
+          });
+        }
+      );
+    </script>
+
+</body>
+
+</html>

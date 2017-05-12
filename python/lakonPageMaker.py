@@ -12,6 +12,9 @@ lakons = re.split(r"[//]\d+ ",narratives);
 for x in range (1, len(lakons)):
 	lines = lakons[x].splitlines()
 	title = re.sub("#","",lines[0])
+	html = open("htmlfragments/heather.txt").read()
+	html += title
+	html += open("htmlfragments/html1.html").read()
 	text = ""
 	matches = re.findall(r'\[(\w*)\]', lakons[x])
 	characters = list(set(matches))
@@ -24,15 +27,19 @@ for x in range (1, len(lakons)):
 	for i in range(1, len(lines)):
 		text += lines[i]
 	text = re.sub(r'(<|>)', "", text)
-	text = re.sub(r'(\d+)', r"<p>\1", text)
+	text = re.sub(r'(\d+)', r"<p><b>\1</b>", text)
+	text = re.sub(r'([a-zA-Z -]+):([a-zA-Z]+)', r" <span class='badge'>\1</span> <b>\2</b>", text)
 	text = re.sub(r'\[(\w*)\]', r"<a href='../characterPages/\1.html'>\1</a>", text)
 	text = re.sub(r'\{(\w*)\}', r"<a href='../characterPages/\1.html'>\1</a>", text)
 	text = re.sub(r'\[(\w*)\]', r"<a href='../characterPages/\1.html'>\1</a>", text)
 	text = re.sub(r'\[(\w*)@\w+\]', r"<a href='../characterPages/\1.html'>\1</a>", text)
 	text = re.sub(r'\((\w*)\)', r"<a href='../characterPages/\1.html'>\1</a>", text)
 	text = re.sub(r'\((\w*)@\w+\)', r"<a href='../characterPages/\1.html'>\1</a>", text)
-	text = "<html><meta charset='UTF-8'>" + characterList + text + "</html>"
+	html += "<h1>" + title + "</h1>"
+	html += '<div class="well">' + characterList + '</div>' 
+	html += text 
+	html += open("htmlfragments/html2.html").read()
 	
 	with open("../html/lakonPages/" + title + ".html", "w") as file:
-		file.write(text.decode('utf-8').encode('utf-8'))
-
+		file.write(html.decode('utf-8').encode('utf-8'))
+		print title + " created"
