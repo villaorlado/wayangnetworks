@@ -13,6 +13,8 @@
 Nagatatmala</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/shop-item.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css"></link>
+
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -60,7 +62,21 @@ Nagatatmala</title>
             <div class="col-md-9">
 
                 <div>
-<p><h1>Nagatatmala</h1></p><p><b>Terms of address</b>: Raden<p><b>Kalangan</b>: Human<p><b>Description</b>: Son of Antaboga. Kisah ini menceritakan tentang Raden Nagatatmala putra Batara Anantaboga yang berani melarikan Dewi Mumpuni, istri Batara Yamadipati pada saat Kahyangan Suralaya menghadapi serbuan Prabu Karungkala, penjelmaan Batara Kalakutana. Raden Nagatatmala dan Dewi Mumpuni akhirnya mendapatkan perlindungan Prabu Wisnupati di Kerajaan Purwacarita.<p><b>Father</b>: Antaboga<p><b>Found in the follwing lakon </b>: <a href="../lakonPages/.html"></a>[<a href="../lakonPages/.html"></a>'<a href="../lakonPages/Bandung Nagasewu.html">Bandung Nagasewu</a>'<a href="../lakonPages/.html"></a>]<a href="../lakonPages/.html"></a><p><b>Degree in canoncial only network</b>: 23.0<p><b>Degree in canonical and disguised network</b>: 27.0<p><b>Difference in degree </b>: -4.0<p><img src=images/Nagatatmala.png></div>
+<p><h1>Nagatatmala</h1></p><p><b>Terms of address</b>: Raden<p><b>Kalangan</b>: Human<p><b>Description</b>: Son of Antaboga. Kisah ini menceritakan tentang Raden Nagatatmala putra Batara Anantaboga yang berani melarikan Dewi Mumpuni, istri Batara Yamadipati pada saat Kahyangan Suralaya menghadapi serbuan Prabu Karungkala, penjelmaan Batara Kalakutana. Raden Nagatatmala dan Dewi Mumpuni akhirnya mendapatkan perlindungan Prabu Wisnupati di Kerajaan Purwacarita.<p><b>Father</b>: Antaboga<p><b>Found in the follwing lakon </b>: <a href="../lakonPages/.html"></a>[<a href="../lakonPages/.html"></a>'<a href="../lakonPages/Bandung Nagasewu.html">Bandung Nagasewu</a>'<a href="../lakonPages/.html"></a>]<a href="../lakonPages/.html"></a><p><b>Degree in canoncial only network</b>: 23.0<p><b>Degree in canonical and disguised network</b>: 27.0<p><b>Difference in degree </b>: -4.0<p><img src=images/Nagatatmala.png><h3>Characters linked to Nagatatmala</h3><hr><table id="linktable" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Character</th>
+                <th>Link weight</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Character</th>
+                <th>Link weight</th>
+            </tr>
+        </tfoot>
+    </table>
+<script src="http://localhost/datatables/jquery-1.12.4.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function() {$("#linktable").DataTable({"ajax":"../data/json/Nagatatmala.txt"});});</script></div>
 
                
 
@@ -88,10 +104,11 @@ Nagatatmala</title>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
+    <!--script src="../js/jquery.js"></script-->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    
 
 </body>
 

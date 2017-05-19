@@ -99,3 +99,4 @@ for k,v in windowTypes.iteritems():
 		makeCSV(value2["dictionary"],str(k)+"_"+value2["fileName"])
 	with open("../output/" + k + ".txt", "w") as file:
 		file.write(windowList)
+	

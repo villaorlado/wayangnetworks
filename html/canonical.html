@@ -22,22 +22,12 @@
           top:0px;
           left:0px;
           width:800px;
-          height:800px;
-          border:1px solid black;
-          /*position:absolute;*/
+          height:550px;
+          box-shadow: 1px 1px 10px #999;
         }
 
         #explanation{
           position:relative;
-          /*top:10px;
-          right:40px;
-          width:300px;
-          border:2px solid black;
-          padding:10px;
-          box-shadow: 10px 10px 10px grey;;
-          background-color:white;
-          display:none;
-          z-index:3000;*/
         }
     </style>
 
@@ -130,10 +120,19 @@
      });
 
       sigma.parsers.gexf(
-        'data/wayang.gexf',
+        'data/canonical.gexf',
         { // Here is the ID of the DOM element that
           // will contain the graph:
-          container: 'sigma-container'
+          container: 'sigma-container',
+          settings: {
+          minNodeSize: 2,
+          maxNodeSize: 10,
+          /*minEdgeSize: 0.1,
+          maxEdgeSize: 1,
+          enableEdgeHovering: true,
+          edgeHoverSizeRatio: 2*/
+        }
+
         },
         function(s) {
           // This function will be executed when the
@@ -141,6 +140,7 @@
           // sigma instance.
           s.graph.nodes().forEach(function(n) {
             n.originalColor = n.color;
+            n.originalLabel = n.label;
           });
           s.graph.edges().forEach(function(e) {
             e.originalColor = e.color;
@@ -155,17 +155,18 @@
           s.bind('clickNode', function(e) {
             var nodeId = e.data.node.id,
                 toKeep = s.graph.neighbors(nodeId),
-                explanation = "<b><a href='characterPages/" + e.data.node.label + ".html'>" + e.data.node.label + "</a></b>",
-                linkedCharacters = [];
-            toKeep[nodeId] = e.data.node;
+                explanation = "<b><a href='characterPages/" + e.data.node.label + ".html'>" + e.data.node.label + "</a></b>";
+                toKeep[nodeId] = e.data.node;
 
             s.graph.nodes().forEach(function(n) {
               if (toKeep[n.id]){
                 n.color = n.originalColor;
-                linkedCharacters.push(n.id);
+                n.label = n.originalLabel;
               }
               else{
                 n.color = '#eee';
+                n.label = "";
+                console.log(n)
               }
             });
 
@@ -176,7 +177,7 @@
             //$.get(("characterPages/" + e.data.node.label + ".txt"), function (data){alert(JSON.stringify(data));});
 
             $.ajax({url: "characterPages/" + e.data.node.label + ".txt", success: function(result){
-            //  alert("a");
+
               explanation += result;
               explanation += "<p><br/>Degree: " + e.data.node.attributes.degree;
               explanation += "<br/>Weighted degree: " + e.data.node.attributes["weighted degree"];
@@ -214,6 +215,7 @@
           s.bind('clickStage', function(e) {
             s.graph.nodes().forEach(function(n) {
               n.color = n.originalColor;
+              n.label = n.originalLabel;
             });
 
             s.graph.edges().forEach(function(e) {

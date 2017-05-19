@@ -187,7 +187,6 @@ Bagong,Antaboga,Undirected,2
 Hagni,Gatotkaca,Undirected,1
 Ugrasena,Kangsa,Undirected,1
 Durna,LesmanaMurdaka,Undirected,1
-SuksmaLanggeng,Arjuna,Undirected,1
 Durna,FakeWerkudara,Undirected,1
 NemburNawa,Arjuna,Undirected,1
 Baladewa,Werkudara,Undirected,7
@@ -230,7 +229,6 @@ Bhisma,Nakula,Undirected,1
 Dewasrani,Bagong,Undirected,2
 Sekipu,Kresna,Undirected,1
 Duryudana,Antareja,Undirected,4
-Suparta,Bendana,Undirected,1
 DewaRuci,Kresna,Undirected,1
 Banowati,Hagni,Undirected,1
 Bomanarakasura,Puntadewa,Undirected,1
@@ -435,7 +433,6 @@ Arimbi,Gendari,Undirected,1
 Suparta,Duryudana,Undirected,1
 Durna,Pulunggana,Undirected,1
 Surya,Kresna,Undirected,1
-Karna,Angganjali,Undirected,1
 Setyaboma,Indra,Undirected,1
 Gatotkaca,Ramayadi,Undirected,1
 Surtikanthi,Basudewa,Undirected,1
@@ -551,7 +548,6 @@ Dewaki,Maerah,Undirected,2
 Bagong,Suparta,Undirected,1
 Petruk,Gendara,Undirected,1
 Raksasa,Wisnu,Undirected,1
-Anoman,SuksmaLanggeng,Undirected,1
 Bismaka,Narada,Undirected,2
 Kamajaya,Arjuna,Undirected,1
 Sugriwa,Gatotkaca,Undirected,1
@@ -691,7 +687,6 @@ LesmanaMandrakumara,Narada,Undirected,1
 Baladewa,Togog,Undirected,1
 Durna,Nagagini,Undirected,1
 Petruk,Madrim,Undirected,1
-Kartamarma,SuksmaLanggeng,Undirected,1
 TunggulWulung,Gatotkaca,Undirected,1
 Sengkuni,Petruk,Undirected,11
 Ugrasena,Salya,Undirected,2
@@ -882,7 +877,7 @@ Bagong,Dersanala,Undirected,1
 Guru,Surya,Undirected,1
 GagakBaka,Wenang,Undirected,1
 Saragupita,Rohini,Undirected,1
-Kresna,SuksmaLanggeng,Undirected,1
+Suparta,Bendana,Undirected,1
 Sadewa,Ramayadi,Undirected,1
 Bismaka,Maerah,Undirected,2
 Baladewa,Dhadhungawuk,Undirected,1
@@ -934,7 +929,6 @@ Duryudana,Lion,Undirected,1
 Banowati,Lion,Undirected,1
 Antaboga,Puntadewa,Undirected,2
 Surtikanthi,Arjuna,Undirected,1
-Wisnu,SuksmaLanggeng,Undirected,1
 Arimbi,Abiyasa,Undirected,1
 Werkudara,Prasara,Undirected,1
 Maruta,Anoman,Undirected,1
@@ -1260,7 +1254,6 @@ Brahma,Dersanala,Undirected,1
 Bagong,Rukmara,Undirected,1
 Guru,Bismaka,Undirected,2
 Sugriwa,Abimanyu,Undirected,1
-Sengkuni,SuksmaLanggeng,Undirected,1
 Sengkuni,LesmanaMurdaka,Undirected,1
 Abiyasa,Kuntiboja,Undirected,1
 Kartamarma,Indra,Undirected,3
@@ -1744,7 +1737,7 @@ Arjuna,Lion,Undirected,1
 YudaKalaKresna,Petruk,Undirected,1
 Angganjali,Gatotkaca,Undirected,1
 Arimbi,Baladewa,Undirected,2
-SuksmaLanggeng,Duryudana,Undirected,1
+Karna,Angganjali,Undirected,1
 Guru,Padmanaba,Undirected,1
 Wisanggeni,Puntadewa,Undirected,3
 Kunti,Arjuna,Undirected,3
@@ -1884,7 +1877,6 @@ Bagong,Bendana,Undirected,3
 Druwasa,Gendari,Undirected,1
 Semar,Dhamdharat,Undirected,1
 Pulunggana,Duryudana,Undirected,1
-Parasara,SuksmaLanggeng,Undirected,1
 Guru,Iswara,Undirected,1
 Gatotkaca,Yamadipati,Undirected,1
 Sadewa,Sri,Undirected,2
@@ -2047,7 +2039,6 @@ YudaKothi,Narada,Undirected,1
 Bisawarna,Ranu,Undirected,1
 Ugrasena,Druwasa,Undirected,1
 Samba,Nagagini,Undirected,1
-Kalika,Citrasena,Undirected,1
 Bagong,Badrahini,Undirected,2
 Anoman,Kresna,Undirected,12
 Wisanggeni,Pulungsari,Undirected,1
@@ -2367,7 +2358,7 @@ Gareng,Kanastren,Undirected,2
 Gatotkaca,Brajadhenta,Undirected,1
 Salya,Destarastra,Undirected,1
 KencanaWulan,Duryudana,Undirected,1
-SuksmaLanggeng,Werkudara,Undirected,1
+Kalika,Citrasena,Undirected,1
 FakeWerkudara,Duryudana,Undirected,1
 Bilung,Durga,Undirected,1
 Sadewa,Drestarastra,Undirected,1
@@ -2559,7 +2550,6 @@ Baladewa,Bagong,Undirected,8
 Resi,Brahma,Undirected,1
 RaraIreng,Indra,Undirected,1
 Samba,Wenang,Undirected,1
-Wenang,SuksmaLanggeng,Undirected,1
 Petruk,LesmanaMurdaka,Undirected,1
 Pujawati,Basudewa,Undirected,1
 Asmarawati,Dhandhang,Undirected,1
@@ -2584,7 +2574,6 @@ Bratajaya,Petruk,Undirected,1
 YudaKalaKresna,Narada,Undirected,1
 Baladewa,JayaBajra,Undirected,1
 Antakawulan,Barata,Undirected,1
-Banowati,SuksmaLanggeng,Undirected,1
 Antaboga,Wisanggeni,Undirected,1
 Prasara,Lion,Undirected,1
 Pujawati,NgembatLandeyan,Undirected,1
@@ -2785,7 +2774,7 @@ Karna,DewaRuci,Undirected,1
 Dewaki,Bagong,Undirected,2
 Wisanggeni,Brahma,Undirected,1
 Setyaki,Werkudara,Undirected,5
-Karna,SuksmaLanggeng,Undirected,1
+Durga,Baladewa,Undirected,1
 Wisanggeni,Indra,Undirected,2
 Bilung,Antaboga,Undirected,1
 Sadewa,Maheswara,Undirected,1
@@ -3026,7 +3015,6 @@ Karna,Antaboga,Undirected,1
 Suparta,Drestarastra,Undirected,1
 Sengkuni,Wisnu,Undirected,1
 Gareng,Nagagini,Undirected,1
-Durna,SuksmaLanggeng,Undirected,1
 Togog,Durga,Undirected,1
 Saragupita,Nagaprasanta,Undirected,1
 Arjuna,Gatotkaca,Undirected,10
@@ -3335,7 +3323,6 @@ YudaKalaKresna,Bagong,Undirected,1
 Durga,Pulungsari,Undirected,1
 Kunti,NemburNawa,Undirected,1
 Bagong,Antasena,Undirected,1
-Raksasa,SuksmaLanggeng,Undirected,1
 Wenang,Narada,Undirected,1
 Gareng,Pandu,Undirected,2
 Bayu,Gendari,Undirected,1
@@ -3345,7 +3332,6 @@ Kresna,JayaBajra,Undirected,1
 Abiyasa,DewaRuci,Undirected,1
 Garuda,Ratmuka,Undirected,1
 Semar,Asmarawati,Undirected,2
-Durga,Baladewa,Undirected,1
 Guru,Yamadipati,Undirected,1
 Gareng,Nakula,Undirected,10
 Kalika,Wisanggeni,Undirected,1

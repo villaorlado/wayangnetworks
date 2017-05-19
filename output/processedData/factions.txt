@@ -1,14 +1,14 @@
 Abimanyu,Human,India,Pandawa
-Angganjali,Human,Java?,
+Angganjali,Human,Java,
 Anoman,Animal,India,
-Antaboga,God,Java,
+Antaboga,God, Snake,Java,
 Antakawulan,Human,Java,
 Antareja,Human,Java,Pandawa
 Antasena,Human,Java,Pandawa
-Arimbi,Raksasa,India,
+Arimbi,Raksasa,India,Pandawa
 Arjuna,Human,India,Pandawa
 Asmarawati,Human,India,
-Badrahini,Heavenly Creature,Java,
+Badrahini,Human,Java,
 Bagaspati,Raksasa,Java,
 Bagong,Human,Java,Punokawan
 Bagus,Human,Java,
@@ -23,15 +23,15 @@ Bhisma,Human,India,
 Bilung,Human,Java,Punokawan
 Bisawarna,Human,Java,
 Bismaka,Human,India,
-Bomanarakasura,Human,India,Korawa
+Bomanarakasura,Human,India,Neutral
 Brajadhenta,Raksasa,Java,
 Iswara,God,India,
 Brajamusthi,Raksasa,Java,
 Brahma,God,India,
 Garuda,Animal,India,
-Abiyasa,Human,India,
+Abiyasa,Human,India,Pandawa
 Citrarata,Human,India,
-Citrasena,Heavenly Creature,India,
+Citrasena,God,India,
 Daryamaya,Raksasa,Java,
 Desamuka,Raksasa,India,
 Destarastra,Human,India,
@@ -41,23 +41,23 @@ Dhadhungawuk,Raksasa,Java,
 Dhamdharat,Demon,Java,
 Dhandhang,Demon,Java,
 Dhandhonwacana,Demon,Java,
-Dersanala,Heavenly Creature,Java,
-Drestarastra,Human,India,Ancestor
-KudaKalaKresna,Raksasa,India?,
+Dersanala,God,Java,
+Drestarastra,Human,India,
+KudaKalaKresna,Raksasa,Java,
 Drupadi,Human,India,
-Druwasa,Human,India,
+Druwasa,God,India,
 Durga,God,India,
 Durna,Human,India,Korawa
 Duryudana,Human,India,Korawa
 Maheswara,God,India?,
 Sambuh,God,India?,
 Erawati,Human,India,
-GagakBaka,Demon,Java,
+GagakBaka,Human,Java,
 Gareng,Human,Java,Punokawan
 Gatotkaca,Human,India,Pandawa
 Gendara,Human,Java,
 Gendari,Human,India,Ancestor
-Godhayitma,Raksasa,Java?,
+Godhayitma,Raksasa,Java,
 Gorawangsa,Raksasa,Java,
 Guru,God,India,
 Mahadewa,God,India?,
@@ -65,29 +65,29 @@ Hagni,Raksasa,Java,
 Indra,God,India,
 JayaBajra,Raksasa,Java,
 Jembawati,Human,India,
-Kalika,Demon,Java?,
+Kalika,Demon,Java,
 Kamajaya,God,India,
-Kanastren,Heavenly Creature,Java,
+Kanastren,God,Java,
 Kangsa,Human,India,
-Karna,Human,India,
+Karna,Human,India,Korawa
 Kartamarma,Human,India,Korawa
-Kartapiyoga,Raksasa,Java,
+Kartapiyoga,Human,Java,
 KencanaWulan,Human,Java,
-Kesawasidhi,Human,Java?,
+Kesawasidhi,Human,Java,
 Sangkara,God,India?,
 Kresna,Human,India,
 Kumbakarna,Raksasa,India,
-Kunti,Human,India,Ancestor
+Kunti,Human,India,
 Kuntiboja,Human,India,
 Kurandhayaksa,Raksasa,Java,
 LesmanaMandrakumara,Human,India,Korawa
 LesmanaMurdaka,Human,India,
-Madrim,Human,India,Ancestor
+Madrim,Human,India,
 Maerah,Human,,
 Mandrakeswara,Human,Java,
 Mangsahpati,Human,India,
 Maruta,Raksasa,Java,
-Nagagini,Animal,Java,
+Nagagini,God, Animal,Java,
 Nakula,Human,India,Pandawa
 Narada,Dewa,India,
 NemburNawa,Animal,India,

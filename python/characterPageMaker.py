@@ -1,15 +1,19 @@
 #!/usr/bin/env python2.7.11
 '''
 This file reads the excel sheet and generates a static page for each character.
+It also generates a list of linked characters.
 '''
 
 import re
 import xlrd # this is for reading the exisitng file
 import matplotlib.pyplot as plt
 import seaborn as sns
+import json
 
 book = xlrd.open_workbook("../input/charactersExpandedInfo.xlsx") #name of the file to open: charactersExpandedInfo.xlsx
 sh = book.sheet_by_index(0)
+
+edgeInfo = xlrd.open_workbook("../output/processedData/adegan_canonicalOnly_edgeInfo.xlsx").sheet_by_index(0)
 
 def makeHtml (header,column):
 	htmlString = ""
@@ -39,7 +43,13 @@ for num in range(1,sh.nrows):
 
 for num in range(1,sh.nrows):
 	
+	array = []
+	data = {}
+	matchedNum = 0
 	name = sh.cell_value(rowx=num, colx=0)
+	
+	print "Working on " + name
+	
 	html = open("htmlfragments/heather.txt").read()
 	html += name 
 	html += open("htmlfragments/html1.html").read()
@@ -60,6 +70,17 @@ for num in range(1,sh.nrows):
 	html += makeHtml("Degree in canonical and disguised network", 18)
 	html += makeHtml("Difference in degree ", 19)
 	html += "<p><img src=images/" + name + ".png>"
+	
+	
+	html += "<h3>Characters linked to %s</h3><hr>" %name
+	
+	html += open("htmlfragments/table.html").read()
+	
+	html += '<script src="http://localhost/datatables/jquery-1.12.4.js"></script>'
+
+	html += '<script src="../js/jquery.dataTables.min.js"></script>'
+	html += '<script>$(document).ready(function() {$("#linktable").DataTable({"ajax":"../data/json/%s.txt"});});</script>' % name
+	
 	html += open("htmlfragments/html2.html").read()
 
 	#text file for network display
@@ -78,7 +99,8 @@ for num in range(1,sh.nrows):
 		file.write(html)
 	with open("../html/characterPages/" + name + ".txt", "w") as file:
 		file.write(text)
-		
+	
+	'''	
 	#making scatterplot image
 	plt.plot([0, 160], [0, 160], "b--")
 	plt.plot(normal, amemba, 'ko', alpha=0.4, markersize=7)
@@ -102,7 +124,25 @@ for num in range(1,sh.nrows):
 	
 	sns.distplot(normal, hist=False, rug=False);
 	plt.savefig("../html/characterPages/images/" + name + "normal.png")
-
+	'''
+	for x in range(1,edgeInfo.nrows):
+		
+		if(edgeInfo.cell_value(rowx=x, colx=0) == name):
+			array.append([])
+			array[matchedNum].append(edgeInfo.cell_value(rowx=x, colx=1))
+			array[matchedNum].append(str(int(edgeInfo.cell_value(rowx=x, colx=2))))
+			matchedNum += 1
+		if(edgeInfo.cell_value(rowx=x, colx=1) == name):
+			array.append([])
+			array[matchedNum].append(edgeInfo.cell_value(rowx=x, colx=0))
+			array[matchedNum].append(str(int(edgeInfo.cell_value(rowx=x, colx=2))))
+			matchedNum += 1
+			
+	data['data'] = array
+	json_data = json.dumps(data)
+	with open("../html/data/json/%s.txt" % name,"w") as file:
+		file.write(json_data)
+	
 with open("../output/processedData/factions.txt","w") as file:
 		file.write(factions)
 

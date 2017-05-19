@@ -1,0 +1,1 @@
+{"data": [["Werkudara", "2"], ["Gatotkaca", "2"], ["Semar", "2"], ["Anoman", "1"], ["Kresna", "3"], ["Abimanyu", "2"], ["Setyaki", "1"], ["Bisawarna", "1"], ["Dhadhungawuk", "1"], ["Petruk", "1"], ["Duryudana", "1"], ["Samba", "1"], ["Baladewa", "2"], ["Gareng", "1"], ["Bagong", "1"], ["Arjuna", "2"], ["Sengkuni", "1"]]}

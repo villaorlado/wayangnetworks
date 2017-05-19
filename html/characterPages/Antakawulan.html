@@ -13,6 +13,8 @@
 Antakawulan</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/shop-item.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css"></link>
+
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -60,7 +62,21 @@ Antakawulan</title>
             <div class="col-md-9">
 
                 <div>
-<p><h1>Antakawulan</h1></p><p><b>Alternative names</b>: Rarawangen<p><b>Terms of address</b>: Dewi<p><b>Kalangan</b>: Human<p><b>Description</b>: Wife of Prabu Barata, king of Ayodya. Also bore a son of Ajuna. Also known as Rarawangen.<p><b>Spouses</b>: Barata, Arjuna<p><b>Found in the follwing lakon </b>: <a href="../lakonPages/.html"></a>[<a href="../lakonPages/.html"></a>'<a href="../lakonPages/Semar Boyong (Wahyu Katetreman).html">Semar Boyong (Wahyu Katetreman)</a>'<a href="../lakonPages/.html"></a>]<a href="../lakonPages/.html"></a><p><b>Degree in canoncial only network</b>: 27.0<p><b>Degree in canonical and disguised network</b>: 28.0<p><b>Difference in degree </b>: -1.0<p><img src=images/Antakawulan.png></div>
+<p><h1>Antakawulan</h1></p><p><b>Alternative names</b>: Rarawangen<p><b>Terms of address</b>: Dewi<p><b>Kalangan</b>: Human<p><b>Description</b>: Wife of Prabu Barata, king of Ayodya. Also bore a son of Ajuna. Also known as Rarawangen.<p><b>Spouses</b>: Barata, Arjuna<p><b>Found in the follwing lakon </b>: <a href="../lakonPages/.html"></a>[<a href="../lakonPages/.html"></a>'<a href="../lakonPages/Semar Boyong (Wahyu Katetreman).html">Semar Boyong (Wahyu Katetreman)</a>'<a href="../lakonPages/.html"></a>]<a href="../lakonPages/.html"></a><p><b>Degree in canoncial only network</b>: 27.0<p><b>Degree in canonical and disguised network</b>: 28.0<p><b>Difference in degree </b>: -1.0<p><img src=images/Antakawulan.png><h3>Characters linked to Antakawulan</h3><hr><table id="linktable" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Character</th>
+                <th>Link weight</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Character</th>
+                <th>Link weight</th>
+            </tr>
+        </tfoot>
+    </table>
+<script src="http://localhost/datatables/jquery-1.12.4.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function() {$("#linktable").DataTable({"ajax":"../data/json/Antakawulan.txt"});});</script></div>
 
                
 
@@ -88,10 +104,11 @@ Antakawulan</title>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
+    <!--script src="../js/jquery.js"></script-->
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    
 
 </body>
 
