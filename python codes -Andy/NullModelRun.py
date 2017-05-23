@@ -66,36 +66,46 @@ EpisodeBetweenness = nx.betweenness_centrality(EI, weight = 'weight', normalized
 
 LinkWeightsTarget = dict()
 LinkDegreeProduct = dict()
-LinkBetweenness = nx.edge_betweenness_centrality(GI, weight = 'weight', normalized = True)
+LinkBetweenness = dict()
+LinkBetweenness0 = nx.edge_betweenness_centrality(GI, weight = 'weight', normalized = True)
 
 for edge in GI.edges():
-	LinkWeightsTarget[edge] = G[edge[0]][edge[1]]['weight']
-	LinkDegreeProduct[edge] = np.dot(CharacterDegrees[edge[0]], CharacterDegrees[edge[1]])
+	LinkBetweenness[tuple(sorted(edge))] = LinkBetweenness0[edge]
+	LinkWeightsTarget[tuple(sorted(edge))] = G[edge[0]][edge[1]]['weight']
+	LinkDegreeProduct[tuple(sorted(edge))] = np.dot(CharacterDegrees[edge[0]], CharacterDegrees[edge[1]])
 
 ##########################################################
 
 # ibs = open("../Outputs/" + datasettag + "/CharList.csv" , 'w')
 # for character in CharacterNodes:
 # 	ibs.write(character + "," + "\n")#," + str(factioneccentricity[faction]) + "," + str(factioncloseness[faction]) + "\n")
-# ibs.close()	
+# ibsNullModelEnsembleProcess(	
 
 #CharacterFactions, FactionCharacters = co.LoadFactions(datasettag)
 CharacterFactions, FactionCharacters = co.LoadFactionsMultiple(datasettag)
 
+print(set(CharacterFactions[0].keys()) - set(CharacterDegrees.keys()))
+
 # CharacterFactions = co.CharacterFactionAffiliations(datasettag)
 # FactionCharacters = co.FactionCharacterLists(CharacterFactions)
-InterfactionBetweenness = co.LoadInterfactionBetweennessMultiple(datasettag)#co.InterfactionBetweennessCentrality(GI, FactionCharacters)
-FactionWorldBetweenness = co.LoadFactionWorldBetweennessMultiple(datasettag)#co.FactionWorldBetweennessCentrality(GI, FactionCharacters)
+InterfactionBetweenness, InterfactionLinkBetweenness = co.LoadInterfactionBetweennessMultiple(datasettag)#co.InterfactionBetweennessCentrality(GI, FactionCharacters)
+FactionWorldBetweenness, FactionWorldLinkBetweenness = co.LoadFactionWorldBetweennessMultiple(datasettag)#co.FactionWorldBetweennessCentrality(GI, FactionCharacters)
 
 ##########################################################
 
 co.NullModelEnsemble(datasettag, ensembletag, EpisodeDegrees, CharacterDegrees, NumberOfRealizations, FactionCharacters, LinkWeightsTarget,1)
+
+#print(InterfactionLinkBetweenness)
+for edge in InterfactionLinkBetweenness[0][('Giant','Heavenly Creature')].keys():
+	print(sorted(edge))
+
 #co.NullModelEnsemble(datasettag, ensembletag, EpisodeDegrees, CharacterDegrees, NumberOfRealizations, 0, LinkWeightsTarget)
 #co.NullModelEnsemble(datasettag, ensembletag, EpisodeDegrees, CharacterDegrees, NumberOfRealizations, 0, LinkWeightsTarget, 1)
 
 ##########################################################
 
-co.NullModelEnsembleProcess(datasettag, ensembletag, CharacterDegrees, CharacterStrengths, CharacterBetweenness, InterfactionBetweenness, FactionWorldBetweenness, LinkWeightsTarget, LinkDegreeProduct, LinkBetweenness,EpisodeDegrees,EpisodeStrengths,EpisodeBetweenness)
+co.NullModelEnsembleProcess(datasettag, ensembletag, CharacterDegrees, CharacterStrengths, CharacterBetweenness, InterfactionBetweenness, FactionWorldBetweenness, LinkWeightsTarget, LinkDegreeProduct, LinkBetweenness,EpisodeDegrees,EpisodeStrengths,EpisodeBetweenness,InterfactionLinkBetweenness,FactionWorldLinkBetweenness, CharacterFactions)
+
 #co.NullModelEnsembleProcess(datasettag, ensembletag, CharacterDegrees, CharacterStrengths, CharacterBetweenness,[],[],LinkWeightsTarget,LinkDegreeProduct,LinkBetweenness)
 #co.NullModelEnsembleProcess(datasettag, ensembletag, CharacterDegrees, CharacterStrengths, CharacterBetweenness,[],[],LinkWeightsTarget,LinkDegreeProduct,LinkBetweenness,EpisodeDegrees,EpisodeStrengths,EpisodeBetweenness)
 
