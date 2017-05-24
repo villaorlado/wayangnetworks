@@ -4,10 +4,10 @@ This file reads the excel sheet and generates a static page for each character.
 '''
 import re
 
-inputFile = "../input/lakonFull.txt"
+inputFile = "../input/stories.txt"
 narratives = open(inputFile).read()
 
-lakons = re.split(r"[//]\d+ ",narratives);
+lakons = re.split(r"\/\/\d+ ",narratives);
 
 for x in range (1, len(lakons)):
 	lines = lakons[x].splitlines()
@@ -19,10 +19,10 @@ for x in range (1, len(lakons)):
 	matches = re.findall(r'\[(\w*)\]', lakons[x])
 	characters = list(set(matches))
 	characterList = "<p>This lakon has " + str(len(characters)) + " characters: " 
+	characterListText = ",".join(characters)
 	
 	for character in characters:
 		characterList += " <a href='../characterPages/" + character + ".html'>" + character + "</a>,"
-	#read character entry in in .xlsx file and then add lakon to it
 	
 	for i in range(1, len(lines)):
 		text += lines[i]
@@ -36,10 +36,13 @@ for x in range (1, len(lakons)):
 	text = re.sub(r'\((\w*)\)', r"<a href='../characterPages/\1.html'>\1</a>", text)
 	text = re.sub(r'\((\w*)@\w+\)', r"<a href='../characterPages/\1.html'>\1</a>", text)
 	html += "<h1>" + title + "</h1>"
-	html += '<div class="well">' + characterList + '</div>' 
+	html += '<div class="well" id="characters">' + characterList + '</div>' 
 	html += text 
 	html += open("htmlfragments/html2.html").read()
 	
 	with open("../html/lakonPages/" + title + ".html", "w") as file:
 		file.write(html.decode('utf-8').encode('utf-8'))
 		print title + " created"
+
+	with open("../html/lakonPages/%s_characters.txt" % title, "w") as file:
+		file.write(characterListText)

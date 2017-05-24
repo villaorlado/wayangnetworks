@@ -1,5 +1,9 @@
 #!/usr/bin/env python2.7.11
 
+''' 
+This file creates a list of characters and a list of lakons for the web interface 
+'''
+
 import glob
 import re
 

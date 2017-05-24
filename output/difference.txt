@@ -1,9 +1,0 @@
-----------------------------------------------------
-Differences in canonicalOnly
-Names in the excel file but not in the story
-
-['Daryamaya', 'Desamuka', 'Kesawasidhi']
-Names in the story but not in the excel file
-
-['Raksasa', 'Source', 'Target', 'Lion', 'FakeWerkudara']
-

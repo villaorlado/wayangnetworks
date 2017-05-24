@@ -1,0 +1,1 @@
+{"data": [["Bagong", "1"], ["Basudewa", "1"], ["Surati_Mantra", "2"], ["Badrahini", "1"], ["Dewaki", "1"], ["Gorawangsa", "2"], ["Rohini", "1"], ["Saragupita", "1"], ["Maerah", "1"], ["Gareng", "1"], ["Semar", "1"], ["Pandu", "1"], ["Indra", "1"], ["Bismaka", "1"], ["Ugrasena", "1"], ["Baladewa", "1"], ["Kresna", "1"], ["Kangsa", "1"], ["Petruk", "1"], ["Rara_Ireng", "1"]]}

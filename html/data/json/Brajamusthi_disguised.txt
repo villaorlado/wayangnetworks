@@ -1,0 +1,1 @@
+{"data": [["Abimanyu", "1"], ["Brajadhenta", "3"], ["Banowati", "1"], ["Kartamarma", "1"], ["Durna", "1"], ["Werkudara", "1"], ["Togog", "2"], ["Gatotkaca", "3"], ["Petruk", "1"], ["Bilung", "2"], ["Abiyasa", "1"], ["Mangsahpati", "1"], ["Sengkuni", "2"], ["Bagong", "1"], ["Gareng", "1"], ["Duryudana", "1"], ["Durga", "2"], ["Semar", "1"]]}

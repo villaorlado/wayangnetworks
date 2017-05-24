@@ -13,7 +13,7 @@ import re
 import itertools
 
 #input variables
-inputFile = "../input/lakonFull.txt"
+inputFile = "../input/stories.txt"
 narratives = open(inputFile).read()
 
 #character types
@@ -76,20 +76,11 @@ def makeCSV(characterDict,csvName):
 	csvFile = "Source,Target,Type,Weight\n"
 	for k,v in characterDict.iteritems():
 		csvFile += str(v["from"]) + "," + str(v["to"]) + ",Undirected," + str(v["degree"]) + "\n"
-	with open("../output/" + csvName + ".csv", "w") as file:
+	with open("../gephi/input/edgeInfo/" + csvName + ".csv", "w") as file:
 		file.write(csvFile)
-
-'''
-For Andy's analysis
-csv file with adegan name and characters = 
-01.01 = Puntadewa, Werkudara, Sadewa
-designations file: character,desgination
-Abimanyu,Pandawa
-'''
 
 #iterate for each window type
 for k,v in windowTypes.iteritems():
-	windowList = ""
 	n = 1
 	windowGroups = re.split(v["pattern"],narratives);
 	for windowGroup in windowGroups: #lakon in lakons, adegan in adegans
@@ -97,6 +88,3 @@ for k,v in windowTypes.iteritems():
 			populateEdgeDict(characterList(value["charactersIncluded"],windowGroup),value["dictionary"])
 	for key2,value2 in networkTypes.iteritems():
 		makeCSV(value2["dictionary"],str(k)+"_"+value2["fileName"])
-	with open("../output/" + k + ".txt", "w") as file:
-		file.write(windowList)
-	
