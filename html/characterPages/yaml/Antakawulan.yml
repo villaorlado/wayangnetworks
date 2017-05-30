@@ -1,0 +1,9 @@
+families:
+  - parents: [Antakawulan, Barata]
+    children: []
+  - parents: [Antakawulan,  Arjuna]
+    children: []
+  - parents: []
+    children: [Antakawulan]
+  - parents: [Kekayi, Dasarata]
+    children: [Barata]

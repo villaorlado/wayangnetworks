@@ -1,0 +1,7 @@
+families:
+  - parents: [Badrahini, Basudewa]
+    children: [Rara_Ireng]
+  - parents: []
+    children: [Badrahini]
+  - parents: [Kuntiboja]
+    children: [Basudewa]

@@ -22,7 +22,7 @@ def col2num(col_str):
     return col_num-1
 
 #read workbooks
-characters = xlrd.open_workbook("../input/characters22.xlsx").sheet_by_index(0) 
+characters = xlrd.open_workbook("../input/characters.xlsx").sheet_by_index(0) 
 canonicalInfo = xlrd.open_workbook("../gephi/output/nodeInfo/adegan_canonicalOnly_nodeInfo.xlsx").sheet_by_index(0) 
 disguisedInfo = xlrd.open_workbook("../gephi/output/nodeInfo/adegan_canonicalAndDisguised_nodeInfo.xlsx").sheet_by_index(0) 
 
@@ -54,7 +54,8 @@ for x in range (0, characters.nrows):
 
 	#excel file with character descriptive info
 	for y in range (0, characterLength):
-		worksheet.write(x, y, characters.cell_value(rowx=x,colx=y).encode("utf-8").decode("utf-8"))
+		#worksheet.write(x, y, characters.cell_value(rowx=x,colx=y).encode("utf-8").decode("utf-8"))
+		worksheet.write(x, y, characters.cell_value(rowx=x,colx=y))
 	
 	#canoncial info
 	for a in range (1, canonicalInfo.nrows):
@@ -92,5 +93,6 @@ for x in range (0, characters.nrows):
 	if (x>0):
 		worksheet.write(x,characterLength,lakonList)
 		worksheet.write(x,characterLength+1,amountOfNames)
-		
+	
 workbook.close()
+print "info expanded!"

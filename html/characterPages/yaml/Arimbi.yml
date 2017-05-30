@@ -1,0 +1,7 @@
+families:
+  - parents: [Arimbi, Werkudara]
+    children: [Gatotkaca]
+  - parents: [Arimbaka]
+    children: [Arimbi]
+  - parents: []
+    children: [Werkudara]

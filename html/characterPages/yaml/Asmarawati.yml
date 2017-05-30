@@ -1,0 +1,7 @@
+families:
+  - parents: [Asmarawati, Arjuna]
+    children: [Kumaladewa, Kumalasekti]
+  - parents: [Wilawuk]
+    children: [Asmarawati]
+  - parents: [Kunti, Pandu]
+    children: [Arjuna]

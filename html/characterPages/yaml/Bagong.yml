@@ -1,0 +1,5 @@
+families:
+  - parents: [Bagong, Bagnawati]
+    children: []
+  - parents: [Semar]
+    children: [Bagong]

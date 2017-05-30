@@ -1,0 +1,9 @@
+families:
+  - parents: [Abiyasa, Ambika]
+    children: [Drestarastra]
+  - parents: [Abiyasa,  Ambiki]
+    children: [Pandu]
+  - parents: [Abiyasa,  Datri]
+    children: [Yamawidura]
+  - parents: [Parasara, Durgandini]
+    children: [Abiyasa]

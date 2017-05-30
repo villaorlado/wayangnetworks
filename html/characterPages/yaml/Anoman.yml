@@ -1,0 +1,5 @@
+families:
+  - parents: [Anoman, Urangrayung]
+    children: [Trihangga]
+  - parents: [Bayu, Anjani]
+    children: [Anoman]

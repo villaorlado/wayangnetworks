@@ -1,0 +1,7 @@
+families:
+  - parents: [Antaboga, Supreti]
+    children: [Nagagini,  Nagatatmala]
+  - parents: [Antaboga]
+    children: [Sri]
+  - parents: [Anantawara]
+    children: [Antaboga]
