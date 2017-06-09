@@ -5,5 +5,7 @@ families:
     children: []
   - parents: []
     children: [Antakawulan]
-  - parents: [Kekayi, Dasarata]
+  - parents: [Kekayi, Destarastra]
     children: [Barata]
+  - parents: [Kunti, Pandu]
+    children: [Arjuna]

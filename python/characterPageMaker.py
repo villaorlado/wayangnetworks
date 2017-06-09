@@ -127,21 +127,22 @@ def getFamily():
 	offspring = []
 	yaml = "families:"
 	family =  sh.cell_value(rowx=num, colx=col2num("L")).decode("utf-8")
-	family = family.split(";")
-	for fam in family:
-		yamlParents = [name]
-		yamlChildren = []
-		members = fam.split(":")
-		if "x" not in members[0]:
-			spouses.append(members[0])
-			yamlParents.append(members[0])
-		children = members[1].split(",")
-		for child in children:
-			if "x" not in child:
-				offspring.append(child)
-				yamlChildren.append(child)
-		yaml += "\n  - parents: [%s]" % ", ".join(yamlParents)
-		yaml += "\n    children: [%s]" % ", ".join(yamlChildren)
+	if (family):
+		family = family.split(";")
+		for fam in family:
+			yamlParents = [name]
+			yamlChildren = []
+			members = fam.split(":")
+			if "x" not in members[0]:
+				spouses.append(re.sub(" ","",members[0]))
+				yamlParents.append(members[0])
+			children = members[1].split(",")
+			for child in children:
+				if "x" not in child:
+					offspring.append(re.sub(" ","",child))
+					yamlChildren.append(child)
+			yaml += "\n  - parents: [%s]" % ", ".join(yamlParents)
+			yaml += "\n    children: [%s]" % ", ".join(yamlChildren)
 	parents = []
 	mother = sh.cell_value(rowx=num, colx=col2num("I"))
 	father = sh.cell_value(rowx=num, colx=col2num("J"))
@@ -172,8 +173,8 @@ def getFamily():
 		if(exists):
 			offspring[x] = "<a href='%s.html'>%s</a>" % (offspring[x],offspring[x])
 	
-	string += "<p><b>Spouses: </b> %s" % ", ".join(spouses)
-	string += "<p><b>Offspring: </b> %s" % ", ".join(offspring)
+	if (spouses): string += "<p><b>Consorts: </b> %s" % ", ".join(spouses)
+	if (offspring): string += "<p><b>Offspring: </b> %s" % ", ".join(offspring)
 	return string
 
 for num in range(1,sh.nrows):
@@ -197,15 +198,17 @@ for num in range(1,sh.nrows):
 	html += makeHtml("Notes on the Sanskrit version", "F")
 	html += makeHtml("Alternative names", "H")
 	html += makeDescriptionHtml()
-	html += "<hr><h3>Family relationships</h3>"
-	html += makeHtml("Mother", "I", True)
-	html += makeHtml("Father", "J", True)
-	html += makeHtml("Siblings", "K", True)
-	if (sh.cell_value(rowx=num, colx=col2num("L"))):
+	
+	if (sh.cell_value(rowx=num, colx=col2num("L")) or sh.cell_value(rowx=num, colx=col2num("I")) or sh.cell_value(rowx=num, colx=col2num("J")) or sh.cell_value(rowx=num, colx=col2num("K"))):	
+		html += "<hr><h3>Family relationships</h3>"
+	
+		html += makeHtml("Mother", "I", True)
+		html += makeHtml("Father", "J", True)
+		html += makeHtml("Siblings", "K", True)
 		html += getFamily()
 	
-	exists = os.path.isfile("../html/characterPages/trees/%s.svg" % name)
-	if(exists):
+		#exists = os.path.isfile("../html/characterPages/trees/%s.svg" % name)
+		#if(exists):
 		svg = open("../html/characterPages/trees/%s.svg" %name).read()
 		svg = re.sub('<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"',"",svg)
 		svg = re.sub('"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">',"",svg)
@@ -222,7 +225,7 @@ for num in range(1,sh.nrows):
 	html += makeHtml("Ruler of", "N")
 	html += makeHtml("Killed by", "O", True)
 	html += makeHtml("Aji / Wahyu / Pusaka", "P")
-	html += makeHtml("Disguised as", "Q", True)
+	html += makeHtml("Takes the shape of", "Q", True)
 	html += makeHtml("Impersonated by", "R", True)
 	html += makeHtml("Wanda", "S", True)
 	html += getSources()
@@ -243,7 +246,7 @@ for num in range(1,sh.nrows):
 	#html += "<p><img src=images/" + name + ".png>"
 	#html += "&nbsp;<p><h3>Characters linked to %s in the canonical network</h3><hr>" %name	
 	#html += open("htmlfragments/table.html").read()
-	html += "<p>&nbsp;<p>&nbsp;<p><h3>Characters linked to %s</h3><hr>" %name	
+	html += "<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same adegan as %s</h3><hr>" %name	
 	html += open("htmlfragments/table4.html").read()
 	
 	html += '<script src="../js/jquery.js"></script>'

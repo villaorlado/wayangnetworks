@@ -62,19 +62,17 @@ Dhadhungawuk</title>
             <div class="col-md-9">
 
                 <div>
-<p><h1>Dhadhungawuk</h1></p><p><b>Terms of address</b>: Kala<p><b>Type</b>: Raksasa<p><b>Origin</b>: Java<p><b>Notes on the Sanskrit version</b>: Not mentioned in the Indian Mahabharata.<p><b>Description in the Javanese version</b>: A tyrant that oppresses the kings of the 100 kingdoms in the Semar Mantu story.<b>spouses</b> <p><b>Found in the follwing lakon</b>: <a href="../lakonPages/Semar_Mantu.html">Semar_Mantu</a></p><p>&nbsp;<hr><p><h3>Network measurements for Dhadhungawuk</h3><table class="table" cellspacing="1" width="100%">
+<p><h1>Dhadhungawuk</h1></p><p><b>Terms of address</b>: Kala<p><b>Type</b>: Raksasa<p><b>Origin</b>: Java<p><b>Notes on the Sanskrit version</b>: Not mentioned in the Indian Mahabharata.<p><b>Description in the Javanese version</b>: He takes care of 40 buffaloes for Batari <a href="Durga.html">Durga</a> at the Kendrawahana / Kendrayana forest. They are all balck with white legs.<hr><h3>More information</h3><p><b>Sources</b>: <i>Ensiklopedi Wayang Purwa</i>, p. 145.; <i>Mengenal Gambar Tokoh Wayang Purwa</i>, p. 69.; <i>Sejarah Wayang Purwa</i>, pp. 330-331.<p><b>Found in the follwing lakon</b>: <a href="../lakonPages/Semar_Mantu.html">Semar_Mantu</a></p><p>&nbsp;<hr><p><h3>Network measurements for Dhadhungawuk</h3><table class="table" cellspacing="1" width="100%">
         <thead>
             <tr>
                 <th>Measurement</th>
-                <th>Canonical Only Network</th>
-                <th>Disguised Network</th>
-                <th>Difference</th>
+                <th>Value</th>
             </tr>
         </thead>
         
     
-<tr><td>Degree</td><td>17.0</td><td>18.0</td><td>-1.0</td></tr><tr><td>Weighted Degree</td><td>20.0</td><td>21.0</td><td>-1.0</td></tr><tr><td>Closeness Centrality</td><td>0.530909090909</td><td>0.527272727273</td><td>0.00363636363636</td></tr><tr><td>Betweeness Centrality</td><td>0.558219178082</td><td>0.551724137931</td><td>0.00649504015116</td></tr><tr><td>Eigen Vector Centrality</td><td>0.229792798692</td><td>0.221663239132</td><td>0.00812955955982</td></tr></table>
-&nbsp;<p><h3>Characters linked to Dhadhungawuk in the canonical network</h3><hr><table id="linktableCanonical" class="display" cellspacing="0" width="100%">
+<tr><td>Degree</td><td>18.0</td></tr><tr><td>Weighted Degree</td><td>21.0</td></tr><tr><td>Closeness Centrality</td><td>0.527272727273</td></tr><tr><td>Betweeness Centrality</td><td>0.551724137931</td></tr><tr><td>Eigen Vector Centrality</td><td>0.221663239132</td></tr></table>
+<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same adegan as Dhadhungawuk</h3><hr><table id="linktableDisguised" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>Character</th>
@@ -88,21 +86,10 @@ Dhadhungawuk</title>
             </tr>
         </tfoot>
     </table>
-<p>&nbsp;<p>&nbsp;<p><h3>Characters linked to Dhadhungawuk in the disguised network</h3><hr><table id="linktableDisguised" class="display" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>Character</th>
-                <th>Link weight</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Character</th>
-                <th>Link weight</th>
-            </tr>
-        </tfoot>
-    </table>
-<script src="../js/jquery.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function(){$("#linktableCanonical").DataTable({"ajax":"../data/json/Dhadhungawuk_canonical.txt"});$("#linktableDisguised").DataTable({"ajax":"../data/json/Dhadhungawuk_disguised.txt"});});</script></div>
+<script src="../js/jquery.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function(){table = $("#linktableDisguised").DataTable({"ajax":"../data/json/Dhadhungawuk_disguised.txt","order": [[ 1, "desc" ]]});$('#linktableDisguised tbody').on('click', 'tr', function () {
+ var data = table.row(this).data();
+ window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});
+ });</script></div>
 
                
 

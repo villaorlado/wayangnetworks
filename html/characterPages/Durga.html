@@ -62,19 +62,17 @@ Durga</title>
             <div class="col-md-9">
 
                 <div>
-<p><h1>Durga</h1></p><p><b>Terms of address</b>: Batari<p><b>Type</b>: God<p><b>Origin</b>: India<p><b>Notes on the Sanskrit version</b>: Known as the goddess who killed Mahishasura, a buffalo headed demon for his atrocities against rishis and deva. She is also the wife of Lord Shiva.<p><b>Alternative names</b>: Uma, Parwati, Pramoni<p><b>Description in the Javanese version</b>: Dewi Pramoni. Wife of Batara Guru. Uma is cursed to become Batari Durga.<b>spouses</b> <p><b>Disguised as</b>: _Woman<p><b>Found in the follwing lakon</b>: <a href="../lakonPages/Wisanggeni_Lahir.html">Wisanggeni_Lahir</a>, <a href="../lakonPages/Brajadhenta_Mbalela_(Gatotkaca_Wisudha).html">Brajadhenta_Mbalela_(Gatotkaca_Wisudha)</a>, <a href="../lakonPages/Sudamala.html">Sudamala</a>, <a href="../lakonPages/Gatotkaca_Lahir.html">Gatotkaca_Lahir</a>, <a href="../lakonPages/Wahyu_Kembar.html">Wahyu_Kembar</a></p><p>&nbsp;<hr><p><h3>Network measurements for Durga</h3><table class="table" cellspacing="1" width="100%">
+<p><h1>Durga</h1></p><p><b>Terms of address</b>: Batari<p><b>Type</b>: God<p><b>Origin</b>: India<p><b>Notes on the Sanskrit version</b>: Known as the goddess who killed Mahishasura, a buffalo headed demon for his atrocities against rishis and deva. She is also the wife of Lord Shiva.<p><b>Alternative names</b>: Uma, Parwati, Pramoni<p><b>Description in the Javanese version</b>: Dewi Pramoni. Wife of Batara Guru. Uma is cursed to become Batari Durga.<hr><h3>More information</h3><p><b>Takes the shape of</b>: _Woman<p><b>Found in the follwing lakon</b>: <a href="../lakonPages/Wisanggeni_Lahir.html">Wisanggeni_Lahir</a>, <a href="../lakonPages/Brajadhenta_Mbalela_(Gatotkaca_Wisudha).html">Brajadhenta_Mbalela_(Gatotkaca_Wisudha)</a>, <a href="../lakonPages/Sudamala.html">Sudamala</a>, <a href="../lakonPages/Gatotkaca_Lahir.html">Gatotkaca_Lahir</a>, <a href="../lakonPages/Wahyu_Kembar.html">Wahyu_Kembar</a></p><p>&nbsp;<hr><p><h3>Network measurements for Durga</h3><table class="table" cellspacing="1" width="100%">
         <thead>
             <tr>
                 <th>Measurement</th>
-                <th>Canonical Only Network</th>
-                <th>Disguised Network</th>
-                <th>Difference</th>
+                <th>Value</th>
             </tr>
         </thead>
         
     
-<tr><td>Degree</td><td>60.0</td><td>66.0</td><td>-6.0</td></tr><tr><td>Weighted Degree</td><td>160.0</td><td>169.0</td><td>-9.0</td></tr><tr><td>Closeness Centrality</td><td>0.629310344828</td><td>0.617021276596</td><td>0.0122890682318</td></tr><tr><td>Betweeness Centrality</td><td>0.705479452055</td><td>0.689655172414</td><td>0.015824279641</td></tr><tr><td>Eigen Vector Centrality</td><td>0.58557023843</td><td>0.570260032915</td><td>0.0153102055144</td></tr></table>
-&nbsp;<p><h3>Characters linked to Durga in the canonical network</h3><hr><table id="linktableCanonical" class="display" cellspacing="0" width="100%">
+<tr><td>Degree</td><td>66.0</td></tr><tr><td>Weighted Degree</td><td>169.0</td></tr><tr><td>Closeness Centrality</td><td>0.617021276596</td></tr><tr><td>Betweeness Centrality</td><td>0.689655172414</td></tr><tr><td>Eigen Vector Centrality</td><td>0.570260032915</td></tr></table>
+<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same adegan as Durga</h3><hr><table id="linktableDisguised" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>Character</th>
@@ -88,21 +86,10 @@ Durga</title>
             </tr>
         </tfoot>
     </table>
-<p>&nbsp;<p>&nbsp;<p><h3>Characters linked to Durga in the disguised network</h3><hr><table id="linktableDisguised" class="display" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>Character</th>
-                <th>Link weight</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Character</th>
-                <th>Link weight</th>
-            </tr>
-        </tfoot>
-    </table>
-<script src="../js/jquery.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function(){$("#linktableCanonical").DataTable({"ajax":"../data/json/Durga_canonical.txt"});$("#linktableDisguised").DataTable({"ajax":"../data/json/Durga_disguised.txt"});});</script></div>
+<script src="../js/jquery.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function(){table = $("#linktableDisguised").DataTable({"ajax":"../data/json/Durga_disguised.txt","order": [[ 1, "desc" ]]});$('#linktableDisguised tbody').on('click', 'tr', function () {
+ var data = table.row(this).data();
+ window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});
+ });</script></div>
 
                
 
