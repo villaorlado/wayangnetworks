@@ -1,0 +1,9 @@
+families:
+  - parents: [Brahma, Saci]
+    children: [ Maricibrama,  Naradabrama]
+  - parents: [Brahma,  Sarasyati]
+    children: [ Bramanasa,  Bramasadewa,  Bramanasadara,  Bramarakanda,  Bramanaresi]
+  - parents: [Brahma,  Raraswati]
+    children: [ Bramani,  Bramanisri,  Bramaniskala,  Bramanayara,  Bramanasita,  Bramaniyari,  Bramaniyodi,  Bramanayana,  Bramaniyata,  Bramanasatama,  Bramanayekti,  Bramaniyuta,  Dresanala,  Dresawati]
+  - parents: [Guru, Uma]
+    children: [Brahma]

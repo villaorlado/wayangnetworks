@@ -1,0 +1,7 @@
+families:
+  - parents: [Dersanala, Arjuna]
+    children: [Wisanggeni]
+  - parents: [Brama]
+    children: [Dersanala]
+  - parents: [Kunti, Pandu]
+    children: [Arjuna]

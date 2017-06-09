@@ -1,0 +1,5 @@
+families:
+  - parents: [Bomanarakasura, Hagnyanawati]
+    children: [ Watubaji]
+  - parents: [Kresna, Pertiwi]
+    children: [Bomanarakasura]

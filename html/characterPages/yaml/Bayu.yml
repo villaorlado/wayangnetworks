@@ -1,0 +1,5 @@
+families:
+  - parents: [Bayu, Sumi]
+    children: [ Sumarma,  Sangkara,  Sadarma,  Bismakara,  Drupada]
+  - parents: [Guru, Uma]
+    children: [Bayu]

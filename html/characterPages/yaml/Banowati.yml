@@ -1,0 +1,7 @@
+families:
+  - parents: [Banowati, Duryudana]
+    children: [Bomanarakasura, Leksmanawati]
+  - parents: [Salya, Pujawati]
+    children: [Banowati]
+  - parents: []
+    children: [Duryudana]

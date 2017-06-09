@@ -1,0 +1,7 @@
+families:
+  - parents: [Baladewa, Erawati]
+    children: [Wisata, Wilmuka]
+  - parents: [Basudewa, Rohini]
+    children: [Baladewa]
+  - parents: [Setyawati, Salya]
+    children: [Erawati]
