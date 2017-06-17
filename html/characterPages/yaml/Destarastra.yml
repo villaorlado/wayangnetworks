@@ -3,5 +3,5 @@ families:
     children: [ {100 Korawa}]
   - parents: [Abiyasa, Ambika]
     children: [Destarastra]
-  - parents: []
+  - parents: [Gandini, Suwala]
     children: [Gendari]

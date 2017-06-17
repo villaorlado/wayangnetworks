@@ -54,7 +54,7 @@ def makeHtml (header,column, linked=False):
 	return htmlString
 
 def makeLakonHtml():
-	lakonList = sh.cell_value(rowx=num, colx=col2num("W")).split(",")
+	lakonList = sh.cell_value(rowx=num, colx=col2num("Y")).split(",")
 	lakonArray = []
 	for lakon in lakonList:
 		lakonArray.append('<a href="../lakonPages/%s.html">%s</a>' % (lakon,lakon))
@@ -70,7 +70,19 @@ def makeDescriptionHtml():
 		if(exists):
 			link = '<a href="%s.html">%s</a>' % (cleanMatch,cleanMatch)
 			htmlString = re.sub("\[" + cleanMatch + "\]", link, htmlString)
-	htmlString = re.sub(r"\/([\w ]+)\/", r"<i>\1</i>", htmlString)
+	#htmlString = re.sub(r"\/([\w ]+)\/", r"<i>\1</i>", htmlString)
+	
+	matchObj = re.findall(r"\/([\w_\(\) ]+)\/",htmlString)
+	for match in matchObj:
+		#print match
+		cleanMatch = re.sub(r"\/","",match)
+		print cleanMatch
+		exists = os.path.isfile("../html/lakonPages/%s.html" % cleanMatch)
+		if(exists):
+			link = '<a href="../lakonPages/%s.html">%s</a>' % (cleanMatch,cleanMatch)
+			htmlString = re.sub("\/" + cleanMatch + "\/", link, htmlString)
+		else:
+			htmlString = re.sub("\/" + cleanMatch + "\/", "<i>" + cleanMatch + "</i>", htmlString)
 	
 	htmlString = "<p><b>Description in the Javanese version</b>: " + htmlString.decode("utf-8")
 	return htmlString
@@ -85,9 +97,9 @@ def makeTable(measurement,location):
 def page(value):
 	trueNumber = re.sub('\.0','',str(value))
 	if ("-" in trueNumber):
-		return "pp. %s." % trueNumber
+		return "pp. %s" % trueNumber
 	else:
-		return "p. %s." % trueNumber
+		return "p. %s" % trueNumber
 
 def getSources():
 	htmlString = ""
@@ -95,12 +107,18 @@ def getSources():
 	ewp = sh.cell_value(rowx=num, colx=col2num("T"))
 	mt = sh.cell_value(rowx=num, colx=col2num("U"))
 	swp = sh.cell_value(rowx=num, colx=col2num("V"))
+	wei = sh.cell_value(rowx=num, colx=col2num("W"))
+	rkwp = sh.cell_value(rowx=num, colx=col2num("X"))
 	if (ewp):
 		array.append("<i>Ensiklopedi Wayang Purwa</i>, %s" % page(ewp))
 	if (mt):
 		array.append("<i>Mengenal Gambar Tokoh Wayang Purwa</i>, %s" % page(mt))
 	if (swp):
 		array.append("<i>Sejarah Wayang Purwa</i>, %s" % page(swp))
+	if (wei):
+		array.append("<i>Ensiklopedi Wayang Indonesia</i>, %s" % page(wei))
+	if (rkwp):
+		array.append("<i>Rupa dan Karakter Wayang Purwa</i>, %s" % page(rkwp))
 	if (not array == []):
 		htmlString = "<p><b>Sources</b>: "  + "; ".join(array)
 	return htmlString
@@ -233,32 +251,27 @@ for num in range(1,sh.nrows):
 	
 	html += "<p>&nbsp;<hr><p><h3>Network measurements for %s</h3>" %name
 	html += open("htmlfragments/table2.html").read()
-	html += makeTable("Degree","Y")
-	html += makeTable("Weighted Degree","Z")
-	html += makeTable("Closeness Centrality","AA")
-	html += makeTable("Betweeness Centrality","AB")
-	html += makeTable("Eigen Vector Centrality","AH")
+	html += makeTable('Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has"><i class="glyphicon glyphicon-question-sign"></i></a>',"AA")
+	html += makeTable('Weighted Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has, taking into account the weight of those connections"><i class="glyphicon glyphicon-question-sign"></i></a>',"AA")
+	html += makeTable('Closeness Centrality <a href="#" data-toggle="tooltip" title="The average length of the shortest path between the node and all other nodes in the graph"><i class="glyphicon glyphicon-question-sign"></i></a>',"AB")
+	html += makeTable('Betweeness Centrality <a href="#" data-toggle="tooltip" title="Inidcates how often a node acts as a bridge along the shortest path between two other nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AE")
+	html += makeTable('Eigen Vector Centrality <a href="#" data-toggle="tooltip" title="A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AJ")
 	html += open("htmlfragments/table3.html").read()
-	
-	#html += makeHtml("Degree in canoncial only network", "T")
-	#html += makeHtml("Degree in canonical and disguised network", "U")
-	#html += makeHtml("Difference in degree ", "V")
-	#html += "<p><img src=images/" + name + ".png>"
-	#html += "&nbsp;<p><h3>Characters linked to %s in the canonical network</h3><hr>" %name	
-	#html += open("htmlfragments/table.html").read()
 	html += "<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same adegan as %s</h3><hr>" %name	
 	html += open("htmlfragments/table4.html").read()
 	
 	html += '<script src="../js/jquery.js"></script>'
 	html += '<script src="../js/jquery.dataTables.min.js"></script>'
 	html += '<script>$(document).ready(function(){'
-	#html += '$("#linktableCanonical").DataTable({"ajax":"../data/json/%s_canonical.txt"});' % name
 	html += 'table = $("#linktableDisguised").DataTable({"ajax":"../data/json/%s_disguised.txt","order": [[ 1, "desc" ]]});' % name
 	html += "$('#linktableDisguised tbody').on('click', 'tr', function () {"
 	html += "\n var data = table.row(this).data();"
 	html += "\n window.location = data[0] + '.html';"
 	html+= "});"
 	html += "$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});"
+	html += "});"
+	html += "$(document).ready(function(){"
+	html += "$('[data-toggle="  +'"tooltip"]' + "').tooltip();"
 	html += '\n });</script>' 
 	html += open("htmlfragments/html2.html").read()
 

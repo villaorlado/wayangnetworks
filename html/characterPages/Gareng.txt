@@ -1,1 +1,1 @@
-<p><h1>Gareng</h1></p><p><b>Type</b>: Human<p><b>Origin</b>: Java
+<p><h1>Gareng</h1></p><p><b>Type</b>: Human<p><b>Origin</b>: Java<p><b>Alternative names</b>: Ki_Lurah_Cakrawansa, Sabuk_Alu, Pega_Waja, Pancal_Pamor, Rujak_Beling, Singa_Padu, Pandubergola, Pandu_Pergola_Manik<p><b>Father</b>: Semar
