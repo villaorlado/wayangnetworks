@@ -1,0 +1,7 @@
+families:
+  - parents: [Duryudana, Banowati]
+    children: [Lesmana_Mandrakumara,  Lesmanawati]
+  - parents: [Destarastra, Gendari]
+    children: [Duryudana]
+  - parents: [Pujawati, Salya]
+    children: [Banowati]

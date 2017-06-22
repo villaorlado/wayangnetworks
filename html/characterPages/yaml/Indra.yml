@@ -1,0 +1,5 @@
+families:
+  - parents: [Indra, Wiyati]
+    children: [Tara,  Tari,  Citrarata,  Citragana,  Jayantaka,  Harjunawangsa,  Jayantara,  Supraba]
+  - parents: [Guru, Uma]
+    children: [Indra]

@@ -4,7 +4,7 @@
 2. <Kedhaton:Amarta>. [Drupadi] awaits the arrival of [Puntadewa]. He arrives and they have a feast. [Puntadewa] then shreds his royal garments for his religious robes. He enters his meditation chambers and seeks divine counsel.
 3. <Paseban-nJawi:Amarta>. [Petruk] exits the palace and talks to [Gareng], [Bagong] and [Anoman], who are waiting for him. They see [Durna], [Sengkuni] and the {Korawa}. A fight ensues between [Petruk] and the {Korwa}. [Werkudara] breaks up the fight. [Kresna] offers a solution to both parties: whoever brings the Jati Wasesa flower can have the Pustaka Jamus Kalimahusada.
 *Patet Sanga*
-4. <Village:Karangkadempel>. [Petruk], [Bagong] and [Gareng] explain the results of the meeting to [Semar]. Then [Abimanyu], [Antareja] and [Gatotkaca] arrive, offering to help find the Jati Wasesa flower.
+4. <Padhukuhan:Karangkadempel>. [Petruk], [Bagong] and [Gareng] explain the results of the meeting to [Semar]. Then [Abimanyu], [Antareja] and [Gatotkaca] arrive, offering to help find the Jati Wasesa flower.
 5. Perang sekar. <Alas:Unnamed>. A fight takes place as [Abimanyu] and [Gatotkaca] face the {WadyaTlukiSeta}. After defeating the ogres, [Sinduragen@Kanastren] arrives and kidnaps [Abimanyu], taking him to Tluki Seta.
 6. <Sabrangan-Buta:TlukiSeta>. The young handsome king [Godakesa@Arjuna] receives [Sinduragen@Kanastren], who has brought with him [Abimanyu] and [Gatotkaca]. [Abimanyu] explains the purpose of his mission. [Gatotkaca] tries to fight a  [_Guard@Yamadipati] that is protecting the flower, but is himself defeated. [Abimanyu] injures the guard with the Sipat Pelor arrow. The [_Guard@Yamadipati] is revealed to be [Yamadipati]. [Yamadipati] determines that the Jati Wasesa flower should be given to [Abimanyu], but [Godakesa@Arjuna] refuses to give it to them. [Abimanyu] nevertheless takes it to Karangkadempel, with [Sinduragen@Kanastren] and [Godakesa@Arjuna] in pursuit.
 *Patet Manyura*
@@ -14,30 +14,36 @@
 10. <Padhukuhan:Karangkadempel>. The {Korawa} dance angrily, but are dispersed by [Werkudara], who sends them flying in all directions. The inhabitants of Karangkadempel then celebrate the return or [Sri] and [Sadana].
 
 //2 #Semar_Mantu#
-1. <Court:Dwarawati>. [Kresna], [Samba] and [Setyaki], await the arrival of [Baladewa]. (Duryudhana) had asked [Baladewa] for help in order to get (RaraTemon) to marry (Lesmana_Mandrakumara). As this is being explained, [Petruk] arrives and asks for a similar thing: help get (RaraTemon) married to (Senet@Abimanyu). [Kresna] is confused about what to do.
-2. <Kedaton:Dwarawati>. [Kresna] meets his daughter [RaraTemon@Siti_Sendari]. She wants to know who she will marry. [Kresna] decides to set a series of difficult conditions for his future son in law, including a golden cart pulled by giant horses, one hundred and forty wild buffaloes with white legs and a white monkey that can dance.
+*Patet Nem*
+1. <Jejer:Dwarawati>. [Kresna], [Samba] and [Setyaki], await the arrival of [Baladewa]. (Duryudhana) had asked [Baladewa] for help in order to get (RaraTemon) to marry (Lesmana_Mandrakumara). As this is being explained, [Petruk] arrives and asks for a similar thing. He wants help to get (RaraTemon) married to (Senet@Abimanyu). [Kresna] is confused about what to do.
+2. <Kedaton:Dwarawati>. [Kresna] meets his daughter [RaraTemon@Siti_Sendari]. She wants to know who she will marry. [Kresna] decides to set a series of difficult conditions for his future son in law, including a golden cart pulled by giant horses, one hundred and forty buffaloes with white legs and a white monkey that can dance.
 3. <Alun-alun:Dwarawati>. [Petruk],[Gareng] and [Bagong] are attacked by the {Korawa}, but [Anoman] helps them. [Baladewa] arrives and breaks the fight. They all go back to their respective places.
 4. <Astina>. [Duryudana] receives [Baladewa], who explains the conditions of the marriage, then distributes orders to find the gifts.
-5. <Village:Karangkadempel>. [Petruk] arrives and explains (Karna)’s conditions to [Semar], who is shocked. [Semar] instructs the Pandawa to help. [Werkudara], [Gatotkaca] and [Arjuna] leave to find the gifts.
-6. <Alun-alun:Singgelapura>. The {RatuSewuNagari} are gathered, planning to attack and defeat [Bisawarna]. But [Werkudara] defeats the {RatuSewuNagari}. [Bisawarna] allows [Werkudara] to borrow the golden cart pulled by giant horses.
-7. <Forest:Krendhawahana>. [Gatotkaca] takes one hundred and forty buffaloes from [Dhadhungawuk], who takes care of them for (Indra). [Arjuna] brings [Anoman], since he is a white monkey that can dance.
-8. <Court:Astina> The {Korawa} try and fail to secure the same gifts and are angry at the Pandawa for their successes. [Sengkuni] provides a false report to [Baladewa], who becomes angry.
-9. <Village:Karangkadempel>. [Semar] receives a visit from [Werkudara], [Gatotkaca] and [Arjuna], all bearing the proper gifts.
-10. <Court:Dwarawati>. [Kresna] awaits the arrival of [Semar], [Werkudara], [Gatotkaca] and [Arjuna]. (Senet) becomes [Abimanyu] and [RaraTemon@Siti_Sendari] becomes [Siti_Sendari], making [Baladewa] embarrassed.
+*Patet Sanga*
+5. <Padhukuhan:Karangkadempel>. [Petruk] arrives and explains (Karna)’s conditions to [Semar], who is shocked. [Semar] instructs the Pandawa to help. [Werkudara], [Gatotkaca] and [Arjuna] leave to find the gifts.
+6. <Alun-alun:Singgelapura>. The Kings from one hundred kingdoms or {RatuSewuNagari}  have gathered and are  planning to attack and defeat [Bisawarna]. But [Werkudara] defeats them. [Bisawarna] allows [Werkudara] to borrow the golden cart pulled by giant horses.
+7. <Alas:Krendhawahana>. [Gatotkaca] takes one hundred and forty buffaloes from [Dhadhungawuk], who looks after them on behalf of (Indra). [Arjuna] brings [Anoman], since he is a white monkey that can dance.
+*Patet Manyura*
+8. <Jejer:Astina> The {Korawa} try and fail to secure the same gifts and are angry at the Pandawa for their successes. [Sengkuni] provides a false report to [Baladewa], who becomes angry.
+9. <Padhukuhan:Karangkadempel>. [Semar] receives a visit from [Werkudara], [Gatotkaca] and [Arjuna], all bearing the proper gifts.
+10. <Jejer:Dwarawati>. [Kresna] awaits the arrival of [Semar], [Werkudara], [Gatotkaca] and [Arjuna]. (Senet) becomes [Abimanyu] and [RaraTemon@Siti_Sendari] becomes [Siti_Sendari], making [Baladewa] embarrassed at his mistakes.
 
 //3 #Semar_Mantu_Alternative_Version#
-1.<Court:Astina> [Duryudana] talks with [Durna], [Sengkuni] and [Karna] – king of Ngawangga. [Lesmana_Mandrakumara] wants to marry the daughter of (Togog), called (RaraTemon@Sri). [Karna] is sent to Parangtejo, followed by the {Korawa}.
-2.<Kedaton:Astina>. [Duryudana] tells [Banowati] that he has sent [Karna] to (Togog)’s residence. [Banowati] and [Duryudana] eat and then [Duryudana] shreds his royal garments for his religious robes. He enters his meditation chambers and asks the gods to support his plan.
+*Patet Nem*
+1.<Jejer:Astina>. [Duryudana] talks with [Durna], [Sengkuni] and [Karna] – king of Ngawangga. [Lesmana_Mandrakumara] wants to marry the daughter of (Togog), called (RaraTemon@Sri). [Karna] is sent to Parangtejo, followed by the {Korawa}.
+2.<Kedaton:Astina>. [Duryudana] tells [Banowati] that he has sent [Karna] to (Togog)’s residence. [Banowati] and [Duryudana] eat and then [Duryudana] shreds his royal garments for his religious robes. He enters his meditation chambers and asks the Gods to support his plan.
 3.<Alun-alun:Astina>. [Sengkuni] instructs the {Korawa} to follow [Karna] to Parangteja. He stresses the importance of the mission.
-4.<Village:Parangteja>. [Togog] is taking care of [Bilung], who is sick. [Karna] and [Petruk] arrive simultaneously, both with the intention of asking for the hand of (RaraTemon@Sri). They fight and exit the chambers. [Togog] asks [RaraTemon@Sri] for her opinion. [RaraTemon@Sri] says she will marry whomever can bring several special gifts, including a golden chariot pulled by a giant Garuda with a dragon as whip.
-5.<Village:Parangteja>. [Petruk] and [Anoman], who is accompanying him as a sentinel, are attacked by the {Korawa}, who are led by [Sengkuni]. [Togog] breaks up the fight and explains (RaraTemon@Sri)’s conditions. Both [Karna] and [Petruk] then return to their houses, bearing news of the contest.
-6.<Village:Karangkadempel>. [Semar], [Arjuna], [Werkudara], [Puntadewa], [Nakula], [Sadewa], [Baladewa] and [Kresna]. [Petruk] arrives and communicates (Togog)’s message. This makes [Semar] sad. [Puntadewa] instructs the Pandawa to search for the chariot.  [Abimanyu] and [Gatotkaca] will go to Trajustrisna and [Antareja] will go to Saptapratala.
-7.<Forest:Unnamed>. [Abimanyu] fights the {WadyaTawanggantungan}, from a country ruled by (Godhayitma).
-8.<Sabrangan:Trajutrisna>. [Bomanarakasura] receives [Godhayitma@Desamuka]. [Abimanyu] and [Gatotkaca] arrive and explain their mission. [Godhayitma@Desamuka] becomes angry and insults [Bomanarakasura]. They fight and [Godhayitma@Desamuka] loses. He leaves, insulting [Bomanarakasura].
+4.<Padhukuhan:Parangteja>. [Togog] is taking care of [Bilung], who is sick. [Karna] and [Petruk] arrive simultaneously, both with the intention of asking for the hand of (RaraTemon@Sri). They fight and exit the chambers. [Togog] asks [RaraTemon@Sri] for her opinion. [RaraTemon@Sri] says she will marry whomever can bring several special gifts, including a golden chariot pulled by a giant Garuda with a dragon as whip.
+5.<Padukuhan:Parangteja>. [Petruk] and [Anoman], who is accompanying him as a sentinel, are attacked by the {Korawa}, who are led by [Sengkuni]. [Togog] breaks up the fight and explains (RaraTemon@Sri)’s conditions. Both [Karna] and [Petruk] then return to their houses, bearing news of the contest.
+*Patet Sanga*
+6.<Padhukuhan:Karangkadempel>. [Semar], [Arjuna], [Werkudara], [Puntadewa], [Nakula], [Sadewa], [Baladewa] and [Kresna]. [Petruk] arrives and communicates (Togog)’s message. This makes [Semar] sad. [Puntadewa] instructs the Pandawa to search for the chariot.  [Abimanyu] and [Gatotkaca] will go to Trajustrisna and [Antareja] will go to Saptapratala.
+7.<Alas:Unnamed>. [Abimanyu] fights the {WadyaTawanggantungan} army, from a country ruled by (Godhayitma).
+*Patet Manyura*
+8.<Sabrangan:Trajutrisna>. [Bomanarakasura] receives [Godhayitma@Desamuka]. [Abimanyu] and [Gatotkaca] arrive and explain their mission. [Godhayitma@Desamuka] becomes angry and insults [Bomanarakasura]. They fight and [Godhayitma@Desamuka] loses. He leaves, throwing insults at [Bomanarakasura].
 9. <Kayangan:Saptapratala>. [Antareja] explains to [Antaboga] that (Semar) wants to marry (JakaPupon@Sadana) to (RaraTemon@Sri) and needs [Antaboga]’s help for this. [Antaboga] gladly agrees to help.
-10. <Forest:Unnamed>[Karna] and [Sengkuni] stop [Gatotkaca] and [Antareja], who have already secured the gifts. [Antareja] and [Gatotkaca] display their anger, sending the {Korawa} running for their lives.
-11. <Village:Karangkadempel>. [Abimanyu], [Gatotkaca] and [Antareja] arrive in [Semar]’s house, bringing the necessary gifts with them. [JakaPupon@Sadana] leaves with them in the direction of Parangteja.
-12. <Village:Parangteja>. [Togog] receives [Semar], [Abimanyu], [Gatotkaca], [Antareja], [Kresna] and [Baladewa].  [JakaPupon@Sadana] becomes [Sadana] and [RaraTemon@Sri] becomes [Sri].
+10. <Alas:Unnamed>. [Karna] and [Sengkuni] stop [Gatotkaca] and [Antareja], who have already secured the gifts. [Antareja] and [Gatotkaca] display their anger, sending the {Korawa} running for their lives.
+11. <Padhukuhan:Karangkadempel>. [Abimanyu], [Gatotkaca] and [Antareja] arrive in [Semar]’s house, bringing the necessary gifts with them. [JakaPupon@Sadana] leaves with them in the direction of Parangteja.
+12. <Padhukuhan:Parangteja>. [Togog] receives [Semar], [Abimanyu], [Gatotkaca], [Antareja], [Kresna] and [Baladewa].  [JakaPupon@Sadana] becomes [Sadana] and [RaraTemon@Sri] becomes [Sri].
 
 //4 #Semar_Boyong_(Wahyu_Katetreman)#
 1. <Court:Astina>. [Duryudana], [Durna], [Karna], [Sengkuni] and [Kartamarma] discuss the problems currently engulfing Astina. [Durna] has been advised by the Gods that their problems might be solved if they bring (Semar) to Astina. [Karna] is tasked with capturing (Semar). [Sengkuni] leaves with him.
@@ -87,7 +93,7 @@
 8. <Kedaton:Astina>. [Gatotkaca@Brajadhenta] chases Banowati until the edges of Astina. The real [Gatotkaca] sees this and  attacks the fake one. A fight ensue and the fake one is revealed to be [Brajadhenta]. Gatotkaca feels uneasy about having to fight his own flesh and blood but he is also angered by Brajadhenta's behaviour. [Brajamusthi] helps him by entering the palm of one of his hands. Eventually both [Brajamusthi] and [Brajadhenta] enter the palms of Gatotkaca's hands and reside there as his source of strength.
 9. <Court:Pringgandani> The dark clouds over the reign of [Gatotkaca] disappear and [Gatotkaca] becomes the king of Pringgandani, crowned  Young King. [Mangsahpati] gives him advice and they all feast together.
 
-//8  #Wahyu_Cakraningrat#
+//8 #Wahyu_Cakraningrat#
 1. <Court:Astina>. [Duryudana] faces [Karna], [Durna] , [Sengkuni] and [Kartamarma]. They discuss a Nugraha from the gods, which will allow the young generations to hold on to power in the future. [Durna] instructs the Adipati of Astina, [Lesmana_Mandrakumara], to obtain this Nugraha which will fall in the Kendrawahana forest. [Duryudana] agrees to this. [Durna], [Karna] and [Sengkuni] are ordered to accompany him.
 2. <Kedaton:Astina>. [Banowati] awaits the return of king [Duryudana]. She washes his feet. [Duryudana] says that their son wants to receive the Wahyu Cakraningrat. After eating, the king enters his meditation chambers to ask for the favor of the gods.
 3. <Alun-alun:Astina>. [Durna] accompanies his grandson [Lesmana_Mandrakumara] on the Kreta Kencana, together with [Karna], [Sengkuni] and the {Korawa} who are headed to the Kendrawahana forest.

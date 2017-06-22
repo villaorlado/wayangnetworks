@@ -1,0 +1,7 @@
+families:
+  - parents: [Drupadi, Puntadewa]
+    children: [Pancawala]
+  - parents: [Drupada]
+    children: [Drupadi]
+  - parents: []
+    children: [Puntadewa]

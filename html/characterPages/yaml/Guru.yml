@@ -1,0 +1,9 @@
+families:
+  - parents: [Guru, Uma]
+    children: [ Sambu,  Brama,  Indra,  Bayu,  Wisnu,  Dewasrani]
+  - parents: [Guru,  Laksmi]
+    children: [Sakra,  Mahadewa,  Asmara]
+  - parents: [Guru]
+    children: [ Kala]
+  - parents: [Sang_Hyang_Tunggal, Rakti]
+    children: [Guru]

@@ -1,0 +1,7 @@
+families:
+  - parents: [Kanastren, Semar]
+    children: [ Kamajaya,  Wungkuam,  Tambora,  Wrahaspati,  Siwah,  Kuwera,  Candra,  Yamadipati,  Surya,  Darmanesti]
+  - parents: []
+    children: [Kanastren]
+  - parents: []
+    children: [Semar]

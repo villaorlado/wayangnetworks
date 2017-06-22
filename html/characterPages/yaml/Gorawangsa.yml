@@ -1,0 +1,7 @@
+families:
+  - parents: [Gorawangsa, Maerah]
+    children: [Kangsa]
+  - parents: []
+    children: [Gorawangsa]
+  - parents: []
+    children: [Maerah]

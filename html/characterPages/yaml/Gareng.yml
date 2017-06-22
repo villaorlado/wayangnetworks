@@ -1,0 +1,5 @@
+families:
+  - parents: [Gareng, Sariwati]
+    children: []
+  - parents: [Semar]
+    children: [Gareng]

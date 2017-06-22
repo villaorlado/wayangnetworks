@@ -1,0 +1,7 @@
+families:
+  - parents: [Gendari, Destarastra]
+    children: [{100 Korawa}]
+  - parents: [Suwala, Gandini]
+    children: [Gendari]
+  - parents: [Ambika, Abiyasa]
+    children: [Destarastra]

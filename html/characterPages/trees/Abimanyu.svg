@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-218 762,-218 762,4 -4,4"/>
 <g id="clust1" class="cluster"><title>cluster_family_0</title>
 </g>
-<g id="clust4" class="cluster"><title>cluster_family_1</title>
+<g id="clust3" class="cluster"><title>cluster_family_1</title>
 </g>
 <g id="clust6" class="cluster"><title>cluster_family_2</title>
 </g>
@@ -21,14 +21,6 @@
 <g id="node1" class="node"><title>union_0</title>
 <ellipse fill="#1abc9c" stroke="white" cx="501.5" cy="-107" rx="3.5" ry="3.5"/>
 </g>
-<!-- siblings_0 -->
-<g id="node4" class="node"><title>siblings_0</title>
-<polygon fill="#1abc9c" stroke="#cccccc" stroke-width="0" points="541,-107.5 534,-107.5 534,-106.5 541,-106.5 541,-107.5"/>
-</g>
-<!-- union_0&#45;&gt;siblings_0 -->
-<g id="edge3" class="edge"><title>union_0&#45;&gt;siblings_0</title>
-<path fill="none" stroke="#1abc9c" d="M505.083,-107C511.913,-107 526.732,-107 533.715,-107"/>
-</g>
 <!-- Abimanyu -->
 <g id="node2" class="node"><title>Abimanyu</title>
 <polygon fill="white" stroke="#cccccc" points="469,-152 289,-152 289,-116 469,-116 469,-152"/>
@@ -36,15 +28,15 @@
 </g>
 <!-- Abimanyu&#45;&gt;union_0 -->
 <g id="edge1" class="edge"><title>Abimanyu&#45;&gt;union_0</title>
-<path fill="none" stroke="#1abc9c" d="M469.116,-120.5C488.348,-120.5 503,-120.5 503,-120.5 503,-120.5 503,-114.406 503,-110.407"/>
+<path fill="none" stroke="#1abc9c" d="M469.116,-128C488.348,-128 503,-128 503,-128 503,-128 503,-116.188 503,-110.281"/>
 </g>
 <!-- union_1 -->
-<g id="node6" class="node"><title>union_1</title>
-<ellipse fill="#2ecc71" stroke="white" cx="501.5" cy="-181" rx="3.5" ry="3.5"/>
+<g id="node4" class="node"><title>union_1</title>
+<ellipse fill="#2ecc71" stroke="white" cx="501.5" cy="-188" rx="3.5" ry="3.5"/>
 </g>
 <!-- Abimanyu&#45;&gt;union_1 -->
-<g id="edge5" class="edge"><title>Abimanyu&#45;&gt;union_1</title>
-<path fill="none" stroke="#2ecc71" d="M469.264,-138.5C487.391,-138.5 501,-138.5 501,-138.5 501,-138.5 501,-167.099 501,-177.376"/>
+<g id="edge3" class="edge"><title>Abimanyu&#45;&gt;union_1</title>
+<path fill="none" stroke="#2ecc71" d="M469.264,-140C487.391,-140 501,-140 501,-140 501,-140 501,-172.918 501,-184.234"/>
 </g>
 <!-- Siti_Sendari -->
 <g id="node3" class="node"><title>Siti_Sendari</title>
@@ -53,27 +45,35 @@
 </g>
 <!-- Siti_Sendari&#45;&gt;union_0 -->
 <g id="edge2" class="edge"><title>Siti_Sendari&#45;&gt;union_0</title>
-<path fill="none" stroke="#1abc9c" d="M469.038,-93.5C487.794,-93.5 502,-93.5 502,-93.5 502,-93.5 502,-99.314 502,-103.311"/>
+<path fill="none" stroke="#1abc9c" d="M469.038,-80C487.794,-80 502,-80 502,-80 502,-80 502,-95.8269 502,-103.246"/>
 </g>
-<!-- Parikesit -->
-<g id="node5" class="node"><title>Parikesit</title>
-<polygon fill="white" stroke="#cccccc" points="750,-125 570,-125 570,-89 750,-89 750,-125"/>
-<text text-anchor="middle" x="660" y="-102.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Parikesit</text>
+<!-- siblings_1 -->
+<g id="node6" class="node"><title>siblings_1</title>
+<polygon fill="#2ecc71" stroke="#cccccc" stroke-width="0" points="541,-188.5 534,-188.5 534,-187.5 541,-187.5 541,-188.5"/>
 </g>
-<!-- siblings_0&#45;&gt;Parikesit -->
-<g id="edge4" class="edge"><title>siblings_0&#45;&gt;Parikesit</title>
-<path fill="none" stroke="#1abc9c" d="M541.034,-107C541.034,-107 559.811,-107 559.811,-107"/>
-<polygon fill="#1abc9c" stroke="#1abc9c" points="567.81,-97 567.811,-117 563.811,-117 563.81,-97.0001 567.81,-97"/>
-<polyline fill="none" stroke="#1abc9c" points="569.811,-107 559.811,-107 "/>
+<!-- union_1&#45;&gt;siblings_1 -->
+<g id="edge5" class="edge"><title>union_1&#45;&gt;siblings_1</title>
+<path fill="none" stroke="#2ecc71" d="M505.083,-188C511.913,-188 526.732,-188 533.715,-188"/>
 </g>
 <!-- Utari -->
-<g id="node7" class="node"><title>Utari</title>
+<g id="node5" class="node"><title>Utari</title>
 <polygon fill="white" stroke="#cccccc" points="469,-206 289,-206 289,-170 469,-170 469,-206"/>
 <text text-anchor="middle" x="379" y="-183.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Utari</text>
 </g>
 <!-- Utari&#45;&gt;union_1 -->
-<g id="edge6" class="edge"><title>Utari&#45;&gt;union_1</title>
-<path fill="none" stroke="#2ecc71" d="M469.315,-181C481.938,-181 492.417,-181 497.733,-181"/>
+<g id="edge4" class="edge"><title>Utari&#45;&gt;union_1</title>
+<path fill="none" stroke="#2ecc71" d="M469.315,-188C481.938,-188 492.417,-188 497.733,-188"/>
+</g>
+<!-- Parikesit -->
+<g id="node7" class="node"><title>Parikesit</title>
+<polygon fill="white" stroke="#cccccc" points="750,-206 570,-206 570,-170 750,-170 750,-206"/>
+<text text-anchor="middle" x="660" y="-183.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Parikesit</text>
+</g>
+<!-- siblings_1&#45;&gt;Parikesit -->
+<g id="edge6" class="edge"><title>siblings_1&#45;&gt;Parikesit</title>
+<path fill="none" stroke="#2ecc71" d="M541.034,-188C541.034,-188 559.811,-188 559.811,-188"/>
+<polygon fill="#2ecc71" stroke="#2ecc71" points="567.81,-178 567.811,-198 563.811,-198 563.81,-178 567.81,-178"/>
+<polyline fill="none" stroke="#2ecc71" points="569.811,-188 559.811,-188 "/>
 </g>
 <!-- union_2 -->
 <g id="node8" class="node"><title>union_2</title>

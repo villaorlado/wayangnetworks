@@ -1,8 +1,8 @@
 families:
   - parents: [Abimanyu, Siti_Sendari]
-    children: [Parikesit]
-  - parents: [Abimanyu,  Utari]
     children: []
+  - parents: [Abimanyu,  Utari]
+    children: [Parikesit]
   - parents: [Arjuna, Rara_Ireng]
     children: [Abimanyu]
   - parents: [Pratiwi, Kresna]

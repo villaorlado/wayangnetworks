@@ -1,0 +1,9 @@
+families:
+  - parents: [Gatotkaca, Pergiwa]
+    children: [ Sasikirana]
+  - parents: [Gatotkaca,  Sumpani]
+    children: [ Arya_Jayasumpena]
+  - parents: [Gatotkaca,  Suryawati]
+    children: [Suryakaca]
+  - parents: [Werkudara, Arimbi]
+    children: [Gatotkaca]

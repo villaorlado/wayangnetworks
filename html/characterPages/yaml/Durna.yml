@@ -1,0 +1,5 @@
+families:
+  - parents: [Durna, Wilutama]
+    children: [Aswatama]
+  - parents: [Kumbini, Baratwadja]
+    children: [Durna]

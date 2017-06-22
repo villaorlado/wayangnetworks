@@ -1,0 +1,7 @@
+families:
+  - parents: [Durga, Guru]
+    children: [Dewasrani,  Kala]
+  - parents: []
+    children: [Durga]
+  - parents: [Rakti, Sang_Hyang_Tunggal]
+    children: [Guru]

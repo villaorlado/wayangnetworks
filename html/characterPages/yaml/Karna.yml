@@ -1,0 +1,7 @@
+families:
+  - parents: [Karna, Surtikanthi]
+    children: [Warsasena,  Warsakusuma]
+  - parents: [Surya, Kunti]
+    children: [Karna]
+  - parents: []
+    children: [Surtikanthi]

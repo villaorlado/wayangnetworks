@@ -1,0 +1,5 @@
+families:
+  - parents: [Kamajaya, Kamaritih]
+    children: []
+  - parents: [Semar, Kanastren]
+    children: [Kamajaya]

@@ -1,0 +1,7 @@
+families:
+  - parents: [Kangsa, Asti]
+    children: []
+  - parents: [Kangsa,  Prapti]
+    children: []
+  - parents: [Gorawangsa, Maerah]
+    children: [Kangsa]

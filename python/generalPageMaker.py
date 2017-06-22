@@ -15,7 +15,7 @@ html += open("htmlfragments/html1.html").read()
 html += "<h1>List of Lakons</h1>"
 html += "<ul>"
 
-for fileItem in glob.glob("../html/lakonPages/*.html"):
+for fileItem in sorted(glob.glob("../html/lakonPages/*.html")):
 	title = re.sub("(../html/lakonPages/|\.html)","",fileItem)
 	html += '<li>' + '<a href="lakonPages/' + title + '.html">' + title + '</a></li>'
 	
@@ -36,7 +36,7 @@ html += open("htmlfragments/html1.html").read()
 html += "<h1>List of Characters</h1>"
 html += "<ul>"
 
-for fileItem in glob.glob("../html/characterPages/*.html"):
+for fileItem in sorted(glob.glob("../html/characterPages/*.html")):
 	title = re.sub("(../html/characterPages/|\.html)","",fileItem)
 	html += '<li>' + '<a href="characterPages/' + title + '.html">' + title + '</a></li>'
 	

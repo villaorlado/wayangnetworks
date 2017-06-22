@@ -56,9 +56,10 @@ def makeHtml (header,column, linked=False):
 def makeLakonHtml():
 	lakonList = sh.cell_value(rowx=num, colx=col2num("Y")).split(",")
 	lakonArray = []
+	htmlString = "<p><b>Found in the follwing lakon (stories)</b>:</p><ol> "
 	for lakon in lakonList:
-		lakonArray.append('<a href="../lakonPages/%s.html">%s</a>' % (lakon,lakon))
-	htmlString = "<p><b>Found in the follwing lakon</b>: " + (", ").join(lakonArray) + "</p>"
+		htmlString += '<li><a href="../lakonPages/%s.html">%s</a></li>' % (lakon,lakon)
+	htmlString += "</ol>"
 	return htmlString
 
 def makeDescriptionHtml():
@@ -216,6 +217,7 @@ for num in range(1,sh.nrows):
 	html += makeHtml("Notes on the Sanskrit version", "F")
 	html += makeHtml("Alternative names", "H")
 	html += makeDescriptionHtml()
+	html += makeLakonHtml()
 	
 	if (sh.cell_value(rowx=num, colx=col2num("L")) or sh.cell_value(rowx=num, colx=col2num("I")) or sh.cell_value(rowx=num, colx=col2num("J")) or sh.cell_value(rowx=num, colx=col2num("K"))):	
 		html += "<hr><h3>Family relationships</h3>"
@@ -247,7 +249,6 @@ for num in range(1,sh.nrows):
 	html += makeHtml("Impersonated by", "R", True)
 	html += makeHtml("Wanda", "S", True)
 	html += getSources()
-	html += makeLakonHtml()
 	
 	html += "<p>&nbsp;<hr><p><h3>Network measurements for %s</h3>" %name
 	html += open("htmlfragments/table2.html").read()
