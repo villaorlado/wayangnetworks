@@ -62,19 +62,17 @@ Maruta</title>
             <div class="col-md-9">
 
                 <div>
-<p><h1>Maruta</h1></p><p><b>Terms of address</b>: Kala<p><b>Type</b>: Raksasa<p><b>Origin</b>: Java<p><b>Notes on the Sanskrit version</b>: Not mentioned in the Indian Mahabharata.<p><b>Description in the Javanese version</b>: King Dahana speaks to Bantala Maruta and Ranu, he wants to marry a Citrawarsiti, daughter of King Karentegnyana in Tasikmadu.  //HY dari unsur angin<b>spouses</b> <p><b>Found in the follwing lakon</b>: <a href="../lakonPages/Wahyu_Makutharama.html">Wahyu_Makutharama</a></p><p>&nbsp;<hr><p><h3>Network measurements for Maruta</h3><table class="table" cellspacing="1" width="100%">
+<p><h1>Maruta</h1></p><p><b>Terms of address</b>: Kala<p><b>Type</b>: Raksasa<p><b>Origin</b>: Java<p><b>Notes on the Sanskrit version</b>: Not mentioned in the Indian Mahabharata.<p><b>Description in the Javanese version</b>: He is a personification of wind. In <i>Wahyu_Mahkutarama</i> he is mentioned as one of the four brothers of <i>Wibisana</i>, who is looking to be returned to his original shape.<p><b>Found in the follwing lakon (stories)</b>:</p><ol> <li><a href="../lakonPages/Wahyu_Makutharama.html">Wahyu_Makutharama</a></li></ol><hr><h3>More information</h3><p>&nbsp;<hr><p><h3>Network measurements for Maruta</h3><table class="table" cellspacing="1" width="100%">
         <thead>
             <tr>
                 <th>Measurement</th>
-                <th>Canonical Only Network</th>
-                <th>Disguised Network</th>
-                <th>Difference</th>
+                <th>Value</th>
             </tr>
         </thead>
         
     
-<tr><td>Degree</td><td>23.0</td><td>25.0</td><td>-2.0</td></tr><tr><td>Weighted Degree</td><td>34.0</td><td>36.0</td><td>-2.0</td></tr><tr><td>Closeness Centrality</td><td>0.542750929368</td><td>0.538699690402</td><td>0.00405123896555</td></tr><tr><td>Betweeness Centrality</td><td>0.578767123288</td><td>0.57183908046</td><td>0.0069280428279</td></tr><tr><td>Eigen Vector Centrality</td><td>0.267753408706</td><td>0.263455723683</td><td>0.00429768502354</td></tr></table>
-&nbsp;<p><h3>Characters linked to Maruta in the canonical network</h3><hr><table id="linktableCanonical" class="display" cellspacing="0" width="100%">
+<tr><td>Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has"><i class="glyphicon glyphicon-question-sign"></i></a></td><td>25.0</td></tr><tr><td>Weighted Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has, taking into account the weight of those connections"><i class="glyphicon glyphicon-question-sign"></i></a></td><td>25.0</td></tr><tr><td>Closeness Centrality <a href="#" data-toggle="tooltip" title="The average length of the shortest path between the node and all other nodes in the graph"><i class="glyphicon glyphicon-question-sign"></i></a></td><td>36.0</td></tr><tr><td>Betweeness Centrality <a href="#" data-toggle="tooltip" title="Inidcates how often a node acts as a bridge along the shortest path between two other nodes"><i class="glyphicon glyphicon-question-sign"></i></a></td><td>0.0</td></tr><tr><td>Eigen Vector Centrality <a href="#" data-toggle="tooltip" title="A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes"><i class="glyphicon glyphicon-question-sign"></i></a></td><td>0.263455723683</td></tr></table>
+<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same adegan as Maruta</h3><hr><table id="linktableDisguised" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>Character</th>
@@ -88,21 +86,10 @@ Maruta</title>
             </tr>
         </tfoot>
     </table>
-<p>&nbsp;<p>&nbsp;<p><h3>Characters linked to Maruta in the disguised network</h3><hr><table id="linktableDisguised" class="display" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>Character</th>
-                <th>Link weight</th>
-            </tr>
-        </thead>
-        <tfoot>
-            <tr>
-                <th>Character</th>
-                <th>Link weight</th>
-            </tr>
-        </tfoot>
-    </table>
-<script src="../js/jquery.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function(){$("#linktableCanonical").DataTable({"ajax":"../data/json/Maruta_canonical.txt"});$("#linktableDisguised").DataTable({"ajax":"../data/json/Maruta_disguised.txt"});});</script></div>
+<script src="../js/jquery.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function(){table = $("#linktableDisguised").DataTable({"ajax":"../data/json/Maruta_disguised.txt","order": [[ 1, "desc" ]]});$('#linktableDisguised tbody').on('click', 'tr', function () {
+ var data = table.row(this).data();
+ window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});});$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();
+ });</script></div>
 
                
 

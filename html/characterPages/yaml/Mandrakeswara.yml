@@ -1,0 +1,5 @@
+families:
+  - parents: [Mandrakeswara, Tejawati]
+    children: [ Salya,  Madrim]
+  - parents: [Hartati_Mandrakusuma, Ayutamayi]
+    children: [Mandrakeswara]

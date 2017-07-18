@@ -1,0 +1,5 @@
+families:
+  - parents: [Kumbakarna, Aswani]
+    children: [ Aswani_Kumba,  Kumba-Kumba]
+  - parents: [Wisrawa, Sukesi]
+    children: [Kumbakarna]

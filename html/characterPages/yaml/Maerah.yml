@@ -1,0 +1,11 @@
+families:
+  - parents: [Maerah, Basudewa]
+    children: []
+  - parents: [Maerah,  Gorawangsa]
+    children: [ Kangsa]
+  - parents: [Kurandapati]
+    children: [Maerah]
+  - parents: [Kuntiboja]
+    children: [Basudewa]
+  - parents: []
+    children: [Gorawangsa]

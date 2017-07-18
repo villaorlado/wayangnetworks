@@ -9,7 +9,7 @@ families:
     children: [Udawa]
   - parents: [Kuntiboja]
     children: [Basudewa]
-  - parents: []
+  - parents: [Kurandapati]
     children: [Maerah]
   - parents: []
     children: [Badrahini]

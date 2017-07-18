@@ -1,0 +1,5 @@
+families:
+  - parents: [Kurandhayaksa]
+    children: [ Kartapiyoga]
+  - parents: []
+    children: [Kurandhayaksa]

@@ -1,3 +1,7 @@
 families:
+  - parents: [Barata, Antakawulan]
+    children: []
   - parents: [Destarastra, Kekayi]
     children: [Barata]
+  - parents: []
+    children: [Antakawulan]

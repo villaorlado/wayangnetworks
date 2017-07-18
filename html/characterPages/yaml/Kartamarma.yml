@@ -1,0 +1,5 @@
+families:
+  - parents: [Kartamarma, Karastri]
+    children: []
+  - parents: [Destarastra, Gendari]
+    children: [Kartamarma]

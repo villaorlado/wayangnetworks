@@ -3,5 +3,5 @@ families:
     children: [Kangsa]
   - parents: []
     children: [Gorawangsa]
-  - parents: []
+  - parents: [Kurandapati]
     children: [Maerah]

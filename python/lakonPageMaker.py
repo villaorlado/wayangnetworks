@@ -30,7 +30,7 @@ for x in range (1, len(lakons)):
 	text = re.sub(r'(\d+)', r"<p><b>\1</b>", text)
 	text = re.sub(r'\*([\w ]+)\*', r"<p>&nbsp;<p><h3>\1</h3><hr>", text)
 	
-	text = re.sub(r'([a-zA-Z -]+):([a-zA-Z]+)', r" <span class='badge'>\1</span> <b>\2</b>", text)
+	text = re.sub(r'([a-zA-Z -]+):([a-zA-Z\-]+)', r" <span class='badge'>\1</span> <b>\2</b>", text)
 	text = re.sub(r'\[(\w*)\]', r"<a href='../characterPages/\1.html'>\1</a>", text)
 	text = re.sub(r'\{(\w*)\}', r"<a href='../characterPages/\1.html'>\1</a>", text)
 	text = re.sub(r'\[(\w*)\]', r"<a href='../characterPages/\1.html'>\1</a>", text)

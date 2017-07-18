@@ -1,0 +1,5 @@
+families:
+  - parents: [Mangsahpati, Rekatawati]
+    children: [ Seta,  Utara,  Wratsangka,  Utari]
+  - parents: [Basuparicara, Adrika]
+    children: [Mangsahpati]

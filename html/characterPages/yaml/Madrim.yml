@@ -1,0 +1,11 @@
+families:
+  - parents: [Madrim, Pandu]
+    children: []
+  - parents: [Madrim,  Aswan]
+    children: [Nakula]
+  - parents: [Madrim,  Aswin]
+    children: [ Sadewa]
+  - parents: [Mandrapati, Tejawati]
+    children: [Madrim]
+  - parents: []
+    children: [Pandu]

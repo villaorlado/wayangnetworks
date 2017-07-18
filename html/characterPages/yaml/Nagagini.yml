@@ -1,0 +1,5 @@
+families:
+  - parents: [Nagagini, Bima]
+    children: [ Antareja]
+  - parents: [Antaboga, Supreti]
+    children: [Nagagini]

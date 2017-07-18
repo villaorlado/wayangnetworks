@@ -3,5 +3,5 @@ families:
     children: [ Samba,  Gunadewa]
   - parents: [Jembawan, Trijata]
     children: [Jembawati]
-  - parents: [Dewaki, Basudewa]
+  - parents: [Mahindra, Basudewa]
     children: [Kresna]
