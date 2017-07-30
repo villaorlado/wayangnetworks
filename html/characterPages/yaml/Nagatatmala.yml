@@ -1,3 +1,5 @@
 families:
-  - parents: [Antaboga]
+  - parents: [Nagatatmala, Mumpuni]
+    children: [ Antawirya]
+  - parents: [Antaboga, Supreti]
     children: [Nagatatmala]
