@@ -1,0 +1,11 @@
+families:
+  - parents: [Pandu, Kunti]
+    children: [ (Darma) Puntadewa,  (Bayu) Bima,  (Endra) Arjuna]
+  - parents: [Pandu,  Madrim]
+    children: [ (Aswan) Nakula,  (Aswin) Sadewa]
+  - parents: [Abyasa, Ambalika]
+    children: [Pandu]
+  - parents: [Surasena]
+    children: [Kunti]
+  - parents: [Tejawati, Mandrapati]
+    children: [Madrim]

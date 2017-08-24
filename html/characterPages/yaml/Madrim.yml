@@ -7,5 +7,5 @@ families:
     children: [ Sadewa]
   - parents: [Mandrapati, Tejawati]
     children: [Madrim]
-  - parents: []
+  - parents: [Ambalika, Abyasa]
     children: [Pandu]

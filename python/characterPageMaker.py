@@ -7,6 +7,7 @@ The default settings only create an edgeList file for the canonical only charact
 
 #imports
 import characterInfoExpander
+#import distributions
 import re
 import xlrd 
 import matplotlib.pyplot as plt
@@ -33,6 +34,26 @@ def col2num(col_str):
         col_num += (ord(char) - ord('A') + 1) * (26 ** expn)
         expn += 1
     return col_num-1
+
+#make histograms
+degreeList = []
+weightedDegreeList = []
+closenessCentralityList = []
+betweennessCentralityList = []
+eigenvectorCentralityList = []
+
+for num in range(1,sh.nrows):	
+	if (sh.cell_value(rowx=num, colx=col2num("AK"))):
+		degree = int(sh.cell_value(rowx=num, colx=col2num("AK")))
+		weightedDegree = int(sh.cell_value(rowx=num, colx=col2num("AL")))
+		closenessCentrality = float(sh.cell_value(rowx=num, colx=col2num("AM")))
+		betweennessCentrality = float(sh.cell_value(rowx=num, colx=col2num("AO")))
+		eigenvectorCentrality = float(sh.cell_value(rowx=num, colx=col2num("AT")))
+		degreeList.append(degree)
+		weightedDegreeList.append(weightedDegree)
+		closenessCentralityList.append(closenessCentrality)
+		betweennessCentralityList.append(betweennessCentrality)
+		eigenvectorCentralityList.append(eigenvectorCentrality)
 
 def makeHtml (header,column, linked=False):
 	htmlString = ""
@@ -88,11 +109,31 @@ def makeDescriptionHtml():
 	htmlString = "<p><b>Description in the Javanese version</b>: " + htmlString.decode("utf-8")
 	return htmlString
 
-def makeTable(measurement,location):
-	#canonicalValue = sh.cell_value(rowx=num, colx=col2num(location))
+def makeTable(listName,valueName,measurement,location):
+	#currently the makeTable function only looks at disguised values
 	disguisedValue = sh.cell_value(rowx=num, colx=col2num(location)+10)
-	#difference = canonicalValue - disguisedValue
-	htmlString = "<tr><td>%s</td><td>%s</td></tr>" % (measurement,disguisedValue)
+	htmlString = "<tr><td>%s</td><td>%s</td><td><a href=\"histograms/%s_%s.png\"><img src=\"histograms/%s_%s.png\" height=\"100px\"></a></td></tr>" % (measurement,disguisedValue,name,valueName,name,valueName)
+	#here we make an image with the histogram for this particular
+	
+	plt.figure(figsize=(15,3)) 
+	n,bins,patches = plt.hist(listName, bins='auto', color="blue") 
+	plt.title("%s for %s (in red)" %(valueName,name))
+	plt.ylabel("Number of instances")
+	plt.xlabel(valueName)
+	
+	binNum = -1
+	for bin in bins:
+		if disguisedValue > bin:
+			binNum+=1
+		else:
+			break
+	
+	if binNum == len(patches):
+		binNum = binNum-1
+
+	patches[binNum].set_fc('r')
+	plt.savefig("../html/characterPages/histograms/%s_%s.png" % (name,valueName))
+	plt.close()
 	return htmlString
 
 def page(value):
@@ -252,11 +293,11 @@ for num in range(1,sh.nrows):
 	
 	html += "<p>&nbsp;<hr><p><h3>Network measurements for %s</h3>" %name
 	html += open("htmlfragments/table2.html").read()
-	html += makeTable('Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has"><i class="glyphicon glyphicon-question-sign"></i></a>',"AA")
-	html += makeTable('Weighted Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has, taking into account the weight of those connections"><i class="glyphicon glyphicon-question-sign"></i></a>',"AA")
-	html += makeTable('Closeness Centrality <a href="#" data-toggle="tooltip" title="The average length of the shortest path between the node and all other nodes in the graph"><i class="glyphicon glyphicon-question-sign"></i></a>',"AB")
-	html += makeTable('Betweeness Centrality <a href="#" data-toggle="tooltip" title="Inidcates how often a node acts as a bridge along the shortest path between two other nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AE")
-	html += makeTable('Eigen Vector Centrality <a href="#" data-toggle="tooltip" title="A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AJ")
+	html += makeTable(degreeList,"Degree",'Degree <a href="#" data-toggle="tooltip" title="The amount of connections of the given node."><i class="glyphicon glyphicon-question-sign"></i></a>',"AA")
+	html += makeTable(weightedDegreeList,"Weigted Degree",'Weighted Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has, taking into account the weight of those connections"><i class="glyphicon glyphicon-question-sign"></i></a>',"AB")
+	html += makeTable(closenessCentralityList,"Closeness Centrality",'Closeness Centrality <a href="#" data-toggle="tooltip" title="The average length of the shortest path between the node and all other nodes in the graph"><i class="glyphicon glyphicon-question-sign"></i></a>',"AC")
+	html += makeTable(betweennessCentralityList,"Betweenness Centrality",'Betweeness Centrality <a href="#" data-toggle="tooltip" title="Inidcates how often a node acts as a bridge along the shortest path between two other nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AE")
+	html += makeTable(eigenvectorCentralityList,"Eigenvector Centrality",'Eigenvector Centrality <a href="#" data-toggle="tooltip" title="A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AJ")
 	html += open("htmlfragments/table3.html").read()
 	html += "<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same adegan as %s</h3><hr>" %name	
 	html += open("htmlfragments/table4.html").read()

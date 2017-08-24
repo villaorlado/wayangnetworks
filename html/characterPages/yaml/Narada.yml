@@ -1,0 +1,5 @@
+families:
+  - parents: [Narada, Wiyodi]
+    children: [Kanekawati, Malangdewa]
+  - parents: [Caturkanaka, Laksmi]
+    children: [Narada]

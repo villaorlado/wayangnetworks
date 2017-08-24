@@ -1,0 +1,5 @@
+families:
+  - parents: [Pancawala, Pregiwati]
+    children: []
+  - parents: [Yudistira, Drupadi]
+    children: [Pancawala]

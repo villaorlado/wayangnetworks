@@ -1,0 +1,7 @@
+families:
+  - parents: [Nakula, Sayati]
+    children: [Pramusinta, Pramuwati]
+  - parents: [Nakula,  Srengganawati]
+    children: [Sri_Tanjung]
+  - parents: [Pandu, Madrim]
+    children: [Nakula]
