@@ -8,8 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<style>
+		path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
 
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.joint:hover{
+	cursor:pointer
+}
+
+#sigma-container{
+          top:0px;
+          left:0px;
+          width:50%;
+          position:relative;
+          height:300px;
+          box-shadow: 1px 1px 5px #999;
+        }
+		</style>
     <title>
+		
 Bantala</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/shop-item.css" rel="stylesheet">
@@ -62,7 +90,7 @@ Bantala</title>
             <div class="col-md-9">
 
                 <div>
-<p><h1>Bantala</h1></p><p><b>Terms of address</b>: Kala<p><b>Type</b>: Raksasa<p><b>Origin</b>: Java<p><b>Notes on the Sanskrit version</b>: Not mentioned in the Indian Mahabharata.<p><b>Alternative names</b>: One of the brothers of Wibisana in /Wahyu Makutharama/. He represents the earth, and is one of several characters that constitute anthropomorphic representations of natural elements.<p><b>Description in the Javanese version</b>: One of the brothers of Wibisana in Wahyu Makutharama. <p><b>Found in the follwing lakon (stories)</b>:</p><ol> <li><a href="../lakonPages/Wahyu_Makutharama.html">Wahyu_Makutharama</a></li></ol><hr><h3>More information</h3><p>&nbsp;<hr><p><h3>Network measurements for Bantala</h3><table class="table" cellspacing="1" width="100%">
+<p><h1>Bantala</h1></p><p><b>Terms of address</b>: Kala<p><b>Type</b>: Raksasa<p><b>Origin</b>: Java<p><b>Notes on the Sanskrit version</b>: Not mentioned in the Indian Mahabharata.<p><b>Description in the Javanese version</b>: In <i>Wahyu_Mahkutarama</i> he is mentioned as one of the four brothers of <a href="Wibisana.html">Wibisana</a>, who is looking to be returned to his original shape. There are no entries for this character in any of the consulted encyclopedias.<p><b>Found in the follwing lakon (stories)</b>:</p><ol> <li><a href="../lakonPages/Wahyu_Makutharama.html">Wahyu_Makutharama</a></li></ol><hr><h3>More information</h3><p>&nbsp;<hr><p><h3>Network measurements for Bantala</h3><table class="table" cellspacing="1" width="100%">
         <thead>
             <tr>
                 <th>Measurement</th>
@@ -91,11 +119,13 @@ Bantala</title>
  window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});});$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();
  });</script></div>
 
-               
+   
 
             </div>
 
         </div>
+
+
 
     </div>
     <!-- /.container -->
@@ -117,12 +147,11 @@ Bantala</title>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <!--script src="../js/jquery.js"></script-->
-
+   
+	<script src="http://d3js.org/d3.v3.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-    
-
+   
 </body>
 
 </html>

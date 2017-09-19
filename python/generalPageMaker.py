@@ -8,20 +8,20 @@ import glob
 import re
 
 #For Lakon Pages
-html = open("htmlfragments/heather.txt").read()
-html += "Lakon list"
-html += open("htmlfragments/html1.html").read()
+html = open("htmlfragments/lakons_template.html").read()
+html = html.replace("$title$","Lakon list")
 
-html += "<h1>List of Lakons</h1>"
-html += "<ul>"
+content = "<h1>List of Lakons</h1>"
+content += "Lakon list"
+content += "<ul>"
 
+x =1
 for fileItem in sorted(glob.glob("../html/lakonPages/*.html")):
 	title = re.sub("(../html/lakonPages/|\.html)","",fileItem)
-	html += '<li>' + '<a href="lakonPages/' + title + '.html">' + title + '</a></li>'
+	content += '<li class="titles" id="title%s">'%x + '<a href="lakonPages/' + title + '.html">' + title + '</a></li>'
+	x+=1
 	
-html += "</ul>"
-html += open("htmlfragments/html2.html").read()
-html = re.sub("\.\.\/","",html)
+html =html.replace("$content$",content)
 
 with open("../html/lakons.html", "w") as file:
 		file.write(html)

@@ -1,0 +1,5 @@
+families:
+  - parents: [Parasara, Durgandini]
+    children: [ Rajamala,  Kencakarupa,  Rupakenca,  Abiyasa]
+  - parents: [Sakri, Sati]
+    children: [Parasara]

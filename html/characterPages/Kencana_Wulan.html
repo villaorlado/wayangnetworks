@@ -8,8 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<style>
+		path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
 
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.joint:hover{
+	cursor:pointer
+}
+
+#sigma-container{
+          top:0px;
+          left:0px;
+          width:50%;
+          position:relative;
+          height:300px;
+          box-shadow: 1px 1px 5px #999;
+        }
+		</style>
     <title>
+		
 Kencana_Wulan</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/shop-item.css" rel="stylesheet">
@@ -91,11 +119,13 @@ Kencana_Wulan</title>
  window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});});$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();
  });</script></div>
 
-               
+   
 
             </div>
 
         </div>
+
+
 
     </div>
     <!-- /.container -->
@@ -117,12 +147,11 @@ Kencana_Wulan</title>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <!--script src="../js/jquery.js"></script-->
-
+   
+	<script src="http://d3js.org/d3.v3.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-    
-
+   
 </body>
 
 </html>

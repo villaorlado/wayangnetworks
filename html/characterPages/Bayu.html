@@ -8,8 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<style>
+		path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
 
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.joint:hover{
+	cursor:pointer
+}
+
+#sigma-container{
+          top:0px;
+          left:0px;
+          width:50%;
+          position:relative;
+          height:300px;
+          box-shadow: 1px 1px 5px #999;
+        }
+		</style>
     <title>
+		
 Bayu</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/shop-item.css" rel="stylesheet">
@@ -200,7 +228,7 @@ Bayu</title>
 </g>
 </g>
 </svg>
-<hr><h3>More information</h3><p><b>Ruler of</b>: Panglawung<p><b>Takes the shape of</b>: _Raksasa2<p><b>Sources</b>: <i>Ensiklopedi Wayang Purwa</i>, p. 112<p>&nbsp;<hr><p><h3>Network measurements for Bayu</h3><table class="table" cellspacing="1" width="100%">
+<hr><h3>More information</h3><p><b>Ruler of</b>: Panglawung<p><b>Takes the shape of</b>: <a href='_Raksasa2.html'>_Raksasa2</a><p><b>Sources</b>: <i>Ensiklopedi Wayang Purwa</i>, p. 112<p>&nbsp;<hr><p><h3>Network measurements for Bayu</h3><table class="table" cellspacing="1" width="100%">
         <thead>
             <tr>
                 <th>Measurement</th>
@@ -229,11 +257,13 @@ Bayu</title>
  window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});});$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();
  });</script></div>
 
-               
+   
 
             </div>
 
         </div>
+
+
 
     </div>
     <!-- /.container -->
@@ -255,12 +285,11 @@ Bayu</title>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <!--script src="../js/jquery.js"></script-->
-
+   
+	<script src="http://d3js.org/d3.v3.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-    
-
+   
 </body>
 
 </html>

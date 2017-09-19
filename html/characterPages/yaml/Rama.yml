@@ -1,0 +1,5 @@
+families:
+  - parents: [Rama, Sinta]
+    children: [ Lawa,  Kusya]
+  - parents: [Dasarata, Sukasalya]
+    children: [Rama]

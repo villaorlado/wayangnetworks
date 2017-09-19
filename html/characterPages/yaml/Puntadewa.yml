@@ -1,0 +1,7 @@
+families:
+  - parents: [Puntadewa, Drupadi]
+    children: [ Pancawala]
+  - parents: [Darma (Pandu), Kunti]
+    children: [Puntadewa]
+  - parents: [Drupada]
+    children: [Drupadi]

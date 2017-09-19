@@ -8,9 +8,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<style>
+		path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
 
-    <title>
-Lakon list</title>
+
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.joint:hover{
+	cursor:pointer
+}
+
+.lakonLine{
+	stroke:green;
+	display:none;
+}
+
+#sigma-container{
+          top:0px;
+          left:0px;
+          width:50%;
+          position:relative;
+          height:300px;
+          box-shadow: 1px 1px 5px #999;
+        }
+</style>
+<title>Lakon list</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/shop-item.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css"></link>
@@ -51,7 +84,7 @@ Lakon list</title>
 
             <div class="col-md-3">
                 <p class="lead">Quantiative Wayang Dictionary</p>
-                <!--img src="img/logo.jpg"></img-->
+                <!--img src="../img/logo.jpg"></img-->
                 <div class="list-group">
                     <a href="characters.html" class="list-group-item">Characters</a>
                     <a href="lakons.html" class="list-group-item">Lakons</a>
@@ -59,16 +92,20 @@ Lakon list</title>
                 </div>
             </div>
 
-            <div class="col-md-9">
+			<div class="row">
+            <div class="col-lg-3">
 
-                <div>
-<h1>List of Lakons</h1><ul><li><a href="lakonPages/Babad_Wanamarta.html">Babad_Wanamarta</a></li><li><a href="lakonPages/Bandung_Nagasewu.html">Bandung_Nagasewu</a></li><li><a href="lakonPages/Basudewa_Grogol.html">Basudewa_Grogol</a></li><li><a href="lakonPages/Brajadhenta_Mbalela_(Gatotkaca_Wisudha).html">Brajadhenta_Mbalela_(Gatotkaca_Wisudha)</a></li><li><a href="lakonPages/Dewa_Ruci.html">Dewa_Ruci</a></li><li><a href="lakonPages/Gatotkaca_Lahir.html">Gatotkaca_Lahir</a></li><li><a href="lakonPages/Kunthi_Pilih_(Lahiripun_Adipati_Karna).html">Kunthi_Pilih_(Lahiripun_Adipati_Karna)</a></li><li><a href="lakonPages/Narayana_Kridha_Brata.html">Narayana_Kridha_Brata</a></li><li><a href="lakonPages/Prabu_Bimasakti.html">Prabu_Bimasakti</a></li><li><a href="lakonPages/Puntadewa_Wisudha.html">Puntadewa_Wisudha</a></li><li><a href="lakonPages/Semar_Barang_Jantur.html">Semar_Barang_Jantur</a></li><li><a href="lakonPages/Semar_Boyong_(Wahyu_Katetreman).html">Semar_Boyong_(Wahyu_Katetreman)</a></li><li><a href="lakonPages/Semar_Mantu.html">Semar_Mantu</a></li><li><a href="lakonPages/Semar_Mantu_Alternative_Version.html">Semar_Mantu_Alternative_Version</a></li><li><a href="lakonPages/Semar_mBangun_Kayangan.html">Semar_mBangun_Kayangan</a></li><li><a href="lakonPages/Sudamala.html">Sudamala</a></li><li><a href="lakonPages/Suksma_Langgeng.html">Suksma_Langgeng</a></li><li><a href="lakonPages/Wahyu_Cakraningrat.html">Wahyu_Cakraningrat</a></li><li><a href="lakonPages/Wahyu_Kaprawiran.html">Wahyu_Kaprawiran</a></li><li><a href="lakonPages/Wahyu_Kembar.html">Wahyu_Kembar</a></li><li><a href="lakonPages/Wahyu_Makutharama.html">Wahyu_Makutharama</a></li><li><a href="lakonPages/Wahyu_Topeng_Waja.html">Wahyu_Topeng_Waja</a></li><li><a href="lakonPages/Wisanggeni_Lahir.html">Wisanggeni_Lahir</a></li></ul></div>
+            
+			<h1>List of Lakons</h1>Lakon list<ul><li class="titles" id="title1"><a href="lakonPages/Babad_Wanamarta.html">Babad_Wanamarta</a></li><li class="titles" id="title2"><a href="lakonPages/Bandung_Nagasewu.html">Bandung_Nagasewu</a></li><li class="titles" id="title3"><a href="lakonPages/Basudewa_Grogol.html">Basudewa_Grogol</a></li><li class="titles" id="title4"><a href="lakonPages/Brajadhenta_Mbalela_(Gatotkaca_Wisudha).html">Brajadhenta_Mbalela_(Gatotkaca_Wisudha)</a></li><li class="titles" id="title5"><a href="lakonPages/Dewa_Ruci.html">Dewa_Ruci</a></li><li class="titles" id="title6"><a href="lakonPages/Gatotkaca_Lahir.html">Gatotkaca_Lahir</a></li><li class="titles" id="title7"><a href="lakonPages/Kunthi_Pilih_(Lahiripun_Adipati_Karna).html">Kunthi_Pilih_(Lahiripun_Adipati_Karna)</a></li><li class="titles" id="title8"><a href="lakonPages/Narayana_Kridha_Brata.html">Narayana_Kridha_Brata</a></li><li class="titles" id="title9"><a href="lakonPages/Prabu_Bimasakti.html">Prabu_Bimasakti</a></li><li class="titles" id="title10"><a href="lakonPages/Puntadewa_Wisudha.html">Puntadewa_Wisudha</a></li><li class="titles" id="title11"><a href="lakonPages/Semar_Barang_Jantur.html">Semar_Barang_Jantur</a></li><li class="titles" id="title12"><a href="lakonPages/Semar_Boyong_(Wahyu_Katetreman).html">Semar_Boyong_(Wahyu_Katetreman)</a></li><li class="titles" id="title13"><a href="lakonPages/Semar_Mantu.html">Semar_Mantu</a></li><li class="titles" id="title14"><a href="lakonPages/Semar_Mantu_Alternative_Version.html">Semar_Mantu_Alternative_Version</a></li><li class="titles" id="title15"><a href="lakonPages/Semar_mBangun_Kayangan.html">Semar_mBangun_Kayangan</a></li><li class="titles" id="title16"><a href="lakonPages/Sudamala.html">Sudamala</a></li><li class="titles" id="title17"><a href="lakonPages/Suksma_Langgeng.html">Suksma_Langgeng</a></li><li class="titles" id="title18"><a href="lakonPages/Wahyu_Cakraningrat.html">Wahyu_Cakraningrat</a></li><li class="titles" id="title19"><a href="lakonPages/Wahyu_Kaprawiran.html">Wahyu_Kaprawiran</a></li><li class="titles" id="title20"><a href="lakonPages/Wahyu_Kembar.html">Wahyu_Kembar</a></li><li class="titles" id="title21"><a href="lakonPages/Wahyu_Makutharama.html">Wahyu_Makutharama</a></li><li class="titles" id="title22"><a href="lakonPages/Wahyu_Topeng_Waja.html">Wahyu_Topeng_Waja</a></li><li class="titles" id="title23"><a href="lakonPages/Wisanggeni_Lahir.html">Wisanggeni_Lahir</a></li>
+			</div>
 
-               
+			<div class="col-lg-3" id="graphspace"><p align="center"></p>Average characters per scene</p></div>
 
             </div>
-
+			</div>
         </div>
+
+
 
     </div>
     <!-- /.container -->
@@ -85,17 +122,257 @@ Lakon list</title>
                 </div>
             </div>
         </footer>
-
+	
     </div>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <!--script src="js/jquery.js"></script-->
-
+   
+	<script src="http://d3js.org/d3.v3.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    
+        <script src="js/jquery.js"></script>
 
+    <script src="js/bootstrap.min.js"></script>
+   
+   <script>
+	   // Set the dimensions of the canvas / graph
+var margin = {top: 30, right: 20, bottom: 60, left: 50},
+    width = 700 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
+
+// Set the ranges
+var x = d3.scale.linear().range([0, width]);
+var y = d3.scale.linear().range([height, 0]);
+
+// Define the axes
+var xAxis = d3.svg.axis().scale(x)
+    .orient("bottom").ticks(13);
+
+var yAxis = d3.svg.axis().scale(y)
+    .orient("left").ticks(10);
+
+// Define the line
+var valueline = d3.svg.line()
+    .x(function(d) { return x(d.number); })
+    .y(function(d) { return y(d.characters); });
+    
+var lakon1 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon1 !== 0 || d.number<8){return y(d.lakon1);}});
+var lakon2 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon2 !== 0 || d.number<8){return y(d.lakon2);}});
+var lakon3 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon3 !== 0 || d.number<8){return y(d.lakon3);}});
+var lakon4 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon4 !== 0 || d.number<8){return y(d.lakon4);}});
+var lakon5 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon5 !== 0 || d.number<8){return y(d.lakon5);}});
+var lakon6 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon6 !== 0 || d.number<8){return y(d.lakon6);}});
+var lakon7 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon7 !== 0 || d.number<8){return y(d.lakon7);}});
+var lakon8 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon8 !== 0 || d.number<8){return y(d.lakon8);}});
+var lakon9 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon9 !== 0 || d.number<8){return y(d.lakon9);}});
+var lakon10 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon10 !== 0 || d.number<8){return y(d.lakon10);}});
+var lakon11 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon11 !== 0 || d.number<8){return y(d.lakon11);}});
+var lakon12 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon12 !== 0 || d.number<8){return y(d.lakon12);}});
+var lakon13 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon13 !== 0 || d.number<8){return y(d.lakon13);}});
+var lakon14 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon14 !== 0 || d.number<8){return y(d.lakon14);}});
+var lakon15 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon15 !== 0 || d.number<8){return y(d.lakon15);}});
+var lakon16 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon16 !== 0 || d.number<8){return y(d.lakon16);}});
+var lakon17 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon17 !== 0 || d.number<8){return y(d.lakon17);}});
+var lakon18 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon18 !== 0 || d.number<8){return y(d.lakon18);}});
+var lakon19 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon19 !== 0 || d.number<8){return y(d.lakon19);}});
+var lakon20 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon20 !== 0 || d.number<8){return y(d.lakon20);}});
+var lakon21 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon21 !== 0 || d.number<8){return y(d.lakon21);}});
+var lakon22 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon22 !== 0 || d.number<8){return y(d.lakon22);}});
+var lakon23 = d3.svg.line().x(function(d) { return x(d.number);}).y(function(d) {if (d.lakon23 !== 0 || d.number<8){return y(d.lakon23);}});
+
+
+
+// Adds the svg canvas
+var svg = d3.select("#graphspace")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform", 
+              "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+
+namesArray = [];
+
+d3.csv("data/lakondata.csv", function(error, data) {
+	var counter = 0
+    data.forEach(function(d) {
+        d.characters = +d.characters;
+        d.sigma = +d.sigma;
+        d.number = +d.number;
+        d.lakon1 = +d.lakon1;
+		d.lakon2 = +d.lakon2;
+		d.lakon3 = +d.lakon3;
+		d.lakon4 = +d.lakon4;
+		d.lakon5 = +d.lakon5;
+		d.lakon6 = +d.lakon6;
+		d.lakon7 = +d.lakon7;
+		d.lakon8 = +d.lakon8;
+		d.lakon9 = +d.lakon9;
+		d.lakon10 = +d.lakon10;
+		d.lakon11 = +d.lakon11;
+		d.lakon12 = +d.lakon12;
+		d.lakon13 = +d.lakon13;
+		d.lakon14 = +d.lakon14;
+		d.lakon15 = +d.lakon15;
+		d.lakon16 = +d.lakon16;
+		d.lakon17 = +d.lakon17;
+		d.lakon18 = +d.lakon18;
+		d.lakon19 = +d.lakon19;
+		d.lakon20 = +d.lakon20;
+		d.lakon21 = +d.lakon21;
+		d.lakon22 = +d.lakon22;
+		d.lakon23 = +d.lakon23;
+        namesArray.push(d.names);
+        counter +=1;
+    });
+
+    // Scale the range of the data
+    x.domain([0,counter]);
+    y.domain([0,12]);
+
+    // Add the valueline path.
+    svg.append("path")
+        .attr("class", "line")
+        .attr("d", valueline(data));
+        
+    svg.append("path")
+        .attr("class", "lakonLine")
+        .attr("id", "lakon1")
+        .attr("d", lakon1(data));
+
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon2").attr("d", lakon2(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon3").attr("d", lakon3(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon4").attr("d", lakon4(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon5").attr("d", lakon5(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon6").attr("d", lakon6(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon7").attr("d", lakon7(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon8").attr("d", lakon8(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon9").attr("d", lakon9(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon10").attr("d", lakon10(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon11").attr("d", lakon11(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon12").attr("d", lakon12(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon13").attr("d", lakon13(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon14").attr("d", lakon14(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon15").attr("d", lakon15(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon16").attr("d", lakon16(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon17").attr("d", lakon17(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon18").attr("d", lakon18(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon19").attr("d", lakon19(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon20").attr("d", lakon20(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon21").attr("d", lakon21(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon22").attr("d", lakon22(data));
+svg.append("path").attr("class", "lakonLine").attr("id", "lakon23").attr("d", lakon23(data));
+
+
+svg.selectAll("labels")
+    .data(data)
+    .enter()
+    .append("line")
+        .attr("x1", function(d) { return x(d.number); })
+        .attr("y1", function(d) { return y(d.characters+d.sigma); })
+        .attr("x2", function(d) { return x(d.number); })
+        .attr("y2", function(d) { return y(d.characters-d.sigma); })
+        .attr("class","label-line")
+        .attr("stroke-width", 1)
+        .attr("stroke", "black")
+        .style("stroke-dasharray",(3,3));
+
+svg.selectAll("top-hat")
+    .data(data)
+    .enter()
+    .append("line")
+        .attr("x1", function(d) { return parseFloat(x(d.number))-8; })
+        .attr("y1", function(d) { return parseFloat(y(d.characters-d.sigma)); })
+        .attr("x2", function(d) { return parseFloat(x(d.number))+8; })
+        .attr("y2", function(d) { return parseFloat(y(d.characters-d.sigma)); })
+        .attr("class","label-line")
+        .attr("stroke-width", 1)
+        .attr("stroke", "black");
+
+svg.selectAll("bottom-hat")
+    .data(data)
+    .enter()
+    .append("line")
+        .attr("x1", function(d) { return parseFloat(x(d.number))-8; })
+        .attr("y1", function(d) { return parseFloat(y(d.characters+d.sigma)); })
+        .attr("x2", function(d) { return parseFloat(x(d.number))+8; })
+        .attr("y2", function(d) { return parseFloat(y(d.characters+d.sigma)); })
+        .attr("class","label-line")
+        .attr("stroke-width", 1)
+        .attr("stroke", "black");
+
+
+        //.style("stroke-dasharray",(3,3));
+
+// Dots
+	var counter = -1;
+	var counter2 = 0;
+	svg.selectAll("dot")
+      .data(data)
+      .enter().append("circle")
+        .attr("r", 6)
+        .attr("id", function(d) {
+          counter += 1;
+          return "adeganCircle" + counter;
+          
+        })
+        .attr("class","joint")
+        .on('mouseover',function(d,i){
+          var adeganNumber = this.id.replace("adeganCircle","");
+          $(".joint").css("fill","black");
+          $(this).css("fill","blue");
+          $(".adegan").css("background","white");
+          $("#adegan" + (parseInt(adeganNumber) + 1)).css("background"," #e6ecff");
+          currentCharacters = namesArray[adeganNumber].split("&");
+          adegan(currentCharacters);
+        })
+        
+        .attr("cy", function(d) { return y(d.characters); })
+        .attr("cx", function(d) {
+          counter2 += 1;
+          return x(counter2);
+        });
+
+    // Add the X Axis
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    // Add the Y Axis
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+	svg.append("text")      // text label for the x axis
+        .attr("x", width / 2 )
+        .attr("y",  height - 15+ margin.bottom)
+        .style("text-anchor", "middle")
+        .text("Scene number");
+
+	svg.append("text")
+       .attr("transform", "rotate(-90)")
+       .attr("y", 0 - margin.left)
+       .attr("x",0 - (height / 2))
+       .attr("dy", "1em")
+       .style("text-anchor", "middle")
+       .text("Number of characters");
+
+});
+
+$(document).ready(function(){
+	$(".titles").mouseover(function(){
+		lakonNumber = this.id.replace("title","");
+		$(".lakonLine").css("display","none");
+		$("#lakon" + lakonNumber).css("display","block");
+	});
+});
+   
+   </script>
+   
 </body>
 
 </html>
+

@@ -1,0 +1,1 @@
+{"data": [["Dewa_Ruci", "1"], ["_Raksasa2", "2"], ["Bayu", "2"], ["Sadewa", "1"], ["Banowati", "1"], ["Karna", "1"], ["Kunti", "1"], ["Nembur_Nawa", "1"], ["Puntadewa", "1"], ["Arjuna", "1"], ["Werkudara", "2"], ["Duryudana", "1"], ["Indra", "2"], ["Kresna", "1"], ["Sengkuni", "1"], ["Abiyasa", "1"], ["Nakula", "1"], ["Kartamarma", "1"], ["Durna", "1"]]}

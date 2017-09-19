@@ -1,0 +1,267 @@
+</div>
+
+<div class="row">
+		
+	
+    <div class="col-lg-6" >gato</div>           
+	<div class="col-lg-6" >paato</div>
+	</div>
+
+	<div class="row">
+		
+	
+    <div class="col-lg-6" id="graphspace"></div>           
+	<div class="col-lg-6" id="sigma-container"></div>
+	</div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; <a href="http://miguelescobar.com">Miguel Escobar Varela</a> and Andy Schauf 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../sigma/sigma.js"></script>
+    <script src="../sigma/plugins/sigma.parsers.gexf.min.js"></script>
+    <script>
+    
+    // Set the dimensions of the canvas / graph
+var margin = {top: 30, right: 20, bottom: 60, left: 50},
+    width = 400 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+
+// Parse the date / time
+var parseDate = d3.time.format("%d-%b-%y").parse;
+
+// Set the ranges
+var x = d3.scale.linear().range([0, width]);
+var y = d3.scale.linear().range([height, 0]);
+
+// Define the axes
+var xAxis = d3.svg.axis().scale(x)
+    .orient("bottom").ticks(5);
+
+var yAxis = d3.svg.axis().scale(y)
+    .orient("left").ticks(5);
+
+var cn = 0;
+// Define the line
+var valueline = d3.svg.line()
+    .x(function(d) {
+      cn+=1;
+      return x(cn);
+    })
+    .y(function(d) { return y(d.characters); });
+
+// Adds the svg canvas
+var svg = d3.select("#graphspace")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform", 
+              "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+
+namesArray = [];
+
+d3.csv("data/@@@.csv", function(error, data) {
+	var counter = 0
+    data.forEach(function(d) {
+        d.characters = +d.characters;
+        namesArray.push(d.names);
+        counter +=1;
+    });
+
+    // Scale the range of the data
+    x.domain([0,counter]);
+    y.domain([0, d3.max(data, function(d) { return d.characters; })]);
+
+    // Add the valueline path.
+    svg.append("path")
+        .attr("class", "line")
+        .attr("d", valueline(data));
+
+// Dots
+	var counter = -1;
+	var counter2 = 0;
+	svg.selectAll("dot")
+      .data(data)
+      .enter().append("circle")
+        .attr("r", 6)
+        .attr("id", function(d) {
+          counter += 1;
+          return "adeganCircle" + counter;
+          
+        })
+        .attr("class","joint")
+        .on('mouseover',function(d,i){
+          var adeganNumber = this.id.replace("adeganCircle","");
+          $(".joint").css("fill","black");
+          $(this).css("fill","blue");
+          $(".adegan").css("background","white");
+          $("#adegan" + (parseInt(adeganNumber) + 1)).css("background"," #e6ecff");
+          currentCharacters = namesArray[adeganNumber].split("&");
+          adegan(currentCharacters);
+        })
+        
+        .attr("cy", function(d) { return y(d.characters); })
+        .attr("cx", function(d) {
+          counter2 += 1;
+          return x(counter2);
+        });
+
+    // Add the X Axis
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    // Add the Y Axis
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+	svg.append("text")      // text label for the x axis
+        .attr("x", width / 2 )
+        .attr("y",  height - 15+ margin.bottom)
+        .style("text-anchor", "middle")
+        .text("Scene number");
+
+	svg.append("text")
+       .attr("transform", "rotate(-90)")
+       .attr("y", 0 - margin.left)
+       .attr("x",0 - (height / 2))
+       .attr("dy", "1em")
+       .style("text-anchor", "middle")
+       .text("Number of characters");
+
+});
+
+sigma.classes.graph.addMethod('neighbors', function(nodeId) {
+       var k,
+           neighbors = {},
+           index = this.allNeighborsIndex[nodeId] || {};
+
+       for (k in index)
+         neighbors[k] = this.nodesIndex[k];
+
+       return neighbors;
+     });
+
+      sigma.parsers.gexf(
+        'networkData/networkGraphs/Babad_Wanamarta.gexf',
+        { // Here is the ID of the DOM element that
+          // will contain the graph:
+          container: 'sigma-container',
+          settings: {
+          minNodeSize: 2,
+          maxNodeSize: 10
+		  }
+        
+
+        },
+        function(s) {
+          // This function will be executed when the
+          // graph is displayed, with "s" the related
+          // sigma instance.
+          s.graph.nodes().forEach(function(n) {
+            n.originalColor = n.color;
+            n.originalLabel = n.label;
+          });
+          s.graph.edges().forEach(function(e) {
+            e.originalColor = e.color;
+          });
+
+          // When a node is clicked, we check for each node
+          // if it is a neighbor of the clicked one. If not,
+          // we set its color as grey, and else, it takes its
+          // original color.
+          // We do the same for the edges, and we only keep
+          // edges that have both extremities colored.
+          //s.bind('clickNode', function(e) {
+          adegan = function(costars){  
+            
+                toKeep = costars;
+                
+            s.graph.nodes().forEach(function(n) {
+              
+              if (toKeep.includes(n.id)){
+                n.color = n.originalColor;
+                n.label = n.originalLabel;
+              }
+              else{
+                n.color = '#eee';
+                n.label = "";
+                
+              }
+            });
+
+            s.graph.edges().forEach(function(e) {
+             
+			  if (toKeep.includes(e.source) && toKeep.includes(e.target)){	  
+                e.color = e.originalColor;
+                //explanation += JSON.stringify(e);
+                //explanation += e.source;
+              }
+              else{
+                e.color = '#eee';
+              }
+              //if (toKeep[e.source] && toKeep[e.target])
+            });
+
+
+
+            // Since the data has been modified, we need to
+            // call the refresh method to make the colors
+            // update effective.
+            s.refresh();
+          //});
+		}
+          // When the stage is clicked, we just color each
+          // node and edge with its original color.
+          s.bind('clickStage', function(e) {
+            s.graph.nodes().forEach(function(n) {
+              n.color = n.originalColor;
+              n.label = n.originalLabel;
+            });
+
+            s.graph.edges().forEach(function(e) {
+              e.color = e.originalColor;
+            });
+
+            // Same as in the previous event:
+            s.refresh();
+          });
+        }
+      );
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+{"data": [["Anoman", "1"], ["Werkudara", "1"], ["Banowati", "1"], ["Duryudana", "1"], ["_Raksasa", "1"], ["Durna", "1"], ["Arjuna", "2"], ["Kartamarma", "1"], ["Wisnu", "2"], ["Sengkuni", "2"], ["Karna", "1"], ["Amonggati", "1"], ["Wenang", "2"], ["SuksmaLanggeng", "2"], ["Parasara", "1"], ["Kresna", "1"], ["Nindyamaya", "1"]]}

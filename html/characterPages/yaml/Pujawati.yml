@@ -1,0 +1,7 @@
+families:
+  - parents: [Pujawati, Salya]
+    children: [ Erawati,  Surikanti,  Banowati,  Burisrawa,  Rukmarata]
+  - parents: [Bagaspati]
+    children: [Pujawati]
+  - parents: [Tejawati, Mandrekaswara]
+    children: [Salya]

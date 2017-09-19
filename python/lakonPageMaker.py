@@ -27,7 +27,7 @@ for x in range (1, len(lakons)):
 	for i in range(1, len(lines)):
 		text += lines[i]
 	text = re.sub(r'(<|>)', "", text)
-	text = re.sub(r'(\d+)', r"<p><b>\1</b>", text)
+	text = re.sub(r'(\d+)', r"<p class='adegan' id='adegan\1'><b>\1</b>", text)
 	text = re.sub(r'\*([\w ]+)\*', r"<p>&nbsp;<p><h3>\1</h3><hr>", text)
 	
 	text = re.sub(r'([a-zA-Z -]+):([a-zA-Z\-]+)', r" <span class='badge'>\1</span> <b>\2</b>", text)
@@ -40,7 +40,7 @@ for x in range (1, len(lakons)):
 	html += "<h1>" + title + "</h1>"
 	html += '<div class="well" id="characters">' + characterList + '</div>' 
 	html += text 
-	html += open("htmlfragments/html2.html").read()
+	html += open("htmlfragments/html3.html").read().replace("@@@",title)
 	
 	with open("../html/lakonPages/" + title + ".html", "w") as file:
 		file.write(html.decode('utf-8').encode('utf-8'))

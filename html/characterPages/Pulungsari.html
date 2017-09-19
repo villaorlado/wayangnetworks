@@ -8,8 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<style>
+		path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
 
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.joint:hover{
+	cursor:pointer
+}
+
+#sigma-container{
+          top:0px;
+          left:0px;
+          width:50%;
+          position:relative;
+          height:300px;
+          box-shadow: 1px 1px 5px #999;
+        }
+		</style>
     <title>
+		
 Pulungsari</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/shop-item.css" rel="stylesheet">
@@ -62,7 +90,7 @@ Pulungsari</title>
             <div class="col-md-9">
 
                 <div>
-<p><h1>Pulungsari</h1></p><p><b>Terms of address</b>: Batari<p><b>Type</b>: God<p><b>Origin</b>: Java<p><b>Notes on the Sanskrit version</b>: Not mentioned in the Indian Mahabharata.<p><b>Description in the Javanese version</b>: wahyu jodoh? From story wahyu kembar cakraningrat. //mengusai premuan sebagai Pertiwi. <p><b>Found in the follwing lakon (stories)</b>:</p><ol> <li><a href="../lakonPages/Wahyu_Kembar.html">Wahyu_Kembar</a></li></ol><hr><h3>More information</h3><p><b>Takes the shape of</b>: <a href='Sengkalawati.html'>Sengkalawati</a><p>&nbsp;<hr><p><h3>Network measurements for Pulungsari</h3><table class="table" cellspacing="1" width="100%">
+<p><h1>Pulungsari</h1></p><p><b>Terms of address</b>: Batari<p><b>Type</b>: God<p><b>Origin</b>: Java<p><b>Notes on the Sanskrit version</b>: Not mentioned in the Indian Mahabharata.<p><b>Description in the Javanese version</b>: She appears in <i>Wahyu_Kembar_Cakraningrat</i> but has no entries in any of the consulted encyclopedias.<p><b>Found in the follwing lakon (stories)</b>:</p><ol> <li><a href="../lakonPages/Wahyu_Kembar.html">Wahyu_Kembar</a></li></ol><hr><h3>More information</h3><p><b>Takes the shape of</b>: <a href='Sengkalawati.html'>Sengkalawati</a><p>&nbsp;<hr><p><h3>Network measurements for Pulungsari</h3><table class="table" cellspacing="1" width="100%">
         <thead>
             <tr>
                 <th>Measurement</th>
@@ -91,11 +119,13 @@ Pulungsari</title>
  window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});});$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();
  });</script></div>
 
-               
+   
 
             </div>
 
         </div>
+
+
 
     </div>
     <!-- /.container -->
@@ -117,12 +147,11 @@ Pulungsari</title>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <!--script src="../js/jquery.js"></script-->
-
+   
+	<script src="http://d3js.org/d3.v3.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-    
-
+   
 </body>
 
 </html>

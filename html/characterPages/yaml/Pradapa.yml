@@ -1,0 +1,7 @@
+families:
+  - parents: [Pradapa, Sadewa]
+    children: []
+  - parents: [Tambapetra]
+    children: [Pradapa]
+  - parents: []
+    children: [Sadewa]

@@ -8,8 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<style>
+		path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
 
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.joint:hover{
+	cursor:pointer
+}
+
+#sigma-container{
+          top:0px;
+          left:0px;
+          width:50%;
+          position:relative;
+          height:300px;
+          box-shadow: 1px 1px 5px #999;
+        }
+		</style>
     <title>
+		
 Ngembat_Landeyan</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/shop-item.css" rel="stylesheet">
@@ -62,7 +90,7 @@ Ngembat_Landeyan</title>
             <div class="col-md-9">
 
                 <div>
-<p><h1>Ngembat_Landeyan</h1></p><p><b>Terms of address</b>: Prabu<p><b>Type</b>: Human<p><b>Origin</b>: Java<p><b>Notes on the Sanskrit version</b>: Not mentioned in the Indian Mahabharata.<p><b>Description in the Javanese version</b>: In Purwadi's <i>Kempalan Lakon Wayang Purwa</i>, he is one of the Thousand Kings in <i>Lahiripun_Adipati_Karna</i>.<p><b>Found in the follwing lakon (stories)</b>:</p><ol> <li><a href="../lakonPages/.html"></a></li></ol><hr><h3>More information</h3><p>&nbsp;<hr><p><h3>Network measurements for Ngembat_Landeyan</h3><table class="table" cellspacing="1" width="100%">
+<p><h1>Ngembat_Landeyan</h1></p><p><b>Terms of address</b>: Prabu<p><b>Type</b>: Human<p><b>Origin</b>: Java<p><b>Notes on the Sanskrit version</b>: Not mentioned in the Indian Mahabharata.<p><b>Description in the Javanese version</b>: In Purwadi's <i>Kempalan Lakon Wayang Purwa</i>, he is one of the Thousand Kings in <i>Lahiripun_Adipati_Karna</i>.<p><b>Found in the follwing lakon (stories)</b>:</p><ol> <li><a href="../lakonPages/Kunthi_Pilih_(Lahiripun_Adipati_Karna).html">Kunthi_Pilih_(Lahiripun_Adipati_Karna)</a></li></ol><hr><h3>More information</h3><p>&nbsp;<hr><p><h3>Network measurements for Ngembat_Landeyan</h3><table class="table" cellspacing="1" width="100%">
         <thead>
             <tr>
                 <th>Measurement</th>
@@ -91,11 +119,13 @@ Ngembat_Landeyan</title>
  window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});});$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();
  });</script></div>
 
-               
+   
 
             </div>
 
         </div>
+
+
 
     </div>
     <!-- /.container -->
@@ -117,12 +147,11 @@ Ngembat_Landeyan</title>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <!--script src="../js/jquery.js"></script-->
-
+   
+	<script src="http://d3js.org/d3.v3.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-    
-
+   
 </body>
 
 </html>

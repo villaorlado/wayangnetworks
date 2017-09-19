@@ -20,7 +20,8 @@ import subprocess
 book = xlrd.open_workbook("../input/characters_withLakonAndQuantitativeData.xlsx") #name of the file to open
 sh = book.sheet_by_index(0)
 edgeInfoCanonical = open("../gephi/input/edgeInfo/adegan_canonicalOnly.csv").read().splitlines() 
-edgeInfoAmemba = open("../gephi/input/edgeInfo/adegan_canonicalAndDisguised.csv").read().splitlines() #this is the file processed by Gephi
+edgeInfoAmemba = open("../gephi/input/edgeInfo/adegan_canonicalAndDisguised.csv").read().splitlines() #this is the file that Gephi opens
+disguisedInfo = xlrd.open_workbook("../gephi/output/nodeInfo/adegan_canonicalAndDisguised_nodeInfo.xlsx").sheet_by_index(0) 
 factions = ""
 origin = ""
 normal = []
@@ -42,13 +43,13 @@ closenessCentralityList = []
 betweennessCentralityList = []
 eigenvectorCentralityList = []
 
-for num in range(1,sh.nrows):	
-	if (sh.cell_value(rowx=num, colx=col2num("AK"))):
-		degree = int(sh.cell_value(rowx=num, colx=col2num("AK")))
-		weightedDegree = int(sh.cell_value(rowx=num, colx=col2num("AL")))
-		closenessCentrality = float(sh.cell_value(rowx=num, colx=col2num("AM")))
-		betweennessCentrality = float(sh.cell_value(rowx=num, colx=col2num("AO")))
-		eigenvectorCentrality = float(sh.cell_value(rowx=num, colx=col2num("AT")))
+for num in range(1,disguisedInfo.nrows):	
+	if (disguisedInfo.cell_value(rowx=num, colx=col2num("B"))):
+		degree = int(disguisedInfo.cell_value(rowx=num, colx=col2num("B")))
+		weightedDegree = int(disguisedInfo.cell_value(rowx=num, colx=col2num("C")))
+		closenessCentrality = float(disguisedInfo.cell_value(rowx=num, colx=col2num("D")))
+		betweennessCentrality = float(disguisedInfo.cell_value(rowx=num, colx=col2num("F")))
+		eigenvectorCentrality = float(disguisedInfo.cell_value(rowx=num, colx=col2num("K")))
 		degreeList.append(degree)
 		weightedDegreeList.append(weightedDegree)
 		closenessCentralityList.append(closenessCentrality)
@@ -116,7 +117,7 @@ def makeTable(listName,valueName,measurement,location):
 	#here we make an image with the histogram for this particular
 	
 	plt.figure(figsize=(15,3)) 
-	n,bins,patches = plt.hist(listName, bins='auto', color="blue") 
+	n,bins,patches = plt.hist(listName, bins=12, color="blue") 
 	plt.title("%s for %s (in red)" %(valueName,name))
 	plt.ylabel("Number of instances")
 	plt.xlabel(valueName)
@@ -128,10 +129,14 @@ def makeTable(listName,valueName,measurement,location):
 		else:
 			break
 	
+	if binNum ==-1:
+		binNum = 0
+	
 	if binNum == len(patches):
 		binNum = binNum-1
 
 	patches[binNum].set_fc('r')
+	plt.xticks(bins)
 	plt.savefig("../html/characterPages/histograms/%s_%s.png" % (name,valueName))
 	plt.close()
 	return htmlString

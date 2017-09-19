@@ -3,5 +3,5 @@ families:
     children: [Pancawala]
   - parents: [Drupada]
     children: [Drupadi]
-  - parents: []
+  - parents: [Kunti, Darma (Pandu)]
     children: [Puntadewa]

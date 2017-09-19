@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<style>
+		path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.joint:hover{
+	cursor:pointer
+}
+
+#sigma-container{
+          top:0px;
+          left:0px;
+          width:50%;
+          position:relative;
+          height:300px;
+          box-shadow: 1px 1px 5px #999;
+        }
+</style>
+<title>$title$</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/shop-item.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css"></link>
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Quantitative Wayang Dictionary</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Quantiative Wayang Dictionary</p>
+                <!--img src="../img/logo.jpg"></img-->
+                <div class="list-group">
+                    <a href="characters.html" class="list-group-item">Characters</a>
+                    <a href="lakons.html" class="list-group-item">Lakons</a>
+                    <a href="networks.html" class="list-group-item">Networks</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+
+                <div>
+$content$
+</div>
+
+   
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <!-- /.container -->
+<div id="graphspace">gato</div>
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; <a href="http://miguelescobar.com">Miguel Escobar Varela</a> and Andy Schauf 2017</p>
+                </div>
+            </div>
+        </footer>
+	
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+   
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+   
+   <script>
+	   // Set the dimensions of the canvas / graph
+var margin = {top: 30, right: 20, bottom: 60, left: 50},
+    width = 400 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+
+// Parse the date / time
+var parseDate = d3.time.format("%d-%b-%y").parse;
+
+// Set the ranges
+var x = d3.scale.linear().range([0, width]);
+var y = d3.scale.linear().range([height, 0]);
+
+// Define the axes
+var xAxis = d3.svg.axis().scale(x)
+    .orient("bottom").ticks(5);
+
+var yAxis = d3.svg.axis().scale(y)
+    .orient("left").ticks(5);
+
+var cn = 0;
+// Define the line
+var valueline = d3.svg.line()
+    .x(function(d) {
+      cn+=1;
+      return x(cn);
+    })
+    .y(function(d) { return y(d.characters); });
+
+// Adds the svg canvas
+var svg = d3.select("#graphspace")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform", 
+              "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+
+namesArray = [];
+
+d3.csv("data/lakondata.csv", function(error, data) {
+	var counter = 0
+    data.forEach(function(d) {
+        d.characters = +d.characters;
+        d.sigma = +d.sigma;
+        namesArray.push(d.names);
+        counter +=1;
+    });
+
+    // Scale the range of the data
+    x.domain([0,counter]);
+    y.domain([0, d3.max(data, function(d) { return d.characters; })]);
+
+    // Add the valueline path.
+    svg.append("path")
+        .attr("class", "line")
+        .attr("d", valueline(data));
+
+var counter3 = 0;
+var counter4 = 0;
+svg.selectAll('line')
+    .data(data)
+    .enter()
+    .append('line')
+    .attr('class', 'error')
+    .attr('x1', function(d) { 
+		counter3 += 1;
+        return 5;
+        //return x(counter3); 
+     })
+    .attr('x2', function(d) { 
+		counter4 += 1;
+        return 5;
+        //return x(counter4); 
+        })
+    .attr('y1', function(d) { 
+		console.log(d.characters + d.sigma);
+		return 50;
+		//return y(d.characters + d.sigma); 
+		})
+    .attr('y2', function(d) { 
+		return 50;
+		//return y(d.characters - d.sigma); 
+		})
+		.attr("stroke-width", 2)
+                         .attr("stroke", "black");
+		
+
+/*
+var circle = svg.append("line")
+                         .attr("x1", 5)
+                         .attr("y1", 5)
+                         .attr("x2", 50)
+                         .attr("y2", 50)
+                         .attr("stroke-width", 2)
+                         .attr("stroke", "black");
+*/ 
+
+// Dots
+	var counter = -1;
+	var counter2 = 0;
+	svg.selectAll("dot")
+      .data(data)
+      .enter().append("circle")
+        .attr("r", 6)
+        .attr("id", function(d) {
+          counter += 1;
+          return "adeganCircle" + counter;
+          
+        })
+        .attr("class","joint")
+        .on('mouseover',function(d,i){
+          var adeganNumber = this.id.replace("adeganCircle","");
+          $(".joint").css("fill","black");
+          $(this).css("fill","blue");
+          $(".adegan").css("background","white");
+          $("#adegan" + (parseInt(adeganNumber) + 1)).css("background"," #e6ecff");
+          currentCharacters = namesArray[adeganNumber].split("&");
+          adegan(currentCharacters);
+        })
+        
+        .attr("cy", function(d) { return y(d.characters); })
+        .attr("cx", function(d) {
+          counter2 += 1;
+          return x(counter2);
+        });
+
+    // Add the X Axis
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    // Add the Y Axis
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis);
+
+	svg.append("text")      // text label for the x axis
+        .attr("x", width / 2 )
+        .attr("y",  height - 15+ margin.bottom)
+        .style("text-anchor", "middle")
+        .text("Scene number");
+
+	svg.append("text")
+       .attr("transform", "rotate(-90)")
+       .attr("y", 0 - margin.left)
+       .attr("x",0 - (height / 2))
+       .attr("dy", "1em")
+       .style("text-anchor", "middle")
+       .text("Number of characters");
+
+});
+
+   
+   </script>
+   
+</body>
+
+</html>
+

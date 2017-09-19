@@ -8,8 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<style>
+		path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
 
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.joint:hover{
+	cursor:pointer
+}
+
+#sigma-container{
+          top:0px;
+          left:0px;
+          width:50%;
+          position:relative;
+          height:300px;
+          box-shadow: 1px 1px 5px #999;
+        }
+		</style>
     <title>
+		
 Pancawala</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/shop-item.css" rel="stylesheet">
@@ -137,7 +165,7 @@ Pancawala</title>
 </g>
 </g>
 </svg>
-<hr><h3>More information</h3><p><b>Killed by</b>: Aswatama<p><b>Sources</b>: <i>Ensiklopedi Wayang Purwa</i>, pp. 373-374; <i>Mengenal Gambar Tokoh Wayang Purwa</i>, p. 178; <i>Sejarah Wayang Purwa</i>, p. 170; <i>Ensiklopedi Wayang Indonesia</i>, pp. 44-46 (Vol. VIII); <i>Rupa dan Karakter Wayang Purwa</i>, pp. 898-899<p>&nbsp;<hr><p><h3>Network measurements for Pancawala</h3><table class="table" cellspacing="1" width="100%">
+<hr><h3>More information</h3><p><b>Killed by</b>: Aswatama<p><b>Sources</b>: <i>Ensiklopedi Wayang Purwa</i>, pp. 373-374; <i>Mengenal Gambar Tokoh Wayang Purwa</i>, p. 178; <i>Sejarah Wayang Purwa</i>, p. 170; <i>Ensiklopedi Wayang Indonesia</i>, pp. 44-46 (Vol. VII); <i>Rupa dan Karakter Wayang Purwa</i>, pp. 898-899<p>&nbsp;<hr><p><h3>Network measurements for Pancawala</h3><table class="table" cellspacing="1" width="100%">
         <thead>
             <tr>
                 <th>Measurement</th>
@@ -166,11 +194,13 @@ Pancawala</title>
  window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});});$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();
  });</script></div>
 
-               
+   
 
             </div>
 
         </div>
+
+
 
     </div>
     <!-- /.container -->
@@ -192,12 +222,11 @@ Pancawala</title>
     <!-- /.container -->
 
     <!-- jQuery -->
-    <!--script src="../js/jquery.js"></script-->
-
+   
+	<script src="http://d3js.org/d3.v3.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
-    
-
+   
 </body>
 
 </html>
