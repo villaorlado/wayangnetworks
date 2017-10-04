@@ -95,8 +95,8 @@ Wahyu_Cakraningrat</title>
 <div class="row">
 		
 	
-    <div class="col-lg-6" >gato</div>           
-	<div class="col-lg-6" >paato</div>
+    <div class="col-lg-6" ></div>           
+	<div class="col-lg-6" ></div>
 	</div>
 
 	<div class="row">
@@ -211,17 +211,10 @@ d3.csv("data/Wahyu_Cakraningrat.csv", function(error, data) {
         })
         .attr("class","joint")
         .on('mouseover',function(d,i){
-          /*videoTime =  parseInt(this.id.split("gato")[1])/100;
-          var currentAngle = y.invert(d3.mouse(this)[1]);
-          console.log(currentAngle);
-          goDance(videoTime);
-          rotate(currentAngle);*/
           var adeganNumber = this.id.replace("adeganCircle","");
-          
           $(".joint").css("fill","black");
           $(this).css("fill","blue");
           $(".adegan").css("background","white");
-          console.log("#adegan" + parseInt(adeganNumber) + 1);
           $("#adegan" + (parseInt(adeganNumber) + 1)).css("background"," #e6ecff");
           currentCharacters = namesArray[adeganNumber].split("&");
           adegan(currentCharacters);
@@ -257,6 +250,25 @@ d3.csv("data/Wahyu_Cakraningrat.csv", function(error, data) {
        .attr("dy", "1em")
        .style("text-anchor", "middle")
        .text("Number of characters");
+       
+//pathet nem
+	svg.append("line")
+        .attr("x1", function(){return x(5)-10})
+        .attr("y1", function(){return y(0)})
+        .attr("x2", function(){return x(5)-10})
+        .attr("y2", function(){return y(11)})
+        .attr("class","label-line")
+        .attr("stroke-width", 2)
+        .attr("stroke", "green")       
+        .style("stroke-dasharray",(3,3));
+     
+     svg.append("text")
+       
+       .attr("y", function(){return x(5)-30})
+       .attr("x", - (height / 2))
+       .attr("dy", "1em")
+       .style("text-anchor", "middle")
+       .text("nem neman");
 
 });
 

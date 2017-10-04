@@ -257,6 +257,7 @@ for num in range(1,sh.nrows):
 	
 	#HTML Character Page
 	html += "<p><h1>" + name + "</h1></p>"
+	html += "<img src='Yogyakarta/" + name + ".png' height='300px'></img>"
 	html += makeHtml("Terms of address", "D")
 	html += makeHtml("Type", "C")
 	html += makeHtml("Origin", "E")
