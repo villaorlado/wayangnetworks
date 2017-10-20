@@ -1,0 +1,7 @@
+families:
+  - parents: [Setyajid, Wresini]
+    children: [ Setyaboma,  Setyaki]
+  - parents: [Setyajid,  Ken_Sagopi]
+    children: [ Adimanggala]
+  - parents: [Kuntiboja]
+    children: [Setyajid]

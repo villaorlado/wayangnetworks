@@ -1,0 +1,5 @@
+families:
+  - parents: [Setyaki, Trirasa]
+    children: [ Arya_sanga-sanga]
+  - parents: []
+    children: [Setyaki]

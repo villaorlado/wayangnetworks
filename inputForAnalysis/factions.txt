@@ -19,7 +19,7 @@ Barata,Human,India,
 Basudewa,Human,India,
 Bayu,God,India,
 Bendana,Raksasa,Java,
-Bhisma,Human,India,
+Bisma,Human,India,Korawa
 Bilung,Human,Java,Punokawan
 Bisawarna,Human,Java,
 Bismaka,Human,India,
@@ -40,7 +40,6 @@ Dhadhungawuk,Raksasa,Java,
 Dhamdharat,Demon,Java,
 Dhandhang,Demon,Java,
 Dhandhonwacana,Demon,Java,
-Drestarastra,Human,India,
 Drupadi,Human,India,
 Druwasa,God,India,
 Durga,God,India,
@@ -86,7 +85,7 @@ Nagatatmala,Human,Java,
 Nakula,Human,India,Pandawa
 Narada,God,India,
 Nembur_Nawa,Animal,India,
-NgembatLandeyan,Human,Java,
+Ngembat_Landeyan,Human,Java,
 Padmanaba,Human,Java,
 Pancawala,Human,Java,Pandawa
 Pandu,Human,India,Pandawa
@@ -96,7 +95,7 @@ Petruk,Human,Java,Punokawan
 Pracona,Raksasa,Java,
 Pradapa,Human,India,
 Pragota,Human,Java,
-Pujawati,Human,India,
+Pujawati,Human,Java,
 Pulunggana,God,Java,
 Pulungsari,God,Java,
 Puntadewa,Human,India,Pandawa
@@ -120,7 +119,7 @@ Semar,God,Java,Punokawan
 Sengkuni,Human,India,Korawa
 Setyaboma,Human,India,
 Setyaki,Human,India,Pandawa
-Siti_Sendari,Human,India,Pandawa
+Siti_Sendari,Human,Java,Pandawa
 Soka,Human,Java,
 Sri,God,Java,
 Sugriwa,Animal,India,
@@ -133,7 +132,7 @@ Tambrapeta,Human,Java,
 Togog,God,Java,Punokawan
 TunggulWulung,Human,Java,
 Udawa,Human,India,
-Ugrasena,Human,India,
+Setyajid,Human,India,
 Wenang,God,Java,
 Werkudara,Human,India,Pandawa
 Wibisana,Human,Java,

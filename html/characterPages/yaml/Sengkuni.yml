@@ -1,0 +1,5 @@
+families:
+  - parents: [Sengkuni, Sukesti]
+    children: [ Kertiwindu,  Surakesti,  Antisura,  Antipati,  Surabasa]
+  - parents: [Suwala]
+    children: [Sengkuni]

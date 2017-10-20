@@ -1,0 +1,7 @@
+families:
+  - parents: [Rukmini, Kresna]
+    children: [ Partadewa,  Titisari,  Saranadewa]
+  - parents: [Bismaka, Rumbini]
+    children: [Rukmini]
+  - parents: [Mahindra, Basudewa]
+    children: [Kresna]

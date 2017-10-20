@@ -1,5 +1,3 @@
 families:
-  - parents: [Ramayadi]
-    children: [ Angganjali]
   - parents: []
     children: [Ramayadi]

@@ -1,0 +1,13 @@
+families:
+  - parents: [Sadewa, Pradapa]
+    children: [ Sritanjung]
+  - parents: [Sadewa,  Srengganawati]
+    children: [ Widapaksa]
+  - parents: [Sadewa,  Rasawulan]
+    children: []
+  - parents: [Sadewa,  Sadarmi]
+    children: [ Sabekti]
+  - parents: [Pandu (Aswin), Madrim]
+    children: [Sadewa]
+  - parents: [Tambapetra]
+    children: [Pradapa]

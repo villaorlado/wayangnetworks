@@ -3,5 +3,5 @@ families:
     children: [ Kamajaya,  Wungkuam,  Tambora,  Wrahaspati,  Siwah,  Kuwera,  Candra,  Yamadipati,  Surya,  Darmanesti]
   - parents: []
     children: [Kanastren]
-  - parents: []
+  - parents: [Rekatawati, Sang_Hyang_Tunggal]
     children: [Semar]

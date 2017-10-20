@@ -1,0 +1,7 @@
+families:
+  - parents: [Setyaboma, Kresna]
+    children: [ Setyaka]
+  - parents: [Ugrasena, Wersini]
+    children: [Setyaboma]
+  - parents: [Mahindra, Basudewa]
+    children: [Kresna]

@@ -1,0 +1,5 @@
+families:
+  - parents: [Sadana, Laksmitawati]
+    children: [ Hartati]
+  - parents: [Sri_Mahapunggung, Danawati]
+    children: [Sadana]

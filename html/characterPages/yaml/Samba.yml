@@ -1,0 +1,7 @@
+families:
+  - parents: [Samba, Hagnyanawati]
+    children: [ Dwara]
+  - parents: [Samba,  Senggatawati]
+    children: [ Sunjoro]
+  - parents: [Kresna, Jembawati]
+    children: [Samba]

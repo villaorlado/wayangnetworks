@@ -62,7 +62,7 @@ def makeHtml (header,column, linked=False):
 	if (sh.cell_value(rowx=num, colx=column) != ""):
 		if (linked):
 			htmlString = "<p><b>" + header + "</b>: "
-			linkedSet = sh.cell_value(rowx=num, colx=column).split(", ")
+			linkedSet = sh.cell_value(rowx=num, colx=column).decode("utf-8").split(", ")
 			for x in range (0, len(linkedSet)):
 				exists = os.path.isfile("../html/characterPages/%s.html" % linkedSet[x])
 				if(exists):
@@ -76,7 +76,7 @@ def makeHtml (header,column, linked=False):
 	return htmlString
 
 def makeLakonHtml():
-	lakonList = sh.cell_value(rowx=num, colx=col2num("Y")).split(",")
+	lakonList = sh.cell_value(rowx=num, colx=col2num("Z")).split(",")
 	lakonArray = []
 	htmlString = "<p><b>Found in the follwing lakon (stories)</b>:</p><ol> "
 	for lakon in lakonList:
@@ -299,11 +299,11 @@ for num in range(1,sh.nrows):
 	
 	html += "<p>&nbsp;<hr><p><h3>Network measurements for %s</h3>" %name
 	html += open("htmlfragments/table2.html").read()
-	html += makeTable(degreeList,"Degree",'Degree <a href="#" data-toggle="tooltip" title="The amount of connections of the given node."><i class="glyphicon glyphicon-question-sign"></i></a>',"AA")
-	html += makeTable(weightedDegreeList,"Weigted Degree",'Weighted Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has, taking into account the weight of those connections"><i class="glyphicon glyphicon-question-sign"></i></a>',"AB")
-	html += makeTable(closenessCentralityList,"Closeness Centrality",'Closeness Centrality <a href="#" data-toggle="tooltip" title="The average length of the shortest path between the node and all other nodes in the graph"><i class="glyphicon glyphicon-question-sign"></i></a>',"AC")
-	html += makeTable(betweennessCentralityList,"Betweenness Centrality",'Betweeness Centrality <a href="#" data-toggle="tooltip" title="Inidcates how often a node acts as a bridge along the shortest path between two other nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AE")
-	html += makeTable(eigenvectorCentralityList,"Eigenvector Centrality",'Eigenvector Centrality <a href="#" data-toggle="tooltip" title="A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AJ")
+	html += makeTable(degreeList,"Degree",'Degree <a href="#" data-toggle="tooltip" title="The amount of connections of the given node."><i class="glyphicon glyphicon-question-sign"></i></a>',"AB")
+	html += makeTable(weightedDegreeList,"Weigted Degree",'Weighted Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has, taking into account the weight of those connections"><i class="glyphicon glyphicon-question-sign"></i></a>',"AC")
+	html += makeTable(closenessCentralityList,"Closeness Centrality",'Closeness Centrality <a href="#" data-toggle="tooltip" title="The average length of the shortest path between the node and all other nodes in the graph"><i class="glyphicon glyphicon-question-sign"></i></a>',"AD")
+	html += makeTable(betweennessCentralityList,"Betweenness Centrality",'Betweeness Centrality <a href="#" data-toggle="tooltip" title="Inidcates how often a node acts as a bridge along the shortest path between two other nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AF")
+	html += makeTable(eigenvectorCentralityList,"Eigenvector Centrality",'Eigenvector Centrality <a href="#" data-toggle="tooltip" title="A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AH")
 	html += open("htmlfragments/table3.html").read()
 	html += "<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same adegan as %s</h3><hr>" %name	
 	html += open("htmlfragments/table4.html").read()

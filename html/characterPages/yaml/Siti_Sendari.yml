@@ -1,0 +1,7 @@
+families:
+  - parents: [Siti_Sendari, Abimanyu]
+    children: []
+  - parents: [Kresna, Pratiwi]
+    children: [Siti_Sendari]
+  - parents: [Rara_Ireng, Arjuna]
+    children: [Abimanyu]

@@ -57,35 +57,35 @@
 <g id="edge2" class="edge"><title>Kunti&#45;&gt;union_0</title>
 <path fill="none" stroke="#1abc9c" d="M469.315,-80C481.938,-80 492.417,-80 497.733,-80"/>
 </g>
-<!-- (Darma) Puntadewa -->
-<g id="node5" class="node"><title>(Darma) Puntadewa</title>
+<!-- Puntadewa -->
+<g id="node5" class="node"><title>Puntadewa</title>
 <polygon fill="white" stroke="#cccccc" points="750,-44 570,-44 570,-8 750,-8 750,-44"/>
-<text text-anchor="middle" x="660" y="-21.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">(Darma) Puntadewa</text>
+<text text-anchor="middle" x="660" y="-21.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Puntadewa</text>
 </g>
-<!-- siblings_0&#45;&gt;(Darma) Puntadewa -->
-<g id="edge4" class="edge"><title>siblings_0&#45;&gt;(Darma) Puntadewa</title>
+<!-- siblings_0&#45;&gt;Puntadewa -->
+<g id="edge4" class="edge"><title>siblings_0&#45;&gt;Puntadewa</title>
 <path fill="none" stroke="#1abc9c" d="M538,-79.3936C538,-73.4609 538,-26 538,-26 538,-26 559.736,-26 559.736,-26"/>
 <polygon fill="#1abc9c" stroke="#1abc9c" points="567.735,-16 567.736,-36 563.736,-36.0001 563.735,-16.0001 567.735,-16"/>
 <polyline fill="none" stroke="#1abc9c" points="569.736,-26 559.736,-26.0001 "/>
 </g>
-<!-- (Bayu) Bima -->
-<g id="node6" class="node"><title>(Bayu) Bima</title>
+<!-- Arjuna -->
+<g id="node6" class="node"><title>Arjuna</title>
 <polygon fill="white" stroke="#cccccc" points="750,-98 570,-98 570,-62 750,-62 750,-98"/>
-<text text-anchor="middle" x="660" y="-75.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">(Bayu) Bima</text>
+<text text-anchor="middle" x="660" y="-75.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Arjuna</text>
 </g>
-<!-- siblings_0&#45;&gt;(Bayu) Bima -->
-<g id="edge5" class="edge"><title>siblings_0&#45;&gt;(Bayu) Bima</title>
+<!-- siblings_0&#45;&gt;Arjuna -->
+<g id="edge5" class="edge"><title>siblings_0&#45;&gt;Arjuna</title>
 <path fill="none" stroke="#1abc9c" d="M541.034,-80C541.034,-80 559.811,-80 559.811,-80"/>
 <polygon fill="#1abc9c" stroke="#1abc9c" points="567.81,-70 567.811,-90 563.811,-90.0001 563.81,-70.0001 567.81,-70"/>
 <polyline fill="none" stroke="#1abc9c" points="569.811,-80 559.811,-80.0001 "/>
 </g>
-<!-- (Endra) Arjuna -->
-<g id="node7" class="node"><title>(Endra) Arjuna</title>
+<!-- Werkudara -->
+<g id="node7" class="node"><title>Werkudara</title>
 <polygon fill="white" stroke="#cccccc" points="750,-152 570,-152 570,-116 750,-116 750,-152"/>
-<text text-anchor="middle" x="660" y="-129.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">(Endra) Arjuna</text>
+<text text-anchor="middle" x="660" y="-129.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Werkudara</text>
 </g>
-<!-- siblings_0&#45;&gt;(Endra) Arjuna -->
-<g id="edge6" class="edge"><title>siblings_0&#45;&gt;(Endra) Arjuna</title>
+<!-- siblings_0&#45;&gt;Werkudara -->
+<g id="edge6" class="edge"><title>siblings_0&#45;&gt;Werkudara</title>
 <path fill="none" stroke="#1abc9c" d="M538,-80.6214C538,-86.7005 538,-135.333 538,-135.333 538,-135.333 559.736,-135.333 559.736,-135.333"/>
 <polygon fill="#1abc9c" stroke="#1abc9c" points="567.735,-125.333 567.736,-145.333 563.736,-145.333 563.735,-125.333 567.735,-125.333"/>
 <polyline fill="none" stroke="#1abc9c" points="569.736,-135.333 559.736,-135.333 "/>
@@ -107,24 +107,24 @@
 <g id="edge8" class="edge"><title>Madrim&#45;&gt;union_1</title>
 <path fill="none" stroke="#2ecc71" d="M469.038,-219C487.794,-219 502,-219 502,-219 502,-219 502,-211.438 502,-206.711"/>
 </g>
-<!-- (Aswan) Nakula -->
-<g id="node11" class="node"><title>(Aswan) Nakula</title>
+<!-- Nakula -->
+<g id="node11" class="node"><title>Nakula</title>
 <polygon fill="white" stroke="#cccccc" points="750,-208 570,-208 570,-172 750,-172 750,-208"/>
-<text text-anchor="middle" x="660" y="-185.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">(Aswan) Nakula</text>
+<text text-anchor="middle" x="660" y="-185.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Nakula</text>
 </g>
-<!-- siblings_1&#45;&gt;(Aswan) Nakula -->
-<g id="edge10" class="edge"><title>siblings_1&#45;&gt;(Aswan) Nakula</title>
+<!-- siblings_1&#45;&gt;Nakula -->
+<g id="edge10" class="edge"><title>siblings_1&#45;&gt;Nakula</title>
 <path fill="none" stroke="#2ecc71" d="M541.034,-203C541.034,-203 559.811,-203 559.811,-203"/>
 <polygon fill="#2ecc71" stroke="#2ecc71" points="567.81,-193 567.811,-213 563.811,-213 563.81,-193 567.81,-193"/>
 <polyline fill="none" stroke="#2ecc71" points="569.811,-203 559.811,-203 "/>
 </g>
-<!-- (Aswin) Sadewa -->
-<g id="node12" class="node"><title>(Aswin) Sadewa</title>
+<!-- Sadewa -->
+<g id="node12" class="node"><title>Sadewa</title>
 <polygon fill="white" stroke="#cccccc" points="750,-262 570,-262 570,-226 750,-226 750,-262"/>
-<text text-anchor="middle" x="660" y="-239.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">(Aswin) Sadewa</text>
+<text text-anchor="middle" x="660" y="-239.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Sadewa</text>
 </g>
-<!-- siblings_1&#45;&gt;(Aswin) Sadewa -->
-<g id="edge11" class="edge"><title>siblings_1&#45;&gt;(Aswin) Sadewa</title>
+<!-- siblings_1&#45;&gt;Sadewa -->
+<g id="edge11" class="edge"><title>siblings_1&#45;&gt;Sadewa</title>
 <path fill="none" stroke="#2ecc71" d="M538,-203.84C538,-209.076 538,-237 538,-237 538,-237 559.736,-237 559.736,-237"/>
 <polygon fill="#2ecc71" stroke="#2ecc71" points="567.735,-227 567.736,-247 563.736,-247 563.735,-227 567.735,-227"/>
 <polyline fill="none" stroke="#2ecc71" points="569.736,-237 559.736,-237 "/>

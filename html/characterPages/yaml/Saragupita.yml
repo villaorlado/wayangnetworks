@@ -1,0 +1,5 @@
+families:
+  - parents: [Saragupita, Saraprabawa]
+    children: [ Pragota,  Prabawa]
+  - parents: [Widarakanda, Ken_Sagopi]
+    children: [Saragupita]

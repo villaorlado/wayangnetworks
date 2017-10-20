@@ -1,0 +1,7 @@
+families:
+  - parents: [Semar, Kanastren]
+    children: []
+  - parents: [Sang_Hyang_Tunggal, Rekatawati]
+    children: [Semar]
+  - parents: []
+    children: [Kanastren]

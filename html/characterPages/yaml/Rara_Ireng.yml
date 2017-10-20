@@ -1,0 +1,7 @@
+families:
+  - parents: [Rara_Ireng, Arjuna]
+    children: [ Abimanyu]
+  - parents: [Basudewa, Badrahini]
+    children: [Rara_Ireng]
+  - parents: [Kunti, Pandu]
+    children: [Arjuna]

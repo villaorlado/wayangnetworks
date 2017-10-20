@@ -1,8 +1,8 @@
 families:
   - parents: [Pandu, Kunti]
-    children: [ (Darma) Puntadewa,  (Bayu) Bima,  (Endra) Arjuna]
-  - parents: [Pandu,  Madrim]
-    children: [ (Aswan) Nakula,  (Aswin) Sadewa]
+    children: [ Puntadewa,  Arjuna,  Werkudara]
+  - parents: [Pandu,   Madrim]
+    children: [ Nakula,  Sadewa]
   - parents: [Abyasa, Ambalika]
     children: [Pandu]
   - parents: [Surasena]
