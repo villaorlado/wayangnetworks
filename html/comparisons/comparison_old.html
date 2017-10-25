@@ -1,0 +1,75 @@
+
+<style>
+.foo{
+	position:fixed;
+	top:0px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+
+<div class="col-sm-7 text">
+  <h1><strong>Div for the images</strong></h1>
+  <div class="description">
+    <div id="myDiagramDiv" draggable="true" style="width:600px; height:400px; background-color: #DAE4E4;"></div>
+  </div>
+</div>
+<div class="col-sm-5 text">
+  <div class="description">
+    <h1><strong>Text</strong></h1>
+  </div>
+  <button type="button" id="Abimanyu" class="btn-primary" >Abimanyu</button>
+  <button type="button" class="btn-primary" id="Antasena">Antasena</button>
+  
+  <select id="puppet1" size="4">
+  <option value="volvo">Abibanyu</option>
+  <option value="saab">Antareja</option>
+  <option value="opel">Antasena</option>
+  <option value="audi">Audi</option>
+</select>
+  
+  
+  <div id="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	
+	
+	
+$(".btn-primary").click(function(){	
+	name = $("#puppet1").val();
+	alert(name);
+	name = this.id;
+	var img = document.createElement("img");
+	img.src = "../characterPages/Yogyakarta/"+name+".png";
+	img.height = 400;
+	img.top = "0px";
+	//img.width = 100;
+
+	var class_name = "foo";
+	img.setAttribute("class", class_name);
+	img.setAttribute("id",name)
+  
+	document.getElementById("myDiagramDiv").appendChild(img);
+	$("foo").css("position","relative");
+	$("foo").css("top","0px");
+	$(img).draggable();
+});
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+//output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+
+slider.oninput = function() {
+    console.log(this.value);
+    $("#Antareja").css("opacity",this.value/100);
+}
+});
+
+</script>
