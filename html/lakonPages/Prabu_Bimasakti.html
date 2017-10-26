@@ -261,7 +261,18 @@ d3.csv("data/Prabu_Bimasakti.csv", function(error, data) {
         .attr("stroke-width", 2)
         .attr("stroke", "green")       
         .style("stroke-dasharray",(3,3));
-     
+ 
+ //pathet nem
+	svg.append("line")
+        .attr("x1", function(){return x(7)-10})
+        .attr("y1", function(){return y(0)})
+        .attr("x2", function(){return x(7)-10})
+        .attr("y2", function(){return y(11)})
+        .attr("class","label-line")
+        .attr("stroke-width", 2)
+        .attr("stroke", "green")       
+        .style("stroke-dasharray",(3,3));
+ 
      svg.append("text")
        
        .attr("y", function(){return x(5)-30})
@@ -284,7 +295,7 @@ sigma.classes.graph.addMethod('neighbors', function(nodeId) {
      });
 
       sigma.parsers.gexf(
-        'networkData/networkGraphs/Babad_Wanamarta.gexf',
+        'networkData/networkGraphs/Prabu_Bimasakti.gexf',
         { // Here is the ID of the DOM element that
           // will contain the graph:
           container: 'sigma-container',
