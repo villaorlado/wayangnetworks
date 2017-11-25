@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import xlrd 
+import seaborn
+import matplotlib.patches as mpatches
 
 def col2num(col_str):
     expn = 0
@@ -38,4 +40,10 @@ plt.scatter(indiaDegree,indiaWeight, color="red")
 plt.scatter(punoDegree,punoWeight, color="green")
 plt.ylabel("Weighted Degree")
 plt.xlabel("Topological Degree")
+
+red_patch = mpatches.Patch(color='red', label='India')
+blue_patch = mpatches.Patch(color='blue', label='Java')
+green_patch = mpatches.Patch(color='green', label='Punokawan')
+plt.legend(handles=[red_patch,blue_patch,green_patch], loc=2)
+plt.savefig("../input/JavaAndIndia.png",bbox_inches='tight')
 plt.show()
