@@ -3,5 +3,5 @@ families:
     children: [Warsasena,  Warsakusuma]
   - parents: [Surya, Kunti]
     children: [Karna]
-  - parents: []
+  - parents: [Pujawati, Salya]
     children: [Surtikanthi]

@@ -1,0 +1,5 @@
+families:
+  - parents: [Wenang, Saoti]
+    children: [ Tunggal,  Wening,  Suyati]
+  - parents: [Nurrasa, Sarwati]
+    children: [Wenang]

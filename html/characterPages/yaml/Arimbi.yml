@@ -3,5 +3,5 @@ families:
     children: [Gatotkaca]
   - parents: [Arimbaka]
     children: [Arimbi]
-  - parents: []
+  - parents: [Kuni, Bayu (Pandu)]
     children: [Werkudara]

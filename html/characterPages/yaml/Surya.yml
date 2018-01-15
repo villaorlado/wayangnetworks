@@ -1,0 +1,11 @@
+families:
+  - parents: [Surya, (Kunti)]
+    children: [(Karna)]
+  - parents: [Surya,  Ngruna]
+    children: [Suwarno]
+  - parents: [Surya, Ngruni]
+    children: [Suryawati, Suryanirada, (Sampati), (Jatayu)]
+  - parents: [Surya, Haruni]
+    children: [Rawiatmaja]
+  - parents: [Ismaya(Semar), Senggani]
+    children: [Surya]

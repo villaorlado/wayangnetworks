@@ -1,0 +1,13 @@
+families:
+  - parents: [Werkudara, Arimbi]
+    children: [Gatotkaca]
+  - parents: [Werkudara, Urangayu]
+    children: [Antasena]
+  - parents: [Werkudara, Nagagini]
+    children: [Antareja]
+  - parents: [Bayu (Pandu), Kuni]
+    children: [Werkudara]
+  - parents: [Arimbaka]
+    children: [Arimbi]
+  - parents: [Supreti, Antaboga]
+    children: [Nagagini]

@@ -17,6 +17,7 @@ import os
 import subprocess
 
 #global vars
+imageHTML = open("htmlfragments/image.html").read()
 book = xlrd.open_workbook("../input/characters_withLakonAndQuantitativeData.xlsx") #name of the file to open
 sh = book.sheet_by_index(0)
 edgeInfoCanonical = open("../gephi/input/edgeInfo/adegan_canonicalOnly.csv").read().splitlines() 
@@ -257,7 +258,17 @@ for num in range(1,sh.nrows):
 	
 	#HTML Character Page
 	html += "<p><h1>" + name + "</h1></p>"
-	html += "<img src='Yogyakarta/" + name + ".png' height='300px'></img>"
+	
+	soloExists = os.path.isfile("../html/characterPages/Surakarta/%s.png" % name)
+	if(soloExists):
+		soloURL = "Surakarta/" + name + ".png"
+		html += imageHTML.replace("$url$",soloURL).replace("$caption$","Surakarta style")
+	
+	yogyaExists = os.path.isfile("../html/characterPages/Yogyakarta/%s.png" % name)
+	if(yogyaExists):
+		yogyaURL = "Yogyakarta/" + name + ".png"
+		html += imageHTML.replace("$url$",yogyaURL).replace("$caption$","Yogyakarta style")
+		
 	html += makeHtml("Terms of address", "D")
 	html += makeHtml("Type", "C")
 	html += makeHtml("Origin", "E")

@@ -9,7 +9,7 @@ families:
     children: [ Arjuna]
   - parents: [Surasena]
     children: [Kunti]
-  - parents: []
+  - parents: [Senggani, Ismaya(Semar)]
     children: [Surya]
   - parents: [Uma, Guru]
     children: [Bayu]
