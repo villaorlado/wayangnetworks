@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2018-03-12">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static">
+    <nodes>
+      <node id="Gatotkaca" label="Gatotkaca">
+        <viz:size value="25.555555"></viz:size>
+        <viz:position x="563.5868" y="-232.41275"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Kanastren" label="Kanastren">
+        <viz:size value="25.555555"></viz:size>
+        <viz:position x="127.522705" y="-17.958574"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Baladewa" label="Baladewa">
+        <viz:size value="25.555555"></viz:size>
+        <viz:position x="-531.70056" y="213.54114"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Sadewa" label="Sadewa">
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-583.95325" y="0.5251441"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Antakawulan" label="Antakawulan">
+        <viz:size value="27.777779"></viz:size>
+        <viz:position x="406.56302" y="408.4325"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Kresna" label="Kresna">
+        <viz:size value="28.88889"></viz:size>
+        <viz:position x="350.43912" y="104.31057"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Puntadewa" label="Puntadewa">
+        <viz:size value="25.555555"></viz:size>
+        <viz:position x="179.51643" y="257.81866"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Rama" label="Rama">
+        <viz:size value="23.333334"></viz:size>
+        <viz:position x="-211.37653" y="538.52594"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Lesmana_Murdaka" label="Lesmana_Murdaka">
+        <viz:size value="24.444445"></viz:size>
+        <viz:position x="393.795" y="-385.57483"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Barata" label="Barata">
+        <viz:size value="22.222221"></viz:size>
+        <viz:position x="-321.10666" y="-194.56415"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Sengkuni" label="Sengkuni">
+        <viz:size value="21.11111"></viz:size>
+        <viz:position x="590.7625" y="-0.14527914"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Abimanyu" label="Abimanyu">
+        <viz:size value="17.777779"></viz:size>
+        <viz:position x="261.70697" y="-557.31885"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Semar" label="Semar">
+        <viz:size value="25.555555"></viz:size>
+        <viz:position x="-314.10526" y="33.011894"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Arjuna" label="Arjuna">
+        <viz:size value="30.0"></viz:size>
+        <viz:position x="222.5053" y="516.9742"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Bagong" label="Bagong">
+        <viz:size value="26.666666"></viz:size>
+        <viz:position x="-24.740402" y="364.69595"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Nakula" label="Nakula">
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-81.97136" y="-127.363815"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Werkudara" label="Werkudara">
+        <viz:size value="20.0"></viz:size>
+        <viz:position x="-74.3424" y="128.16496"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Gareng" label="Gareng">
+        <viz:size value="26.666666"></viz:size>
+        <viz:position x="326.917" y="-144.73367"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Wenang" label="Wenang">
+        <viz:size value="15.555555"></viz:size>
+        <viz:position x="-403.59534" y="-429.59906"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Banowati" label="Banowati">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-448.9857" y="446.81534"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Duryudana" label="Duryudana">
+        <viz:size value="14.444445"></viz:size>
+        <viz:position x="-278.6349" y="278.2653"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Karna" label="Karna">
+        <viz:size value="21.11111"></viz:size>
+        <viz:position x="36.28808" y="-572.93976"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Sugriwa" label="Sugriwa">
+        <viz:size value="14.444445"></viz:size>
+        <viz:position x="-562.3365" y="-232.50029"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Petruk" label="Petruk">
+        <viz:size value="26.666666"></viz:size>
+        <viz:position x="127.78975" y="-304.42795"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Kartamarma" label="Kartamarma">
+        <viz:size value="13.333334"></viz:size>
+        <viz:position x="18.948818" y="619.12726"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Durna" label="Durna">
+        <viz:size value="13.333334"></viz:size>
+        <viz:position x="-119.269936" y="-366.73517"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Anoman" label="Anoman">
+        <viz:size value="18.88889"></viz:size>
+        <viz:position x="558.81036" y="239.31444"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+      <node id="Satrugna" label="Satrugna">
+        <viz:size value="13.333334"></viz:size>
+        <viz:position x="-209.03304" y="-583.24927"></viz:position>
+        <viz:color r="175" g="173" b="255"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="Gatotkaca" target="Kanastren">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="1" source="Baladewa" target="Sadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="2" source="Antakawulan" target="Kresna" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="3" source="Puntadewa" target="Rama">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="4" source="Baladewa" target="Lesmana_Murdaka">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="5" source="Kanastren" target="Barata">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="6" source="Sengkuni" target="Abimanyu">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="7" source="Semar" target="Arjuna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="8" source="Gatotkaca" target="Antakawulan">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="9" source="Sengkuni" target="Kanastren">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="10" source="Kanastren" target="Rama">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="11" source="Kanastren" target="Bagong">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="12" source="Nakula" target="Werkudara">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="13" source="Rama" target="Barata" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="14" source="Arjuna" target="Rama" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="15" source="Puntadewa" target="Werkudara">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="16" source="Antakawulan" target="Gareng">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="17" source="Semar" target="Abimanyu">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="18" source="Gatotkaca" target="Wenang">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="19" source="Nakula" target="Kresna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="20" source="Banowati" target="Duryudana">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="21" source="Karna" target="Kanastren">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="22" source="Arjuna" target="Lesmana_Murdaka" weight="3.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="23" source="Nakula" target="Arjuna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="24" source="Sugriwa" target="Rama">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="25" source="Puntadewa" target="Petruk">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="26" source="Bagong" target="Kresna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="27" source="Bagong" target="Sadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="28" source="Kresna" target="Werkudara">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="29" source="Baladewa" target="Gareng">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="30" source="Wenang" target="Kresna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="31" source="Puntadewa" target="Gareng">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="32" source="Nakula" target="Petruk">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="33" source="Baladewa" target="Bagong">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="34" source="Gareng" target="Semar">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="35" source="Gatotkaca" target="Abimanyu">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="36" source="Karna" target="Duryudana">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="37" source="Bagong" target="Werkudara">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="38" source="Gatotkaca" target="Gareng">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="39" source="Semar" target="Karna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="40" source="Duryudana" target="Kartamarma">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="41" source="Durna" target="Duryudana">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="42" source="Anoman" target="Rama" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="43" source="Semar" target="Sengkuni" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="44" source="Wenang" target="Lesmana_Murdaka">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="45" source="Baladewa" target="Kanastren">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="46" source="Arjuna" target="Barata" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="47" source="Kanastren" target="Petruk">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="48" source="Gareng" target="Kresna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="49" source="Sengkuni" target="Gareng">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="50" source="Anoman" target="Arjuna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="51" source="Gatotkaca" target="Lesmana_Murdaka">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="52" source="Sengkuni" target="Bagong">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="53" source="Karna" target="Durna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="54" source="Satrugna" target="Barata">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="55" source="Antakawulan" target="Bagong">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="56" source="Petruk" target="Abimanyu">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="57" source="Semar" target="Baladewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="58" source="Durna" target="Kartamarma">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="59" source="Antakawulan" target="Barata" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="60" source="Arjuna" target="Sadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="61" source="Sengkuni" target="Petruk">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="62" source="Semar" target="Lesmana_Murdaka">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="63" source="Satrugna" target="Antakawulan">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="64" source="Satrugna" target="Lesmana_Murdaka">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="65" source="Semar" target="Petruk">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="66" source="Gatotkaca" target="Petruk">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="67" source="Karna" target="Abimanyu">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="68" source="Puntadewa" target="Sadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="69" source="Antakawulan" target="Arjuna" weight="4.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="70" source="Anoman" target="Lesmana_Murdaka" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="71" source="Nakula" target="Puntadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="72" source="Gareng" target="Sadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="73" source="Gatotkaca" target="Anoman">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="74" source="Bagong" target="Petruk" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="75" source="Gatotkaca" target="Semar">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="76" source="Puntadewa" target="Kresna" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="77" source="Kresna" target="Rama" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="78" source="Gatotkaca" target="Karna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="79" source="Semar" target="Kanastren" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="80" source="Kresna" target="Lesmana_Murdaka" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="81" source="Semar" target="Rama">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="82" source="Petruk" target="Kresna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="83" source="Arjuna" target="Puntadewa" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="84" source="Arjuna" target="Bagong">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="85" source="Anoman" target="Barata">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="86" source="Karna" target="Bagong">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="87" source="Gatotkaca" target="Arjuna" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="88" source="Antakawulan" target="Sugriwa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="89" source="Nakula" target="Sadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="90" source="Gareng" target="Abimanyu">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="91" source="Nakula" target="Bagong">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="92" source="Sengkuni" target="Kartamarma">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="93" source="Sadewa" target="Werkudara">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="94" source="Nakula" target="Gareng">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="95" source="Kanastren" target="Kresna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="96" source="Baladewa" target="Rama">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="97" source="Gatotkaca" target="Rama">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="98" source="Puntadewa" target="Baladewa" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="99" source="Sugriwa" target="Lesmana_Murdaka">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="100" source="Petruk" target="Sadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="101" source="Gatotkaca" target="Sengkuni">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="102" source="Antakawulan" target="Puntadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="103" source="Puntadewa" target="Barata">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="104" source="Karna" target="Petruk">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="105" source="Gareng" target="Werkudara">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="106" source="Antakawulan" target="Werkudara">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="107" source="Puntadewa" target="Kanastren">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="108" source="Semar" target="Kresna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="109" source="Wenang" target="Anoman">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="110" source="Arjuna" target="Gareng">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="111" source="Bagong" target="Abimanyu">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="112" source="Gareng" target="Kanastren">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="113" source="Karna" target="Kartamarma">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="114" source="Arjuna" target="Baladewa" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="115" source="Antakawulan" target="Lesmana_Murdaka" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="116" source="Anoman" target="Sugriwa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="117" source="Antakawulan" target="Anoman">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="118" source="Gareng" target="Bagong" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="119" source="Petruk" target="Werkudara">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="120" source="Karna" target="Sengkuni" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="121" source="Antakawulan" target="Baladewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="122" source="Sugriwa" target="Barata">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="123" source="Antakawulan" target="Petruk">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="124" source="Nakula" target="Antakawulan">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="125" source="Gatotkaca" target="Kresna" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="126" source="Petruk" target="Baladewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="127" source="Kresna" target="Barata">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="128" source="Anoman" target="Kresna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="129" source="Semar" target="Barata">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="130" source="Kresna" target="Sadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="131" source="Wenang" target="Arjuna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="132" source="Gareng" target="Karna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="133" source="Kanastren" target="Abimanyu">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="134" source="Baladewa" target="Werkudara">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="135" source="Wenang" target="Rama">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="136" source="Sengkuni" target="Durna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="137" source="Puntadewa" target="Semar">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="138" source="Rama" target="Lesmana_Murdaka" weight="3.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="139" source="Arjuna" target="Petruk">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="140" source="Lesmana_Murdaka" target="Barata" weight="3.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="141" source="Arjuna" target="Werkudara">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="142" source="Nakula" target="Baladewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="143" source="Sengkuni" target="Duryudana">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="144" source="Satrugna" target="Arjuna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="145" source="Gareng" target="Petruk" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="146" source="Antakawulan" target="Rama">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="147" source="Baladewa" target="Kresna" weight="2.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="148" source="Baladewa" target="Barata">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="149" source="Gatotkaca" target="Bagong">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="150" source="Antakawulan" target="Sadewa">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="151" source="Puntadewa" target="Lesmana_Murdaka">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="152" source="Semar" target="Bagong">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="153" source="Puntadewa" target="Bagong">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="154" source="Arjuna" target="Kresna" weight="4.0">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="155" source="Kanastren" target="Lesmana_Murdaka">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+      <edge id="156" source="Kanastren" target="Arjuna">
+        <viz:color r="194" g="194" b="255"></viz:color>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

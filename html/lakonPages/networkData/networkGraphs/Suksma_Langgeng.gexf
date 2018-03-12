@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2018-03-12">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static">
+    <nodes>
+      <node id="Arjuna" label="Arjuna">
+        <viz:size value="30.0"></viz:size>
+        <viz:position x="-141.84116" y="464.83545"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="_Raksasa" label="_Raksasa">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-495.8081" y="-138.46756"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Wisnu" label="Wisnu">
+        <viz:size value="24.545456"></viz:size>
+        <viz:position x="-372.18643" y="362.46112"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Werkudara" label="Werkudara">
+        <viz:size value="22.727272"></viz:size>
+        <viz:position x="69.798645" y="249.30685"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="_Boar" label="_Boar">
+        <viz:size value="13.636364"></viz:size>
+        <viz:position x="-215.51521" y="-163.38599"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="SuksmaLanggeng" label="SuksmaLanggeng">
+        <viz:size value="24.545456"></viz:size>
+        <viz:position x="116.22814" y="513.88275"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Nindyamaya" label="Nindyamaya">
+        <viz:size value="22.727272"></viz:size>
+        <viz:position x="496.1527" y="159.17116"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Amonggati" label="Amonggati">
+        <viz:size value="22.727272"></viz:size>
+        <viz:position x="263.6678" y="21.630972"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Duryudana" label="Duryudana">
+        <viz:size value="28.181818"></viz:size>
+        <viz:position x="338.71744" y="362.43958"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Anoman" label="Anoman">
+        <viz:size value="22.727272"></viz:size>
+        <viz:position x="0.8568835" y="-15.000084"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Banowati" label="Banowati">
+        <viz:size value="20.909092"></viz:size>
+        <viz:position x="-114.946205" y="-466.1764"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Durna" label="Durna">
+        <viz:size value="22.727272"></viz:size>
+        <viz:position x="-211.95311" y="140.35493"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Sengkuni" label="Sengkuni">
+        <viz:size value="22.727272"></viz:size>
+        <viz:position x="-487.1585" y="116.39341"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Kresna" label="Kresna">
+        <viz:size value="26.363636"></viz:size>
+        <viz:position x="492.91827" y="-118.458206"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Karna" label="Karna">
+        <viz:size value="13.636364"></viz:size>
+        <viz:position x="373.28177" y="-347.45932"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Wenang" label="Wenang">
+        <viz:size value="13.636364"></viz:size>
+        <viz:position x="139.3913" y="-506.52075"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Kartamarma" label="Kartamarma">
+        <viz:size value="13.636364"></viz:size>
+        <viz:position x="109.211464" y="-247.32738"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+      <node id="Parasara" label="Parasara">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-360.81558" y="-387.68042"></viz:position>
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="Arjuna" target="_Raksasa">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="1" source="Wisnu" target="Werkudara">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="2" source="_Boar" target="SuksmaLanggeng">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="3" source="Arjuna" target="Nindyamaya" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="4" source="Amonggati" target="Duryudana" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="5" source="Nindyamaya" target="Duryudana" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="6" source="Anoman" target="Banowati">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="7" source="Banowati" target="Werkudara">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="8" source="Durna" target="Nindyamaya">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="9" source="Sengkuni" target="Arjuna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="10" source="Wisnu" target="Arjuna" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="11" source="Wisnu" target="Duryudana">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="12" source="Arjuna" target="Amonggati" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="13" source="Banowati" target="Nindyamaya">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="14" source="Kresna" target="Arjuna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="15" source="Karna" target="Kresna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="16" source="Durna" target="Duryudana" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="17" source="Amonggati" target="Wisnu">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="18" source="SuksmaLanggeng" target="Werkudara">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="19" source="Kresna" target="Werkudara">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="20" source="Wisnu" target="SuksmaLanggeng" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="21" source="Wenang" target="SuksmaLanggeng">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="22" source="Sengkuni" target="Karna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="23" source="SuksmaLanggeng" target="Nindyamaya">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="24" source="Amonggati" target="Kresna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="25" source="Amonggati" target="Anoman" weight="3.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="26" source="Karna" target="Duryudana">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="27" source="Sengkuni" target="SuksmaLanggeng">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="28" source="Sengkuni" target="Kartamarma">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="29" source="Nindyamaya" target="Kresna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="30" source="Duryudana" target="Werkudara" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="31" source="Wenang" target="Arjuna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="32" source="Sengkuni" target="_Boar">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="33" source="Wisnu" target="_Boar">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="34" source="Durna" target="Banowati">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="35" source="Durna" target="Kresna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="36" source="Anoman" target="Arjuna" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="37" source="Anoman" target="Kresna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="38" source="SuksmaLanggeng" target="Duryudana">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="39" source="Anoman" target="Werkudara" weight="3.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="40" source="Wenang" target="_Boar">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="41" source="Wisnu" target="Anoman">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="42" source="Amonggati" target="Durna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="43" source="Parasara" target="_Raksasa">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="44" source="Sengkuni" target="Wenang">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="45" source="Sengkuni" target="Wisnu">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="46" source="Sengkuni" target="Durna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="47" source="Amonggati" target="Banowati">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="48" source="_Boar" target="Arjuna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="49" source="Durna" target="Werkudara">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="50" source="Parasara" target="Arjuna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="51" source="Sengkuni" target="Duryudana">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="52" source="Durna" target="Anoman">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="53" source="Sengkuni" target="Kresna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="54" source="Anoman" target="Duryudana" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="55" source="Wisnu" target="Nindyamaya">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="56" source="Banowati" target="Duryudana" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="57" source="Arjuna" target="Duryudana">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="58" source="Kartamarma" target="Durna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="59" source="Banowati" target="Arjuna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="60" source="Kresna" target="Duryudana" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="61" source="Amonggati" target="SuksmaLanggeng">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="62" source="Amonggati" target="Werkudara" weight="3.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="63" source="Banowati" target="_Raksasa">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="64" source="Wenang" target="Wisnu">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="65" source="Amonggati" target="Nindyamaya" weight="3.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="66" source="Arjuna" target="Werkudara" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="67" source="SuksmaLanggeng" target="Kresna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="68" source="Kartamarma" target="Kresna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="69" source="SuksmaLanggeng" target="Arjuna" weight="2.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="70" source="Anoman" target="SuksmaLanggeng">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="71" source="Kartamarma" target="Duryudana">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="72" source="Durna" target="Karna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="73" source="Banowati" target="Parasara">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="74" source="Wisnu" target="Kresna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="75" source="Anoman" target="Nindyamaya" weight="3.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="76" source="Nindyamaya" target="Werkudara" weight="3.0">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+      <edge id="77" source="Kartamarma" target="Karna">
+        <viz:color r="41" g="56" b="192"></viz:color>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

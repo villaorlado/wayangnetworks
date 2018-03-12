@@ -162,9 +162,9 @@ def getSources():
 	if (wei):
 		array.append("<br>H. Solichin, Suyanto, Sumari, Undung Wiyono, Sri Purwanto, 2017. <i>Ensiklopedi Wayang Indonesia.</i> Mitra Sarana Edukasi, Jakarta, %s." % page(wei))
 	if (rkwp):
-		array.append("<br>Heru S Sudjarwo, Sumari, Undung Wiyono, 2010. Rupa dan Karakter Wayang Purwa. Kakilangit Kencana, Jakarta., %s." % page(rkwp))
+		array.append("<br>Heru S Sudjarwo, Sumari, Undung Wiyono, 2010. Rupa dan Karakter Wayang Purwa. Kakilangit Kencana, Jakarta, %s." % page(rkwp))
 	if (mt):
-		array.append("<br>Purwadi, 2013. <i>Mengenal Gambar Tokoh Wayang Purwa dan Keterangannya</i>. Cendrawasih, Surakarta, , %s." % page(mt))
+		array.append("<br>Purwadi, 2013. <i>Mengenal Gambar Tokoh Wayang Purwa dan Keterangannya</i>. Cendrawasih, Surakarta, %s." % page(mt))
 	if (ewp):
 		array.append("<br>Sudibyoprono, R.R., Suwandono, Dhanisworo, Mujiyono, 1991. <i>Ensiklopedi Wayang Purwa</i>. Balai Pustaka, Jakarta, %s." % page(ewp))
 	

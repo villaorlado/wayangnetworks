@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gexf xmlns="http://www.gexf.net/1.3" version="1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd">
+  <meta lastmodifieddate="2018-03-12">
+    <creator>Gephi 0.9</creator>
+    <description></description>
+  </meta>
+  <graph defaultedgetype="undirected" mode="static">
+    <nodes>
+      <node id="Gareng" label="Gareng">
+        <viz:size value="21.666666"></viz:size>
+        <viz:position x="555.9976" y="29.530245"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Bagong" label="Bagong">
+        <viz:size value="21.666666"></viz:size>
+        <viz:position x="169.19145" y="274.97488"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Kunti" label="Kunti">
+        <viz:size value="30.0"></viz:size>
+        <viz:position x="-276.64716" y="-86.02805"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Salya" label="Salya">
+        <viz:size value="21.666666"></viz:size>
+        <viz:position x="-142.38393" y="568.4461"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Semar" label="Semar">
+        <viz:size value="21.666666"></viz:size>
+        <viz:position x="49.45213" y="-103.525955"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Pandu" label="Pandu">
+        <viz:size value="30.0"></viz:size>
+        <viz:position x="113.692474" y="541.6451"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Madrim" label="Madrim">
+        <viz:size value="25.0"></viz:size>
+        <viz:position x="-35.13843" y="98.96976"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Gendari" label="Gendari">
+        <viz:size value="18.333332"></viz:size>
+        <viz:position x="-93.9995" y="336.69406"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Sengkuni" label="Sengkuni">
+        <viz:size value="13.333334"></viz:size>
+        <viz:position x="348.81516" y="462.84952"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Destarastra" label="Destarastra">
+        <viz:size value="18.333332"></viz:size>
+        <viz:position x="499.6406" y="266.18365"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Kuntiboja" label="Kuntiboja">
+        <viz:size value="18.333332"></viz:size>
+        <viz:position x="-371.68582" y="-439.98477"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Karna" label="Karna">
+        <viz:size value="15.0"></viz:size>
+        <viz:position x="-298.45483" y="150.86813"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Petruk" label="Petruk">
+        <viz:size value="21.666666"></viz:size>
+        <viz:position x="-136.82083" y="-538.9622"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Bismaka" label="Bismaka">
+        <viz:size value="13.333334"></viz:size>
+        <viz:position x="364.8097" y="-442.54935"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Basudewa" label="Basudewa">
+        <viz:size value="18.333332"></viz:size>
+        <viz:position x="-363.36633" y="425.24554"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Ugrasena" label="Ugrasena">
+        <viz:size value="15.0"></viz:size>
+        <viz:position x="118.315765" y="-578.4448"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Mandrakeswara" label="Mandrakeswara">
+        <viz:size value="18.333332"></viz:size>
+        <viz:position x="-528.86664" y="236.81093"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Abiyasa" label="Abiyasa">
+        <viz:size value="13.333334"></viz:size>
+        <viz:position x="310.54086" y="-169.7663"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Druwasa" label="Druwasa">
+        <viz:size value="15.0"></viz:size>
+        <viz:position x="-511.67886" y="-240.95686"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Gendara" label="Gendara">
+        <viz:size value="13.333334"></viz:size>
+        <viz:position x="-559.5516" y="-7.4989405"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Ngembat_Landeyan" label="Ngembat_Landeyan">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="-158.81993" y="-287.98914"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Yamawidura" label="Yamawidura">
+        <viz:size value="13.333334"></viz:size>
+        <viz:position x="543.7666" y="-227.08769"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Bagaspati" label="Bagaspati">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="295.94315" y="75.343864"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+      <node id="Pujawati" label="Pujawati">
+        <viz:size value="10.0"></viz:size>
+        <viz:position x="107.2483" y="-344.76773"></viz:position>
+        <viz:color r="203" g="199" b="255"></viz:color>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="Gareng" target="Bagong" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="1" source="Kunti" target="Salya" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="2" source="Semar" target="Pandu">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="3" source="Gareng" target="Pandu">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="4" source="Madrim" target="Kunti" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="5" source="Madrim" target="Gendari">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="6" source="Pandu" target="Sengkuni">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="7" source="Kunti" target="Destarastra">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="8" source="Kuntiboja" target="Karna">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="9" source="Semar" target="Kunti">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="10" source="Pandu" target="Petruk">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="11" source="Bismaka" target="Basudewa">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="12" source="Gareng" target="Salya" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="13" source="Bagong" target="Salya" weight="3.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="14" source="Ugrasena" target="Bismaka">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="15" source="Kunti" target="Basudewa">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="16" source="Semar" target="Mandrakeswara">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="17" source="Gareng" target="Kunti">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="18" source="Madrim" target="Bagong" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="19" source="Abiyasa" target="Destarastra">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="20" source="Petruk" target="Mandrakeswara">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="21" source="Madrim" target="Destarastra">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="22" source="Madrim" target="Gareng" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="23" source="Pandu" target="Gendari" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="24" source="Kunti" target="Kuntiboja">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="25" source="Pandu" target="Salya">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="26" source="Kunti" target="Bagong">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="27" source="Pandu" target="Bagong">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="28" source="Madrim" target="Salya" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="29" source="Druwasa" target="Basudewa">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="30" source="Pandu" target="Gendara">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="31" source="Druwasa" target="Karna">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="32" source="Madrim" target="Pandu" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="33" source="Semar" target="Salya" weight="3.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="34" source="Kunti" target="Gendari">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="35" source="Salya" target="Mandrakeswara">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="36" source="Bagong" target="Mandrakeswara">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="37" source="Ugrasena" target="Ngembat_Landeyan">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="38" source="Madrim" target="Semar" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="39" source="Pandu" target="Destarastra" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="40" source="Sengkuni" target="Gendara">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="41" source="Petruk" target="Salya" weight="3.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="42" source="Gareng" target="Mandrakeswara">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="43" source="Kunti" target="Karna">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="44" source="Druwasa" target="Kuntiboja">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="45" source="Gendari" target="Destarastra">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="46" source="Sengkuni" target="Gendari">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="47" source="Semar" target="Petruk" weight="3.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="48" source="Pandu" target="Kunti" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="49" source="Basudewa" target="Karna">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="50" source="Madrim" target="Mandrakeswara">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="51" source="Abiyasa" target="Yamawidura">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="52" source="Pandu" target="Abiyasa">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="53" source="Gareng" target="Petruk" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="54" source="Kunti" target="Petruk">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="55" source="Bagaspati" target="Pujawati">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="56" source="Ugrasena" target="Basudewa">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="57" source="Bismaka" target="Kuntiboja">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="58" source="Semar" target="Bagong" weight="3.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="59" source="Druwasa" target="Kunti">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="60" source="Bagong" target="Petruk" weight="3.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="61" source="Yamawidura" target="Destarastra">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="62" source="Gendari" target="Gendara">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="63" source="Madrim" target="Petruk" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="64" source="Kuntiboja" target="Basudewa" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="65" source="Pandu" target="Yamawidura">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="66" source="Ugrasena" target="Kuntiboja">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+      <edge id="67" source="Gareng" target="Semar" weight="2.0">
+        <viz:color r="168" g="169" b="255"></viz:color>
+      </edge>
+    </edges>
+  </graph>
+</gexf>
