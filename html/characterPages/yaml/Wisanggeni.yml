@@ -1,3 +1,5 @@
 families:
+  - parents: [Wisanggeni, Mustikawati]
+    children: []
   - parents: [Arjuna, Dresanala]
     children: [Wisanggeni]

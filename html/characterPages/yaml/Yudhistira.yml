@@ -1,3 +1,5 @@
 families:
+  - parents: [Yudhistira, Rahina]
+    children: [ Ratri]
   - parents: []
     children: [Yudhistira]

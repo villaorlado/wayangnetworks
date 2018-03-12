@@ -79,7 +79,7 @@ def makeHtml (header,column, linked=False):
 def makeLakonHtml():
 	lakonList = sh.cell_value(rowx=num, colx=col2num("Z")).split(",")
 	lakonArray = []
-	htmlString = "<p><b>Found in the follwing lakon (stories)</b>:</p><ol> "
+	htmlString = "<p><b>Found in the follwing stories (lakon)</b>:</p><ol> "
 	for lakon in lakonList:
 		htmlString += '<li><a href="../lakonPages/%s.html">%s</a></li>' % (lakon,lakon)
 	htmlString += "</ol>"
@@ -108,7 +108,7 @@ def makeDescriptionHtml():
 		else:
 			htmlString = re.sub("\/" + cleanMatch + "\/", "<i>" + cleanMatch + "</i>", htmlString)
 	
-	htmlString = "<p><b>Description in the Javanese version</b>: " + htmlString.decode("utf-8")
+	htmlString = "<p><b>Description in the Javanese wayang versions</b>: " + htmlString.decode("utf-8")
 	return htmlString
 
 def makeTable(listName,valueName,measurement,location):
@@ -157,18 +157,19 @@ def getSources():
 	swp = sh.cell_value(rowx=num, colx=col2num("V"))
 	wei = sh.cell_value(rowx=num, colx=col2num("W"))
 	rkwp = sh.cell_value(rowx=num, colx=col2num("X"))
-	if (ewp):
-		array.append("<i>Ensiklopedi Wayang Purwa</i>, %s" % page(ewp))
-	if (mt):
-		array.append("<i>Mengenal Gambar Tokoh Wayang Purwa</i>, %s" % page(mt))
 	if (swp):
-		array.append("<i>Sejarah Wayang Purwa</i>, %s" % page(swp))
+		array.append("<br>Hardjowirogo, 1948. <i>Sejarah Wayang Purwa</i>. Balai Pustaka, Jakarta, %s" % page(swp))
 	if (wei):
-		array.append("<i>Ensiklopedi Wayang Indonesia</i>, %s" % page(wei))
+		array.append("<br>H. Solichin, Suyanto, Sumari, Undung Wiyono, Sri Purwanto, 2017. <i>Ensiklopedi Wayang Indonesia.</i> Mitra Sarana Edukasi, Jakarta, %s." % page(wei))
 	if (rkwp):
-		array.append("<i>Rupa dan Karakter Wayang Purwa</i>, %s" % page(rkwp))
+		array.append("<br>Heru S Sudjarwo, Sumari, Undung Wiyono, 2010. Rupa dan Karakter Wayang Purwa. Kakilangit Kencana, Jakarta., %s." % page(rkwp))
+	if (mt):
+		array.append("<br>Purwadi, 2013. <i>Mengenal Gambar Tokoh Wayang Purwa dan Keterangannya</i>. Cendrawasih, Surakarta, , %s." % page(mt))
+	if (ewp):
+		array.append("<br>Sudibyoprono, R.R., Suwandono, Dhanisworo, Mujiyono, 1991. <i>Ensiklopedi Wayang Purwa</i>. Balai Pustaka, Jakarta, %s." % page(ewp))
+	
 	if (not array == []):
-		htmlString = "<p><b>Sources</b>: "  + "; ".join(array)
+		htmlString = "<hr><h3>Sources</h3> "  + " ".join(array)
 	return htmlString
 
 def findSpouseAncestry(spouse):
@@ -257,8 +258,13 @@ for num in range(1,sh.nrows):
 	html += open("htmlfragments/html1.html").read()
 	
 	#HTML Character Page
-	html += "<p><h1>" + name + "</h1></p>"
 	
+	html += "<p><h1>" + name + "</h1></p>"
+	html += "<div class='well'>"
+	html += makeHtml("Alternative names", "H")
+	html += "</div>"
+	
+	'''
 	soloExists = os.path.isfile("../html/characterPages/Surakarta/%s.png" % name)
 	if(soloExists):
 		soloURL = "Surakarta/" + name + ".png"
@@ -268,12 +274,12 @@ for num in range(1,sh.nrows):
 	if(yogyaExists):
 		yogyaURL = "Yogyakarta/" + name + ".png"
 		html += imageHTML.replace("$url$",yogyaURL).replace("$caption$","Yogyakarta style")
-		
+	'''	
 	html += makeHtml("Terms of address", "D")
 	html += makeHtml("Type", "C")
 	html += makeHtml("Origin", "E")
-	html += makeHtml("Notes on the Sanskrit version", "F")
-	html += makeHtml("Alternative names", "H")
+	html += makeHtml("Notes on the Indian versions", "F")
+	
 	html += makeDescriptionHtml()
 	html += makeLakonHtml()
 	
@@ -300,23 +306,21 @@ for num in range(1,sh.nrows):
 		html += "<p>" + svg
 	
 	html += "<hr><h3>More information</h3>"
-	html += makeHtml("Ruler of", "N")
+	html += makeHtml("Lived in", "N")
 	html += makeHtml("Killed by", "O", True)
-	html += makeHtml("Aji / Wahyu / Pusaka", "P")
+	html += makeHtml("Amulets and hierlooms", "P")
 	html += makeHtml("Takes the shape of", "Q", True)
 	html += makeHtml("Impersonated by", "R", True)
 	html += makeHtml("Wanda", "S", True)
 	html += getSources()
 	
-	html += "<p>&nbsp;<hr><p><h3>Network measurements for %s</h3>" %name
-	html += open("htmlfragments/table2.html").read()
-	html += makeTable(degreeList,"Degree",'Degree <a href="#" data-toggle="tooltip" title="The amount of connections of the given node."><i class="glyphicon glyphicon-question-sign"></i></a>',"AB")
-	html += makeTable(weightedDegreeList,"Weigted Degree",'Weighted Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has, taking into account the weight of those connections"><i class="glyphicon glyphicon-question-sign"></i></a>',"AC")
+	#html += makeTable(weightedDegreeList,"Weigted Degree",'Weighted Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has, taking into account the weight of those connections"><i class="glyphicon glyphicon-question-sign"></i></a>',"AC")
 	#html += makeTable(closenessCentralityList,"Closeness Centrality",'Closeness Centrality <a href="#" data-toggle="tooltip" title="The average length of the shortest path between the node and all other nodes in the graph"><i class="glyphicon glyphicon-question-sign"></i></a>',"AD")
-	html += makeTable(betweennessCentralityList,"Betweenness Centrality",'Betweeness Centrality <a href="#" data-toggle="tooltip" title="Inidcates how often a node acts as a bridge along the shortest path between two other nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AF")
-	html += makeTable(eigenvectorCentralityList,"Eigenvector Centrality",'Eigenvector Centrality <a href="#" data-toggle="tooltip" title="A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AK")
+	#html += makeTable(betweennessCentralityList,"Betweenness Centrality",'Betweeness Centrality <a href="#" data-toggle="tooltip" title="Inidcates how often a node acts as a bridge along the shortest path between two other nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AF")
+	#html += makeTable(eigenvectorCentralityList,"Eigenvector Centrality",'Eigenvector Centrality <a href="#" data-toggle="tooltip" title="A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"AK")
+	
 	html += open("htmlfragments/table3.html").read()
-	html += "<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same adegan as %s</h3><hr>" %name	
+	html += "<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same scene (adegan) as %s</h3><hr>" %name	
 	html += open("htmlfragments/table4.html").read()
 	
 	html += '<script src="../js/jquery.js"></script>'
@@ -332,11 +336,17 @@ for num in range(1,sh.nrows):
 	html += "$(document).ready(function(){"
 	html += "$('[data-toggle="  +'"tooltip"]' + "').tooltip();"
 	html += '\n });</script>' 
+	
+	#this displays the network measurements and has just been commented out
+	#html += open("htmlfragments/table2.html").read()
+	#html += "<p>&nbsp;<hr><p><h3>Network measurements for %s</h3>" %name
+	#html += makeTable(degreeList,"Degree (number of connections)",'Degree <a href="#" data-toggle="tooltip" title="The amount of connections of the given node."><i class="glyphicon glyphicon-question-sign"></i></a>',"AB")
+		
 	html += open("htmlfragments/html2.html").read()
 
 	#text file for network display
 	text = ""
-	text += "<p><h1>" + name + "</h1></p>"
+	text += "<h1>" + name + "</h1>[<a href='characterPages/"+name+".html'>full description]</a><p> "
 	text += makeHtml("Terms of address", "D")
 	text += makeHtml("Type", "C")
 	text += makeHtml("Origin", "E")

@@ -1,0 +1,5 @@
+families:
+  - parents: [Yamawidura, Padmarini]
+    children: [Sanjaya,  Yuyutsuh]
+  - parents: [Abiyasa, Drati]
+    children: [Yamawidura]

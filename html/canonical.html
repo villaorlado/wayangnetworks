@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Canonical Only Network</title>
+    <title>Network Visualization</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/shop-item.css" rel="stylesheet">
         <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../index.html">Quantitative Wayang Dictionary</a>
+                    <a class="navbar-brand" href="../index.html">Digital Wayang Encyclopedia</a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
@@ -61,17 +61,24 @@
             <div class="row">
 
                 <div class="col-md-3">
-                    <p class="lead">Quantiative Wayang Dictionary</p>
+                    <p class="lead"></p>
                     <!--img src="../img/logo.jpg"></img-->
-
-                    Click on a character for a description
+					<div class="list-group">
+                    <a href="characters.html" class="list-group-item">Characters</a>
+                    <a href="lakons.html" class="list-group-item">Story plots (lakon)</a>
+                    <a href="canonical.html" class="list-group-item">Network visualization</a>
+                </div>
                     <div id="explanation"></div>
                 </div>
 
                 <div class="col-md-9">
 
                 <div>
-                  <h1>Canonical Only Network</h1>
+                  This non-directed network represents co-occurences of characters in scenes from the Javanese wayang kulit theatre. The nodes indicate the different characters. 
+					Green edges are Javanese in origin and pink ones are also found in the Indian versions of the stories. The size of the nodes corresponds to their degree.
+					(Larger nodes have a higher number of connections.
+					The thickness of the edges represents the number of times two characters appear together in the same scene (adegan). 
+                    Click on a character's node for a more information.<p></p>
                   <div id="sigma-container"></div>
 
                 </div>
@@ -93,7 +100,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; <a href="http://miguelescobar.com">Miguel Escobar Varela</a> and Andy Schauf 2017</p>
+                    <p>Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. 
                 </div>
             </div>
         </footer>
@@ -155,7 +162,8 @@
           s.bind('clickNode', function(e) {
             var nodeId = e.data.node.id,
                 toKeep = s.graph.neighbors(nodeId),
-                explanation = "<b><a href='characterPages/" + e.data.node.label + ".html'>" + e.data.node.label + "</a></b>";
+                //explanation = "<p><b><a href='characterPages/" + e.data.node.label + ".html'>View full description</a></b>"; //+ e.data.node.label +
+                explanation = "<hr>";
                 toKeep[nodeId] = e.data.node;
 
             s.graph.nodes().forEach(function(n) {

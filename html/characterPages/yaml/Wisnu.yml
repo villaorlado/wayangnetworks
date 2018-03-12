@@ -1,0 +1,9 @@
+families:
+  - parents: [Wisnu, Sri_Sekar]
+    children: [ Srigata,  Srinada,  Srinadi]
+  - parents: [Wisnu,  Sri_Pujayanti]
+    children: [ Heruyana,  Isawa,  Bisawa,  Isnapurna,  Madura,  Madudewa,  Madusasana,  Dewi_Srihunon,  Sewi_Srihuni,  Pujarta,  Panonbuja,  Sarwedi]
+  - parents: [Wisnu, Pertiwi]
+    children: []
+  - parents: [Guru, Uma]
+    children: [Wisnu]

@@ -1,3 +1,5 @@
 families:
-  - parents: []
+  - parents: [Wibisana, Triwati]
+    children: [ Trijati,  Dentawilukrama]
+  - parents: [Wisrawa, Sukesi]
     children: [Wibisana]

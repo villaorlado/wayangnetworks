@@ -1,0 +1,5 @@
+families:
+  - parents: [Yamadipati, Mumpuni]
+    children: []
+  - parents: [Ismaya(Semar), Kanastren]
+    children: [Yamadipati]

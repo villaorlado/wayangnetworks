@@ -135,7 +135,7 @@ Udawa,Human,India,
 Setyajid,Human,India,
 Wenang,God,Java,
 Werkudara,Human,India,Pandawa
-Wibisana,Human,Java,
+Wibisana,Human,India,
 Wilawuk,Demon,Java,
 Wisanggeni,Human,Java,Pandawa
 Wisnu,God,India,

@@ -34,13 +34,13 @@
 <g id="edge1" class="edge"><title>Bomanarakasura&#45;&gt;union_0</title>
 <path fill="none" stroke="#1abc9c" d="M469.038,-66.5C487.794,-66.5 502,-66.5 502,-66.5 502,-66.5 502,-60.686 502,-56.6889"/>
 </g>
-<!-- Hagnyanawati -->
-<g id="node3" class="node"><title>Hagnyanawati</title>
+<!-- Hagnyawati -->
+<g id="node3" class="node"><title>Hagnyawati</title>
 <polygon fill="white" stroke="#cccccc" points="469,-44 289,-44 289,-8 469,-8 469,-44"/>
-<text text-anchor="middle" x="379" y="-21.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Hagnyanawati</text>
+<text text-anchor="middle" x="379" y="-21.8" font-family="Helvetica, Arial, sans-serif" font-size="14.00">Hagnyawati</text>
 </g>
-<!-- Hagnyanawati&#45;&gt;union_0 -->
-<g id="edge2" class="edge"><title>Hagnyanawati&#45;&gt;union_0</title>
+<!-- Hagnyawati&#45;&gt;union_0 -->
+<g id="edge2" class="edge"><title>Hagnyawati&#45;&gt;union_0</title>
 <path fill="none" stroke="#1abc9c" d="M469.038,-39.5C487.794,-39.5 502,-39.5 502,-39.5 502,-39.5 502,-45.314 502,-49.3111"/>
 </g>
 <!-- Watubaji -->

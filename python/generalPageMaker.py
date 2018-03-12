@@ -11,7 +11,7 @@ import re
 html = open("htmlfragments/lakons_template.html").read()
 html = html.replace("$title$","Lakon list")
 
-content = "<h1>List of Lakons</h1>"
+content = "<h1>List of stories (lakon)</h1>"
 content += "Lakon list"
 content += "<ul>"
 
@@ -27,7 +27,7 @@ with open("../html/lakons.html", "w") as file:
 		file.write(html)
 		print "lakons.html created"
 	
-	
+'''	
 #For Character Pages
 html = open("htmlfragments/heather.txt").read()
 html += "Lakon list"
@@ -47,3 +47,4 @@ html = re.sub("\.\.\/","",html)
 with open("../html/characters.html", "w") as file:
 		file.write(html)
 		print "characterss.html created"
+'''
