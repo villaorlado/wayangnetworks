@@ -76,6 +76,25 @@ def makeHtml (header,column, linked=False):
 			htmlString = "<p><b>" + header + "</b>: " + str(sh.cell_value(rowx=num, colx=column))	
 	return htmlString
 
+def makeWell (header,column, linked=False):
+	htmlString = ""
+	column = col2num(column)
+	if (sh.cell_value(rowx=num, colx=column) != ""):
+		if (linked):
+			htmlString = "<p><b>" + header + "</b>: "
+			linkedSet = sh.cell_value(rowx=num, colx=column).decode("utf-8").split(", ")
+			for x in range (0, len(linkedSet)):
+				exists = os.path.isfile("../html/characterPages/%s.html" % linkedSet[x])
+				if(exists):
+					htmlString += "<a href='%s.html'>%s</a>" % (linkedSet[x],linkedSet[x])
+				else:
+					htmlString += str(linkedSet[x])
+				if x < len(linkedSet)-1:
+					htmlString += ", "
+		else:
+			htmlString = "<div class='well'><b>" + header + "</b>: " + str(sh.cell_value(rowx=num, colx=column)) + "</div>"	
+	return htmlString
+
 def makeLakonHtml():
 	lakonList = sh.cell_value(rowx=num, colx=col2num("Z")).split(",")
 	lakonArray = []
@@ -260,9 +279,8 @@ for num in range(1,sh.nrows):
 	#HTML Character Page
 	
 	html += "<p><h1>" + name + "</h1></p>"
-	html += "<div class='well'>"
-	html += makeHtml("Alternative names", "H")
-	html += "</div>"
+	
+	html += makeWell("Alternative names", "H")
 	
 	'''
 	soloExists = os.path.isfile("../html/characterPages/Surakarta/%s.png" % name)

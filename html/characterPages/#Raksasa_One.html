@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Digital Wayang Encyclopedia">
+    <meta name="author" content="Miguel Escobar Varela">
+<style>
+		path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.joint:hover{
+	cursor:pointer
+}
+
+#sigma-container{
+          top:0px;
+          left:0px;
+          width:50%;
+          position:relative;
+          height:300px;
+          box-shadow: 1px 1px 5px #999;
+        }
+		</style>
+    <title>
+		
+#Raksasa_One</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/shop-item.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css"></link>
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"  style="color:white;cursor:default">Digital Wayang Encyclopedia</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../index.html">About</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead"></p>
+                <!--img src="../img/logo.jpg"></img-->
+                <div class="list-group">
+                    <a href="../characters.html" class="list-group-item">Characters</a>
+                    <a href="../lakons.html" class="list-group-item">Story plots (lakon)</a>
+                    <a href="../canonical.html" class="list-group-item">Network visualization</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+
+                <div>
+<p><h1>#Raksasa_One</h1></p><div class='well'><i>This is not a real character, but a disguise for another character</i></div><p><b>Real character</b>: <a href='Indra.html'>Indra</a><p><b>Found in the follwing lakon (stories)</b>:</p><ol> <li><a href="../lakonPages/Dewa_Ruci.html">Dewa_Ruci</a></li></ol></table>
+<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same adegan as #Raksasa_One</h3><hr><table id="linktableDisguised" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Character</th>
+                <th>Link weight</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Character</th>
+                <th>Link weight</th>
+            </tr>
+        </tfoot>
+    </table>
+<script src="../js/jquery.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function(){table = $("#linktableDisguised").DataTable({"ajax":"../data/json/#Raksasa_One_disguised.txt","order": [[ 1, "desc" ]]});$('#linktableDisguised tbody').on('click', 'tr', function () {
+ var data = table.row(this).data();
+ window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});});$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();
+ });</script></div>
+
+   
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. 
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+   
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+   
+</body>
+
+</html>

@@ -129,13 +129,15 @@ for num in range (1, characters.nrows):
 	html += makeHtml("Type", "C")
 	html += makeLakonHtml()
 	
-	html += "<p>&nbsp;<hr><p><h3>Network measurements for %s</h3>" %name
-	html += open("htmlfragments/table2.html").read()
-	html += makeTable(degreeList,"Degree",'Degree <a href="#" data-toggle="tooltip" title="The amount of connections of the given node."><i class="glyphicon glyphicon-question-sign"></i></a>',"B")
-	html += makeTable(weightedDegreeList,"Weigted Degree",'Weighted Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has, taking into account the weight of those connections"><i class="glyphicon glyphicon-question-sign"></i></a>',"C")
-	html += makeTable(closenessCentralityList,"Closeness Centrality",'Closeness Centrality <a href="#" data-toggle="tooltip" title="The average length of the shortest path between the node and all other nodes in the graph"><i class="glyphicon glyphicon-question-sign"></i></a>',"D")
-	html += makeTable(betweennessCentralityList,"Betweenness Centrality",'Betweeness Centrality <a href="#" data-toggle="tooltip" title="Inidcates how often a node acts as a bridge along the shortest path between two other nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"F")
-	html += makeTable(eigenvectorCentralityList,"Eigenvector Centrality",'Eigenvector Centrality <a href="#" data-toggle="tooltip" title="A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"K")
+	nameForTable = name.replace("~","_",1)
+	#A previous version included a table and images of network measurements
+	#html += "<p>&nbsp;<hr><p><h3>Network measurements for %s</h3>" %name
+	#html += open("htmlfragments/table2.html").read()
+	#html += makeTable(degreeList,"Degree",'Degree <a href="#" data-toggle="tooltip" title="The amount of connections of the given node."><i class="glyphicon glyphicon-question-sign"></i></a>',"B")
+	#html += makeTable(weightedDegreeList,"Weigted Degree",'Weighted Degree <a href="#" data-toggle="tooltip" title="The amount of connections a node has, taking into account the weight of those connections"><i class="glyphicon glyphicon-question-sign"></i></a>',"C")
+	#html += makeTable(closenessCentralityList,"Closeness Centrality",'Closeness Centrality <a href="#" data-toggle="tooltip" title="The average length of the shortest path between the node and all other nodes in the graph"><i class="glyphicon glyphicon-question-sign"></i></a>',"D")
+	#html += makeTable(betweennessCentralityList,"Betweenness Centrality",'Betweeness Centrality <a href="#" data-toggle="tooltip" title="Inidcates how often a node acts as a bridge along the shortest path between two other nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"F")
+	#html += makeTable(eigenvectorCentralityList,"Eigenvector Centrality",'Eigenvector Centrality <a href="#" data-toggle="tooltip" title="A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes"><i class="glyphicon glyphicon-question-sign"></i></a>',"K")
 	html += open("htmlfragments/table3.html").read()
 	html += "<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same adegan as %s</h3><hr>" %name	
 	html += open("htmlfragments/table4.html").read()
@@ -143,7 +145,7 @@ for num in range (1, characters.nrows):
 	html += '<script src="../js/jquery.js"></script>'
 	html += '<script src="../js/jquery.dataTables.min.js"></script>'
 	html += '<script>$(document).ready(function(){'
-	html += 'table = $("#linktableDisguised").DataTable({"ajax":"../data/json/%s_disguised.txt","order": [[ 1, "desc" ]]});' % name
+	html += 'table = $("#linktableDisguised").DataTable({"ajax":"../data/json/%s_disguised.txt","order": [[ 1, "desc" ]]});' % nameForTable
 	html += "$('#linktableDisguised tbody').on('click', 'tr', function () {"
 	html += "\n var data = table.row(this).data();"
 	html += "\n window.location = data[0] + '.html';"
