@@ -27,24 +27,23 @@ with open("../html/lakons.html", "w") as file:
 		file.write(html)
 		print "lakons.html created"
 	
-'''	
-#For Character Pages
-html = open("htmlfragments/heather.txt").read()
-html += "Lakon list"
-html += open("htmlfragments/html1.html").read()
 
-html += "<h1>List of Characters</h1>"
-html += "<ul>"
+#For Character Pages
+html = open("htmlfragments/characters_template.html").read()
+characterArray = []
+characterList = "<ul>"
 
 for fileItem in sorted(glob.glob("../html/characterPages/*.html")):
 	title = re.sub("(../html/characterPages/|\.html)","",fileItem)
-	html += '<li>' + '<a href="characterPages/' + title + '.html">' + title + '</a></li>'
+	characterList += '<li>' + '<a href="characterPages/' + title + '.html">' + title + '</a></li>'
+	characterArray.append(title)
 	
-html += "</ul>"
-html += open("htmlfragments/html2.html").read()
-html = re.sub("\.\.\/","",html)
+characterList += "</ul>"
+
+html = html.replace("@@@",str(characterArray))
+html = html.replace("$$$",characterList)
 
 with open("../html/characters.html", "w") as file:
 		file.write(html)
-		print "characterss.html created"
-'''
+		print "characters.html created"
+
