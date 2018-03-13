@@ -34,9 +34,14 @@ characterArray = []
 characterList = "<ul>"
 
 for fileItem in sorted(glob.glob("../html/characterPages/*.html")):
+	
 	title = re.sub("(../html/characterPages/|\.html)","",fileItem)
-	characterList += '<li>' + '<a href="characterPages/' + title + '.html">' + title + '</a></li>'
-	characterArray.append(title)
+	if ("*" not in title):
+		characterList += '<li>' + '<a href="characterPages/' + title + '.html">' + title + '</a></li>'
+		characterArray.append(title)
+	else:
+		characterList += '<li>' + '<a href="characterPages/' + title + '.html">' + title + '</a></li>'
+		characterArray.append(title)
 	
 characterList += "</ul>"
 
