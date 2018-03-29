@@ -283,7 +283,7 @@ for num in range(1,sh.nrows):
 	
 	html += makeWell("Alternative names", "H")
 	
-	
+	'''
 	soloExists = glob.glob("../html/characterPages/Surakarta/%s*" % name)
 	if(soloExists):
 		
@@ -298,7 +298,7 @@ for num in range(1,sh.nrows):
 	if(yogyaExists):
 		yogyaURL = "Yogyakarta/" + name + ".png"
 		html += imageHTML.replace("$url$",yogyaURL).replace("$caption$","Yogyakarta style. From Ki Cerma Sutejo's collection.")
-	
+	'''
 	html += makeHtml("Terms of address", "D")
 	html += makeHtml("Type", "C")
 	html += makeHtml("Origin", "E")
