@@ -68,7 +68,7 @@ def printArray (array,array_name,title):
 		if (key == 0):
 			content += "<p><h3>No %s %.2f%%</h3>" % (array_name, value/total * 100)
 		else:
-			content += "<p><h3><img src='elements/%s/%s.png'> %.2f%%</h3>" % (array_name, key, value/total * 100)
+			content += "<p><h3><img height='70px' src='elements/%s/%s.png'> %.2f%%</h3>" % (array_name, key, value/total * 100)
 	
 	html = htmlTemplate.replace("$title$",array_name).replace("$content$",content)
 	with open("../html/comparisons/" + array_name + ".html", "w") as file:

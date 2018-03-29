@@ -44,7 +44,7 @@ counter = 1;
 for a in range(1,data.nrows):	
 	name = data.cell_value(rowx=a, colx=col2num("A"))
 	degree = data.cell_value(rowx=a, colx=col2num("AB"))
-	wtd_degree = data.cell_value(rowx=a, colx=col2num("AK"))
+	wtd_degree = data.cell_value(rowx=a, colx=col2num("AC"))
 	
 	for b in range(1,changes.nrows):
 		name2 = changes.cell_value(rowx=b, colx=col2num("A"))

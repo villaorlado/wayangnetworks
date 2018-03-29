@@ -15,6 +15,7 @@ import seaborn as sns
 import json
 import os
 import subprocess
+import glob
 
 #global vars
 imageHTML = open("htmlfragments/image.html").read()
@@ -282,17 +283,22 @@ for num in range(1,sh.nrows):
 	
 	html += makeWell("Alternative names", "H")
 	
-	'''
-	soloExists = os.path.isfile("../html/characterPages/Surakarta/%s.png" % name)
+	
+	soloExists = glob.glob("../html/characterPages/Surakarta/%s*" % name)
 	if(soloExists):
-		soloURL = "Surakarta/" + name + ".png"
-		html += imageHTML.replace("$url$",soloURL).replace("$caption$","Surakarta style")
+		
+		soloURL = str(soloExists[0]).replace("../html/characterPages/","")
+		if "Kyai" in soloURL:
+			caption = "Surakarta Style. From Ki Purbo Asmoro's Kyai Bantala collection."
+		else:
+			caption = "Surakarta Style. From Ki Catur Kuncoro's Collection."
+		html += imageHTML.replace("$url$",soloURL).replace("$caption$",caption)
 	
 	yogyaExists = os.path.isfile("../html/characterPages/Yogyakarta/%s.png" % name)
 	if(yogyaExists):
 		yogyaURL = "Yogyakarta/" + name + ".png"
-		html += imageHTML.replace("$url$",yogyaURL).replace("$caption$","Yogyakarta style")
-	'''	
+		html += imageHTML.replace("$url$",yogyaURL).replace("$caption$","Yogyakarta style. From Ki Cerma Sutejo's collection.")
+	
 	html += makeHtml("Terms of address", "D")
 	html += makeHtml("Type", "C")
 	html += makeHtml("Origin", "E")

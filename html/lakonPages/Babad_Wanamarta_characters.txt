@@ -1,1 +1,1 @@
-Gareng,Durna,Bagong,Bayu,Sadewa,Bisma,Sengkuni,Dhandhonwacana,Puntadewa,Semar,Kunti,Arimbi,Suparta,Arjuna,Werkudara,Petruk,Abiyasa,Bendana,Asmarawati,Duryudana,Destarastra,Nakula,Gendari,Yudhistira,Wilawuk
+Gareng,Durna,Bagong,Bayu,Sadewa,Bisma,Sengkuni,Dhandhonwacana,Puntadewa,Semar,Kunti,Arimbi,Suparta,Arjuna,Werkudara,Petruk,Abiyasa,Asmarawati,Duryudana,Destarastra,Nakula,Gendari,Yudhistira,Wilawuk
