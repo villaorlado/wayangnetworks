@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Digital Wayang Encyclopedia">
+    <meta name="author" content="Miguel Escobar Varela">
+    <style></style>
+    <title>@@@title@@@</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/shop-item.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.typeahead.css" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-target="#myScrollspy">
+    <nav class="navbar navbar-inverse navbar-top navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" style="color:lightgray;cursor:default">Digital Wayang Encyclopedia</a> </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">About</a></li>
+            <li><a href="canonical.html">Network analysis</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="lakons.html">Lakons (stories)</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="typeahead__container">
+              <div class="typeahead__field"> <span class="typeahead__query">
+                <input class="js-typeahead"
+                                             name="q"
+                                             type="search"
+                                             autofocus
+                                             placeholder="Search"
+                                             autocomplete="off">
+                                  </span> <span class="typeahead__button">
+                                      <button class="btn btn-default" type="submit">
+                                          <span class="typeahead__search-icon"></span> </button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" id="smyScrollspy">
+          <ul class="nav nav-pills nav-stacked leftnav" data-spy="affix" data-offset-top="0">
+            <li><a href="#CharacterList">Character List</a></li>
+            <li><a href="#Pathet Nem">Pathet Nem</a></li>
+            <li><a href="#Pathet Sanga">Pathet Sanga</a></li>
+            <li><a href="#Pathet Manyura">Pathet Manyura</a></li>
+            <li><a href="#Graphs">Graphs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9" style="">
+@@@content@@@
+    
+    
+    <!--interactive graph-->
+    <div class="datum" id="Graphs">
+		<h3>Graphs</h3>
+		<div class="row">
+			<div class="col-lg-6" id="graphspace"></div>           
+			<div class="col-lg-6"><div id="sigma-container"></div></div>
+		</div>
+	</div>
+	</div>
+	</div>
+    
+    </div>
+  </div>
+    <!-- /.container -->
+    <!--Footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!--First column-->
+
+            <div class="col-md-12">
+              <p>
+              Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf.</p>
+
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+
+            <!--/.Second column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+    <!-- /.container -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    ><script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.typeahead.js"></script>
+    <script>var rootURL="";</script>
+    <script src="js/search.js"></script>
+  
+  
+  </body>
+
+
+
+</html>

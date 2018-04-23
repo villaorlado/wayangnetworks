@@ -1,142 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Digital Wayang Encyclopedia">
     <meta name="author" content="Miguel Escobar Varela">
-<style>
-		path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-
-.joint:hover{
-	cursor:pointer
-}
-
-#sigma-container{
-          top:0px;
-          left:0px;
-          width:50%;
-          position:relative;
-          height:300px;
-          box-shadow: 1px 1px 5px #999;
-        }
-		</style>
-    <title>
-		
-Wahyu_Makutharama</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/shop-item.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css"></link>
-
+    <style></style>
+    <title>Wahyu_Makutharama</title>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/shop-item.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.typeahead.css" />
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
 
-</head>
-
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand"  style="color:white;cursor:default">Digital Wayang Encyclopedia</a>
+  <body data-spy="scroll" data-target="#myScrollspy">
+    <nav class="navbar navbar-inverse navbar-top navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" style="color:lightgray;cursor:default">Digital Wayang Encyclopedia</a> </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../canonical.html">Network analysis</a></li>
+            <li><a href="../characters.html">Characters</a></li>
+            <li><a href="../lakons.html">Lakons (stories)</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="typeahead__container">
+              <div class="typeahead__field"> <span class="typeahead__query">
+                <input class="js-typeahead"
+                                             name="q"
+                                             type="search"
+                                             autofocus
+                                             placeholder="Search"
+                                             autocomplete="off">
+                                  </span> <span class="typeahead__button">
+                                      <button class="btn btn-default" type="submit">
+                                          <span class="typeahead__search-icon"></span> </button>
+                </span>
+              </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="../index.html">About</a>
-                    </li>
-                    
-                </ul>
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
-
     <div class="container">
-
+      <div class="row">
+        <div class="col-md-3" id="smyScrollspy">
+          <ul class="nav nav-pills nav-stacked leftnav" data-spy="affix" data-offset-top="0">
+            <li><a href="#CharacterList">Character List</a></li>
+            <li><a href="#Pathet Nem">Pathet Nem</a></li>
+            <li><a href="#Pathet Sanga">Pathet Sanga</a></li>
+            <li><a href="#Pathet Manyura">Pathet Manyura</a></li>
+            <li><a href="#Graphs">Graphs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9" style="">
+<h1>Wahyu_Makutharama</h1><div class="datum" id="CharacterList"><p>This lakon has 24 characters:  <a href='../characterPages/Bisawarna.html'>Bisawarna</a>, <a href='../characterPages/Maruta.html'>Maruta</a>, <a href='../characterPages/Durna.html'>Durna</a>, <a href='../characterPages/Karna.html'>Karna</a>, <a href='../characterPages/Wibisana.html'>Wibisana</a>, <a href='../characterPages/Banowati.html'>Banowati</a>, <a href='../characterPages/Rara_Ireng.html'>Rara_Ireng</a>, <a href='../characterPages/Sadewa.html'>Sadewa</a>, <a href='../characterPages/Sengkuni.html'>Sengkuni</a>, <a href='../characterPages/Puntadewa.html'>Puntadewa</a>, <a href='../characterPages/Garuda.html'>Garuda</a>, <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a>, <a href='../characterPages/Hagni.html'>Hagni</a>, <a href='../characterPages/Arjuna.html'>Arjuna</a>, <a href='../characterPages/Werkudara.html'>Werkudara</a>, <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>, <a href='../characterPages/Duryudana.html'>Duryudana</a>, <a href='../characterPages/Nakula.html'>Nakula</a>, <a href='../characterPages/Narada.html'>Narada</a>, <a href='../characterPages/Kartamarma.html'>Kartamarma</a>, <a href='../characterPages/Ranu.html'>Ranu</a>, <a href='../characterPages/Anoman.html'>Anoman</a>, <a href='../characterPages/Bantala.html'>Bantala</a>, <a href='../characterPages/Kresna.html'>Kresna</a>,</div><div class="datum"><p>&nbsp;<p id='Pathet Nem'><h3>Pathet Nem</h3><br/><p class='adegan' id='adegan1'><b>1</b>. <span class='badge'> Jejer</span> <b>Astina</b>. <a href='../characterPages/Duryudana.html'>Duryudana</a>, <a href='../characterPages/Karna.html'>Karna</a>, <a href='../characterPages/Sengkuni.html'>Sengkuni</a> and <a href='../characterPages/Kartamarma.html'>Kartamarma</a> discuss the Wahyu Papakem Makutharama. Whoever possesses this will be able to pass on his throne to generations to come. Before setting a plan in motion, <a href='../characterPages/Durna.html'>Durna</a> admonishes <a href='../characterPages/Duryudana.html'>Duryudana</a> to confirm the rumors regarding the hermit in the Kutharunggu mountains. <a href='../characterPages/Duryudana.html'>Duryudana</a> instructs <a href='../characterPages/Karna.html'>Karna</a> to go and see if the rumors are true. <a href='../characterPages/Karna.html'>Karna</a> takes leave from <a href='../characterPages/Duryudana.html'>Duryudana</a>.<p class='adegan' id='adegan2'><b>2</b>. <span class='badge'> Kedhaton</span> <b>Astina</b>. <a href='../characterPages/Banowati.html'>Banowati</a> receives <a href='../characterPages/Duryudana.html'>Duryudana</a> and offers him food. After eating, the king changes into his religious robes and asks for divine guidance.<p class='adegan' id='adegan3'><b>3</b>. <span class='badge'> Alun-alun</span> <b>Astina</b>. <a href='../characterPages/Sengkuni.html'>Sengkuni</a> instructs the Korawa army to follow <a href='../characterPages/Karna.html'>Karna</a> to Kutharunggu.<p class='adegan' id='adegan4'><b>4</b>. <span class='badge'> Wana</span> <b>KakiGunungKutharunggu</b>. The students of Dewa Bayu (Kadang Bayu) look after the residence of Begawan <a href='../characterPages/Kesawasidhi.html'>Kesawasidhi</a>. The bird <a href='../characterPages/Garuda.html'>Garuda</a> arrives and reports that the Korawa, led by <a href='../characterPages/Karna.html'>Karna</a> and <a href='../characterPages/Sengkuni.html'>Sengkuni</a> are at the base of the mountain. <a href='../characterPages/Anoman.html'>Anoman</a> and the Kadang Bayu go to meet them and a fight ensues. <a href='../characterPages/Karna.html'>Karna</a> tries to use his Kunta weapon, but <a href='../characterPages/Anoman.html'>Anoman</a> steals it from him. <a href='../characterPages/Karna.html'>Karna</a> loses all strength when the weapon is removed from him. He then meditates so that the weapon can be quickly returned to him.<p class='adegan' id='adegan5'><b>5</b>. <span class='badge'> Pertapaan</span> <b>Candramanik</b> <a href='../characterPages/Wibisana.html'>Wibisana</a> receives his son <a href='../characterPages/Bisawarna.html'>Bisawarna</a>, who has doubts about following the orders of Singgelapura, known the world over as Alengkadiraja. <a href='../characterPages/Wibisana.html'>Wibisana</a> explains the nature of government and the law. After <a href='../characterPages/Bisawarna.html'>Bisawarna</a> is satisfied by the explanation, he takes leave from his father and returns to the kingdom. After the son has gone, <a href='../characterPages/Wibisana.html'>Wibisana</a> meditates and meets the soul of his deceased older brother <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a>. <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a> blames <a href='../characterPages/Wibisana.html'>Wibisana</a> for the events in the past. <a href='../characterPages/Wibisana.html'>Wibisana</a> tells <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a> he can find the way to the true heaven if he becomes one with <a href='../characterPages/Werkudara.html'>Werkudara</a>. <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a> follows the suggestions of his younger brother and departs in search for the second son of the  Pandawa. Wibisana returns to his meditation and encounters his other four brothers: Kala <a href='../characterPages/Bantala.html'>Bantala</a>, Kala <a href='../characterPages/Ranu.html'>Ranu</a>, Kala <a href='../characterPages/Maruta.html'>Maruta</a> and Kala <a href='../characterPages/Hagni.html'>Hagni</a>. They want to be returned to their true shapes. <a href='../characterPages/Wibisana.html'>Wibisana</a> instructs them to find <a href='../characterPages/Arjuna.html'>Arjuna</a>, who can return them to their original shapes. This young warrior is to be found in the Dhandaka forest. After the brothers depart, <a href='../characterPages/Wibisana.html'>Wibisana</a> returns to his meditation. He wants to be reunited with the Gods. A thunderous sound is heard in the skies. This signals that <a href='../characterPages/Wibisana.html'>Wibisana</a> has entered the realm of heaven.<p>&nbsp;<p id='Pathet Sanga'><h3>Pathet Sanga</h3><br/><p class='adegan' id='adegan6'><b>6</b>. <span class='badge'> Wana</span> <b>Dhandaka</b>. <a href='../characterPages/Arjuna.html'>Arjuna</a> is meditating for the purpose of obtaining the Wahyu Mahkutarama. Semar is keeping him company and keeping him strong. Kala <a href='../characterPages/Bantala.html'>Bantala</a>, Kala <a href='../characterPages/Ranu.html'>Ranu</a>, Kala <a href='../characterPages/Maruta.html'>Maruta</a> and Kala <a href='../characterPages/Hagni.html'>Hagni</a>, the brothers of <a href='../characterPages/Wibisana.html'>Wibisana</a>, suddenly arrive. They are seeking perfection. <a href='../characterPages/Arjuna.html'>Arjuna</a>, advised by Semar performs a ceremony to return them to their original shapes, as befits the elements they represent: fire will return to fire, earth will return to earth, water will return to the water and the wind will return to the wind. <a href='../characterPages/Arjuna.html'>Arjuna</a> then continues on his journey to Kutharunggu.<p class='adegan' id='adegan7'><b>7</b>. <span class='badge'> Wana</span> <b>Unnamed</b>. Dewi Wara <a href='../characterPages/Rara_Ireng.html'>Rara_Ireng</a>, princess of Mandura misses her husband <a href='../characterPages/Arjuna.html'>Arjuna</a>. She is so overtaken by her feelings that she goes into the forest in search of her husband. <a href='../characterPages/Narada.html'>Narada</a> is touched by this display of love and disguises her as a man, for protection. <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> sees this handsome young warrior, <a href='../characterPages/*Sintawaka.html'>*Sintawaka</a> and attacks him. However <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> is actually defeated by <a href='../characterPages/*Sintawaka.html'>*Sintawaka</a>. They both then depart in search for Arjuna.<p>&nbsp;<p id='Pathet Manyura'><h3>Pathet Manyura</h3><br/><p class='adegan' id='adegan8'><b>8</b>. <span class='badge'> Jejer</span> <b>Amarta</b>. <a href='../characterPages/Puntadewa.html'>Puntadewa</a>, <a href='../characterPages/Werkudara.html'>Werkudara</a>, <a href='../characterPages/Nakula.html'>Nakula</a> and <a href='../characterPages/Sadewa.html'>Sadewa</a> are puzzled by the  disappearance of <a href='../characterPages/Arjuna.html'>Arjuna</a> and <a href='../characterPages/Kresna.html'>Kresna</a>. <a href='../characterPages/Werkudara.html'>Werkudara</a> leaves in search for them.<p class='adegan' id='adegan9'><b>9</b>. <span class='badge'> Pacrabakan</span> <b>Kutharunggu</b>. <a href='../characterPages/*Kesawasidhi.html'>*Kesawasidhi</a> receives <a href='../characterPages/Anoman.html'>Anoman</a> who has the Kunta weapon with him. <a href='../characterPages/*Kesawasidhi.html'>*Kesawasidhi</a> instructs <a href='../characterPages/Anoman.html'>Anoman</a> to leave. The Gods have determined that the Papakem Makutharama will be given to <a href='../characterPages/Arjuna.html'>Arjuna</a>. This Wahyu consists of advice for a king, known as the Asthabrata. <a href='../characterPages/Arjuna.html'>Arjuna</a> is given the Kunta weapon, which he should in turn give to <a href='../characterPages/Karna.html'>Karna</a>. After <a href='../characterPages/Arjuna.html'>Arjuna</a> leaves, <a href='../characterPages/*Kesawasidhi.html'>*Kesawasidhi</a> reveals his true shape as <a href='../characterPages/Kresna.html'>Kresna</a>.<p class='adegan' id='adegan10'><b>10</b>. <span class='badge'>Wana</span> <b>Unnamed</b>. <a href='../characterPages/Werkudara.html'>Werkudara</a> meets the soul of <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a>, who asks to be cured. <a href='../characterPages/Werkudara.html'>Werkudara</a> says this is beyond his abilities. A fight ensues between the two of them. When <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a> is defeated he enters the thigh of <a href='../characterPages/Werkudara.html'>Werkudara</a>. <a href='../characterPages/Kresna.html'>Kresna</a> arrives and provides and explanation for <a href='../characterPages/Werkudara.html'>Werkudara</a>. <a href='../characterPages/Kresna.html'>Kresna</a> then departs in search of Arjuna.<p class='adegan' id='adegan11'><b>11</b>. <span class='badge'>Wana</span> <b>Unnamed</b>. <a href='../characterPages/Arjuna.html'>Arjuna</a> is not yet far from Kutharunggu when he meets <a href='../characterPages/Karna.html'>Karna</a>. <a href='../characterPages/Arjuna.html'>Arjuna</a> returns the Kunta weapon to <a href='../characterPages/Karna.html'>Karna</a>, who is very thankful for this. However <a href='../characterPages/Karna.html'>Karna</a> is envious of <a href='../characterPages/Arjuna.html'>Arjuna</a> for having received Wahyu Mahkutharama and a fight ensues between the two of them. <a href='../characterPages/Arjuna.html'>Arjuna</a> sends <a href='../characterPages/Karna.html'>Karna</a> flying into the distance. He lands next to <a href='../characterPages/*Sintawaka.html'>*Sintawaka</a> and asks him for help. <a href='../characterPages/*Sintawaka.html'>*Sintawaka</a> fights Arjuna and almost defeats him. But then <a href='../characterPages/*Sintawaka.html'>*Sintawaka</a> returns to her true shape as <a href='../characterPages/Rara_Ireng.html'>Rara_Ireng</a>. They all return to Amarta. A feast is served, for <a href='../characterPages/Arjuna.html'>Arjuna</a> has received the blessings of the Gods.</div>
+    
+    
+    <!--interactive graph-->
+    <div class="datum" id="Graphs">
+		<h3>Graphs</h3>
+		<div class="row">
+			<div class="col-lg-6" id="graphspace"></div>           
+			<div class="col-lg-6"><div id="sigma-container"></div></div>
+		</div>
+	</div>
+	</div>
+	</div>
+    
+    </div>
+  </div>
+    <!-- /.container -->
+    <!--Footer-->
+<footer class="footer">
+    <div class="container">
         <div class="row">
 
-            <div class="col-md-3">
-                <p class="lead"></p>
-                <!--img src="../img/logo.jpg"></img-->
-                <div class="list-group">
-                    <a href="../characters.html" class="list-group-item">Characters</a>
-                    <a href="../lakons.html" class="list-group-item">Story plots (lakon)</a>
-                    <a href="../canonical.html" class="list-group-item">Network visualization</a>
-                </div>
+            <!--First column-->
+
+            <div class="col-md-12">
+              <p>
+              Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf.</p>
+
             </div>
+            <!--/.First column-->
 
-            <div class="col-md-9">
+            <!--Second column-->
 
-                <div>
-<h1>Wahyu_Makutharama</h1><div class="well" id="characters"><p>This lakon has 24 characters:  <a href='../characterPages/Bisawarna.html'>Bisawarna</a>, <a href='../characterPages/Maruta.html'>Maruta</a>, <a href='../characterPages/Durna.html'>Durna</a>, <a href='../characterPages/Karna.html'>Karna</a>, <a href='../characterPages/Wibisana.html'>Wibisana</a>, <a href='../characterPages/Banowati.html'>Banowati</a>, <a href='../characterPages/Rara_Ireng.html'>Rara_Ireng</a>, <a href='../characterPages/Sadewa.html'>Sadewa</a>, <a href='../characterPages/Sengkuni.html'>Sengkuni</a>, <a href='../characterPages/Puntadewa.html'>Puntadewa</a>, <a href='../characterPages/Garuda.html'>Garuda</a>, <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a>, <a href='../characterPages/Hagni.html'>Hagni</a>, <a href='../characterPages/Arjuna.html'>Arjuna</a>, <a href='../characterPages/Werkudara.html'>Werkudara</a>, <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>, <a href='../characterPages/Duryudana.html'>Duryudana</a>, <a href='../characterPages/Nakula.html'>Nakula</a>, <a href='../characterPages/Narada.html'>Narada</a>, <a href='../characterPages/Kartamarma.html'>Kartamarma</a>, <a href='../characterPages/Ranu.html'>Ranu</a>, <a href='../characterPages/Anoman.html'>Anoman</a>, <a href='../characterPages/Bantala.html'>Bantala</a>, <a href='../characterPages/Kresna.html'>Kresna</a>,</div><p>&nbsp;<p><h3>Pathet Nem</h3><hr><p class='adegan' id='adegan1'><b>1</b>. <span class='badge'> Jejer</span> <b>Astina</b>. <a href='../characterPages/Duryudana.html'>Duryudana</a>, <a href='../characterPages/Karna.html'>Karna</a>, <a href='../characterPages/Sengkuni.html'>Sengkuni</a> and <a href='../characterPages/Kartamarma.html'>Kartamarma</a> discuss the Wahyu Papakem Makutharama. Whoever possesses this will be able to pass on his throne to generations to come. Before setting a plan in motion, <a href='../characterPages/Durna.html'>Durna</a> admonishes <a href='../characterPages/Duryudana.html'>Duryudana</a> to confirm the rumors regarding the hermit in the Kutharunggu mountains. <a href='../characterPages/Duryudana.html'>Duryudana</a> instructs <a href='../characterPages/Karna.html'>Karna</a> to go and see if the rumors are true. <a href='../characterPages/Karna.html'>Karna</a> takes leave from <a href='../characterPages/Duryudana.html'>Duryudana</a>.<p class='adegan' id='adegan2'><b>2</b>. <span class='badge'> Kedhaton</span> <b>Astina</b>. <a href='../characterPages/Banowati.html'>Banowati</a> receives <a href='../characterPages/Duryudana.html'>Duryudana</a> and offers him food. After eating, the king changes into his religious robes and asks for divine guidance.<p class='adegan' id='adegan3'><b>3</b>. <span class='badge'> Alun-alun</span> <b>Astina</b>. <a href='../characterPages/Sengkuni.html'>Sengkuni</a> instructs the Korawa army to follow <a href='../characterPages/Karna.html'>Karna</a> to Kutharunggu.<p class='adegan' id='adegan4'><b>4</b>. <span class='badge'> Wana</span> <b>KakiGunungKutharunggu</b>. The brotherhood of the wind (Kadang Bayu) look after the residence of Begawan <a href='../characterPages/Kesawasidhi.html'>Kesawasidhi</a>. The bird <a href='../characterPages/Garuda.html'>Garuda</a> arrives and reports that the Korawa, led by <a href='../characterPages/Karna.html'>Karna</a> and <a href='../characterPages/Sengkuni.html'>Sengkuni</a> are at the base of the mountain. <a href='../characterPages/Anoman.html'>Anoman</a> and the Kadang Bayu go to meet them and a fight ensues. <a href='../characterPages/Karna.html'>Karna</a> tries to use his Kunta weapon, but <a href='../characterPages/Anoman.html'>Anoman</a> steals it from him. <a href='../characterPages/Karna.html'>Karna</a> loses all strength when the weapon is removed from him. He then meditates so that the weapon can be quickly returned to him.<p class='adegan' id='adegan5'><b>5</b>. <span class='badge'> Pertapaan</span> <b>Candramanik</b> <a href='../characterPages/Wibisana.html'>Wibisana</a> receives his son <a href='../characterPages/Bisawarna.html'>Bisawarna</a>, who has doubts about following the orders of Singgelapura, known the world over as Alengkadiraja. <a href='../characterPages/Wibisana.html'>Wibisana</a> explains the nature of government and the law. After <a href='../characterPages/Bisawarna.html'>Bisawarna</a> is satisfied by the explanation, he takes leave from his father and returns to the kingdom. After the son has gone, <a href='../characterPages/Wibisana.html'>Wibisana</a> meditates and meets the soul of his deceased older brother <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a>. <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a> blames <a href='../characterPages/Wibisana.html'>Wibisana</a> for the events in the past. <a href='../characterPages/Wibisana.html'>Wibisana</a> tells <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a> he can find the way to the true heaven if he becomes one with <a href='../characterPages/Werkudara.html'>Werkudara</a>. <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a> follows the suggestions of his younger brother and departs in search for the second son of the  Pandawa. Wibisana returns to his meditation and encounters his other four brothers: Kala <a href='../characterPages/Bantala.html'>Bantala</a>, Kala <a href='../characterPages/Ranu.html'>Ranu</a>, Kala <a href='../characterPages/Maruta.html'>Maruta</a> and Kala <a href='../characterPages/Hagni.html'>Hagni</a>. They want to be returned to their true shapes. <a href='../characterPages/Wibisana.html'>Wibisana</a> instructs them to find <a href='../characterPages/Arjuna.html'>Arjuna</a>, who can return them to their original shapes. This young warrior is to be found in the Dhandaka forest. After the brothers depart, <a href='../characterPages/Wibisana.html'>Wibisana</a> returns to his meditation. He wants to be reunited with the Gods. A thunderous sound is heard in the skies. This signals that <a href='../characterPages/Wibisana.html'>Wibisana</a> has entered the realm of heaven.<p>&nbsp;<p><h3>Pathet Sanga</h3><hr><p class='adegan' id='adegan6'><b>6</b>. <span class='badge'> Wana</span> <b>Dhandaka</b>. <a href='../characterPages/Arjuna.html'>Arjuna</a> is meditating for the purpose of obtaining the Wahyu Mahkutarama. Semar is keeping him company and keeping him strong. Kala <a href='../characterPages/Bantala.html'>Bantala</a>, Kala <a href='../characterPages/Ranu.html'>Ranu</a>, Kala <a href='../characterPages/Maruta.html'>Maruta</a> and Kala <a href='../characterPages/Hagni.html'>Hagni</a>, the brothers of <a href='../characterPages/Wibisana.html'>Wibisana</a>, suddenly arrive. They are seeking perfection. <a href='../characterPages/Arjuna.html'>Arjuna</a>, advised by Semar performs a ceremony to return them to their original shapes, as befits the elements they represent: fire will return to fire, earth will return to earth, water will return to the water and the wind will return to the wind. <a href='../characterPages/Arjuna.html'>Arjuna</a> then continues on his journey to Kutharunggu.<p class='adegan' id='adegan7'><b>7</b>. <span class='badge'> Wana</span> <b>Unnamed</b>. Dewi Wara <a href='../characterPages/Rara_Ireng.html'>Rara_Ireng</a>, princess of Mandura misses her husband <a href='../characterPages/Arjuna.html'>Arjuna</a>. She is so overtaken by her feelings that she goes into the forest in search of her husband. <a href='../characterPages/Narada.html'>Narada</a> is touched by this display of love and disguises her as a man, for protection. <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> sees this handsome young warrior, <a href='../characterPages/*Sintawaka.html'>*Sintawaka</a> and attacks him. However <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> is actually defeated by <a href='../characterPages/*Sintawaka.html'>*Sintawaka</a>. They both then depart in search for Arjuna.<p>&nbsp;<p><h3>Pathet Manyura</h3><hr><p class='adegan' id='adegan8'><b>8</b>. <span class='badge'> Jejer</span> <b>Amarta</b>. <a href='../characterPages/Puntadewa.html'>Puntadewa</a>, <a href='../characterPages/Werkudara.html'>Werkudara</a>, <a href='../characterPages/Nakula.html'>Nakula</a> and <a href='../characterPages/Sadewa.html'>Sadewa</a> are puzzled by the  disappearance of <a href='../characterPages/Arjuna.html'>Arjuna</a> and <a href='../characterPages/Kresna.html'>Kresna</a>. <a href='../characterPages/Werkudara.html'>Werkudara</a> leaves in search for them.<p class='adegan' id='adegan9'><b>9</b>. <span class='badge'> Pacrabakan</span> <b>Kutharunggu</b>. <a href='../characterPages/*Kesawasidhi.html'>*Kesawasidhi</a> receives <a href='../characterPages/Anoman.html'>Anoman</a> who has the Kunta weapon with him. <a href='../characterPages/*Kesawasidhi.html'>*Kesawasidhi</a> instructs <a href='../characterPages/Anoman.html'>Anoman</a> to leave. The Gods have determined that the Papakem Makutharama will be given to <a href='../characterPages/Arjuna.html'>Arjuna</a>. This Wahyu consists of advice for a king, known as the Asthabrata. <a href='../characterPages/Arjuna.html'>Arjuna</a> is given the Kunta weapon, which he should in turn give to <a href='../characterPages/Karna.html'>Karna</a>. After <a href='../characterPages/Arjuna.html'>Arjuna</a> leaves, <a href='../characterPages/*Kesawasidhi.html'>*Kesawasidhi</a> reveals his true shape as <a href='../characterPages/Kresna.html'>Kresna</a>.<p class='adegan' id='adegan10'><b>10</b>. <span class='badge'>Wana</span> <b>Unnamed</b>. <a href='../characterPages/Werkudara.html'>Werkudara</a> meets the soul of <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a>, who asks to be cured. <a href='../characterPages/Werkudara.html'>Werkudara</a> says this is beyond his abilities. A fight ensues between the two of them. When <a href='../characterPages/Kumbakarna.html'>Kumbakarna</a> is defeated he enters the thigh of <a href='../characterPages/Werkudara.html'>Werkudara</a>. <a href='../characterPages/Kresna.html'>Kresna</a> arrives and provides and explanation for <a href='../characterPages/Werkudara.html'>Werkudara</a>. <a href='../characterPages/Kresna.html'>Kresna</a> then departs in search of Arjuna.<p class='adegan' id='adegan11'><b>11</b>. <span class='badge'>Wana</span> <b>Unnamed</b>. <a href='../characterPages/Arjuna.html'>Arjuna</a> is not yet far from Kutharunggu when he meets <a href='../characterPages/Karna.html'>Karna</a>. <a href='../characterPages/Arjuna.html'>Arjuna</a> returns the Kunta weapon to <a href='../characterPages/Karna.html'>Karna</a>, who is very thankful for this. However <a href='../characterPages/Karna.html'>Karna</a> is envious of <a href='../characterPages/Arjuna.html'>Arjuna</a> for having received Wahyu Mahkutharama and a fight ensues between the two of them. <a href='../characterPages/Arjuna.html'>Arjuna</a> sends <a href='../characterPages/Karna.html'>Karna</a> flying into the distance. He lands next to <a href='../characterPages/*Sintawaka.html'>*Sintawaka</a> and asks him for help. <a href='../characterPages/*Sintawaka.html'>*Sintawaka</a> fights Arjuna and almost defeats him. But then <a href='../characterPages/*Sintawaka.html'>*Sintawaka</a> returns to her true shape as <a href='../characterPages/Rara_Ireng.html'>Rara_Ireng</a>. They all return to Amarta. A feast is served, for <a href='../characterPages/Arjuna.html'>Arjuna</a> has received the blessings of the Gods.</div>
-
-<div class="row">
-		
-	
-    <div class="col-lg-6" ></div>           
-	<div class="col-lg-6" ></div>
-	</div>
-
-	<div class="row">
-		
-	
-    <div class="col-lg-6" id="graphspace"></div>           
-	<div class="col-lg-6" id="sigma-container"></div>
-	</div>
-            </div>
-
+            <!--/.Second column-->
         </div>
-
-
-
     </div>
-    <!-- /.container -->
+    <!--/.Footer Links-->
 
-    <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                   <p>Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. 
-               
-                </div>
-            </div>
-        </footer>
-
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
     </div>
-    <!-- /.container -->
+    <!--/.Copyright-->
 
-    <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
-	<script src="../js/d3.v3.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
+</footer>
+<!--/.Footer-->
+    <!-- /.container -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    ><script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../sigma/sigma.js"></script>
+    <script src="../js/jquery.typeahead.js"></script>
+    <script>var rootURL="../";</script>
+    <script src="../js/search.js"></script>
+  
+  <!-- script specific to lakon-->
+  <script src="../sigma/sigma.js"></script>
     <script src="../sigma/plugins/sigma.parsers.gexf.min.js"></script>
     <script>
     
@@ -384,7 +370,9 @@ sigma.classes.graph.addMethod('neighbors', function(nodeId) {
 
 
     </script>
+  
+  </body>
 
-</body>
+
 
 </html>

@@ -1,169 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-<style>
-		path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-
-.joint:hover{
-	cursor:pointer
-}
-
-#sigma-container{
-          top:0px;
-          left:0px;
-          width:50%;
-          position:relative;
-          height:300px;
-          box-shadow: 1px 1px 5px #999;
-        }
-        
- .ui-autocomplete {
-    max-height: 100px;
-    overflow-y: auto;
-    /* prevent horizontal scrollbar */
-    overflow-x: hidden;
-  }
-  /* IE 6 doesn't support max-height
-   * we use height instead, but this forces the menu to always be this tall
-   */
-  * html .ui-autocomplete {
-    height: 100px;
-  }
-
-		</style>
-    <title>
-		
-Lakon list</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/shop-item.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css"></link>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
+    <meta name="description" content="Digital Wayang Encyclopedia">
+    <meta name="author" content="Miguel Escobar Varela">
+    <style></style>
+    <title>Characters</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/shop-item2.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.typeahead.css" />
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    var availableTags = ['*Amonggati', '*Arjuna', '*Bagus', '*Basudewa', '*Bayu_Bajra', '*Bimasakti', '*Boar', '*Brahala', '*Gatotkaca', '*Godakesa', '*Godhayitma', '*Guard', '*JakaPupon', '*Kalanjaya', '*Kalantaka', '*Kesawasidhi', '*Lesmana_Murdaka', '*Lion', '*Nagabanda', '*Nagasewu', '*Narada', '*Nindyamaya', '*Raksasa', '*Raksasa_One', '*Raksasa_Two', '*RaraTemon', '*Resi', '*Sengkalawati', '*Sinduragen', '*Sintawaka', '*SuksmaLanggeng', '*Tiger', '*Werkudara', '*Woman', 'Abimanyu', 'Abiyasa', 'Angganjali', 'Anoman', 'Antaboga', 'Antakawulan', 'Antareja', 'Antasena', 'Arimbi', 'Arjuna', 'Asmarawati', 'Badrahini', 'Bagaspati', 'Bagong', 'Baladewa', 'Banowati', 'Bantala', 'Barata', 'Basudewa', 'Bayu', 'Bendana', 'Bilung', 'Bisawarna', 'Bisma', 'Bismaka', 'Bomanarakasura', 'Brahma', 'Brajadhenta', 'Brajamusthi', 'Citrarata', 'Citrasena', 'Daryamaya', 'Dersanala', 'Desamuka', 'Destarastra', 'Dewa_Ruci', 'Dewaki', 'Dewasrani', 'Dhadhungawuk', 'Dhamdharat', 'Dhandhang', 'Dhandhonwacana', 'Drupadi', 'Druwasa', 'Durga', 'Durna', 'Duryudana', 'Erawati', 'Gagak_Baka', 'Gareng', 'Garuda', 'Gatotkaca', 'Gendara', 'Gendari', 'Gorawangsa', 'Guru', 'Hagni', 'Indra', 'Jaya_Bajra', 'Jembawati', 'Kalika', 'Kamajaya', 'Kanastren', 'Kangsa', 'Karna', 'Kartamarma', 'Kartapiyoga', 'Kencana_Wulan', 'Kresna', 'Kumbakarna', 'Kunti', 'Kuntiboja', 'Kurandhayaksa', 'Lesmana_Mandrakumara', 'Lesmana_Murdaka', 'Madrim', 'Maerah', 'Mandrakeswara', 'Mangsahpati', 'Maruta', 'Nagagini', 'Nagaprasanta', 'Nagatatmala', 'Nakula', 'Narada', 'Nembur_Nawa', 'Ngembat_Landeyan', 'Padmanaba', 'Pancawala', 'Pandu', 'Panyarikan', 'Parasara', 'Petruk', 'Pracona', 'Pradapa', 'Pragota', 'Pujawati', 'Pulunggana', 'Pulungsari', 'Puntadewa', 'Rama', 'Ramaparasu', 'Ramayadi', 'Ranu', 'Rara_Ireng', 'Ratmuka', 'Rohini', 'Rukmara', 'Rukmini', 'Sadana', 'Sadewa', 'Salya', 'Samba', 'Saragupita', 'Satrugna', 'Sekipu', 'Semar', 'Sengkuni', 'Setyaboma', 'Setyajid', 'Setyaki', 'Siti_Sendari', 'Soka', 'Sri', 'Sugriwa', 'Suparta', 'Surabramadiraja', 'Surati_Mantra', 'Surtikanthi', 'Surya', 'Tambrapeta', 'Togog', 'TunggulWulung', 'Udawa', 'Wenang', 'Werkudara', 'Wibisana', 'Wilawuk', 'Wisanggeni', 'Wisnu', 'Wulan_Drema', 'Wulan_Dremi', 'Yamadipati', 'Yamawidura', 'Yuda_Kala_Kresna', 'Yuda_Kothi', 'Yudhistira'];
-    $( "#tags" ).autocomplete({
-      source: availableTags,
-      select: function(event,ui){
-		  URL = "characterPages/" + ui.item.label +".html";
-		  window.location.replace(URL);
-		  }
-    });
-  } );
-  </script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
 
-</head>
-
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" style="color:white;cursor:default">Digital Wayang Encyclopedia</a>
+  <body data-spy="scroll" data-target="#myScrollspy">
+    <nav class="navbar navbar-inverse navbar-top navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" style="color:lightgray;cursor:default">Digital Wayang Encyclopedia</a> </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">About</a></li>
+            <li><a href="canonical.html">Network analysis</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="lakons.html">Lakons (stories)</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="typeahead__container">
+              <div class="typeahead__field"> <span class="typeahead__query">
+                <input class="js-typeahead"
+                                             name="q"
+                                             type="search"
+                                             autofocus
+                                             placeholder="Search"
+                                             autocomplete="off">
+                                  </span> <span class="typeahead__button">
+                                      <button class="btn btn-default" type="submit">
+                                          <span class="typeahead__search-icon"></span> </button>
+                </span>
+              </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html">About</a>
-                    </li>
-                    
-                </ul>
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
-
     <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-3">
-                <p class="lead"></p>
-                <!--img src="img/logo.jpg"></img-->
-                <div class="list-group">
-                    <a href="characters.html" class="list-group-item">Characters</a>
-                    <a href="lakons.html" class="list-group-item">Story plots (lakon)</a>
-                    <a href="canonical.html" class="list-group-item">Network visualization</a>
-                </div>
-            </div>
-
-            <div class="col-md-9">
-
-                <div>
-					
-<div class="ui-widget">
-  <label for="tags">Search by name: </label>
-  <input id="tags">
-  <hr>
-  <p>Characters preceded by a * sign are not real characters, but disguises for other characters.</p>
-  Full list:
-</div>					
-<ul><li><a href="characterPages/*Amonggati.html">*Amonggati</a></li><li><a href="characterPages/*Arjuna.html">*Arjuna</a></li><li><a href="characterPages/*Bagus.html">*Bagus</a></li><li><a href="characterPages/*Basudewa.html">*Basudewa</a></li><li><a href="characterPages/*Bayu_Bajra.html">*Bayu_Bajra</a></li><li><a href="characterPages/*Bimasakti.html">*Bimasakti</a></li><li><a href="characterPages/*Boar.html">*Boar</a></li><li><a href="characterPages/*Brahala.html">*Brahala</a></li><li><a href="characterPages/*Gatotkaca.html">*Gatotkaca</a></li><li><a href="characterPages/*Godakesa.html">*Godakesa</a></li><li><a href="characterPages/*Godhayitma.html">*Godhayitma</a></li><li><a href="characterPages/*Guard.html">*Guard</a></li><li><a href="characterPages/*JakaPupon.html">*JakaPupon</a></li><li><a href="characterPages/*Kalanjaya.html">*Kalanjaya</a></li><li><a href="characterPages/*Kalantaka.html">*Kalantaka</a></li><li><a href="characterPages/*Kesawasidhi.html">*Kesawasidhi</a></li><li><a href="characterPages/*Lesmana_Murdaka.html">*Lesmana_Murdaka</a></li><li><a href="characterPages/*Lion.html">*Lion</a></li><li><a href="characterPages/*Nagabanda.html">*Nagabanda</a></li><li><a href="characterPages/*Nagasewu.html">*Nagasewu</a></li><li><a href="characterPages/*Narada.html">*Narada</a></li><li><a href="characterPages/*Nindyamaya.html">*Nindyamaya</a></li><li><a href="characterPages/*Raksasa.html">*Raksasa</a></li><li><a href="characterPages/*Raksasa_One.html">*Raksasa_One</a></li><li><a href="characterPages/*Raksasa_Two.html">*Raksasa_Two</a></li><li><a href="characterPages/*RaraTemon.html">*RaraTemon</a></li><li><a href="characterPages/*Resi.html">*Resi</a></li><li><a href="characterPages/*Sengkalawati.html">*Sengkalawati</a></li><li><a href="characterPages/*Sinduragen.html">*Sinduragen</a></li><li><a href="characterPages/*Sintawaka.html">*Sintawaka</a></li><li><a href="characterPages/*SuksmaLanggeng.html">*SuksmaLanggeng</a></li><li><a href="characterPages/*Tiger.html">*Tiger</a></li><li><a href="characterPages/*Werkudara.html">*Werkudara</a></li><li><a href="characterPages/*Woman.html">*Woman</a></li><li><a href="characterPages/Abimanyu.html">Abimanyu</a></li><li><a href="characterPages/Abiyasa.html">Abiyasa</a></li><li><a href="characterPages/Angganjali.html">Angganjali</a></li><li><a href="characterPages/Anoman.html">Anoman</a></li><li><a href="characterPages/Antaboga.html">Antaboga</a></li><li><a href="characterPages/Antakawulan.html">Antakawulan</a></li><li><a href="characterPages/Antareja.html">Antareja</a></li><li><a href="characterPages/Antasena.html">Antasena</a></li><li><a href="characterPages/Arimbi.html">Arimbi</a></li><li><a href="characterPages/Arjuna.html">Arjuna</a></li><li><a href="characterPages/Asmarawati.html">Asmarawati</a></li><li><a href="characterPages/Badrahini.html">Badrahini</a></li><li><a href="characterPages/Bagaspati.html">Bagaspati</a></li><li><a href="characterPages/Bagong.html">Bagong</a></li><li><a href="characterPages/Baladewa.html">Baladewa</a></li><li><a href="characterPages/Banowati.html">Banowati</a></li><li><a href="characterPages/Bantala.html">Bantala</a></li><li><a href="characterPages/Barata.html">Barata</a></li><li><a href="characterPages/Basudewa.html">Basudewa</a></li><li><a href="characterPages/Bayu.html">Bayu</a></li><li><a href="characterPages/Bendana.html">Bendana</a></li><li><a href="characterPages/Bilung.html">Bilung</a></li><li><a href="characterPages/Bisawarna.html">Bisawarna</a></li><li><a href="characterPages/Bisma.html">Bisma</a></li><li><a href="characterPages/Bismaka.html">Bismaka</a></li><li><a href="characterPages/Bomanarakasura.html">Bomanarakasura</a></li><li><a href="characterPages/Brahma.html">Brahma</a></li><li><a href="characterPages/Brajadhenta.html">Brajadhenta</a></li><li><a href="characterPages/Brajamusthi.html">Brajamusthi</a></li><li><a href="characterPages/Citrarata.html">Citrarata</a></li><li><a href="characterPages/Citrasena.html">Citrasena</a></li><li><a href="characterPages/Daryamaya.html">Daryamaya</a></li><li><a href="characterPages/Dersanala.html">Dersanala</a></li><li><a href="characterPages/Desamuka.html">Desamuka</a></li><li><a href="characterPages/Destarastra.html">Destarastra</a></li><li><a href="characterPages/Dewa_Ruci.html">Dewa_Ruci</a></li><li><a href="characterPages/Dewaki.html">Dewaki</a></li><li><a href="characterPages/Dewasrani.html">Dewasrani</a></li><li><a href="characterPages/Dhadhungawuk.html">Dhadhungawuk</a></li><li><a href="characterPages/Dhamdharat.html">Dhamdharat</a></li><li><a href="characterPages/Dhandhang.html">Dhandhang</a></li><li><a href="characterPages/Dhandhonwacana.html">Dhandhonwacana</a></li><li><a href="characterPages/Drupadi.html">Drupadi</a></li><li><a href="characterPages/Druwasa.html">Druwasa</a></li><li><a href="characterPages/Durga.html">Durga</a></li><li><a href="characterPages/Durna.html">Durna</a></li><li><a href="characterPages/Duryudana.html">Duryudana</a></li><li><a href="characterPages/Erawati.html">Erawati</a></li><li><a href="characterPages/Gagak_Baka.html">Gagak_Baka</a></li><li><a href="characterPages/Gareng.html">Gareng</a></li><li><a href="characterPages/Garuda.html">Garuda</a></li><li><a href="characterPages/Gatotkaca.html">Gatotkaca</a></li><li><a href="characterPages/Gendara.html">Gendara</a></li><li><a href="characterPages/Gendari.html">Gendari</a></li><li><a href="characterPages/Gorawangsa.html">Gorawangsa</a></li><li><a href="characterPages/Guru.html">Guru</a></li><li><a href="characterPages/Hagni.html">Hagni</a></li><li><a href="characterPages/Indra.html">Indra</a></li><li><a href="characterPages/Jaya_Bajra.html">Jaya_Bajra</a></li><li><a href="characterPages/Jembawati.html">Jembawati</a></li><li><a href="characterPages/Kalika.html">Kalika</a></li><li><a href="characterPages/Kamajaya.html">Kamajaya</a></li><li><a href="characterPages/Kanastren.html">Kanastren</a></li><li><a href="characterPages/Kangsa.html">Kangsa</a></li><li><a href="characterPages/Karna.html">Karna</a></li><li><a href="characterPages/Kartamarma.html">Kartamarma</a></li><li><a href="characterPages/Kartapiyoga.html">Kartapiyoga</a></li><li><a href="characterPages/Kencana_Wulan.html">Kencana_Wulan</a></li><li><a href="characterPages/Kresna.html">Kresna</a></li><li><a href="characterPages/Kumbakarna.html">Kumbakarna</a></li><li><a href="characterPages/Kunti.html">Kunti</a></li><li><a href="characterPages/Kuntiboja.html">Kuntiboja</a></li><li><a href="characterPages/Kurandhayaksa.html">Kurandhayaksa</a></li><li><a href="characterPages/Lesmana_Mandrakumara.html">Lesmana_Mandrakumara</a></li><li><a href="characterPages/Lesmana_Murdaka.html">Lesmana_Murdaka</a></li><li><a href="characterPages/Madrim.html">Madrim</a></li><li><a href="characterPages/Maerah.html">Maerah</a></li><li><a href="characterPages/Mandrakeswara.html">Mandrakeswara</a></li><li><a href="characterPages/Mangsahpati.html">Mangsahpati</a></li><li><a href="characterPages/Maruta.html">Maruta</a></li><li><a href="characterPages/Nagagini.html">Nagagini</a></li><li><a href="characterPages/Nagaprasanta.html">Nagaprasanta</a></li><li><a href="characterPages/Nagatatmala.html">Nagatatmala</a></li><li><a href="characterPages/Nakula.html">Nakula</a></li><li><a href="characterPages/Narada.html">Narada</a></li><li><a href="characterPages/Nembur_Nawa.html">Nembur_Nawa</a></li><li><a href="characterPages/Ngembat_Landeyan.html">Ngembat_Landeyan</a></li><li><a href="characterPages/Padmanaba.html">Padmanaba</a></li><li><a href="characterPages/Pancawala.html">Pancawala</a></li><li><a href="characterPages/Pandu.html">Pandu</a></li><li><a href="characterPages/Panyarikan.html">Panyarikan</a></li><li><a href="characterPages/Parasara.html">Parasara</a></li><li><a href="characterPages/Petruk.html">Petruk</a></li><li><a href="characterPages/Pracona.html">Pracona</a></li><li><a href="characterPages/Pradapa.html">Pradapa</a></li><li><a href="characterPages/Pragota.html">Pragota</a></li><li><a href="characterPages/Pujawati.html">Pujawati</a></li><li><a href="characterPages/Pulunggana.html">Pulunggana</a></li><li><a href="characterPages/Pulungsari.html">Pulungsari</a></li><li><a href="characterPages/Puntadewa.html">Puntadewa</a></li><li><a href="characterPages/Rama.html">Rama</a></li><li><a href="characterPages/Ramaparasu.html">Ramaparasu</a></li><li><a href="characterPages/Ramayadi.html">Ramayadi</a></li><li><a href="characterPages/Ranu.html">Ranu</a></li><li><a href="characterPages/Rara_Ireng.html">Rara_Ireng</a></li><li><a href="characterPages/Ratmuka.html">Ratmuka</a></li><li><a href="characterPages/Rohini.html">Rohini</a></li><li><a href="characterPages/Rukmara.html">Rukmara</a></li><li><a href="characterPages/Rukmini.html">Rukmini</a></li><li><a href="characterPages/Sadana.html">Sadana</a></li><li><a href="characterPages/Sadewa.html">Sadewa</a></li><li><a href="characterPages/Salya.html">Salya</a></li><li><a href="characterPages/Samba.html">Samba</a></li><li><a href="characterPages/Saragupita.html">Saragupita</a></li><li><a href="characterPages/Satrugna.html">Satrugna</a></li><li><a href="characterPages/Sekipu.html">Sekipu</a></li><li><a href="characterPages/Semar.html">Semar</a></li><li><a href="characterPages/Sengkuni.html">Sengkuni</a></li><li><a href="characterPages/Setyaboma.html">Setyaboma</a></li><li><a href="characterPages/Setyajid.html">Setyajid</a></li><li><a href="characterPages/Setyaki.html">Setyaki</a></li><li><a href="characterPages/Siti_Sendari.html">Siti_Sendari</a></li><li><a href="characterPages/Soka.html">Soka</a></li><li><a href="characterPages/Sri.html">Sri</a></li><li><a href="characterPages/Sugriwa.html">Sugriwa</a></li><li><a href="characterPages/Suparta.html">Suparta</a></li><li><a href="characterPages/Surabramadiraja.html">Surabramadiraja</a></li><li><a href="characterPages/Surati_Mantra.html">Surati_Mantra</a></li><li><a href="characterPages/Surtikanthi.html">Surtikanthi</a></li><li><a href="characterPages/Surya.html">Surya</a></li><li><a href="characterPages/Tambrapeta.html">Tambrapeta</a></li><li><a href="characterPages/Togog.html">Togog</a></li><li><a href="characterPages/TunggulWulung.html">TunggulWulung</a></li><li><a href="characterPages/Udawa.html">Udawa</a></li><li><a href="characterPages/Wenang.html">Wenang</a></li><li><a href="characterPages/Werkudara.html">Werkudara</a></li><li><a href="characterPages/Wibisana.html">Wibisana</a></li><li><a href="characterPages/Wilawuk.html">Wilawuk</a></li><li><a href="characterPages/Wisanggeni.html">Wisanggeni</a></li><li><a href="characterPages/Wisnu.html">Wisnu</a></li><li><a href="characterPages/Wulan_Drema.html">Wulan_Drema</a></li><li><a href="characterPages/Wulan_Dremi.html">Wulan_Dremi</a></li><li><a href="characterPages/Yamadipati.html">Yamadipati</a></li><li><a href="characterPages/Yamawidura.html">Yamawidura</a></li><li><a href="characterPages/Yuda_Kala_Kresna.html">Yuda_Kala_Kresna</a></li><li><a href="characterPages/Yuda_Kothi.html">Yuda_Kothi</a></li><li><a href="characterPages/Yudhistira.html">Yudhistira</a></li></ul>					
+      <div class="row">
+        <div class="col-md-3" id="smyScrollspy">
+          <br/>
+          <div id="pieChart"></div>
+        </div>
+        <div class="col-md-9" style="">
+<div class="datum">
+	Characters
+	
+	<table id="allCharacters" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Character Type</th>
+                <th>Origin</th>
+                <th>Amount of Names</th>
+                <th>Weighted Degree</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Character Type</th>
+                <th>Origin</th>
+                <th>Amount of Names</th>
+                <th>Weighted Degree</th>
+            </tr>
+        </tfoot>
+    </table>
 </div>
 
+	
 
-   
-
-            </div>
-
-        </div>
-
-
-
+    
+    
+    <!--interactive graph-->
+    
+	</div>
+	</div>
+    
     </div>
+  </div>
     <!-- /.container -->
-
+    <!--Footer-->
+<footer class="footer">
     <div class="container">
+        <div class="row">
 
-        <hr>
+            <!--First column-->
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                     <p>Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-                </div>
+            <div class="col-md-12">
+              <p>
+              Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf.</p>
+
             </div>
-        </footer>
+            <!--/.First column-->
 
+            <!--Second column-->
+
+            <!--/.Second column-->
+        </div>
     </div>
-    <!-- /.container -->
+    <!--/.Footer Links-->
 
-    <!-- jQuery -->
-   
-	<script src="http://d3js.org/d3.v3.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+    <!-- /.container -->
+    <!--script src="http://d3js.org/d3.v3.min.js"></script-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/4.7.2/d3.min.js"></script>
+
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-   
-</body>
+    <script src="js/jquery.typeahead.js"></script>
+    <script>var rootURL="";</script>
+    <script src="js/search.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/d3pie.min.js"></script>
+    <script>
+		$(document).ready(function(){
+			characterType = [{'value': 29, 'label': 'God', "color":"red"}, {'value': 8, 'label': 'Demon'}, {'value': 5, 'label': 'Animal'}, {'value': 84, 'label': 'Human'}, {'value': 21, 'label':'Raksasa'}];
+			origin = [{'value': 73, 'label': 'Java'}, {'value': 74, 'label': 'India'}];
+
+			table = $("#allCharacters").DataTable({
+				"ajax":"data/json/allCharacters.txt",
+				"order": [[ 1, "desc" ]],
+				"pageLength":50,
+				});
+			
+			$('#allCharacters tbody').on('click', 'tr', function () {
+				var data = table.row(this).data();
+				window.location = "characterPages/" + data[0] + '.html';
+			});
+			
+			$('#allCharacters thead').on('click', 'th', function () {
+				columnName = $(this).text();
+				if (typeof dataPie !== 'undefined'){
+					dataPie.destroy();
+				}
+				if (columnName == "Character Type"){
+					pie(characterType,columnName);
+				}
+				if (columnName == "Origin"){
+					pie(origin,columnName);
+				}
+			});
+			
+			$('#allCharacters tbody').mouseover(function(){
+				$(this).css('cursor','pointer');
+			});
+		
+		
+		//this is the pie part
+		function pie (dataSource,pieTitle){ 
+			
+		dataPie = new d3pie("pieChart", {
+	"header": {
+		"title": {
+			"text": pieTitle,
+			"fontSize": 24,
+			"font": "open sans"
+		},
+		/*"subtitle": {
+			"text": "A full pie chart to show off label collision detection and resolution.",
+			"color": "#999999",
+			"fontSize": 12,
+			"font": "open sans"
+		},
+		"titleSubtitlePadding": 9*/
+	},
+	"footer": {
+		"color": "#999999",
+		"fontSize": 10,
+		"font": "open sans",
+		"location": "bottom-left"
+	},
+	"size": {
+		"canvasWidth": 250,
+		"pieOuterRadius": "60%",
+		"canvasHeight":300
+	},
+	"data": {
+		"sortOrder": "value-desc",
+		"content": dataSource
+	},
+	"labels": {
+		"outer": {
+			"pieDistance": 12
+		},
+		"inner": {
+			"hideWhenLessThanPercentage": 0
+		},
+		"mainLabel": {
+			"fontSize": 11
+		},
+		"percentage": {
+			"color": "#ffffff",
+			"decimalPlaces": 0
+		},
+		"value": {
+			"color": "#adadad",
+			"fontSize": 11
+		},
+		"lines": {
+			"enabled": true
+		},
+		"truncation": {
+			"enabled": false
+		}
+	},
+	"effects": {
+		"pullOutSegmentOnClick": {
+			"effect": "linear",
+			"speed": 400,
+			"size": 8
+		}
+	},
+	"misc": {
+		"gradient": {
+			"enabled": true,
+			"percentage": 100
+		}
+	}
+//});
+	})};
+	
+	
+	//pie.destroy();
+		
+			//'[data-toggle="tooltip"]').tooltip();
+		});
+ </script>
+
+  
+  </body>
+
+
 
 </html>

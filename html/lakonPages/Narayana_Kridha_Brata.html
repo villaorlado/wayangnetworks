@@ -1,142 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Digital Wayang Encyclopedia">
     <meta name="author" content="Miguel Escobar Varela">
-<style>
-		path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-
-.joint:hover{
-	cursor:pointer
-}
-
-#sigma-container{
-          top:0px;
-          left:0px;
-          width:50%;
-          position:relative;
-          height:300px;
-          box-shadow: 1px 1px 5px #999;
-        }
-		</style>
-    <title>
-		
-Narayana_Kridha_Brata</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/shop-item.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css"></link>
-
+    <style></style>
+    <title>Narayana_Kridha_Brata</title>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/shop-item.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.typeahead.css" />
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
 
-</head>
-
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand"  style="color:white;cursor:default">Digital Wayang Encyclopedia</a>
+  <body data-spy="scroll" data-target="#myScrollspy">
+    <nav class="navbar navbar-inverse navbar-top navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" style="color:lightgray;cursor:default">Digital Wayang Encyclopedia</a> </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../canonical.html">Network analysis</a></li>
+            <li><a href="../characters.html">Characters</a></li>
+            <li><a href="../lakons.html">Lakons (stories)</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="typeahead__container">
+              <div class="typeahead__field"> <span class="typeahead__query">
+                <input class="js-typeahead"
+                                             name="q"
+                                             type="search"
+                                             autofocus
+                                             placeholder="Search"
+                                             autocomplete="off">
+                                  </span> <span class="typeahead__button">
+                                      <button class="btn btn-default" type="submit">
+                                          <span class="typeahead__search-icon"></span> </button>
+                </span>
+              </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="../index.html">About</a>
-                    </li>
-                    
-                </ul>
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
-
     <div class="container">
-
+      <div class="row">
+        <div class="col-md-3" id="smyScrollspy">
+          <ul class="nav nav-pills nav-stacked leftnav" data-spy="affix" data-offset-top="0">
+            <li><a href="#CharacterList">Character List</a></li>
+            <li><a href="#Pathet Nem">Pathet Nem</a></li>
+            <li><a href="#Pathet Sanga">Pathet Sanga</a></li>
+            <li><a href="#Pathet Manyura">Pathet Manyura</a></li>
+            <li><a href="#Graphs">Graphs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9" style="">
+<h1>Narayana_Kridha_Brata</h1><div class="datum" id="CharacterList"><p>This lakon has 24 characters:  <a href='../characterPages/Guru.html'>Guru</a>, <a href='../characterPages/Gareng.html'>Gareng</a>, <a href='../characterPages/Durna.html'>Durna</a>, <a href='../characterPages/Rukmini.html'>Rukmini</a>, <a href='../characterPages/Bagong.html'>Bagong</a>, <a href='../characterPages/Udawa.html'>Udawa</a>, <a href='../characterPages/Panyarikan.html'>Panyarikan</a>, <a href='../characterPages/Sadewa.html'>Sadewa</a>, <a href='../characterPages/Puntadewa.html'>Puntadewa</a>, <a href='../characterPages/Semar.html'>Semar</a>, <a href='../characterPages/Rukmara.html'>Rukmara</a>, <a href='../characterPages/Bismaka.html'>Bismaka</a>, <a href='../characterPages/Arjuna.html'>Arjuna</a>, <a href='../characterPages/Werkudara.html'>Werkudara</a>, <a href='../characterPages/Petruk.html'>Petruk</a>, <a href='../characterPages/Abiyasa.html'>Abiyasa</a>, <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a>, <a href='../characterPages/Duryudana.html'>Duryudana</a>, <a href='../characterPages/Nakula.html'>Nakula</a>, <a href='../characterPages/Narada.html'>Narada</a>, <a href='../characterPages/Indra.html'>Indra</a>, <a href='../characterPages/Padmanaba.html'>Padmanaba</a>, <a href='../characterPages/Anoman.html'>Anoman</a>, <a href='../characterPages/Kresna.html'>Kresna</a>,</div><div class="datum"><p>&nbsp;<p id='Pathet Nem'><h3>Pathet Nem</h3><br/><p class='adegan' id='adegan1'><b>1</b>. <span class='badge'> Jejer</span> <b>Kumbina</b>. <a href='../characterPages/Bismaka.html'>Bismaka</a> meets <a href='../characterPages/Arjuna.html'>Arjuna</a>, <a href='../characterPages/Werkudara.html'>Werkudara</a>, <a href='../characterPages/Puntadewa.html'>Puntadewa</a>, <a href='../characterPages/Nakula.html'>Nakula</a> and <a href='../characterPages/Sadewa.html'>Sadewa</a>. <a href='../characterPages/Durna.html'>Durna</a> arrives. He wants <a href='../characterPages/Rukmini.html'>Rukmini</a>'s hand in marriage. There is a condition for this: the future husband of <a href='../characterPages/Rukmini.html'>Rukmini</a> must answer a set of riddles about the true nature of men and women. [Durna is ready for the challenge and leaves for <a href='../characterPages/Rukmini.html'>Rukmini</a>'s chambers.<p class='adegan' id='adegan2'><b>2</b>. <span class='badge'> Kedhaton</span> <b>Kumbina</b>. <a href='../characterPages/Rukmini.html'>Rukmini</a> receives <a href='../characterPages/Durna.html'>Durna</a>, who is accompanied by her older brother <a href='../characterPages/Rukmara.html'>Rukmara</a>. After exchanging greetings, <a href='../characterPages/Durna.html'>Durna</a> answers <a href='../characterPages/Rukmini.html'>Rukmini</a>'s riddles. She is not satisfied with his answers and this makes him angry. <a href='../characterPages/Durna.html'>Durna</a> then takes <a href='../characterPages/Rukmini.html'>Rukmini</a> away by force. She runs and is protected by <a href='../characterPages/*Brahala.html'>*Brahala</a>. <a href='../characterPages/Durna.html'>Durna</a> is afraid and reports this to <a href='../characterPages/Duryudana.html'>Duryudana</a>. The Korawa are asked to capture <a href='../characterPages/*Brahala.html'>*Brahala</a> but fail to do so. Then the Korawa ask <a href='../characterPages/Werkudara.html'>Werkudara</a> for help, but hi is also unable to defeat <a href='../characterPages/*Brahala.html'>*Brahala</a>. Then <a href='../characterPages/Puntadewa.html'>Puntadewa</a> fights him and almost wins. But <a href='../characterPages/*Brahala.html'>*Brahala</a> runs away. <a href='../characterPages/Durna.html'>Durna</a> accuses <a href='../characterPages/Arjuna.html'>Arjuna</a> of disguising himself as <a href='../characterPages/*Brahala.html'>*Brahala</a> on <a href='../characterPages/Puntadewa.html'>Puntadewa</a>'s orders. <a href='../characterPages/Durna.html'>Durna</a> orders <a href='../characterPages/Werkudara.html'>Werkudara</a> to depart in search of <a href='../characterPages/Arjuna.html'>Arjuna</a>.<p class='adegan' id='adegan3'><b>3</b>. <span class='badge'> Kayangan</span> <b>JonggringSaloka</b>. <a href='../characterPages/Guru.html'>Guru</a> meets <a href='../characterPages/Narada.html'>Narada</a>, <a href='../characterPages/Indra.html'>Indra</a> and <a href='../characterPages/Panyarikan.html'>Panyarikan</a>. <a href='../characterPages/Guru.html'>Guru</a> is concerned about the arrival of an enemy army from Dwarawati, led by Patih <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a>. The ogre army is waiting to see if the Gods will relinquish their power without a fight. <a href='../characterPages/Guru.html'>Guru</a> instructs <a href='../characterPages/Narada.html'>Narada</a> to meet them at Repat Kepanasan and try to negotiate with them. The giants can't be chased away and <a href='../characterPages/Narada.html'>Narada</a> is sent for someone who can protect the Gods. The only person who can do this is a manifestation of <a href='../characterPages/Wisnu.html'>Wisnu</a> called <a href='../characterPages/Kresna.html'>Kresna</a> – who was called Narayana at the time.<p>&nbsp;<p id='Pathet Sanga'><h3>Pathet Sanga</h3><br/><p class='adegan' id='adegan4'><b>4</b>. <span class='badge'> Pertapaan</span> <b>Untara</b>. For eight year, <a href='../characterPages/Kresna.html'>Kresna</a> and <a href='../characterPages/Udawa.html'>Udawa</a> had studied spiritual matters with <a href='../characterPages/Padmanaba.html'>Padmanaba</a>. The hermit transmits his knowledge to <a href='../characterPages/Kresna.html'>Kresna</a>. He also gives him the weapons Kyai Sanjata Cakra and Sekar Wijayakusuma, as well as the Wahyu Narabapa. Then the hermit becomes one with <a href='../characterPages/Kresna.html'>Kresna</a>. This had all be determined by God: <a href='../characterPages/Kresna.html'>Kresna</a> was meant to become a world renowned warrior even though <a href='../characterPages/Udawa.html'>Udawa</a> was the eldest of the apprentices.<p class='adegan' id='adegan5'><b>5</b>. <span class='badge'> Wana</span> <b>Unnamed</b>. <a href='../characterPages/Arjuna.html'>Arjuna</a> is accompanied by <a href='../characterPages/Semar.html'>Semar</a>, <a href='../characterPages/Petruk.html'>Petruk</a>, <a href='../characterPages/Bagong.html'>Bagong</a> and <a href='../characterPages/Gareng.html'>Gareng</a> in the forest. <a href='../characterPages/Abiyasa.html'>Abiyasa</a> had ordered <a href='../characterPages/Arjuna.html'>Arjuna</a> to approach Kumbina, telling him a crisis would soon befall this place and only <a href='../characterPages/Arjuna.html'>Arjuna</a> could avert it. <a href='../characterPages/Arjuna.html'>Arjuna</a> is surprised by the arrival of an ogre army. <a href='../characterPages/Arjuna.html'>Arjuna</a> kills all the ogres. <a href='../characterPages/Werkudara.html'>Werkudara</a> arrives and finds <a href='../characterPages/Arjuna.html'>Arjuna</a> at fault for his behavior. <a href='../characterPages/Arjuna.html'>Arjuna</a> departs angrily without saying his proper goodbyes.<p class='adegan' id='adegan6'><b>6</b>. Dwarawati. <a href='../characterPages/*Brahala.html'>*Brahala</a> is seen roaming Dwarawati. <a href='../characterPages/Arjuna.html'>Arjuna</a> is able to fight him and <a href='../characterPages/*Brahala.html'>*Brahala</a>'s true shape as <a href='../characterPages/Kresna.html'>Kresna</a> is revealed. Arjuna surrenders himself to <a href='../characterPages/Kresna.html'>Kresna</a>, so that <a href='../characterPages/Kresna.html'>Kresna</a>'s good name can be salvaged. On the instructions of <a href='../characterPages/Kresna.html'>Kresna</a>, <a href='../characterPages/Arjuna.html'>Arjuna</a> turns the souls of <a href='../characterPages/Kresna.html'>Kresna</a> and <a href='../characterPages/Rukmini.html'>Rukmini</a> into flowers, which he then wears as earrings. <a href='../characterPages/Arjuna.html'>Arjuna</a> then offers the empty bodies <a href='../characterPages/Kresna.html'>Kresna</a> and <a href='../characterPages/Rukmini.html'>Rukmini</a> to the Korawa and <a href='../characterPages/Werkudara.html'>Werkudara</a>, who demand that these bodies be burned. <a href='../characterPages/Puntadewa.html'>Puntadewa</a> is aware of the magical substitution that took place and orders <a href='../characterPages/Arjuna.html'>Arjuna</a> to follow <a href='../characterPages/Kresna.html'>Kresna</a> to Jonggring Saloka.<p class='adegan' id='adegan7'><b>7</b>. <span class='badge'> Sky</span> <b>Unnamed</b>.<a href='../characterPages/Kresna.html'>Kresna</a> and <a href='../characterPages/Narada.html'>Narada</a> fly through the clouds and meet <a href='../characterPages/Anoman.html'>Anoman</a>. <a href='../characterPages/Anoman.html'>Anoman</a> has been meditating, vowing to only stop when we meets the warrior who is an incarnation of <a href='../characterPages/Wisnu.html'>Wisnu</a>. When <a href='../characterPages/Anoman.html'>Anoman</a> sees the Wijayakusuma flower adorning the head of <a href='../characterPages/Kresna.html'>Kresna</a> as well as the Cakra weapon that he carries, Anoman prostrates himself in front of <a href='../characterPages/Kresna.html'>Kresna</a>. <a href='../characterPages/Kresna.html'>Kresna</a> accepts <a href='../characterPages/Anoman.html'>Anoman</a>'s services and they both depart for the heavens.<p>&nbsp;<p id='Pathet Manyura'><h3>Pathet Manyura</h3><br/><p class='adegan' id='adegan8'><b>8</b>. <span class='badge'> Jejer</span> <b>Dwarawati</b>. Prabu <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a> faces his ogre army. They are awaiting the return of Patih <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a>, who has been gone for a long time. Therefore, the king prepares his army to ascend to the heavens.<p class='adegan' id='adegan9'><b>9</b>. <span class='badge'> Kayangan</span> <b>JonggringSaloka</b> <a href='../characterPages/Guru.html'>Guru</a> receives <a href='../characterPages/Narada.html'>Narada</a>, <a href='../characterPages/Kresna.html'>Kresna</a>, <a href='../characterPages/Arjuna.html'>Arjuna</a> and <a href='../characterPages/Anoman.html'>Anoman</a>. They are each given divine gifts: the Kyai Jaladara chariot for <a href='../characterPages/Kresna.html'>Kresna</a>, the Kyai Sangkala trumpet for <a href='../characterPages/Arjuna.html'>Arjuna</a> and the Kendalisada mountain for <a href='../characterPages/Anoman.html'>Anoman</a>. Then the three of them are escorted by <a href='../characterPages/Narada.html'>Narada</a> to the enemy lines. They drive the Kyai Jaladara, with <a href='../characterPages/Arjuna.html'>Arjuna</a> as the charioteer.<p class='adegan' id='adegan10'><b>10</b>. <span class='badge'> Alun-alun</span> <b>Repat</b> Kepanasan Patih <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a> receives Prabu <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a> and his ogre army. A fight ensues.<a href='../characterPages/Anoman.html'>Anoman</a> fights <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a> and attacks his feet,since this is where his  strength resides. <a href='../characterPages/Kresna.html'>Kresna</a> fights <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a>. The king of Dwarawati is very powerful and he can traverse soil, water, fire and sky. But <a href='../characterPages/Kresna.html'>Kresna</a> is able to follow in the Jaladara chariot. The ogre king utters a mantra that renders the chariot useless. <a href='../characterPages/Narada.html'>Narada</a> then pounds the Pancanya gong and this destroys <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a>'s strength. Before dying, he gives his name and kingdom to <a href='../characterPages/Kresna.html'>Kresna</a>.<p class='adegan' id='adegan11'><b>11</b>. <span class='badge'> Kayangan</span> <b>JonggringSaloka</b> <a href='../characterPages/Guru.html'>Guru</a> celebrates the defeat of his enemies and crowns <a href='../characterPages/Kresna.html'>Kresna</a> as king of Dwarawati, with <a href='../characterPages/Udawa.html'>Udawa</a> as his Patih.</div>
+    
+    
+    <!--interactive graph-->
+    <div class="datum" id="Graphs">
+		<h3>Graphs</h3>
+		<div class="row">
+			<div class="col-lg-6" id="graphspace"></div>           
+			<div class="col-lg-6"><div id="sigma-container"></div></div>
+		</div>
+	</div>
+	</div>
+	</div>
+    
+    </div>
+  </div>
+    <!-- /.container -->
+    <!--Footer-->
+<footer class="footer">
+    <div class="container">
         <div class="row">
 
-            <div class="col-md-3">
-                <p class="lead"></p>
-                <!--img src="../img/logo.jpg"></img-->
-                <div class="list-group">
-                    <a href="../characters.html" class="list-group-item">Characters</a>
-                    <a href="../lakons.html" class="list-group-item">Story plots (lakon)</a>
-                    <a href="../canonical.html" class="list-group-item">Network visualization</a>
-                </div>
+            <!--First column-->
+
+            <div class="col-md-12">
+              <p>
+              Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf.</p>
+
             </div>
+            <!--/.First column-->
 
-            <div class="col-md-9">
+            <!--Second column-->
 
-                <div>
-<h1>Narayana_Kridha_Brata</h1><div class="well" id="characters"><p>This lakon has 24 characters:  <a href='../characterPages/Guru.html'>Guru</a>, <a href='../characterPages/Gareng.html'>Gareng</a>, <a href='../characterPages/Durna.html'>Durna</a>, <a href='../characterPages/Rukmini.html'>Rukmini</a>, <a href='../characterPages/Bagong.html'>Bagong</a>, <a href='../characterPages/Udawa.html'>Udawa</a>, <a href='../characterPages/Panyarikan.html'>Panyarikan</a>, <a href='../characterPages/Sadewa.html'>Sadewa</a>, <a href='../characterPages/Puntadewa.html'>Puntadewa</a>, <a href='../characterPages/Semar.html'>Semar</a>, <a href='../characterPages/Rukmara.html'>Rukmara</a>, <a href='../characterPages/Bismaka.html'>Bismaka</a>, <a href='../characterPages/Arjuna.html'>Arjuna</a>, <a href='../characterPages/Werkudara.html'>Werkudara</a>, <a href='../characterPages/Petruk.html'>Petruk</a>, <a href='../characterPages/Abiyasa.html'>Abiyasa</a>, <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a>, <a href='../characterPages/Duryudana.html'>Duryudana</a>, <a href='../characterPages/Nakula.html'>Nakula</a>, <a href='../characterPages/Narada.html'>Narada</a>, <a href='../characterPages/Indra.html'>Indra</a>, <a href='../characterPages/Padmanaba.html'>Padmanaba</a>, <a href='../characterPages/Anoman.html'>Anoman</a>, <a href='../characterPages/Kresna.html'>Kresna</a>,</div><p>&nbsp;<p><h3>Pathet Nem</h3><hr><p class='adegan' id='adegan1'><b>1</b>. <span class='badge'> Jejer</span> <b>Kumbina</b>. <a href='../characterPages/Bismaka.html'>Bismaka</a> meets <a href='../characterPages/Arjuna.html'>Arjuna</a>, <a href='../characterPages/Werkudara.html'>Werkudara</a>, <a href='../characterPages/Puntadewa.html'>Puntadewa</a>, <a href='../characterPages/Nakula.html'>Nakula</a> and <a href='../characterPages/Sadewa.html'>Sadewa</a>. <a href='../characterPages/Durna.html'>Durna</a> arrives. He wants <a href='../characterPages/Rukmini.html'>Rukmini</a>'s hand in marriage. There is a condition for this: the future husband of <a href='../characterPages/Rukmini.html'>Rukmini</a> must answer a set of riddles about the true nature of men and women. [Durna is ready for the challenge and leaves for <a href='../characterPages/Rukmini.html'>Rukmini</a>'s chambers.<p class='adegan' id='adegan2'><b>2</b>. <span class='badge'> Kedhaton</span> <b>Kumbina</b>. <a href='../characterPages/Rukmini.html'>Rukmini</a> receives <a href='../characterPages/Durna.html'>Durna</a>, who is accompanied by her older brother <a href='../characterPages/Rukmara.html'>Rukmara</a>. After exchanging greetings, <a href='../characterPages/Durna.html'>Durna</a> answers <a href='../characterPages/Rukmini.html'>Rukmini</a>'s riddles. She is not satisfied with his answers and this makes him angry. <a href='../characterPages/Durna.html'>Durna</a> then takes <a href='../characterPages/Rukmini.html'>Rukmini</a> away by force. She runs and is protected by <a href='../characterPages/*Brahala.html'>*Brahala</a>. <a href='../characterPages/Durna.html'>Durna</a> is afraid and reports this to <a href='../characterPages/Duryudana.html'>Duryudana</a>. The Korawa are asked to capture <a href='../characterPages/*Brahala.html'>*Brahala</a> but fail to do so. Then the Korawa ask <a href='../characterPages/Werkudara.html'>Werkudara</a> for help, but hi is also unable to defeat <a href='../characterPages/*Brahala.html'>*Brahala</a>. Then <a href='../characterPages/Puntadewa.html'>Puntadewa</a> fights him and almost wins. But <a href='../characterPages/*Brahala.html'>*Brahala</a> runs away. <a href='../characterPages/Durna.html'>Durna</a> accuses <a href='../characterPages/Arjuna.html'>Arjuna</a> of disguising himself as <a href='../characterPages/*Brahala.html'>*Brahala</a> on <a href='../characterPages/Puntadewa.html'>Puntadewa</a>'s orders. <a href='../characterPages/Durna.html'>Durna</a> orders <a href='../characterPages/Werkudara.html'>Werkudara</a> to depart in search of <a href='../characterPages/Arjuna.html'>Arjuna</a>.<p class='adegan' id='adegan3'><b>3</b>. <span class='badge'> Kayangan</span> <b>JonggringSaloka</b>. <a href='../characterPages/Guru.html'>Guru</a> meets <a href='../characterPages/Narada.html'>Narada</a>, <a href='../characterPages/Indra.html'>Indra</a> and <a href='../characterPages/Panyarikan.html'>Panyarikan</a>. <a href='../characterPages/Guru.html'>Guru</a> is concerned about the arrival of an enemy army from Dwarawati, led by Patih <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a>. The ogre army is waiting to see if the Gods will relinquish their power without a fight. <a href='../characterPages/Guru.html'>Guru</a> instructs <a href='../characterPages/Narada.html'>Narada</a> to meet them at Repat Kepanasan and try to negotiate with them. The giants can't be chased away and <a href='../characterPages/Narada.html'>Narada</a> is sent for someone who can protect the Gods. The only person who can do this is a manifestation of <a href='../characterPages/Wisnu.html'>Wisnu</a> called <a href='../characterPages/Kresna.html'>Kresna</a> – who was called Narayana at the time.<p>&nbsp;<p><h3>Pathet Sanga</h3><hr><p class='adegan' id='adegan4'><b>4</b>. <span class='badge'> Pertapaan</span> <b>Untara</b>. For eight year, <a href='../characterPages/Kresna.html'>Kresna</a> and <a href='../characterPages/Udawa.html'>Udawa</a> had studied spiritual matters with <a href='../characterPages/Padmanaba.html'>Padmanaba</a>. The hermit transmits his knowledge to <a href='../characterPages/Kresna.html'>Kresna</a>. He also gives him the weapons Kyai Sanjata Cakra and Sekar Wijayakusuma, as well as the Wahyu Narabapa. Then the hermit becomes one with <a href='../characterPages/Kresna.html'>Kresna</a>. This had all be determined by God: <a href='../characterPages/Kresna.html'>Kresna</a> was meant to become a world renowned warrior even though <a href='../characterPages/Udawa.html'>Udawa</a> was the eldest of the apprentices.<p class='adegan' id='adegan5'><b>5</b>. <span class='badge'> Wana</span> <b>Unnamed</b>. <a href='../characterPages/Arjuna.html'>Arjuna</a> is accompanied by <a href='../characterPages/Semar.html'>Semar</a>, <a href='../characterPages/Petruk.html'>Petruk</a>, <a href='../characterPages/Bagong.html'>Bagong</a> and <a href='../characterPages/Gareng.html'>Gareng</a> in the forest. <a href='../characterPages/Abiyasa.html'>Abiyasa</a> had ordered <a href='../characterPages/Arjuna.html'>Arjuna</a> to approach Kumbina, telling him a crisis would soon befall this place and only <a href='../characterPages/Arjuna.html'>Arjuna</a> could avert it. <a href='../characterPages/Arjuna.html'>Arjuna</a> is surprised by the arrival of an ogre army. <a href='../characterPages/Arjuna.html'>Arjuna</a> kills all the ogres. <a href='../characterPages/Werkudara.html'>Werkudara</a> arrives and finds <a href='../characterPages/Arjuna.html'>Arjuna</a> at fault for his behavior. <a href='../characterPages/Arjuna.html'>Arjuna</a> departs angrily without saying his proper goodbyes.<p class='adegan' id='adegan6'><b>6</b>. Dwarawati. <a href='../characterPages/*Brahala.html'>*Brahala</a> is seen roaming Dwarawati. <a href='../characterPages/Arjuna.html'>Arjuna</a> is able to fight him and <a href='../characterPages/*Brahala.html'>*Brahala</a>'s true shape as <a href='../characterPages/Kresna.html'>Kresna</a> is revealed. Arjuna surrenders himself to <a href='../characterPages/Kresna.html'>Kresna</a>, so that <a href='../characterPages/Kresna.html'>Kresna</a>'s good name can be salvaged. On the instructions of <a href='../characterPages/Kresna.html'>Kresna</a>, <a href='../characterPages/Arjuna.html'>Arjuna</a> turns the souls of <a href='../characterPages/Kresna.html'>Kresna</a> and <a href='../characterPages/Rukmini.html'>Rukmini</a> into flowers, which he then wears as earrings. <a href='../characterPages/Arjuna.html'>Arjuna</a> then offers the empty bodies <a href='../characterPages/Kresna.html'>Kresna</a> and <a href='../characterPages/Rukmini.html'>Rukmini</a> to the Korawa and <a href='../characterPages/Werkudara.html'>Werkudara</a>, who demand that these bodies be burned. <a href='../characterPages/Puntadewa.html'>Puntadewa</a> is aware of the magical substitution that took place and orders <a href='../characterPages/Arjuna.html'>Arjuna</a> to follow <a href='../characterPages/Kresna.html'>Kresna</a> to Jonggring Saloka.<p class='adegan' id='adegan7'><b>7</b>. <span class='badge'> Sky</span> <b>Unnamed</b>.<a href='../characterPages/Kresna.html'>Kresna</a> and <a href='../characterPages/Narada.html'>Narada</a> fly through the clouds and meet <a href='../characterPages/Anoman.html'>Anoman</a>. <a href='../characterPages/Anoman.html'>Anoman</a> has been meditating, vowing to only stop when we meets the warrior who is an incarnation of <a href='../characterPages/Wisnu.html'>Wisnu</a>. When <a href='../characterPages/Anoman.html'>Anoman</a> sees the Wijayakusuma flower adorning the head of <a href='../characterPages/Kresna.html'>Kresna</a> as well as the Cakra weapon that he carries, Anoman prostrates himself in front of <a href='../characterPages/Kresna.html'>Kresna</a>. <a href='../characterPages/Kresna.html'>Kresna</a> accepts <a href='../characterPages/Anoman.html'>Anoman</a>'s services and they both depart for the heavens.<p>&nbsp;<p><h3>Pathet Manyura</h3><hr><p class='adegan' id='adegan8'><b>8</b>. <span class='badge'> Jejer</span> <b>Dwarawati</b>. Prabu <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a> faces his ogre army. They are awaiting the return of Patih <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a>, who has been gone for a long time. Therefore, the king prepares his army to ascend to the heavens.<p class='adegan' id='adegan9'><b>9</b>. <span class='badge'> Kayangan</span> <b>JonggringSaloka</b> <a href='../characterPages/Guru.html'>Guru</a> receives <a href='../characterPages/Narada.html'>Narada</a>, <a href='../characterPages/Kresna.html'>Kresna</a>, <a href='../characterPages/Arjuna.html'>Arjuna</a> and <a href='../characterPages/Anoman.html'>Anoman</a>. They are each given divine gifts: the Kyai Jaladara chariot for <a href='../characterPages/Kresna.html'>Kresna</a>, the Kyai Sangkala trumpet for <a href='../characterPages/Arjuna.html'>Arjuna</a> and the Kendalisada mountain for <a href='../characterPages/Anoman.html'>Anoman</a>. Then the three of them are escorted by <a href='../characterPages/Narada.html'>Narada</a> to the enemy lines. They drive the Kyai Jaladara, with <a href='../characterPages/Arjuna.html'>Arjuna</a> as the charioteer.<p class='adegan' id='adegan10'><b>10</b>. <span class='badge'> Alun-alun</span> <b>Repat</b> Kepanasan Patih <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a> receives Prabu <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a> and his ogre army. A fight ensues.<a href='../characterPages/Anoman.html'>Anoman</a> fights <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a> and attacks his feet,since this is where his  strength resides. <a href='../characterPages/Kresna.html'>Kresna</a> fights <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a>. The king of Dwarawati is very powerful and he can traverse soil, water, fire and sky. But <a href='../characterPages/Kresna.html'>Kresna</a> is able to follow in the Jaladara chariot. The ogre king utters a mantra that renders the chariot useless. <a href='../characterPages/Narada.html'>Narada</a> then pounds the Pancanya gong and this destroys <a href='../characterPages/Yuda_Kala_Kresna.html'>Yuda_Kala_Kresna</a>'s strength. Before dying, he gives his name and kingdom to <a href='../characterPages/Kresna.html'>Kresna</a>.<p class='adegan' id='adegan11'><b>11</b>. <span class='badge'> Kayangan</span> <b>JonggringSaloka</b> <a href='../characterPages/Guru.html'>Guru</a> celebrates the defeat of his enemies and crowns <a href='../characterPages/Kresna.html'>Kresna</a> as king of Dwarawati, with <a href='../characterPages/Udawa.html'>Udawa</a> as his Patih.</div>
-
-<div class="row">
-		
-	
-    <div class="col-lg-6" ></div>           
-	<div class="col-lg-6" ></div>
-	</div>
-
-	<div class="row">
-		
-	
-    <div class="col-lg-6" id="graphspace"></div>           
-	<div class="col-lg-6" id="sigma-container"></div>
-	</div>
-            </div>
-
+            <!--/.Second column-->
         </div>
-
-
-
     </div>
-    <!-- /.container -->
+    <!--/.Footer Links-->
 
-    <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                   <p>Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. 
-               
-                </div>
-            </div>
-        </footer>
-
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
     </div>
-    <!-- /.container -->
+    <!--/.Copyright-->
 
-    <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
-	<script src="../js/d3.v3.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
+</footer>
+<!--/.Footer-->
+    <!-- /.container -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    ><script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../sigma/sigma.js"></script>
+    <script src="../js/jquery.typeahead.js"></script>
+    <script>var rootURL="../";</script>
+    <script src="../js/search.js"></script>
+  
+  <!-- script specific to lakon-->
+  <script src="../sigma/sigma.js"></script>
     <script src="../sigma/plugins/sigma.parsers.gexf.min.js"></script>
     <script>
     
@@ -384,7 +370,9 @@ sigma.classes.graph.addMethod('neighbors', function(nodeId) {
 
 
     </script>
+  
+  </body>
 
-</body>
+
 
 </html>

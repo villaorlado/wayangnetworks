@@ -1,96 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Digital Wayang Encyclopedia">
     <meta name="author" content="Miguel Escobar Varela">
-<style>
-		path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-
-.joint:hover{
-	cursor:pointer
-}
-
-#sigma-container{
-          top:0px;
-          left:0px;
-          width:50%;
-          position:relative;
-          height:300px;
-          box-shadow: 1px 1px 5px #999;
-        }
-		</style>
-    <title>
-		
-Brajamusthi</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/shop-item.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css"></link>
-
+    <style></style>
+    <title>Brajamusthi</title>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/shop-item.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.typeahead.css" />
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
 
-</head>
-
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand"  style="color:white;cursor:default">Digital Wayang Encyclopedia</a>
+  <body data-spy="scroll" data-target="#myScrollspy">
+    <nav class="navbar navbar-inverse navbar-top navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" style="color:lightgray;cursor:default">Digital Wayang Encyclopedia</a> </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../canonical.html">Network analysis</a></li>
+            <li><a href="../lakons.html">Lakons (stories)</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="typeahead__container">
+              <div class="typeahead__field"> <span class="typeahead__query">
+                <input class="js-typeahead"
+                                             name="q"
+                                             type="search"
+                                             autofocus
+                                             placeholder="Search"
+                                             autocomplete="off">
+                                  </span> <span class="typeahead__button">
+                                      <button class="btn btn-default" type="submit">
+                                          <span class="typeahead__search-icon"></span> </button>
+                </span>
+              </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="../index.html">About</a>
-                    </li>
-                    
-                </ul>
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
-
     <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-3">
-                <p class="lead"></p>
-                <!--img src="../img/logo.jpg"></img-->
-                <div class="list-group">
-                    <a href="../characters.html" class="list-group-item">Characters</a>
-                    <a href="../lakons.html" class="list-group-item">Story plots (lakon)</a>
-                    <a href="../canonical.html" class="list-group-item">Network visualization</a>
-                </div>
-            </div>
-
-            <div class="col-md-9">
-
-                <div>
-<p><h1>Brajamusthi</h1></p><p><b>Terms of address</b>: Kala<p><b>Type</b>: Raksasa<p><b>Origin</b>: Java<p><b>Notes on the Indian versions</b>: Not mentioned in the Indian Mahabharata.<p><b>Description in the Javanese wayang versions</b>: He is a son of Prabu Arimbaka (king of Pringgandani) and Dewi Hadimba. <p><b>Found in the follwing stories (lakon)</b>:</p><ol> <li><a href="../lakonPages/Brajadhenta_Mbalela_(Gatotkaca_Wisudha).html">Brajadhenta_Mbalela_(Gatotkaca_Wisudha)</a></li></ol><hr><h3>Family relationships</h3><p><b>Mother</b>: Hidimba<p><b>Father</b>: Arimbaka<p><b>Siblings</b>: Arimba, <a href='Arimbi.html'>Arimbi</a>, <a href='Brajadhenta.html'>Brajadhenta</a>, Brajalamatan, Brajawikalpa, <a href='Bendana.html'>Bendana</a>, Prabakeswa<p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+      <div class="row">
+        <div class="col-md-3" id="smyScrollspy">
+          <ul class="nav nav-pills nav-stacked leftnav" data-spy="affix" data-offset-top="0">
+            <li><a href="#generalInfo">General information</a></li>
+            <li><a href="#Indian">Indian description</a></li>
+            <li><a href="#Javanese">Javanese description</a></li>
+            <li><a href="#Lakon">Lakon (stories)</a></li>
+            <li><a href="#Family">Family relationships</a></li>
+            <li><a href="#More">More information</a></li>
+            <li><a href="#Sources">Sources</a></li>
+            <li><a href="#Family">Family relationships</a></li>
+            <li><a href="#Adegan">Characters in same adegan (scene)</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9" style="">
+<div id='generalInfo' class='datum'><p><h1>Brajamusthi</h1></p><p><b>Terms of address</b>: Kala<p><b>Type</b>: Raksasa<p><b>Origin</b>: Java</div><div id='Indian' class='datum'><p><b>Notes on the Indian versions</b>: Not mentioned in the Indian Mahabharata.</div><div id='Javanese' class='datum'><p><b>Description in the Javanese wayang versions</b>: He is a son of Prabu Arimbaka (king of Pringgandani) and Dewi Hadimba. </div><div id='Lakon' class='datum'><h3>Found in the follwing stories (lakon)</h3><br/><ol> <li><a href="../lakonPages/Brajadhenta_Mbalela_(Gatotkaca_Wisudha).html">Brajadhenta_Mbalela_(Gatotkaca_Wisudha)</a></li></ol></div><div id='Family' class='datum'><h3>Family relationships</h3><br/><p><b>Mother</b>: Hidimba<p><b>Father</b>: Arimbaka<p><b>Siblings</b>: Arimba, <a href='Arimbi.html'>Arimbi</a>, <a href='Brajadhenta.html'>Brajadhenta</a>, Brajalamatan, Brajawikalpa, <a href='Bendana.html'>Bendana</a>, Prabakeswa<p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
  
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
@@ -146,8 +125,8 @@ Brajamusthi</title>
 </g>
 </g>
 </svg>
-<hr><h3>More information</h3><p><b>Killed by</b>: <a href='Gatotkaca.html'>Gatotkaca</a><hr><h3>Sources</h3> <br>Purwadi, 2013. <i>Mengenal Gambar Tokoh Wayang Purwa dan Keterangannya</i>. Cendrawasih, Surakarta, p. 52. <br>Sudibyoprono, R.R., Suwandono, Dhanisworo, Mujiyono, 1991. <i>Ensiklopedi Wayang Purwa</i>. Balai Pustaka, Jakarta, p. 130.</table>
-<p>&nbsp;<p>&nbsp;<p><h3>Characters in the same scene (adegan) as Brajamusthi</h3><hr><table id="linktableDisguised" class="display" cellspacing="0" width="100%">
+</div><div id='More' class='datum'><h3>More information</h3><br/><p><b>Killed by</b>: <a href='Gatotkaca.html'>Gatotkaca</a></div><div id='Sources' class='datum'><h3>Sources</h3> <br>Purwadi, 2013. <i>Mengenal Gambar Tokoh Wayang Purwa dan Keterangannya</i>. Cendrawasih, Surakarta, p. 52. <br>Sudibyoprono, R.R., Suwandono, Dhanisworo, Mujiyono, 1991. <i>Ensiklopedi Wayang Purwa</i>. Balai Pustaka, Jakarta, p. 130.</div></table>
+<div id='Adegan' class='datum'><h3>Characters in the same scene (adegan) as Brajamusthi</h3><br/><table id="linktableDisguised" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>Character</th>
@@ -161,44 +140,49 @@ Brajamusthi</title>
             </tr>
         </tfoot>
     </table>
-<script src="../js/jquery.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function(){table = $("#linktableDisguised").DataTable({"ajax":"../data/json/Brajamusthi_disguised.txt","order": [[ 1, "desc" ]]});$('#linktableDisguised tbody').on('click', 'tr', function () {
+</div><script src="../js/jquery.js"></script><script src="../js/jquery.dataTables.min.js"></script><script>$(document).ready(function(){table = $("#linktableDisguised").DataTable({"ajax":"../data/json/Brajamusthi_disguised.txt","order": [[ 1, "desc" ]]});$('#linktableDisguised tbody').on('click', 'tr', function () {
  var data = table.row(this).data();
  window.location = data[0] + '.html';});$('#linktableDisguised tbody').mouseover(function(){$(this).css('cursor','pointer');});});$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();
- });</script></div>
-
-   
-
-            </div>
-
-        </div>
-
-
-
+ });</script>
     </div>
+    </div>
+  </div>
     <!-- /.container -->
-
+    <!--Footer-->
+<footer class="footer">
     <div class="container">
+        <div class="row">
 
-        <hr>
+            <!--First column-->
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. 
-                </div>
+            <div class="col-md-12">
+              <p>
+              Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf.</p>
+
             </div>
-        </footer>
+            <!--/.First column-->
 
+            <!--Second column-->
+
+            <!--/.Second column-->
+        </div>
     </div>
-    <!-- /.container -->
+    <!--/.Footer Links-->
 
-    <!-- jQuery -->
-   
-	<script src="http://d3js.org/d3.v3.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+    <!-- /.container -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-   
-</body>
+    <script src="../js/jquery.typeahead.js"></script>
+    <script src="../js/search.js"></script>
+  </body>
 
 </html>

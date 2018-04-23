@@ -8,7 +8,7 @@ Antareja,Human,Java,Pandawa
 Antasena,Human,Java,Pandawa
 Arimbi,Raksasa,India,Pandawa
 Arjuna,Human,India,Pandawa
-Asmarawati,Human,India,
+Asmarawati,Human,Java,
 Badrahini,Human,Java,
 Bagaspati,Raksasa,Java,
 Bagong,Human,Java,Punokawan

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Digital Wayang Encyclopedia">
+    <meta name="author" content="Miguel Escobar Varela">
+    <style>
+    .sigma-container{
+		width:500px;
+	}
+    </style>
+    <title>Network analysis</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/shop-item.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.typeahead.css" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-target="#myScrollspy">
+    <nav class="navbar navbar-inverse navbar-top navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" style="color:lightgray;cursor:default">Digital Wayang Encyclopedia</a> </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../canonical.html">Network analysis</a></li>
+            <li><a href="../characters.html">Characters</a></li>
+            <li><a href="../lakons.html">Lakons (stories)</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="typeahead__container">
+              <div class="typeahead__field"> <span class="typeahead__query">
+                <input class="js-typeahead"
+                                             name="q"
+                                             type="search"
+                                             autofocus
+                                             placeholder="Search"
+                                             autocomplete="off">
+                                  </span> <span class="typeahead__button">
+                                      <button class="btn btn-default" type="submit">
+                                          <span class="typeahead__search-icon"></span> </button>
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          
+          <div id="explanation"></div>
+        </div>
+        <div class="col-md-9" style="">
+
+<!--content-->
+
+ <p>The non-directed network visualization represents co-occurences of characters in the scene-by-scene plot descriptions. The nodes (circles) indicate the different characters. Green nodes are Javanese in origin and pink ones are also found in the Indian versions of the stories. The size of the nodes corresponds to their degree (larger nodes have a higher number of connections). An edge (line) between two characters means they are present in the same scene. The thickness of the edges represents the number of times two characters appear together in the same scene. Clicking on a character's node reveals more information</p>
+                  <div id="sigma-container"></div>
+
+<!--end of content-->
+    
+    
+    <!--interactive graph-->
+    
+	</div>
+	</div>
+    
+    </div>
+  </div>
+    <!-- /.container -->
+    <!--Footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!--First column-->
+
+            <div class="col-md-12">
+              <p>
+              Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf.</p>
+
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+
+            <!--/.Second column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+    <!-- /.container -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    ><script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.typeahead.js"></script>
+    <script src="js/search.js"></script>
+  
+  <!-- script specific to lakon-->
+  <script src="sigma/sigma.js"></script>
+    <script src="sigma/plugins/sigma.parsers.gexf.min.js"></script>
+    <script>
+   
+    sigma.classes.graph.addMethod('neighbors', function(nodeId) {
+       var k,
+           neighbors = {},
+           index = this.allNeighborsIndex[nodeId] || {};
+
+       for (k in index)
+         neighbors[k] = this.nodesIndex[k];
+
+       return neighbors;
+     });
+
+      sigma.parsers.gexf(
+        'data/adegan_canonicalOnly.gexf',
+        { // Here is the ID of the DOM element that
+          // will contain the graph:
+          container: 'sigma-container',
+          settings: {
+          minNodeSize: 2,
+          maxNodeSize: 10,
+          /*minEdgeSize: 0.1,
+          maxEdgeSize: 1,
+          enableEdgeHovering: true,
+          edgeHoverSizeRatio: 2*/
+        }
+
+        },
+        function(s) {
+          // This function will be executed when the
+          // graph is displayed, with "s" the related
+          // sigma instance.
+          s.graph.nodes().forEach(function(n) {
+            n.originalColor = n.color;
+            n.originalLabel = n.label;
+          });
+          s.graph.edges().forEach(function(e) {
+            e.originalColor = e.color;
+          });
+
+          // When a node is clicked, we check for each node
+          // if it is a neighbor of the clicked one. If not,
+          // we set its color as grey, and else, it takes its
+          // original color.
+          // We do the same for the edges, and we only keep
+          // edges that have both extremities colored.
+          s.bind('clickNode', function(e) {
+            var nodeId = e.data.node.id,
+                toKeep = s.graph.neighbors(nodeId),
+                //explanation = "<p><b><a href='characterPages/" + e.data.node.label + ".html'>View full description</a></b>"; //+ e.data.node.label +
+                explanation = "<hr>";
+                toKeep[nodeId] = e.data.node;
+
+            s.graph.nodes().forEach(function(n) {
+              if (toKeep[n.id]){
+                n.color = n.originalColor;
+                n.label = n.originalLabel;
+              }
+              else{
+                n.color = '#eee';
+                n.label = "";
+                console.log(n)
+              }
+            });
+
+            //modularity_class, componentnumber, clustering, Triangles, newClusteringCoefficient, eigencentrality
+            //explanation += JSON.stringify(e.data.node.attributes);
+
+            //explanation += $.load("characterPages/" + e.data.node.label + ".txt");
+            //$.get(("characterPages/" + e.data.node.label + ".txt"), function (data){alert(JSON.stringify(data));});
+
+            $.ajax({url: "characterPages/" + e.data.node.label + ".txt", success: function(result){
+
+              explanation += result;
+              explanation += "<p><br/>Degree: " + e.data.node.attributes.degree;
+              explanation += "<br/>Weighted degree: " + e.data.node.attributes["weighted degree"];
+              explanation += "<br/>Eccentricity: " + e.data.node.attributes.eccentricity;
+              explanation += "<br/>Closness centrality: " + parseFloat(e.data.node.attributes.closnesscentrality).toFixed(2);
+              explanation += "<br/>Betweeness centrality: " + e.data.node.attributes.betweenesscentrality.toFixed(2);
+              explanation += "<br/>Clustering: " + e.data.node.attributes.clustering.toFixed(2);
+              //explanation += "<br/>Linked to: " + (linkedCharacters.length -1 )  + " characters";
+              $("#explanation").html(explanation);
+              $("#explanation").show();
+            }});
+
+            s.graph.edges().forEach(function(e) {
+              if (toKeep[e.source] && toKeep[e.target]){
+                e.color = e.originalColor;
+                //explanation += JSON.stringify(e);
+                //explanation += e.source;
+              }
+              else{
+                e.color = '#eee';
+              }
+              //if (toKeep[e.source] && toKeep[e.target])
+            });
+
+
+
+            // Since the data has been modified, we need to
+            // call the refresh method to make the colors
+            // update effective.
+            s.refresh();
+          });
+
+          // When the stage is clicked, we just color each
+          // node and edge with its original color.
+          s.bind('clickStage', function(e) {
+            s.graph.nodes().forEach(function(n) {
+              n.color = n.originalColor;
+              n.label = n.originalLabel;
+            });
+
+            s.graph.edges().forEach(function(e) {
+              e.color = e.originalColor;
+            });
+
+            // Same as in the previous event:
+            s.refresh();
+          });
+        }
+      );
+    
+   </script>
+  
+  </body>
+
+
+
+</html>

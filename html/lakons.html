@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-<style>
-		path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
-
-
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-
-.joint:hover{
+    <meta name="description" content="Digital Wayang Encyclopedia">
+    <meta name="author" content="Miguel Escobar Varela">
+    <style>
+    .joint:hover{
 	cursor:pointer
 }
 
@@ -33,113 +16,132 @@
 	stroke:green;
 	display:none;
 }
-
-#sigma-container{
-          top:0px;
-          left:0px;
-          width:50%;
-          position:relative;
-          height:300px;
-          box-shadow: 1px 1px 5px #999;
-        }
-</style>
-<title>Lakon list</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/shop-item.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css"></link>
-
+    </style>
+    <title>Lakon (stories)</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/shop-item.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.typeahead.css" />
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
 
-</head>
-
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" style="color:white;cursor:default">Digital Wayang Encyclopedia</a>
+  <body data-spy="scroll" data-target="#myScrollspy">
+    <nav class="navbar navbar-inverse navbar-top navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" style="color:lightgray;cursor:default">Digital Wayang Encyclopedia</a> </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">About</a></li>
+            <li><a href="canonical.html">Network analysis</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="lakons.html">Lakons (stories)</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="typeahead__container">
+              <div class="typeahead__field"> <span class="typeahead__query">
+                <input class="js-typeahead"
+                                             name="q"
+                                             type="search"
+                                             autofocus
+                                             placeholder="Search"
+                                             autocomplete="off">
+                                  </span> <span class="typeahead__button">
+                                      <button class="btn btn-default" type="submit">
+                                          <span class="typeahead__search-icon"></span> </button>
+                </span>
+              </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="../index.html">About</a>
-                    </li>
-                    
-                </ul>
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
-
     <div class="container">
-
+      <div class="row">
+        <div class="col-md-3" id="smyScrollspy">
+          
+        </div>
+        <div class="col-md-9" style="">
+		<div class="datum">
+			<h1>List of lakon (stories)</h1>
+			<div class="row">
+			<div class="col-md-6">
+<ul><li class="titles" id="title1"><a href="lakonPages/Babad_Wanamarta.html">Babad_Wanamarta</a></li><li class="titles" id="title2"><a href="lakonPages/Bandung_Nagasewu.html">Bandung_Nagasewu</a></li><li class="titles" id="title3"><a href="lakonPages/Basudewa_Grogol.html">Basudewa_Grogol</a></li><li class="titles" id="title4"><a href="lakonPages/Brajadhenta_Mbalela_(Gatotkaca_Wisudha).html">Brajadhenta_Mbalela_(Gatotkaca_Wisudha)</a></li><li class="titles" id="title5"><a href="lakonPages/Dewa_Ruci.html">Dewa_Ruci</a></li><li class="titles" id="title6"><a href="lakonPages/Gatotkaca_Lahir.html">Gatotkaca_Lahir</a></li><li class="titles" id="title7"><a href="lakonPages/Kunthi_Pilih_(Lahiripun_Adipati_Karna).html">Kunthi_Pilih_(Lahiripun_Adipati_Karna)</a></li><li class="titles" id="title8"><a href="lakonPages/Narayana_Kridha_Brata.html">Narayana_Kridha_Brata</a></li><li class="titles" id="title9"><a href="lakonPages/Prabu_Bimasakti.html">Prabu_Bimasakti</a></li><li class="titles" id="title10"><a href="lakonPages/Puntadewa_Wisudha.html">Puntadewa_Wisudha</a></li><li class="titles" id="title11"><a href="lakonPages/Semar_Barang_Jantur.html">Semar_Barang_Jantur</a></li><li class="titles" id="title12"><a href="lakonPages/Semar_Boyong_(Wahyu_Katetreman).html">Semar_Boyong_(Wahyu_Katetreman)</a></li></ul>
+    </div>
+    <div class="col-md-6"><ul><li class="titles" id="title13"><a href="lakonPages/Semar_Mantu.html">Semar_Mantu</a></li><li class="titles" id="title14"><a href="lakonPages/Semar_Mantu_Alternative_Version.html">Semar_Mantu_Alternative_Version</a></li><li class="titles" id="title15"><a href="lakonPages/Semar_mBangun_Kayangan.html">Semar_mBangun_Kayangan</a></li><li class="titles" id="title16"><a href="lakonPages/Sudamala.html">Sudamala</a></li><li class="titles" id="title17"><a href="lakonPages/Suksma_Langgeng.html">Suksma_Langgeng</a></li><li class="titles" id="title18"><a href="lakonPages/Wahyu_Cakraningrat.html">Wahyu_Cakraningrat</a></li><li class="titles" id="title19"><a href="lakonPages/Wahyu_Kaprawiran.html">Wahyu_Kaprawiran</a></li><li class="titles" id="title20"><a href="lakonPages/Wahyu_Kembar.html">Wahyu_Kembar</a></li><li class="titles" id="title21"><a href="lakonPages/Wahyu_Makutharama.html">Wahyu_Makutharama</a></li><li class="titles" id="title22"><a href="lakonPages/Wahyu_Topeng_Waja.html">Wahyu_Topeng_Waja</a></li><li class="titles" id="title23"><a href="lakonPages/Wisanggeni_Lahir.html">Wisanggeni_Lahir</a></li></ul></div>
+    
+    </div>
+    </div>
+    
+    <!--interactive graph-->
+    <div class="datum" id="graphspace">
+		<h3>Average characters per adegan (scene)</h3>
+		<small>Hover your mouse over any item in the list above to see the number of characters per scene for a specific story</small>
+		<div class="row">
+			<div class="col-lg-6" id="graphspace"></div>           
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+    
+    </div>
+  </div>
+    <!-- /.container -->
+    <!--Footer-->
+<footer class="footer">
+    <div class="container">
         <div class="row">
 
-            <div class="col-md-3">
-                <p class="lead"></p>
-                <!--img src="../img/logo.jpg"></img-->
-                <div class="list-group">
-                    <a href="characters.html" class="list-group-item">Characters</a>
-                    <a href="lakons.html" class="list-group-item">Story plots (lakon)</a>
-                    <a href="canonical.html" class="list-group-item">Network visualization</a>
-                </div>
-            </div>
+            <!--First column-->
 
-			<div class="row">
-            <div class="col-lg-3">
-
-            
-			<h1>List of stories (lakon)</h1>Lakon list<ul><li class="titles" id="title1"><a href="lakonPages/Babad_Wanamarta.html">Babad_Wanamarta</a></li><li class="titles" id="title2"><a href="lakonPages/Bandung_Nagasewu.html">Bandung_Nagasewu</a></li><li class="titles" id="title3"><a href="lakonPages/Basudewa_Grogol.html">Basudewa_Grogol</a></li><li class="titles" id="title4"><a href="lakonPages/Brajadhenta_Mbalela_(Gatotkaca_Wisudha).html">Brajadhenta_Mbalela_(Gatotkaca_Wisudha)</a></li><li class="titles" id="title5"><a href="lakonPages/Dewa_Ruci.html">Dewa_Ruci</a></li><li class="titles" id="title6"><a href="lakonPages/Gatotkaca_Lahir.html">Gatotkaca_Lahir</a></li><li class="titles" id="title7"><a href="lakonPages/Kunthi_Pilih_(Lahiripun_Adipati_Karna).html">Kunthi_Pilih_(Lahiripun_Adipati_Karna)</a></li><li class="titles" id="title8"><a href="lakonPages/Narayana_Kridha_Brata.html">Narayana_Kridha_Brata</a></li><li class="titles" id="title9"><a href="lakonPages/Prabu_Bimasakti.html">Prabu_Bimasakti</a></li><li class="titles" id="title10"><a href="lakonPages/Puntadewa_Wisudha.html">Puntadewa_Wisudha</a></li><li class="titles" id="title11"><a href="lakonPages/Semar_Barang_Jantur.html">Semar_Barang_Jantur</a></li><li class="titles" id="title12"><a href="lakonPages/Semar_Boyong_(Wahyu_Katetreman).html">Semar_Boyong_(Wahyu_Katetreman)</a></li><li class="titles" id="title13"><a href="lakonPages/Semar_Mantu.html">Semar_Mantu</a></li><li class="titles" id="title14"><a href="lakonPages/Semar_Mantu_Alternative_Version.html">Semar_Mantu_Alternative_Version</a></li><li class="titles" id="title15"><a href="lakonPages/Semar_mBangun_Kayangan.html">Semar_mBangun_Kayangan</a></li><li class="titles" id="title16"><a href="lakonPages/Sudamala.html">Sudamala</a></li><li class="titles" id="title17"><a href="lakonPages/Suksma_Langgeng.html">Suksma_Langgeng</a></li><li class="titles" id="title18"><a href="lakonPages/Wahyu_Cakraningrat.html">Wahyu_Cakraningrat</a></li><li class="titles" id="title19"><a href="lakonPages/Wahyu_Kaprawiran.html">Wahyu_Kaprawiran</a></li><li class="titles" id="title20"><a href="lakonPages/Wahyu_Kembar.html">Wahyu_Kembar</a></li><li class="titles" id="title21"><a href="lakonPages/Wahyu_Makutharama.html">Wahyu_Makutharama</a></li><li class="titles" id="title22"><a href="lakonPages/Wahyu_Topeng_Waja.html">Wahyu_Topeng_Waja</a></li><li class="titles" id="title23"><a href="lakonPages/Wisanggeni_Lahir.html">Wisanggeni_Lahir</a></li><li class="titles" id="title24"><a href="lakonPages/~Basudewa_Grogol.html">~Basudewa_Grogol</a></li>
-			</div>
-
-			<div class="col-lg-3" id="graphspace"><p align="center"></p>Average characters per scene</p></div>
+            <div class="col-md-12">
+              <p>
+              Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf.</p>
 
             </div>
-			</div>
+            <!--/.First column-->
+
+            <!--Second column-->
+
+            <!--/.Second column-->
         </div>
-
-
-
     </div>
-    <!-- /.container -->
+    <!--/.Footer Links-->
 
-    <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. 
-               
-                </div>
-            </div>
-        </footer>
-	
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
     </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
     <!-- /.container -->
-
-    <!-- jQuery -->
-   
-	<script src="js/d3.v3.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-        <script src="js/jquery.js"></script>
-
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    ><script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.typeahead.js"></script>
+    <script>var rootURL="";</script>
+    <script src="js/search.js"></script>
+  <script>
+  
+   // Set the dimensions of the canvas / graph
    
-   <script>
-	   // Set the dimensions of the canvas / graph
+   divWidth = $("#graphspace").width();
+   
+   
 var margin = {top: 30, right: 20, bottom: 60, left: 50},
-    width = 700 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+    width = divWidth - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
 
 // Set the ranges
 var x = d3.scale.linear().range([0, width]);
@@ -370,10 +372,11 @@ $(document).ready(function(){
 		$("#lakon" + lakonNumber).css("display","block");
 	});
 });
-   
-   </script>
-   
-</body>
+  
+  </script>
+  
+  </body>
+
+
 
 </html>
-

@@ -1,79 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Digital Wayang Encyclopedia">
+    <meta name="author" content="Miguel Escobar Varela">
+    <style></style>
+    <title>Digital Wayang Encyclopedia</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/shop-item.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.typeahead.css" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
 
-    <title>Canonical Only Network</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/shop-item.css" rel="stylesheet">
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    <style>
-        #sigma-container{
-          top:0px;
-          left:0px;
-          width:800px;
-          height:550px;
-          box-shadow: 1px 1px 10px #999;
-        }
-
-        #explanation{
-          position:relative;
-        }
-    </style>
-
-    </head>
-
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" style="color:white;cursor:default">Digital Wayang Encyclopedia</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="index.html">About</a>
-                        </li>
-
-                    </ul>
-                </div>
+  <body data-spy="scroll" data-target="#myScrollspy">
+    <nav class="navbar navbar-inverse navbar-top navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" style="color:lightgray;cursor:default">Digital Wayang Encyclopedia</a> </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">About</a></li>
+            <li><a href="canonical.html">Network analysis</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="lakons.html">Lakons (stories)</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="typeahead__container">
+              <div class="typeahead__field"> <span class="typeahead__query">
+                <input class="js-typeahead"
+                                             name="q"
+                                             type="search"
+                                             autofocus
+                                             placeholder="Search"
+                                             autocomplete="off">
+                                  </span> <span class="typeahead__button">
+                                      <button class="btn btn-default" type="submit">
+                                          <span class="typeahead__search-icon"></span> </button>
+                </span>
+              </div>
             </div>
-        </nav>
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-md-3">
-                    <a href="characters.html" class="list-group-item">Characters</a>
-                    <a href="lakons.html" class="list-group-item">Story plots (lakon)</a>
-                    <a href="canonical.html" class="list-group-item">Network visualization</a>
-                    <div id="explanation"></div>
-                </div>
-
-                <div class="col-md-9">
-				<div>
-				<h1>Objective</h1>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3" id="smyScrollspy">
+          <ul class="nav nav-pills nav-stacked leftnav" data-spy="affix" data-offset-top="0">
+            <li><a href="#Objective">Objective</a></li>
+            <li><a href="#CharacterEntries">Character Entries</a></li>
+            <li><a href="#PlotDescriptions">Plot Descriptions (balungan lakon)</a></li>
+            <li><a href="#NetworkVisualization">Network Visualization</a></li>
+            <li><a href="#Sources">Sources</a></li>
+            <li><a href="#TheTeam">The Team</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9" style="">
+				<div class="datum" id="Objective">
+				<h3>Objective</h3>
                 				
                 <p>The objective of the Digital Wayang Encyclopedia is to offer consistent information about the main wayang kulit characters and plots. Javanese wayang kulit (leather puppets) is one of the most important and oldest performance traditions in Southeast Asia. But the languages and conventions constitute an impediment to those not familiar with the tradition. The Digital Wayang Encyclopedia (as sister project of the Contemporary Wayang Archive) aims to be used by scholars, students, artists and wayang enthusiasts interested in Javanese wayang kulit (an Indonesian-language version is being planned). Our goal is to aid in a variety of research and creative projects, ranging from ethnographic to computational analysis. The information in the entries is hyperlinked and easily searchable. It is also encoded in machine readable formats that can be used for data-driven quantitative analyses. Our main goal is not comprehensiveness but consistency and below we explain how we standardize the data in the entries, and the rationale for this.  
-				<hr>
-				<h1>Character Entries</h1>
+				</div>
+				
+				<div class="datum" id="CharacterEntries">
+				<br/>
+				<h3>Character Entries</h3>
 				
 				<div class="col-md-6"><div class="thumbnail">
 				<img alt="" src="img/entry.jpg"/>
@@ -81,10 +83,10 @@
 				
 				
 				<p>Each character entry contains the following information. If one of the following sections is not included, it means that the information is not known (to the extent of our knowledge). 
-				<p><b>Character name.</b> We sort their characters by their most common names. We use Indonesian rather than Javanese spelling of names, since this is the convention used by most existing encyclopedia (see below for sources). In Javanese, there is no separation between words which poses a problem for transcription into roman characters. For example, Bayubajra could also be written Bayu Bajra. We opt for separating the characters whenever two versions are possible, but indicating this with an underscore: Bayu_Bajra.
+				<p><b>Character name.</b> We sort the character entries by their most common names. We use Indonesian rather than Javanese spelling of names, since this is the convention used by most existing encyclopedias (see below for sources). In Javanese, there is no separation between words which poses a problem for transcription into roman characters. For example, Bayubajra could also be written Bayu Bajra. We opt for separating the characters whenever two versions are possible, but indicating this with an underscore: Bayu_Bajra.
 				<p><b>Alternative names.</b> We include a comprehensive list of alternative names. Sometimes the names are interchangeable and sometimes they have specific connotations (i.e., sometimes they were only used by the characters in their youth, or before an life-changing event). In the later case, we include describe the context of specific names within the character's description.
 				<p><b>Type.</b> We distinguish between humans, animals and gods. This information is very straightforward in some cases, but not always. Some humans are incarnations or avatars of gods. Some gods have animal bodies. We tried to identify the primary type of a character. The reasons for these choices are explained in the description.
-				<p><b>Origin.</b> We note whether the characters are also known in the best known Indian versions, even if their stories are significantly different. Our main source for this information is previous encyclopedias in Java. Although we carried additional research on the Indian versions, the expanse and variety of Indian versions of the story is beyond the scope of the present project. 
+				<p><b>Origin.</b> We note whether the characters are also present in the best known Indian versions, even if their stories are significantly different. Our main source for this information is previous encyclopedias in Java. Although we carried additional research on the Indian versions, the expanse and variety of Indian versions of the story is beyond the scope of the present project. 
 				<p><b>Note on the Indian versions.</b> We note when the stories, ancestry and name of the characters is different but the characters are still arguably traceable to an Indian origin. It must be noted, though that all characters (even the most Indian ones) have been sufficiently transformed in the Javanese context.
 				<p><b>Description in the Javanese versions.</b> We don't indicate every known episode in which the character is known, but merely a selection of the most commonly known episodes, as supported in plot descriptions (balungan lakon) and previous encyclopedias. Clicking on any of the characters' names redirects to their entries in the encyclopedia. If a character name appears in square brackets [] it means that an entry for that character is at present not found in the encyclopedia.
 				<p><b>Plots where the character is found.</b> This is based on published scene-by-scene plot descriptions (balungan lakon) . We are on the process of including more plot descriptions from a wider regional and historical range. In a further iteration of the project, we aim to include research information on the origin and variations (sanggit) of specific plots.
@@ -94,70 +96,98 @@
 				<p><b>Amulets and heirlooms.</b> Certain characters are associated with specific amulets and heirlooms, but these are also inherited, transferred as a result of virtuous action, or momentarily stolen. We indicate these multiple possibilities in the character description.
 				<p><b>Wanda.</b> There are multiple versions of a puppet (wanda) according to specific moments in their biography, moods, episodes or even parts of a story (i.e., court vs. battle wanda). However, there is much disagreement on what specific wanda should be called. We include here the names to give an indication of the range of versions of a given character rather than for the comprehensive description of the meaning and characteristics of each wanda. 
 				<p><b>Characters in the same scene.</b> The list of all characters that appear together with the current character in a scene (adegan). The weight is the amount of times each pair of characters is present in the same scene. In the default view, the table is arrange in decreasing order, but this can be modified by clicking on the table headers. Users can also search through the table. Clicking on any of the characters' names redirects to their entries in the encyclopedia.
-				<hr>
-				<h1>Plot descriptions (balungan lakon)</h1>
+				</div>
 				
 				
+				<div class="datum" id="PlotDescriptions">
+				<h3>Plot Descriptions (Balungan Lakon)</h3>
+				<br/>
 				<p>Each description is organized according to the pathet - the major plot and musical modes of a wayang performance. Each scene (adegan) is numbered in progressive order. For each scene we indicate the type of scene (jejer, perang kembang, etc.) and the kingdom or name of the place where the scene happens (Amarta, Dwarawati, etc.). In cases where this is uncertain we indicate this as unknown.
-				<hr>
-				<h1>Network visualization</h1>
+				</p>
+				</div>
+				
+				<div class="datum" id="NetworkVisualization">
+				<h3>Network Visualization</h3>
+				<br/>
 				<div class="col-md-6"><div class="thumbnail">
 				<img alt="" src="img/network.jpg"/>
-				</div></div> 
+				</div>
+				</div> 
 				The non-directed network visualization represents co-occurences of characters in the scene-by-scene plot descriptions. The nodes (circles) indicate the different characters. Green nodes are Javanese in origin and pink ones are also found in the Indian versions of the stories. The size of the nodes corresponds to their degree (larger nodes have a higher number of connections). An edge (line) between two characters means they are present in the same scene. The thickness of the edges represents the number of times two characters appear together in the same scene. Clicking on a character's node reveals more information:
 				<p><b>Degree.</b> The amount of connections of the given node.
 				<p><b>Weighted degree.</b> The amount of connections a node has, taking into account the weight of those connections.
 				<p><b>Closeness Centrality.</b> The average length of the shortest path between the node and all other nodes in the graph. 
 				<p><b>Betweenness Centrality.</b> Indicates how often a node acts as a bridge along the shortest path between two other nodes
 				<p><b>Eigenvector Centrality.</b> A measurement of the influence of the node in the graph, that takes into account how connected it is to higher-degree nodes.
-
-				<h1>Sources</h1>
+				</div>
+				
+				<div class="datum" id="Sources">
+				<h3>Sources</h3>
+				<br/>
 				<p>Hardjowirogo, 1948. Sejarah Wayang Purwa. Balai Pustaka, Jakarta. 
 				<p>H. Solichin, Suyanto, Sumari, Undung Wiyono, Sri Purwanto, 2017. Ensiklopedi Wayang Indonesia. Mitra Sarana Edukasi, Jakarta. 
 				<p>Heru S Sudjarwo, Sumari, Undung Wiyono, 2010. Rupa dan Karakter Wayang Purwa. Kakilangit Kencana, Jakarta.
 				<p>Purwadi, 2013. Mengenal Gambar Tokoh Wayang Purwa dan Keterangannya. Cendrawasih, Surakarta.
 				<p>Sudibyoprono, R.R., Suwandono, Dhanisworo, Mujiyono, 1991. Ensiklopedi Wayang Purwa. Balai Pustaka, Jakarta.
+				</p>
+				</div>
 
-
-				<h1>The team</h1>
+				<div class="datum" id="TheTeam">
+				<h3>The Team</h3>
+				<br/>
 				<p>Programming and encyclopedia entries: Miguel Escobar Varela
 				<p>Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono
 				<p>Scientific advisor for network analysis: Andrew Schauf
-
                 </div>
-
-
-
-            </div>
-
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-    <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; <a href="http://miguelescobar.com">Miguel Escobar Varela</a> and Andy Schauf 2017</p>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery and Sigma-->
-    <script src="js/jquery.js"></script>
-    <script src="sigma/sigma.js"></script>
-    <script src="sigma/plugins/sigma.parsers.gexf.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
     
-</body>
+    
+	</div>
+	</div>
+    
+    </div>
+  </div>
+    <!-- /.container -->
+    <!--Footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+
+            <!--First column-->
+
+            <div class="col-md-12">
+              <p>
+              Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf.</p>
+
+            </div>
+            <!--/.First column-->
+
+            <!--Second column-->
+
+            <!--/.Second column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+    <!-- /.container -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    ><script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.typeahead.js"></script>
+    <script>var rootURL="";</script>
+    <script src="js/search.js"></script>
+  
+  
+  </body>
+
+
 
 </html>

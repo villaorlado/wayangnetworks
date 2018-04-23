@@ -5,7 +5,8 @@
  */
 
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    /*padding-top: 70px;*/
+    background-color: #F3F3F4;/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
 .thumbnail img {
@@ -28,5 +29,177 @@ body {
 }
 
 footer {
-    margin: 50px 0;
+    /*margin: 50px 0;*/
+
+    color:white;
+
+    font-size: 14px;
+    position:relative;
+    top:30px;
+    padding-top: 30px;
+
+    background-color: #333;
+
+}
+
+.foot-container{
+  position: relative;
+  top:30px;
+
+  background-color: #333;
+}
+
+.footer-copyright{
+  background-color: black;
+  padding-top:20px;
+  padding-bottom:20px;
+  top:30px;
+  position: relative;
+}
+
+footer a{
+  color: #c69302 !important;
+}
+
+.leftnav li a{
+  font-weight: bold;
+  color:##337ab7;
+}
+
+a{
+  color:#337ab7;
+}
+
+/*.leftnav li a{
+
+  color:#111;
+  border-radius: 0px !important;
+  width:200px !important;
+  border-bottom: 3px solid #c69302
+}
+
+.datum bb{
+  color:black;
+  border-radius: 0px !important;
+  width:200px !important;
+  border-bottom: 2px solid #c69302
+}
+
+.datum a{
+  color:#c69302;
+  weight:bold;
+}*/
+
+.wayangThumbnail{
+  max-height:300px !important;
+  width:auto;
+  border-radius: 0px;
+  border:1px solid lightgray;
+  /*background:lightgray;*/
+}
+
+.caption{
+  background-color:#333;
+  color:white !important;
+  height:100px;
+}
+
+#search input{
+  background-color:black;
+  color:white;
+  border:0px solid transparent;
+  border-radius: 0px;
+  border-bottom: 2px solid white;
+}
+
+.js-typeahead{
+  background-color:black !important;
+  color:white;
+  border:0px solid transparent !important;
+  border-radius: 0px;
+  border-bottom: 2px solid white !important;
+
+}
+
+.typeahead__button button{
+  background-color: black !important;
+  color:white !important;
+  height:40px;
+  display: none !important;
+  border-radius:0px;
+  border:0px solid transparent !important;
+}
+
+
+#search button{
+  background-color: black;
+  color:white;
+  height:34px;
+  border-radius:0px;
+  border:0px solid transparent;
+
+}
+
+.navbar{
+  font-size:16px;
+
+  background-color: #333;
+  border-bottom:4px solid #c69302;
+}
+
+.navbar li a{
+  /*color:white !important;*/
+}
+
+.datum{
+  background-color:white;
+  box-shadow: 1px 1px 4px #999;
+  border-radius:2px;
+  border:0px solid transparent;
+  margin-top:20px;
+  padding:20px;
+}
+
+/*Character Pages*/
+path {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: grey;
+  stroke-width: 1;
+  shape-rendering: crispEdges;
+}
+
+.joint:hover{
+  cursor:pointer
+}
+
+#sigma-container{
+  top:0px;
+  left:0px;
+  width:100%;
+  position:relative;
+  height:300px;
+  /*box-shadow: 1px 1px 15px #999;*/
+}
+
+#sigma-container-big{
+  top:0px;
+  left:0px;
+  width:100%;
+  position:relative;
+  height:500px;
+  /*background-color:white;*/
+  /*box-shadow: 1px 1px 15px #999;*/
+}
+
+.typeahead__container{
+/*width: 200px;
+position:fixed !important;
+border:3px solid blue;*/
 }

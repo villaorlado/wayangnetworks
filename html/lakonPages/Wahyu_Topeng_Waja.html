@@ -1,142 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Digital Wayang Encyclopedia">
     <meta name="author" content="Miguel Escobar Varela">
-<style>
-		path { 
-    stroke: steelblue;
-    stroke-width: 2;
-    fill: none;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: grey;
-    stroke-width: 1;
-    shape-rendering: crispEdges;
-}
-
-.joint:hover{
-	cursor:pointer
-}
-
-#sigma-container{
-          top:0px;
-          left:0px;
-          width:50%;
-          position:relative;
-          height:300px;
-          box-shadow: 1px 1px 5px #999;
-        }
-		</style>
-    <title>
-		
-Wahyu_Topeng_Waja</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/shop-item.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css"></link>
-
+    <style></style>
+    <title>Wahyu_Topeng_Waja</title>
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/shop-item.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="../css/jquery.typeahead.css" />
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
 
-</head>
-
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand"  style="color:white;cursor:default">Digital Wayang Encyclopedia</a>
+  <body data-spy="scroll" data-target="#myScrollspy">
+    <nav class="navbar navbar-inverse navbar-top navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> <a class="navbar-brand" style="color:lightgray;cursor:default">Digital Wayang Encyclopedia</a> </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">About</a></li>
+            <li><a href="../canonical.html">Network analysis</a></li>
+            <li><a href="../characters.html">Characters</a></li>
+            <li><a href="../lakons.html">Lakons (stories)</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <div class="typeahead__container">
+              <div class="typeahead__field"> <span class="typeahead__query">
+                <input class="js-typeahead"
+                                             name="q"
+                                             type="search"
+                                             autofocus
+                                             placeholder="Search"
+                                             autocomplete="off">
+                                  </span> <span class="typeahead__button">
+                                      <button class="btn btn-default" type="submit">
+                                          <span class="typeahead__search-icon"></span> </button>
+                </span>
+              </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="../index.html">About</a>
-                    </li>
-                    
-                </ul>
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
-
     <div class="container">
-
+      <div class="row">
+        <div class="col-md-3" id="smyScrollspy">
+          <ul class="nav nav-pills nav-stacked leftnav" data-spy="affix" data-offset-top="0">
+            <li><a href="#CharacterList">Character List</a></li>
+            <li><a href="#Pathet Nem">Pathet Nem</a></li>
+            <li><a href="#Pathet Sanga">Pathet Sanga</a></li>
+            <li><a href="#Pathet Manyura">Pathet Manyura</a></li>
+            <li><a href="#Graphs">Graphs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9" style="">
+<h1>Wahyu_Topeng_Waja</h1><div class="datum" id="CharacterList"><p>This lakon has 21 characters:  <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>, <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a>, <a href='../characterPages/Samba.html'>Samba</a>, <a href='../characterPages/Wisanggeni.html'>Wisanggeni</a>, <a href='../characterPages/Wisnu.html'>Wisnu</a>, <a href='../characterPages/Gareng.html'>Gareng</a>, <a href='../characterPages/Abimanyu.html'>Abimanyu</a>, <a href='../characterPages/Baladewa.html'>Baladewa</a>, <a href='../characterPages/Rukmini.html'>Rukmini</a>, <a href='../characterPages/Bagong.html'>Bagong</a>, <a href='../characterPages/Jembawati.html'>Jembawati</a>, <a href='../characterPages/Setyaki.html'>Setyaki</a>, <a href='../characterPages/Anoman.html'>Anoman</a>, <a href='../characterPages/Narada.html'>Narada</a>, <a href='../characterPages/Antaboga.html'>Antaboga</a>, <a href='../characterPages/Kresna.html'>Kresna</a>, <a href='../characterPages/Semar.html'>Semar</a>, <a href='../characterPages/Guru.html'>Guru</a>, <a href='../characterPages/Petruk.html'>Petruk</a>, <a href='../characterPages/Setyaboma.html'>Setyaboma</a>, <a href='../characterPages/Werkudara.html'>Werkudara</a>,</div><div class="datum"><p>&nbsp;<p id='Pathet Nem'><h3>Pathet Nem</h3><br/><p class='adegan' id='adegan1'><b>1</b>. <span class='badge'> Jejer</span> <b>Dwarawati</b>. <a href='../characterPages/Kresna.html'>Kresna</a>, <a href='../characterPages/Samba.html'>Samba</a> and <a href='../characterPages/Setyaki.html'>Setyaki</a> receive <a href='../characterPages/Baladewa.html'>Baladewa</a>. They talk about visiting <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>, who is sick. <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> will soon be given the title of Senopati. <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> arrives unexpectedly and asks <a href='../characterPages/Kresna.html'>Kresna</a> for the Wahyu Senopati. <a href='../characterPages/Kresna.html'>Kresna</a> is no longer inhabited by Batara <a href='../characterPages/Wisnu.html'>Wisnu</a>'s spirit, but even then, the Wahyu Senopati does not belong to Bomanarakasura. However <a href='../characterPages/Kresna.html'>Kresna</a> follows the wishes of his second son. They argue with <a href='../characterPages/Baladewa.html'>Baladewa</a>, who exits angrily from the chamber because of his difference of opinion. <a href='../characterPages/Kresna.html'>Kresna</a> goes to heaven. <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> goes to see <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>'s but is in fact hoping he will son die.<p class='adegan' id='adegan2'><b>2</b>. <span class='badge'> Kedhaton</span> <b>Dwarawati</b>. Dewi <a href='../characterPages/Jembawati.html'>Jembawati</a>, <a href='../characterPages/Rukmini.html'>Rukmini</a> and <a href='../characterPages/Setyaboma.html'>Setyaboma</a> await the return of king <a href='../characterPages/Kresna.html'>Kresna</a>. After eating, the king takes leave and goes to heaven.<p class='adegan' id='adegan3'><b>3</b>. <span class='badge'> Alun-alun</span> <b>Dwarawati</b>. The Dwarawati army gets ready to accompany <a href='../characterPages/Kresna.html'>Kresna</a> and <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> in their journeys.<p class='adegan' id='adegan4'><b>4</b>. <span class='badge'> Sky</span> <b>Unnamed</b> The Korawa and <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> encounter <a href='../characterPages/Anoman.html'>Anoman</a> in the middle of the sky. A fight ensues but <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> breaks it. Anoman continues on his way to Pringgandani, where he intends to cure Gatotkaca from his disease.<p class='adegan' id='adegan5'><b>5</b>. <span class='badge'> Sabrangan</span> <b>Tawanggantungan</b>. <a href='../characterPages/*Godhayitma.html'>*Godhayitma</a> receives the visit of his older brother and teacher, Sitija <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a>, the king of Trajutrisna. <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> asks <a href='../characterPages/*Godhayitma.html'>*Godhayitma</a> for help to kill <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>. <a href='../characterPages/*Godhayitma.html'>*Godhayitma</a> agrees to this request.<p>&nbsp;<p id='Pathet Sanga'><h3>Pathet Sanga</h3><br/><p class='adegan' id='adegan6'><b>6</b>. <span class='badge'> Wana</span> <b>Unnamed</b>. <a href='../characterPages/Abimanyu.html'>Abimanyu</a>, <a href='../characterPages/Semar.html'>Semar</a>, <a href='../characterPages/Bagong.html'>Bagong</a>, <a href='../characterPages/Gareng.html'>Gareng</a> and <a href='../characterPages/Petruk.html'>Petruk</a> are traveling. They are hoping to help <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> will receive his wahyu. It is noon, so they take a rest and <a href='../characterPages/Abimanyu.html'>Abimanyu</a> lies against a tree. Then a <a href='../characterPages/*Tiger.html'>*Tiger</a> kombang, jumps from the tree, grabs <a href='../characterPages/Abimanyu.html'>Abimanyu</a> and takes him away. <a href='../characterPages/Petruk.html'>Petruk</a> runs in pursuit and attacks the tiger, with his weapon, called Petel. <a href='../characterPages/Abimanyu.html'>Abimanyu</a> is released from the tiger's grip. He takes aim at the tiger and injures him with an arrow. The <a href='../characterPages/*Tiger.html'>*Tiger</a> reveals his true shape as Batara <a href='../characterPages/Wisnu.html'>Wisnu</a>. <a href='../characterPages/Wisnu.html'>Wisnu</a> admonishes <a href='../characterPages/Abimanyu.html'>Abimanyu</a> to return to Pringgandani if he wants <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> to heal. He says that the Wahyu will come on its own accord.<p>&nbsp;<p id='Pathet Manyura'><h3>Pathet Manyura</h3><br/><p class='adegan' id='adegan7'><b>7</b>. <span class='badge'> Kayangan</span> <b>JonggringSaloka</b>. <a href='../characterPages/Guru.html'>Guru</a> receives <a href='../characterPages/Antaboga.html'>Antaboga</a> and <a href='../characterPages/Kresna.html'>Kresna</a>. They ask <a href='../characterPages/Guru.html'>Guru</a> to give the Wahyu Senopati, known also as Wahyu Topeng Waja to <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a>. Guru does not want to help them because the Wahyu is not meant for <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a>. Upon seeing this situation, <a href='../characterPages/Antaboga.html'>Antaboga</a> seizes the Wahyu and runs away. <a href='../characterPages/Narada.html'>Narada</a> is ordered to chase after him. <a href='../characterPages/Narada.html'>Narada</a> then finds <a href='../characterPages/Wisanggeni.html'>Wisanggeni</a> meditating on a cloud.<p class='adegan' id='adegan8'><b>8</b>. <span class='badge'> Wana</span> <b>Unnamed</b>.<a href='../characterPages/Narada.html'>Narada</a> wakes <a href='../characterPages/Wisanggeni.html'>Wisanggeni</a> from his meditation and asks him whether he is meditating in order to find the Wahyu for <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>. <a href='../characterPages/Narada.html'>Narada</a> explains that the Wahyu has been seized by <a href='../characterPages/Antaboga.html'>Antaboga</a> from <a href='../characterPages/Guru.html'>Guru</a>'s hands. <a href='../characterPages/Wisanggeni.html'>Wisanggeni</a> is angered by what he hears and runs in pursuit of <a href='../characterPages/Antaboga.html'>Antaboga</a> and <a href='../characterPages/Kresna.html'>Kresna</a>. The Wahyu slips from everyone’s grasp and then falls into Marcapada, the world of the mortals.<p class='adegan' id='adegan9'><b>9</b>. <span class='badge'> Jejer</span> <b>Pringgandani</b>. <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> is suffering from his sickness, as his elders take care of him. <a href='../characterPages/Abimanyu.html'>Abimanyu</a> arrives and communicates to them what Batara <a href='../characterPages/Guru.html'>Guru</a> said earlier: <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>'s medicine will come on its own. <a href='../characterPages/Werkudara.html'>Werkudara</a> disagrees with this. Bu then <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> arrives and at the same time Wahyu arrives and enters the body of Gatotkaca. <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> is angered at <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> and challenges him to a fight. They take the fight outside to the alun-alun. The Topeng Waja breaks and becomes the Topeng Prunggu. Kresna accepts his mistake. He should not have encouraged the missteps of his son. This will lead one day to the Gojali Suta war. <a href='../characterPages/Antaboga.html'>Antaboga</a> also accepts his faults and apologizes for having taken the Wahyu for <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a>. The inhabitants of Pringgandani have a feast.</div>
+    
+    
+    <!--interactive graph-->
+    <div class="datum" id="Graphs">
+		<h3>Graphs</h3>
+		<div class="row">
+			<div class="col-lg-6" id="graphspace"></div>           
+			<div class="col-lg-6"><div id="sigma-container"></div></div>
+		</div>
+	</div>
+	</div>
+	</div>
+    
+    </div>
+  </div>
+    <!-- /.container -->
+    <!--Footer-->
+<footer class="footer">
+    <div class="container">
         <div class="row">
 
-            <div class="col-md-3">
-                <p class="lead"></p>
-                <!--img src="../img/logo.jpg"></img-->
-                <div class="list-group">
-                    <a href="../characters.html" class="list-group-item">Characters</a>
-                    <a href="../lakons.html" class="list-group-item">Story plots (lakon)</a>
-                    <a href="../canonical.html" class="list-group-item">Network visualization</a>
-                </div>
+            <!--First column-->
+
+            <div class="col-md-12">
+              <p>
+              Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf.</p>
+
             </div>
+            <!--/.First column-->
 
-            <div class="col-md-9">
+            <!--Second column-->
 
-                <div>
-<h1>Wahyu_Topeng_Waja</h1><div class="well" id="characters"><p>This lakon has 21 characters:  <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>, <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a>, <a href='../characterPages/Samba.html'>Samba</a>, <a href='../characterPages/Wisanggeni.html'>Wisanggeni</a>, <a href='../characterPages/Wisnu.html'>Wisnu</a>, <a href='../characterPages/Gareng.html'>Gareng</a>, <a href='../characterPages/Abimanyu.html'>Abimanyu</a>, <a href='../characterPages/Baladewa.html'>Baladewa</a>, <a href='../characterPages/Rukmini.html'>Rukmini</a>, <a href='../characterPages/Bagong.html'>Bagong</a>, <a href='../characterPages/Jembawati.html'>Jembawati</a>, <a href='../characterPages/Setyaki.html'>Setyaki</a>, <a href='../characterPages/Anoman.html'>Anoman</a>, <a href='../characterPages/Narada.html'>Narada</a>, <a href='../characterPages/Antaboga.html'>Antaboga</a>, <a href='../characterPages/Kresna.html'>Kresna</a>, <a href='../characterPages/Semar.html'>Semar</a>, <a href='../characterPages/Guru.html'>Guru</a>, <a href='../characterPages/Petruk.html'>Petruk</a>, <a href='../characterPages/Setyaboma.html'>Setyaboma</a>, <a href='../characterPages/Werkudara.html'>Werkudara</a>,</div><p>&nbsp;<p><h3>Pathet Nem</h3><hr><p class='adegan' id='adegan1'><b>1</b>. <span class='badge'> Jejer</span> <b>Dwarawati</b>. <a href='../characterPages/Kresna.html'>Kresna</a>, <a href='../characterPages/Samba.html'>Samba</a> and <a href='../characterPages/Setyaki.html'>Setyaki</a> receive <a href='../characterPages/Baladewa.html'>Baladewa</a>. They talk about visiting <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>, who is sick. <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> will soon be given the title of Senopati. <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> arrives unexpectedly and asks <a href='../characterPages/Kresna.html'>Kresna</a> for the Wahyu Senopati. <a href='../characterPages/Kresna.html'>Kresna</a> is no longer inhabited by Batara <a href='../characterPages/Wisnu.html'>Wisnu</a>'s spirit, but even then, the Wahyu Senopati does not belong to Bomanarakasura. However <a href='../characterPages/Kresna.html'>Kresna</a> follows the wishes of his second son. They argue with <a href='../characterPages/Baladewa.html'>Baladewa</a>, who exits angrily from the chamber because of his difference of opinion. <a href='../characterPages/Kresna.html'>Kresna</a> goes to heaven. <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> goes to see <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>'s but is in fact hoping he will son die.<p class='adegan' id='adegan2'><b>2</b>. <span class='badge'> Kedhaton</span> <b>Dwarawati</b>. Dewi <a href='../characterPages/Jembawati.html'>Jembawati</a>, <a href='../characterPages/Rukmini.html'>Rukmini</a> and <a href='../characterPages/Setyaboma.html'>Setyaboma</a> await the return of king <a href='../characterPages/Kresna.html'>Kresna</a>. After eating, the king takes leave and goes to heaven.<p class='adegan' id='adegan3'><b>3</b>. <span class='badge'> Alun-alun</span> <b>Dwarawati</b>. The Dwarawati army gets ready to accompany <a href='../characterPages/Kresna.html'>Kresna</a> and <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> in their journeys.<p class='adegan' id='adegan4'><b>4</b>. <span class='badge'> Sky</span> <b>Unnamed</b> The Korawa and <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> encounter <a href='../characterPages/Anoman.html'>Anoman</a> in the middle of the sky. A fight ensues but <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> breaks it. Anoman continues on his way to Pringgandani, where he intends to cure Gatotkaca from his disease.<p class='adegan' id='adegan5'><b>5</b>. <span class='badge'> Sabrangan</span> <b>Tawanggantungan</b>. <a href='../characterPages/*Godhayitma.html'>*Godhayitma</a> receives the visit of his older brother and teacher, Sitija <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a>, the king of Trajutrisna. <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> asks <a href='../characterPages/*Godhayitma.html'>*Godhayitma</a> for help to kill <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>. <a href='../characterPages/*Godhayitma.html'>*Godhayitma</a> agrees to this request.<p>&nbsp;<p><h3>Pathet Sanga</h3><hr><p class='adegan' id='adegan6'><b>6</b>. <span class='badge'> Wana</span> <b>Unnamed</b>. <a href='../characterPages/Abimanyu.html'>Abimanyu</a>, <a href='../characterPages/Semar.html'>Semar</a>, <a href='../characterPages/Bagong.html'>Bagong</a>, <a href='../characterPages/Gareng.html'>Gareng</a> and <a href='../characterPages/Petruk.html'>Petruk</a> are traveling. They are hoping to help <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> will receive his wahyu. It is noon, so they take a rest and <a href='../characterPages/Abimanyu.html'>Abimanyu</a> lies against a tree. Then a <a href='../characterPages/*Tiger.html'>*Tiger</a> kombang, jumps from the tree, grabs <a href='../characterPages/Abimanyu.html'>Abimanyu</a> and takes him away. <a href='../characterPages/Petruk.html'>Petruk</a> runs in pursuit and attacks the tiger, with his weapon, called Petel. <a href='../characterPages/Abimanyu.html'>Abimanyu</a> is released from the tiger's grip. He takes aim at the tiger and injures him with an arrow. The <a href='../characterPages/*Tiger.html'>*Tiger</a> reveals his true shape as Batara <a href='../characterPages/Wisnu.html'>Wisnu</a>. <a href='../characterPages/Wisnu.html'>Wisnu</a> admonishes <a href='../characterPages/Abimanyu.html'>Abimanyu</a> to return to Pringgandani if he wants <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> to heal. He says that the Wahyu will come on its own accord.<p>&nbsp;<p><h3>Pathet Manyura</h3><hr><p class='adegan' id='adegan7'><b>7</b>. <span class='badge'> Kayangan</span> <b>JonggringSaloka</b>. <a href='../characterPages/Guru.html'>Guru</a> receives <a href='../characterPages/Antaboga.html'>Antaboga</a> and <a href='../characterPages/Kresna.html'>Kresna</a>. They ask <a href='../characterPages/Guru.html'>Guru</a> to give the Wahyu Senopati, known also as Wahyu Topeng Waja to <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a>. Guru does not want to help them because the Wahyu is not meant for <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a>. Upon seeing this situation, <a href='../characterPages/Antaboga.html'>Antaboga</a> seizes the Wahyu and runs away. <a href='../characterPages/Narada.html'>Narada</a> is ordered to chase after him. <a href='../characterPages/Narada.html'>Narada</a> then finds <a href='../characterPages/Wisanggeni.html'>Wisanggeni</a> meditating on a cloud.<p class='adegan' id='adegan8'><b>8</b>. <span class='badge'> Wana</span> <b>Unnamed</b>.<a href='../characterPages/Narada.html'>Narada</a> wakes <a href='../characterPages/Wisanggeni.html'>Wisanggeni</a> from his meditation and asks him whether he is meditating in order to find the Wahyu for <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>. <a href='../characterPages/Narada.html'>Narada</a> explains that the Wahyu has been seized by <a href='../characterPages/Antaboga.html'>Antaboga</a> from <a href='../characterPages/Guru.html'>Guru</a>'s hands. <a href='../characterPages/Wisanggeni.html'>Wisanggeni</a> is angered by what he hears and runs in pursuit of <a href='../characterPages/Antaboga.html'>Antaboga</a> and <a href='../characterPages/Kresna.html'>Kresna</a>. The Wahyu slips from everyone’s grasp and then falls into Marcapada, the world of the mortals.<p class='adegan' id='adegan9'><b>9</b>. <span class='badge'> Jejer</span> <b>Pringgandani</b>. <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> is suffering from his sickness, as his elders take care of him. <a href='../characterPages/Abimanyu.html'>Abimanyu</a> arrives and communicates to them what Batara <a href='../characterPages/Guru.html'>Guru</a> said earlier: <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a>'s medicine will come on its own. <a href='../characterPages/Werkudara.html'>Werkudara</a> disagrees with this. Bu then <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> arrives and at the same time Wahyu arrives and enters the body of Gatotkaca. <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a> is angered at <a href='../characterPages/Gatotkaca.html'>Gatotkaca</a> and challenges him to a fight. They take the fight outside to the alun-alun. The Topeng Waja breaks and becomes the Topeng Prunggu. Kresna accepts his mistake. He should not have encouraged the missteps of his son. This will lead one day to the Gojali Suta war. <a href='../characterPages/Antaboga.html'>Antaboga</a> also accepts his faults and apologizes for having taken the Wahyu for <a href='../characterPages/Bomanarakasura.html'>Bomanarakasura</a>. The inhabitants of Pringgandani have a feast.</div>
-
-<div class="row">
-		
-	
-    <div class="col-lg-6" ></div>           
-	<div class="col-lg-6" ></div>
-	</div>
-
-	<div class="row">
-		
-	
-    <div class="col-lg-6" id="graphspace"></div>           
-	<div class="col-lg-6" id="sigma-container"></div>
-	</div>
-            </div>
-
+            <!--/.Second column-->
         </div>
-
-
-
     </div>
-    <!-- /.container -->
+    <!--/.Footer Links-->
 
-    <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                   <p>Programming and information by <a href="http://miguelescobar.com">Miguel Escobar Varela</a>. Research assistants: Hariyanto, Losheini Ravindran, F.X. Satriyo Nugroho, Yosephin Novi Marginingrum and Andi Wicaksono. Scientific advisor: Andrew Schauf. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. 
-               
-                </div>
-            </div>
-        </footer>
-
+    <!--Copyright-->
+    <div class="footer-copyright py-3 text-center">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
     </div>
-    <!-- /.container -->
+    <!--/.Copyright-->
 
-    <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
-	<script src="../js/d3.v3.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
+</footer>
+<!--/.Footer-->
+    <!-- /.container -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    ><script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../sigma/sigma.js"></script>
+    <script src="../js/jquery.typeahead.js"></script>
+    <script>var rootURL="../";</script>
+    <script src="../js/search.js"></script>
+  
+  <!-- script specific to lakon-->
+  <script src="../sigma/sigma.js"></script>
     <script src="../sigma/plugins/sigma.parsers.gexf.min.js"></script>
     <script>
     
@@ -384,7 +370,9 @@ sigma.classes.graph.addMethod('neighbors', function(nodeId) {
 
 
     </script>
+  
+  </body>
 
-</body>
+
 
 </html>
