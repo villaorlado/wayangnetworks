@@ -6,7 +6,9 @@
 
 body {
     /*padding-top: 70px;*/
-    background-color: #F3F3F4;/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    /*background-color: #F3F3F4; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	background-color: white;
+	
 }
 
 .thumbnail img {
@@ -153,11 +155,20 @@ a{
 
 .datum{
   background-color:white;
-  box-shadow: 1px 1px 4px #999;
+  /*box-shadow: 1px 1px 1px #999;*/
   border-radius:2px;
   border:0px solid transparent;
-  margin-top:20px;
+  border-bottom:1px solid lightgray;
+  /*margin-top:20px;*/
   padding:20px;
+}
+
+#smyScrollspy{
+	top:30px;
+}
+
+#explanation{
+positiontop:10px;border:1px solid gray;padding:10px;
 }
 
 /*Character Pages*/
@@ -165,6 +176,12 @@ path {
   stroke: steelblue;
   stroke-width: 2;
   fill: none;
+}
+
+#generalInfo h1{
+  font-size:50px;
+  margin-bottom:30px;
+  margin-top:-5px;
 }
 
 .axis path,
