@@ -74,7 +74,7 @@ def makeHtml (header,column, linked=False):
 				if x < len(linkedSet)-1:
 					htmlString += ", "
 		else:
-			htmlString = "<p><b>" + header + "</b>: " + str(sh.cell_value(rowx=num, colx=column))	
+			htmlString = "<p><b>" + header + "</b>: " + str(sh.cell_value(rowx=num, colx=column)).encode('utf-8')	
 	return htmlString
 
 def makeWell (header,column, linked=False):
