@@ -14,38 +14,35 @@ Schauf, A., & Escobar Varela, M. (2018). [Searching for hidden bridges in co-occ
 
 ## Repository Structure
 
-### 1. Texts (`1_texts/`)
+### 1_texts/
 Original source materials - the raw text files containing the stories for analysis.
 
-### 2. Network data (`2_network_data/`)
+### 2_network_data/
 Processed datasets for:
 - Network analysis
 - Simulations
 - Null model comparisons
 
-### 3. Experiments (`3_experiments/`)
-*(previously 5_experiments)*
+### 3_experiments/
 Python scripts for:
 - Network analysis
 - Simulations
 - Null model comparisons
 
-### 4. Network Visualization (`4_network_visualization/`)
-*(previously 6_gephi)*
+### 4_network_visualization/
 Gephi files for network visualization.
 
-### 5. Web Content (`5_web_content/`)
-*(previously 2_data_for_static_site)*
+### 5_web_content/
 Structured data prepared for the website:
 - Character information
 - Relationship data
 - Metadata
 
-### 6. Site Generator (`6_site_generator/`)
+### 6_site_generator/
 Tools to generate the static website:
 - Templates
 - Build scripts
 - Asset processing
 
-### Output (`html/`)
+### html/
 The final built website with all visualizations and analysis.
